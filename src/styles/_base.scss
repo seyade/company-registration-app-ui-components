@@ -1,0 +1,47 @@
+body {
+  position: relative;
+}
+
+.page {
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 99px;
+    background-color: #171717;
+    width: 2px;
+    height: 128vh;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.page-section {
+  padding: 0 32px;
+}
+
+.page-section--head {
+  padding: 0 160px;
+}
+
+.onedifc-title {
+  padding-bottom: 16px;
+
+  &--level-2 {
+    font-size: 36px;
+  }
+
+  &--level-3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.onedifc-paragraph {
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 16px;
+}

@@ -1,0 +1,47 @@
+// own comp. file
+.onedifc-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 150px;
+  padding: 8px;
+  margin-right: 16px;
+  font-size: 14px;
+  border: none;
+  transition: all 200ms ease-in-out;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  &--default {
+    border: 1px solid #171717;
+  }
+
+  &--primary {
+    color: #fff;
+    border: 1px solid #171717;
+    background-color: #171717;
+
+    &:hover {
+      color: #fff;
+      background-color: #373737;
+    }
+  }
+
+  &:hover {
+    transform: scaleX(1.03);
+    text-decoration: none;
+  }
+}

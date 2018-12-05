@@ -1,0 +1,36 @@
+.onedifc-progress-tracker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  // border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    display: flex;
+    align-items: flex-start;
+    font-size: 32px;
+    font-weight: 600;
+
+    &::before {
+      position: absolute;
+      left: 99px;
+      bottom: 0;
+      content: '';
+      height: 64px;
+      width: 2px;
+      background-color: #171717;
+    }
+  }
+
+  &__progressbar {
+    flex: 0 0 50%;
+  }
+}
+
+.onedifc-timeline-menu-button {
+  margin-right: 16px;
+  margin-left: 96px;
+}

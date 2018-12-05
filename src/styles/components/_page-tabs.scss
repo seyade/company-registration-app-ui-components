@@ -1,0 +1,35 @@
+.page-tabs {
+  margin: 16px 0;
+  font-size: 16px;
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    margin-top: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__tab {
+    color: #7f7f7f;
+    margin-right: 48px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #333;
+    }
+
+    &--active {
+      color: #171717;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

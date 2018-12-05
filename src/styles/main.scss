@@ -1,0 +1,15 @@
+@import './vendors/normalize';
+@import './vendors/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.min.css';
+
+@import 'fonts';
+@import 'base';
+
+@import 'components/onedifc-buttons';
+@import 'components/onedifc-navigation';
+@import 'components/onedifc-search-bar';
+@import 'components/onedifc-progress-tracker';
+@import 'components/progress-bar';
+@import 'components/onedifc-announcement';
+@import 'components/page-tabs';
+@import 'components/path-summary';
+@import 'components/next-steps-panel';

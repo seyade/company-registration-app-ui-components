@@ -1,0 +1,45 @@
+$EuclidTrialRoot: '/assets/fonts/Euclid_Trial'; // root folder
+$EuclidSquareTrial_Path: '#{$EuclidTrialRoot}/Euclid_Square_Trial/Web';
+$EuclidCircularATrial_Path: '#{$EuclidTrialRoot}/Euclid_Circular_A_Trial/Web';
+$EuclidCircularBTrial_Path: '#{$EuclidTrialRoot}/Euclid_Circular_B_Trial/Web';
+$EuclidFlexTrial_Path: '#{$EuclidTrialRoot}/Euclid_Flex_Trial/Web';
+$EuclidTriangleTrial_Path: '#{$EuclidTrialRoot}/Euclid_Triangle_Trial/Web';
+
+@font-face {
+  font-family: 'EuclidSquareTrial';
+  src: url('#{$EuclidSquareTrial_Path}/EuclidSquare-Regular-WebTrial.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'EuclidSquareTrial-Medium';
+  src: url('#{$EuclidSquareTrial_Path}/EuclidSquare-Medium-WebTrial.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'EuclidSquareTrial-Bold';
+  src: url('#{$EuclidSquareTrial_Path}/EuclidSquare-Bold-WebTrial.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'EuclidSquareTrial-Semibold';
+  src: url('#{$EuclidSquareTrial_Path}/EuclidSquare-Semibold-WebTrial.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'EuclidTriangleTrial';
+  src: url('#{$EuclidTriangleTrial_Path}/EuclidTriangle-Regular-WebTrial.woff')
+    format('woff');
+}
+
+// @font-face {
+//   font-family: 'EuclidSquareTrial';
+//   src: url('#{$EuclidSquareTrial_Path}/webfont.eot');
+//   src: url('#{$EuclidSquareTrial_Path}/webfont.eot?#iefix') format('embedded-opentype'),
+//     url('#{$EuclidSquareTrial_Path}/webfont.woff2') format('woff2'), url('#{$EuclidSquareTrial_Path}/webfont.woff') format('woff'),
+//     url('#{$EuclidSquareTrial_Path}/webfont.ttf') format('truetype'),
+//     url('#{$EuclidSquareTrial_Path}/webfont.svg#svgFontName') format('svg');
+// }

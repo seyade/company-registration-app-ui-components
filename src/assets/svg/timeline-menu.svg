@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Timeline Menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Timeline-Menu" fill="#000000">
+            <g>
+                <g id="hamburger" transform="translate(6.000000, 0.500000)">
+                    <path d="M0.619443699,3 C0.619443699,3 0.0204670514,2.65 0.0204670514,2.25 L0.0204670514,0.75 C0.0204670514,0.35 0.619443699,0 0.619443699,0 L11.4010234,0 C11.4010234,0 12,0.35 12,0.75 L12,2.25 C12,2.65 11.4010234,3 11.4010234,3 L0.619443699,3 Z M0.448670954,11 C0.448670954,11 0,10.025054 0,9.66034808 L0,9.29270102 C0,8.92799513 0.448670954,8 0.448670954,8 L11.5158878,8 C11.5158878,8 11.9645588,8.92799513 11.9645588,9.29270102 L11.9645588,9.66034808 C11.9645588,10.025054 11.5158878,11 11.5158878,11 L0.448670954,11 Z M0.619443699,19 C0.619443699,19 0,18.4074069 0,18.042701 L0,16.675054 C0,16.3103481 0.619443699,16 0.619443699,16 L11.4010234,16 C11.4010234,16 11.9654448,16.3103481 11.9654448,16.675054 L11.9654448,18.042701 C11.9654448,18.4074069 11.4010234,19 11.4010234,19 L0.619443699,19 Z" id="Shape"></path>
+                </g>
+                <circle id="Oval" fill-rule="nonzero" cx="2" cy="2" r="2"></circle>
+                <circle id="Oval-Copy" fill-rule="nonzero" cx="2" cy="10" r="2"></circle>
+                <circle id="Oval-Copy-2" fill-rule="nonzero" cx="2" cy="18" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

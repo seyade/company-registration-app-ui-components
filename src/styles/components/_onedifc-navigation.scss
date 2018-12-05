@@ -1,0 +1,48 @@
+.onedifc-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  color: #171717;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 33.33%;
+    font-size: 16px;
+  }
+
+  &__user-name {
+    padding-right: 4px;
+  }
+
+  &__link {
+    margin-right: 16px;
+  }
+
+  &__user-avatar {
+    &-image {
+      width: 48px;
+    }
+  }
+
+  &__dynamic-menu {
+    border: none;
+
+    &-image {
+      width: 28px;
+    }
+  }
+
+  a {
+    color: #171717;
+  }
+}
