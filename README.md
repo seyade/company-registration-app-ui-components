@@ -1,4 +1,4 @@
-##Usage
+## Usage
 
 1. Go to your terminal/command window.
 2. Type `npm install` or `npm i` to intall all npm dependencies.
@@ -9,3 +9,5 @@ I haven't found a way to split the code into their own compiled css file yet! No
 
 Also this should be good enough to start integrating. Not all components will be 100% there, like the `progress-bar` as it will take some time to do animation, etc.
 But I'll be adding as we go along.
+
+Please sign up to https://github.ibm.com/new to create a Github account while waiting for Bitbucket to be ready. So we can share and update our project.
