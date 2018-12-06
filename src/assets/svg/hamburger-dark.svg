@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="25px" height="18px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="21px" height="16px" viewBox="0 0 21 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 7</title>
+    <title>Shape</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="Navigation-/-Header---Logged-In" transform="translate(-1084.000000, -48.000000)" stroke="#171717">
-            <g id="Header">
-                <g id="Group-7" transform="translate(1085.000000, 48.000000)">
-                    <path d="M0.194915254,1 L22.8185232,1" id="Line-2"></path>
-                    <path d="M0.194915254,9 L22.8185232,9" id="Line-2-Copy"></path>
-                    <path d="M0.194915254,17 L22.8185232,17" id="Line-2-Copy-2"></path>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-/-Global-Header" transform="translate(-1356.000000, -32.000000)" fill="#4A4A4A">
+            <g id="hamburger">
+                <g transform="translate(1356.000000, 32.000000)">
+                    <path d="M1.03417003,3.77347545 C1.03417003,3.77347545 0.0341700323,3.42347545 0.0341700323,3.02347545 L0.0341700323,1.52347545 C0.0341700323,1.12347545 1.03417003,0.773475454 1.03417003,0.773475454 L19.03417,0.773475454 C19.03417,0.773475454 20.03417,1.12347545 20.03417,1.52347545 L20.03417,3.02347545 C20.03417,3.42347545 19.03417,3.77347545 19.03417,3.77347545 L1.03417003,3.77347545 Z M0.749062514,9.77347545 C0.749062514,9.77347545 0,8.79852941 0,8.43382353 L0,8.06617647 C0,7.70147059 0.749062514,6.77347545 0.749062514,6.77347545 L19.2259379,6.77347545 C19.2259379,6.77347545 19.9750004,7.70147059 19.9750004,8.06617647 L19.9750004,8.43382353 C19.9750004,8.79852941 19.2259379,9.77347545 19.2259379,9.77347545 L0.749062514,9.77347545 Z M1.03417003,15.7734755 C1.03417003,15.7734755 0,15.1808824 0,14.8161765 L0,13.4485294 C0,13.0838235 1.03417003,12.7734755 1.03417003,12.7734755 L19.03417,12.7734755 C19.03417,12.7734755 19.9764796,13.0838235 19.9764796,13.4485294 L19.9764796,14.8161765 C19.9764796,15.1808824 19.03417,15.7734755 19.03417,15.7734755 L1.03417003,15.7734755 Z" id="Shape"></path>
                 </g>
             </g>
         </g>
