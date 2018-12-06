@@ -4,8 +4,8 @@
   "description": "DIFC APP components UI",
   "main": "index.js",
   "scripts": {
-    "serve": "./node_modules/webpack/.bin/webpack --mode development --watch & ./node_modules/.bin/webpack-dev-server --mode development --open --hot",
-    "serve:prod": "webpack --mode production",
+    "serve": "node_modules/.bin/webpack --mode development --watch & node_modules/.bin/webpack-dev-server --mode development --open --hot",
+    "serve:prod": "node_modules/webpack/.bin/webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

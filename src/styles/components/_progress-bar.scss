@@ -1,7 +1,9 @@
 .progress-bar {
+  &::after {
+  }
 }
 
-.slds-progress-bar__value {
+.progress-bar__value {
   display: block;
   background: #171717;
   height: 100%;
