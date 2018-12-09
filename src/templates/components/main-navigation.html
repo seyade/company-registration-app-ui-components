@@ -1,29 +1,31 @@
-<header class="onedifc-navigation">
-  <h1 class="onedifc-navigation__title">One DIFC</h1>
+<header class="main-navigation">
+  <h1 class="main-navigation__title">One DIFC</h1>
 
-  <div class="onedifc-navigation__main-navigation">
-    <a class="onedifc-navigation__link" href="#">support</a>
+  <div class="main-navigation__content">
+    <a class="main-navigation__link" href="#">support</a>
 
     {% include 'components/search-bar.html' %}
 
-    <div class="onedifc-navigation__user">
-      <a class="onedifc-navigation__user-link" href="#">
-        <span class="onedifc-navigation__user-name">Company name</span>
-        <span class="onedifc-navigation__user-avatar">
+    <div class="main-navigation__user">
+      <a class="main-navigation__user-link" href="#">
+        <span class="main-navigation__user-name">Company name</span>
+        <span class="main-navigation__user-avatar">
           <img
-            src="/assets/images/avatar-placeholder.png"
+            src="/assets/svg/avatar-placeholder.svg"
             alt="avatar image"
-            class="onedifc-navigation__user-avatar-image"
+            class="main-navigation__user-avatar-image"
           />
         </span>
       </a>
     </div>
-    <button class="onedifc-navigation__dynamic-menu">
-      <img
-        src="/assets/svg/hamburger-dark.svg"
-        alt=""
-        class="onedifc-navigation__dynamic-menu-image"
-      />
-    </button>
+    <div class="main-navigation__dynamic-menu">
+      <button class="main-navigation__dynamic-menu-button">
+        <img
+          src="/assets/svg/bell-dark.svg"
+          alt=""
+          class="main-navigation__dynamic-menu-image"
+        />
+      </button>
+    </div>
   </div>
 </header>

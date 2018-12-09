@@ -1,5 +1,5 @@
 // own comp. file
-.onedifc-button {
+.button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -37,6 +37,20 @@
     &:hover {
       color: #fff;
       background-color: #373737;
+    }
+  }
+
+  &--close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #171717;
+    border-radius: 2px;
+
+    &-icon {
+      display: block;
     }
   }
 

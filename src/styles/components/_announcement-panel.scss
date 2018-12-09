@@ -1,4 +1,4 @@
-.onedifc-announcement {
+.announcement-panel {
   position: relative;
   min-height: 256px;
   padding: 32px;
@@ -11,29 +11,15 @@
     width: 33%;
   }
 
-  .onedifc-button {
+  .button {
     margin-top: 48px;
-  }
-
-  .onedifc-close {
-    position: absolute;
-    top: 32px;
-    right: 32px;
-    width: 28px;
-    height: 28px;
-    border: 1px solid #171717;
-    border-radius: 2px;
-
-    &-icon {
-      display: block;
-    }
   }
 }
 
-.onedifc-announcement--hidden {
+.announcement--hidden {
   animation: slideUp 700ms 300ms forwards cubic-bezier(0.23, 1, 0.32, 1);
 
-  .onedifc-announcement__content {
+  .announcement__content {
     animation: fadeOut 300ms ease-out forwards;
   }
 }

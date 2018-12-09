@@ -1,24 +1,25 @@
 console.log('MAIN IS RUNNING!!!!');
+(function() {
+  const toggleButtons = document.querySelectorAll('.button--toggle');
 
-const toggleButtons = document.querySelectorAll('.onedifc-button--toggle');
+  for (let toggleButton of toggleButtons) {
+    toggleButton.addEventListener('click', event => {
+      let parentGroup = event.currentTarget.parentElement;
+      let details = parentGroup.nextElementSibling;
 
-for (let toggleButton of toggleButtons) {
-  toggleButton.addEventListener('click', event => {
-    let parentGroup = event.currentTarget.parentElement;
-    let details = parentGroup.nextElementSibling;
+      if (details.classList.contains('path-summary__details--hidden')) {
+        details.classList.remove('path-summary__details--hidden');
+        event.currentTarget.classList.add('button--toggle--open');
+      } else {
+        details.classList.add('path-summary__details--hidden');
+        event.currentTarget.classList.remove('button--toggle--open');
+      }
+    });
+  }
 
-    if (details.classList.contains('path-summary__details--hidden')) {
-      details.classList.remove('path-summary__details--hidden');
-    } else {
-      details.classList.add('path-summary__details--hidden');
-    }
+  const closeButton = document.querySelector('.button--close');
+
+  closeButton.addEventListener('click', event => {
+    event.currentTarget.parentElement.classList.add('announcement--hidden');
   });
-}
-
-const closeButton = document.querySelector('.onedifc-close');
-
-closeButton.addEventListener('click', event => {
-  event.currentTarget.parentElement.classList.add(
-    'onedifc-announcement--hidden'
-  );
-});
+})();
