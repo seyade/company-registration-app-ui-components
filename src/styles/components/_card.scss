@@ -1,0 +1,17 @@
+.card {
+  margin: 16px 0;
+  background-color: #fff;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
+  &--grey {
+    background-color: #f5f5f5;
+  }
+
+  &--hidden {
+    animation: slideUp 700ms 300ms forwards cubic-bezier(0.23, 1, 0.32, 1);
+
+    .card__content {
+      animation: fadeOut 300ms ease-out forwards;
+    }
+  }
+}

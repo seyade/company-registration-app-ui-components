@@ -17,7 +17,7 @@ class App {
     /**
      * @description button to close panel
      */
-    this.closeButton = document.querySelector('.button--close');
+    this.closeButtons = document.querySelectorAll('.button--close');
   }
 
   init() {
@@ -47,9 +47,11 @@ class App {
   }
 
   closePanel() {
-    this.closeButton.addEventListener('click', event => {
-      event.currentTarget.parentElement.classList.add('announcement--hidden');
-    });
+    for (let closeButton of this.closeButtons) {
+      closeButton.addEventListener('click', event => {
+        event.currentTarget.parentElement.classList.add('card--hidden');
+      });
+    }
   }
 }
 

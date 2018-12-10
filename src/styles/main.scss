@@ -2,8 +2,10 @@
 @import './vendors/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.min.css';
 
 @import 'fonts';
+@import 'animations';
 @import 'base';
 
+@import 'components/card';
 @import 'components/buttons';
 @import 'components/main-navigation';
 @import 'components/search-bar';
