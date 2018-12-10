@@ -8,6 +8,7 @@
   padding: 8px;
   margin-right: 16px;
   font-size: 14px;
+  color: #171717;
   border: none;
   transition: all 200ms ease-in-out;
   text-align: center;
@@ -44,10 +45,14 @@
     position: absolute;
     top: 32px;
     right: 32px;
-    width: 28px;
-    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
     border: 1px solid #171717;
     border-radius: 2px;
+    background-color: transparent;
 
     &-icon {
       display: block;
@@ -55,6 +60,7 @@
   }
 
   &:hover {
+    color: #373737;
     transform: scaleX(1.03);
     text-decoration: none;
   }
