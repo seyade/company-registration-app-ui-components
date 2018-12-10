@@ -8,9 +8,21 @@ class App {
     this.toggleButtons = document.querySelectorAll('.button--toggle');
 
     /**
+     * @description details of path
+     */
+    this.pathsSummaryDetails = document.querySelectorAll(
+      '.path-summary__details'
+    );
+
+    /**
      * @description button to close panel
      */
     this.closeButton = document.querySelector('.button--close');
+  }
+
+  init() {
+    this.toggle();
+    this.closePanel();
   }
 
   toggle() {
@@ -21,9 +33,13 @@ class App {
 
         if (details.classList.contains('path-summary__details--hidden')) {
           details.classList.remove('path-summary__details--hidden');
+          details.classList.add('path-summary__details--open');
+
           event.currentTarget.classList.add('button--toggle--open');
         } else {
           details.classList.add('path-summary__details--hidden');
+          details.classList.remove('path-summary__details--open');
+
           event.currentTarget.classList.remove('button--toggle--open');
         }
       });
@@ -40,5 +56,4 @@ class App {
 // start the app
 const app = new App();
 
-app.toggle();
-app.closePanel();
+app.init();
