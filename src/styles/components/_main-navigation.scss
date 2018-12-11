@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
+  height: 80px;
+  padding: 0 32px;
   color: #4a4a4a;
   border-bottom: 1px solid #eaeaea;
   background-color: #fff;
@@ -16,7 +17,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 0 0 33.33%;
+    flex: 0 0 90%;
+    height: 100%;
     font-size: 16px;
   }
 
