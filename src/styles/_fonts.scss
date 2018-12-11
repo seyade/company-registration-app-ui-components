@@ -5,6 +5,9 @@ $EuclidCircularBTrial_Path: '#{$EuclidTrialRoot}/Euclid_Circular_B_Trial/Web';
 $EuclidFlexTrial_Path: '#{$EuclidTrialRoot}/Euclid_Flex_Trial/Web';
 $EuclidTriangleTrial_Path: '#{$EuclidTrialRoot}/Euclid_Triangle_Trial/Web';
 
+$DINNextLTArabicRoot: '/assets/fonts/DINNextLTArabic'; // root folder
+$TSTARRoot: '/assets/fonts/TSTAR'; // root folder
+
 @font-face {
   font-family: 'EuclidSquareTrial';
   src: url('#{$EuclidSquareTrial_Path}/EuclidSquare-Regular-WebTrial.woff')
@@ -33,6 +36,44 @@ $EuclidTriangleTrial_Path: '#{$EuclidTrialRoot}/Euclid_Triangle_Trial/Web';
   font-family: 'EuclidTriangleTrial';
   src: url('#{$EuclidTriangleTrial_Path}/EuclidTriangle-Regular-WebTrial.woff')
     format('woff');
+}
+
+@font-face {
+  font-family: 'DINNextLTArabic-UltraLight';
+  src: url('#{$DINNextLTArabicRoot}/DINNextLTArabic-UltraLight.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'DINNextLTArabic-Light';
+  src: url('#{$DINNextLTArabicRoot}/DINNextLTArabic-Light.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'DINNextLTArabic-Medium';
+  src: url('#{$DINNextLTArabicRoot}/DINNextLTArabic-Medium.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'TSTAR-Light';
+  src: url('#{$TSTARRoot}/TSTAR-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TSTAR-Medium';
+  src: url('#{$TSTARRoot}/TSTAR-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TSTAR-Bold';
+  src: url('#{$TSTARRoot}/TSTAR-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TSTAR-Heavy';
+  src: url('#{$TSTARRoot}/TSTAR-Heavy.otf') format('opentype');
 }
 
 // @font-face {

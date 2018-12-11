@@ -1,4 +1,4 @@
-.onedifc-progress-tracker {
+.progress-tracker {
   position: relative;
   display: flex;
   align-items: center;
@@ -11,15 +11,14 @@
   &__title {
     display: flex;
     align-items: flex-start;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 48px;
 
     &::before {
       position: absolute;
       left: 99px;
       bottom: 0;
       content: '';
-      height: 64px;
+      height: 76px;
       width: 2px;
       background-color: #171717;
     }
@@ -31,7 +30,7 @@
   }
 }
 
-.onedifc-timeline-menu-button {
+.timeline-menu-button {
   margin-right: 16px;
   margin-left: 96px;
 }

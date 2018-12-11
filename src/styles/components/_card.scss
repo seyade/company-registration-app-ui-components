@@ -3,6 +3,27 @@
   background-color: #fff;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
 
+  &__title {
+    padding-bottom: 16px;
+    color: #171717;
+
+    &--level-2 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    &--level-3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-bottom: 16px;
+  }
+
   &--grey {
     background-color: #f5f5f5;
   }
