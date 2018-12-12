@@ -11,3 +11,40 @@ Also this should be good enough to start integrating. Not all components will be
 But I'll be adding as we go along.
 
 Please sign up to https://github.ibm.com/new to create a Github account while waiting for Bitbucket to be ready. So we can share and update our project.
+
+## CHANGES for 11/12/2018
+
+### Fonts
+
+New fonts are added in `fonts` folder
+
+### HTML
+
+1. src/templates/components/search-bar.html
+2. src/templates/components/page-tabs.html
+3. src/templates/components/main-navigation.html
+4. src/templates/components/progress-tracker.html
+5. src/templates/components/progress-bar.html
+6. src/templates/components/path-summary.html
+7. src/templates/components/next-steps-panel.html
+8. src/templates/components/announcement-panel.html
+9. src/templates/components/add-panel.html
+
+### CSS
+
+1. src/styles/\_base.scss
+2. src/styles/\_fonts.scss
+3. src/styles/components/\_add-panel.scss
+4. src/styles/components/\_announcement-panel.scss
+5. src/styles/components/\_card.scss
+6. src/styles/components/\_main-navigation.scss
+7. src/styles/components/\_next-steps-panel.scss
+8. src/styles/components/\_path-summary.scss
+9. src/styles/components/\_progress-bar.scss
+10. src/styles/components/\_progress-tracker.scss
+11. src/styles/components/\_main-navigation.scss
+12. src/styles/components/\_search-bar.scss
+
+### JS
+
+/app.bundle.js
