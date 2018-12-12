@@ -17,13 +17,20 @@ body {
   &__inner {
     position: relative;
     z-index: 2;
+    max-width: 1440px;
+    margin: 0 auto;
   }
+}
+
+.page-header__bottom-tier {
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+}
+
+.page-header__bottom-tier {
+  padding: 0 160px;
 }
 
 .page-section {
   padding: 0 32px;
-}
-
-.page-section--head {
-  padding: 0 160px;
 }

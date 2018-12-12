@@ -1,12 +1,17 @@
 .main-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  padding: 0 32px;
-  color: #4a4a4a;
   border-bottom: 1px solid #eaeaea;
   background-color: #fff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 80px;
+    padding: 0 32px;
+    margin: 0 auto;
+    color: #4a4a4a;
+  }
 
   &__title {
     font-size: 22px;

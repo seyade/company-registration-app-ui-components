@@ -1,16 +1,16 @@
 {% extends '_layout.html' %} {% block content %}
 <article class="page">
-  <div class="page__inner">
-    <header>
-      {% include 'components/main-navigation.html' %} 
+  <header class="page-header">
+    <div class="page-header__top-tier">
+      {% include 'components/main-navigation.html' %}
       {% include 'components/progress-tracker.html' %}
-    </header>
-
-    <section class="page-section page-section--head">
+    </div>
+    <div class="page-header__bottom-tier">
       {% include 'components/announcement-panel.html' %}
-      
       {% include 'components/page-tabs.html' %}
-    </section>
+    </div>
+  </header>
+  <div class="page__inner">
 
     <section class="page-section slds-grid slds-gutters">
       <div class="slds-col slds-size_6-of-12">
@@ -23,6 +23,7 @@
         {% include 'components/add-panel.html' %}
       </div>
     </section>
+
   </div>
 </article>
 {% endblock %}
