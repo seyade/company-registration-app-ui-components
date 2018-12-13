@@ -30,7 +30,7 @@ New fonts are added in `fonts` folder
 8. src/templates/components/announcement-panel.html
 9. src/templates/components/add-panel.html
 
-### CSS
+### SASS
 
 1. src/styles/\_base.scss
 2. src/styles/\_fonts.scss

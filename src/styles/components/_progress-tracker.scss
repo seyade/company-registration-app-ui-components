@@ -1,12 +1,17 @@
 .progress-tracker {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 32px;
   border-bottom: 1px solid #eaeaea;
   background-color: #fff;
-  // box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 32px;
+    margin: 0 auto;
+  }
 
   &__title {
     display: flex;
@@ -15,7 +20,7 @@
 
     &::before {
       position: absolute;
-      left: 99px;
+      left: 98px;
       bottom: 0;
       content: '';
       height: 76px;

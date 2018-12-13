@@ -4,14 +4,19 @@ body {
 }
 
 .page {
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    left: 99px;
-    background-color: #171717;
-    width: 2px;
-    height: 128vh;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   z-index: 1;
+  //   left: 152px;
+  //   background-color: #171717;
+  //   width: 2px;
+  //   height: 128vh;
+  // }
+
+  &-header {
+    position: relative;
+    z-index: 2;
   }
 
   &__inner {
@@ -22,15 +27,29 @@ body {
   }
 }
 
-.page-header__bottom-tier {
-  border-bottom: 1px solid #eaeaea;
-  background-color: #fff;
-}
+.page-header__tier-inner {
+  position: relative;
+  // padding: 0 200px;
+  max-width: 1440px;
+  padding: 0 128px;
+  margin: 0 auto;
 
-.page-header__bottom-tier {
-  padding: 0 160px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -64px;
+    z-index: 1;
+    left: 98px;
+    background-color: #171717;
+    width: 2px;
+    height: 512px;
+  }
 }
 
 .page-section {
   padding: 0 32px;
+
+  @media screen and (min-width: 1440px) {
+    margin-right: 84px;
+  }
 }
