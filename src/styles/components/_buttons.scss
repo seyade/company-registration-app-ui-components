@@ -28,8 +28,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 28px;
+    margin-bottom: 28px;
   }
 
   &--default {
@@ -67,6 +67,12 @@
 
   &--toggle {
     border: none;
+
+    &:hover {
+      color: #373737;
+      transform: none;
+      text-decoration: none;
+    }
 
     &--open {
       .button__icon--arrow {

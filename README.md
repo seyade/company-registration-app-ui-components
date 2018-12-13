@@ -14,18 +14,17 @@ Please sign up to https://github.ibm.com/new to create a Github account while wa
 
 ## CHANGES for 11/12/2018
 
-### Fonts
+### New/Updated Assets
 
-N/A
+src/assets/svg/bell.svg
 
 ### HTML
 
-1. src/templates/\_layout.html
-2. src/templates/components/main-navigation.html
-3. src/templates/index.html
-4. src/templates/components/announcement-panel.html
-5. src/templates/components/page-tabs.html
-6. src/templates/components/progress-tracker.html
+1. src/templates/index.html
+2. src/templates/components/path-summary--a.html
+3. src/templates/components/path-summary--b.html
+4. src/templates/components/path-summary--c.html
+5. src/templates/components/path-summary--d.html
 
 ### SASS
 
@@ -35,4 +34,4 @@ N/A
 
 ### JS
 
-/app.bundle.js
+N/A
