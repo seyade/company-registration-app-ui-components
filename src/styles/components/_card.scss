@@ -35,4 +35,15 @@
       animation: fadeOut 300ms ease-out forwards;
     }
   }
+
+  &--disabled {
+    opacity: 0.6;
+
+    .button {
+      &--primary {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+  }
 }
