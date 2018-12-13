@@ -86,7 +86,6 @@
   }
 
   &__details {
-    position: relative;
     margin-top: 16px;
     padding-bottom: 32px;
     transition: all 300ms ease-in-out;
@@ -96,9 +95,11 @@
       width: 2px;
       height: 115%;
       position: absolute;
-      top: -64px;
-      left: -57px;
+      top: 222px;
+      left: 66px;
       background-color: #dadada;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
     }
 
     &-list {
@@ -212,6 +213,10 @@
 
 .path-summary__details--open {
   max-height: 1200px;
+
+  &::before {
+    opacity: 1;
+  }
 
   .path-summary__details-list {
     opacity: 1;
