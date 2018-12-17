@@ -33,6 +33,12 @@ class SelectBox {
      * @type {Element}
      */
     this.selectBoxWrap;
+
+    /**
+     * progress marker
+     * @type {Element}
+     */
+    this.marker;
   }
 
   /**
@@ -59,6 +65,12 @@ class SelectBox {
       this.pseudoSelect.className = SelectBox.CLASSES.pseudoSelect;
       this.pseudoSelect.innerText = 'Type of business in DIFC';
 
+      let arrowImage = document.createElement('img');
+      arrowImage.className = 'pseudo-select__icon';
+      arrowImage.src = '/assets/svg/arrow-down.svg';
+
+      this.pseudoSelect.appendChild(arrowImage);
+
       this.pseudoList = document.createElement('ul');
       this.pseudoList.className =
         'pseudo-select__option-list pseudo-select__option-list--hidden';
@@ -69,10 +81,12 @@ class SelectBox {
       this.selectBoxWrap.appendChild(this.pseudoSelect);
       this.selectBoxWrap.appendChild(this.pseudoList);
 
+      this.marker = parentItem.parentElement.previousElementSibling;
+
       parentItem.appendChild(this.selectBoxWrap);
 
       // interaction
-      this._addEvent();
+      this._addEvents();
     }, this);
   }
 
@@ -87,7 +101,7 @@ class SelectBox {
     });
   }
 
-  _addEvent() {
+  _addEvents() {
     this.pseudoSelect.addEventListener('click', event => {
       const thisPseudoSelect = event.currentTarget;
       const thisPseudoList = thisPseudoSelect.nextElementSibling;
@@ -96,8 +110,12 @@ class SelectBox {
         !thisPseudoList.classList.contains(SelectBox.CLASSES.pseudoListHidden)
       ) {
         thisPseudoList.classList.add(SelectBox.CLASSES.pseudoListHidden);
+        this.marker.removeAttribute('style');
+        this.selectBoxWrap.classList.remove('select-box-wrap--expanded');
       } else {
         thisPseudoList.classList.remove(SelectBox.CLASSES.pseudoListHidden);
+        this.marker.style.transform = 'translateY(-69px)';
+        this.selectBoxWrap.classList.add('select-box-wrap--expanded');
       }
     });
   }

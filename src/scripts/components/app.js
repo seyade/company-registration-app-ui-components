@@ -1,4 +1,5 @@
 import SelectBox from './selectBox';
+import SearchBar from './searchBar';
 
 /**
  * @name App
@@ -25,18 +26,6 @@ class App {
      * @type {Element}
      */
     this.closeButtons;
-
-    /**
-     * @name searchBarButton
-     * @type {Element}
-     */
-    this.searchBarButton;
-
-    /**
-     * @name searchbarField
-     * @type {Element}
-     */
-    this.searchbarField;
   }
 
   /**
@@ -51,36 +40,17 @@ class App {
       '.path-summary__details'
     );
     this.closeButtons = document.querySelectorAll('.button--close');
-    this.searchBarButton = document.querySelector('.search-bar__button');
-    this.searchbarField = document.querySelector('.search-bar__field');
 
     this.toggle();
     this.closePanel();
-    this.searchBar();
+
+    // seacrhbar
+    const searcheBar = new SearchBar();
+    searcheBar.init();
 
     // start selectbox
     const selectBox = new SelectBox();
     selectBox.init();
-  }
-
-  /**
-   * @function searchBar
-   * @description search bar functionalitiy
-   */
-  searchBar() {
-    this.searchBarButton.addEventListener('click', event => {
-      const searchBarPanel = event.currentTarget.parentElement;
-
-      if (searchBarPanel.classList.contains(App.CLASSES.searchBarCollapsed)) {
-        searchBarPanel.classList.remove(App.CLASSES.searchBarCollapsed);
-        searchBarPanel.classList.add(App.CLASSES.searchBarExpanded);
-
-        this.searchbarField.focus();
-      } else {
-        searchBarPanel.classList.remove(App.CLASSES.searchBarExpanded);
-        searchBarPanel.classList.add(App.CLASSES.searchBarCollapsed);
-      }
-    });
   }
 
   /**
@@ -127,8 +97,6 @@ class App {
 
 // CSS classes used by the app
 App.CLASSES = {
-  searchBarCollapsed: 'search-bar--collapsed',
-  searchBarExpanded: 'search-bar--expanded',
   pathSummaryDetailsHidden: 'path-summary__details--hidden',
   pathSummaryDetailsOpen: 'path-summary__details--open',
 };
