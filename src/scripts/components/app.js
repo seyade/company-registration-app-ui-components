@@ -29,7 +29,7 @@ class App {
   }
 
   /**
-   * @function init
+   * @method init
    * @description initialise the app
    */
   init() {
@@ -41,8 +41,8 @@ class App {
     );
     this.closeButtons = document.querySelectorAll('.button--close');
 
-    this.toggle();
-    this.closePanel();
+    this._toggle();
+    this._closePanel();
 
     // seacrhbar
     const searcheBar = new SearchBar();
@@ -54,10 +54,11 @@ class App {
   }
 
   /**
-   * @function toggle
+   * @method toggle
    * @description toggle content on path summary, but might make global.
+   * @private
    */
-  toggle() {
+  _toggle() {
     let toggleButton;
 
     for (toggleButton of this.toggleButtons) {
@@ -81,10 +82,11 @@ class App {
   }
 
   /**
-   * @function closePanel
+   * @method closePanel
    * @description close a panel
+   * @private
    */
-  closePanel() {
+  _closePanel() {
     let closeButton;
 
     for (closeButton of this.closeButtons) {

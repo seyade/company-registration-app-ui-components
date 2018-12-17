@@ -42,13 +42,12 @@
   transition: all 300ms ease-in-out;
 
   &--hidden {
-    // display: none;
+    display: none;
 
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    // padding: 0;
-    margin: 0;
+    // max-height: 0;
+    // overflow: hidden;
+    // opacity: 0;
+    // margin: 0;
   }
 }
 

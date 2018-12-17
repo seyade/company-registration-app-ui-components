@@ -66,7 +66,7 @@ class SelectBox {
       this.pseudoSelect.innerText = 'Type of business in DIFC';
 
       let arrowImage = document.createElement('img');
-      arrowImage.className = 'pseudo-select__icon';
+      arrowImage.className = 'pseudo-select__icon icon-image';
       arrowImage.src = '/assets/svg/arrow-down.svg';
 
       this.pseudoSelect.appendChild(arrowImage);
