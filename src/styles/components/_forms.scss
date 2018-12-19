@@ -1,5 +1,5 @@
 .form {
-  padding: 16px 256px 16px 56px;
+  padding: 0 32px 8px 0;
 
   &-control-group {
     width: 100%;
@@ -18,7 +18,11 @@
     }
   }
 
-  .form-control-label {
+  &__list {
+    padding: 16px 256px 16px 56px;
+  }
+
+  &-control-label {
     &--hidden {
       width: 0;
       height: 0;

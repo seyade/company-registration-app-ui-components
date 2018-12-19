@@ -32,6 +32,10 @@
     margin-bottom: 28px;
   }
 
+  &-group--right {
+    justify-content: flex-end;
+  }
+
   &--default {
     border: 1px solid #171717;
   }
