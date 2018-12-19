@@ -68,6 +68,12 @@ module.exports = {
       inject: true,
       hash: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/incorporate.html',
+      filename: 'incorporate.html',
+      inject: true,
+      hash: true,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),

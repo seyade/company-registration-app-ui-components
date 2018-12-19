@@ -1,0 +1,94 @@
+<form class="form">
+  <div class="slds-progress slds-progress_vertical">
+    <ol class="form__list slds-progress__list">
+      <li class="form__list-item slds-progress__item slds-is-completed">
+        <span
+          class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+          title="Complete"
+        >
+          <img
+            src="/assets/svg/progress-ring-complete.svg"
+            alt="complete icon"
+            class="icon-image"
+          />
+          <span class="slds-assistive-text">Complete</span>
+        </span>
+        <div
+          class="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          <div class="form-control-group">
+            <label for="">Name of applicant / DIFC entity</label>
+            <input
+              class="form-control"
+              placeholder="Name of company here"
+              type="text"
+            />
+          </div>
+        </div>
+      </li>
+      <li class="form__list-item slds-progress__item slds-is-active">
+        <div class="slds-progress__marker">
+          <span class="slds-assistive-text">Active</span>
+        </div>
+        <div
+          class="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          <div class="form-control-group">
+            <label for="">License number</label>
+            <input
+              class="form-control"
+              placeholder="ex.: 3478-78192"
+              type="text"
+            />
+          </div>
+        </div>
+      </li>
+      <li class="form__list-item slds-progress__item">
+        <div class="slds-progress__marker"></div>
+        <div
+          class="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+        <div class="form-control-group">
+          <label for="">Full name of authorized person/ signatory (who is authorized to make this request)</label>
+          <input
+            class="form-control"
+            placeholder="Name of director who is responsible"
+            type="text"
+          />
+        </div>
+      </li>
+      <li class="form__list-item slds-progress__item">
+        <div class="slds-progress__marker"></div>
+        <div
+          class="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+         <div class="form-control-group">
+            <label for="business-type" class="form-control-label--hidden">Type of business in DIFC</label>
+            <select class="select-box" id="business-type">
+              <option value="">Company type A</option>
+              <option value="">Company type B</option>
+              <option value="">Company type C</option>
+              <option value="">Company type D</option>
+            </select>
+         </div>
+        </div>
+      </li>
+      <li class="form__list-item slds-progress__item">
+        <div class="slds-progress__marker"></div>
+        <div
+          class="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          Step 5
+        </div>
+      </li>
+    </ol>
+    <div
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="25"
+      role="progressbar"
+    >
+      <span class="slds-assistive-text">Progress: 25%</span>
+    </div>
+  </div>
+</form>
