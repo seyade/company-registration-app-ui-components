@@ -1,5 +1,6 @@
 .progress-bar {
   position: relative;
+  z-index: 1000;
 }
 
 .progress-bar__label {
@@ -94,12 +95,14 @@
 .tooltip {
   position: absolute;
   top: 24px;
+
   display: none;
   width: 160px;
 }
 
 .tooltip__tip {
   position: relative;
+  z-index: 1000;
   overflow: hidden;
   text-align: center;
   height: 50px;

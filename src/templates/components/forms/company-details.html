@@ -48,13 +48,16 @@
         <div
           class="slds-progress__item_content slds-grid slds-grid_align-spread"
         >
-        <div class="form-control-group">
-          <label for="">Full name of authorized person/ signatory (who is authorized to make this request)</label>
-          <input
-            class="form-control"
-            placeholder="Name of director who is responsible"
-            type="text"
-          />
+          <div class="form-control-group">
+            <label for="">
+              Size of the applicant’s office in the DIFC (sq metres)
+            </label>
+            <input
+              class="form-control"
+              placeholder="Name of director who is responsible"
+              type="text"
+            />
+          </div>
         </div>
       </li>
       <li class="form__list-item slds-progress__item">
@@ -62,15 +65,9 @@
         <div
           class="slds-progress__item_content slds-grid slds-grid_align-spread"
         >
-         <div class="form-control-group">
-            <label for="business-type" class="form-control-label--hidden">Type of business in DIFC</label>
-            <select class="select-box" id="business-type">
-              <option value="">Company type A</option>
-              <option value="">Company type B</option>
-              <option value="">Company type C</option>
-              <option value="">Company type D</option>
-            </select>
-         </div>
+          <div class="form-control-group">
+            {% include 'components/forms/selectBox.html' %}
+          </div>
         </div>
       </li>
       <li class="form__list-item slds-progress__item">
@@ -78,7 +75,34 @@
         <div
           class="slds-progress__item_content slds-grid slds-grid_align-spread"
         >
-          Step 5
+          <div class="form-control-group">
+            <label for="">
+              Full name of authorized person / signatory (who is authorized to
+              make this request)
+            </label>
+            <input
+              class="form-control"
+              placeholder="Name of director who is responsible"
+              type="text"
+            />
+          </div>
+        </div>
+      </li>
+      <li class="form__list-item slds-progress__item">
+        <div class="slds-progress__marker"></div>
+        <div
+          class="slds-progress__item_content slds-grid slds-grid_align-spread"
+        >
+          <div class="form-control-group">
+            <label for="">
+              Number of staff employed by the applicant (under DIFC visas)
+            </label>
+            <input
+              class="form-control"
+              placeholder="Name of director who is responsible"
+              type="text"
+            />
+          </div>
         </div>
       </li>
     </ol>
@@ -90,5 +114,9 @@
     >
       <span class="slds-assistive-text">Progress: 25%</span>
     </div>
+  </div>
+
+  <div class="button-group button-group--right">
+    <button class="button button--primary">Confrim Details</button>
   </div>
 </form>
