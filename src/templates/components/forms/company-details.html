@@ -66,15 +66,7 @@
           class="slds-progress__item_content slds-grid slds-grid_align-spread"
         >
           <div class="form-control-group">
-            <label for="business-type" class="form-control-label--hidden">
-              Type of business in DIFC
-            </label>
-            <select class="select-box" id="business-type">
-              <option value="">Company type A</option>
-              <option value="">Company type B</option>
-              <option value="">Company type C</option>
-              <option value="">Company type D</option>
-            </select>
+            {% include 'components/forms/selectBox.html' %}
           </div>
         </div>
       </li>
@@ -85,7 +77,7 @@
         >
           <div class="form-control-group">
             <label for="">
-              Full name of authorized person/ signatory (who is authorized to
+              Full name of authorized person / signatory (who is authorized to
               make this request)
             </label>
             <input
@@ -103,7 +95,7 @@
         >
           <div class="form-control-group">
             <label for="">
-              Number of staff employed by the applicant (under DIFC visas
+              Number of staff employed by the applicant (under DIFC visas)
             </label>
             <input
               class="form-control"
