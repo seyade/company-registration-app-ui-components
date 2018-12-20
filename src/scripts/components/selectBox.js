@@ -1,3 +1,5 @@
+import * as utils from '../utils';
+
 /**
  * SelectBox component
  * @description styled select dropdown to replace native HTML select.
@@ -5,7 +7,7 @@
 class SelectBox {
   constructor() {
     /**
-     * selectBoxes
+     * selectBoxes array
      * @type {Element}
      */
     this.selectBoxes;
@@ -29,6 +31,12 @@ class SelectBox {
     this.pseudoList;
 
     /**
+     * pseudoOptions
+     * @type {Element}
+     */
+    this.pseudoOptions;
+
+    /**
      * selectBoxWrap
      * @type {Element}
      */
@@ -48,6 +56,11 @@ class SelectBox {
     this._renderSelectBox();
   }
 
+  /**
+   * _renderSelectBox
+   * @method
+   * @private
+   */
   _renderSelectBox() {
     this.selectBoxes = document.querySelectorAll('.select-box');
 
@@ -81,30 +94,46 @@ class SelectBox {
       this.selectBoxWrap.appendChild(this.pseudoSelect);
       this.selectBoxWrap.appendChild(this.pseudoList);
 
-      this.marker = parentItem.parentElement.previousElementSibling;
-
       parentItem.appendChild(this.selectBoxWrap);
+
+      this.pseudoOptions = document.querySelectorAll('.pseudo-select__option');
 
       // interaction
       this._addEvents();
     }, this);
   }
 
+  /**
+   * _addPseudoOptions
+   * @method
+   * @private
+   */
   _addPseudoOptions(newList, initialOptions) {
     initialOptions.forEach((option, i) => {
-      const optionItem = document.createElement('li');
+      let newOptionItem = document.createElement('li');
 
-      optionItem.className = 'pseudo-select__option';
-      optionItem.innerText = option.innerText;
+      newOptionItem.className = 'pseudo-select__option';
+      newOptionItem.innerText = option.innerText;
 
-      newList.appendChild(optionItem);
+      newList.appendChild(newOptionItem);
     });
   }
 
+  /**
+   * _addEvents
+   * @method
+   * @private
+   */
   _addEvents() {
     this.pseudoSelect.addEventListener('click', event => {
       const thisPseudoSelect = event.currentTarget;
       const thisPseudoList = thisPseudoSelect.nextElementSibling;
+      const listItemContent = utils.findParent(
+        thisPseudoSelect,
+        'slds-progress__item_content'
+      );
+
+      this.marker = listItemContent.previousElementSibling;
 
       if (
         !thisPseudoList.classList.contains(SelectBox.CLASSES.pseudoListHidden)
@@ -118,6 +147,12 @@ class SelectBox {
         this.selectBoxWrap.classList.add('select-box-wrap--expanded');
       }
     });
+
+    for (const pseudoOtion of this.pseudoOptions) {
+      pseudoOtion.addEventListener('click', event => {
+        console.log(event.currentTarget.innerText);
+      });
+    }
   }
 }
 
