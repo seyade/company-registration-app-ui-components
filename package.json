@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "node_modules/.bin/webpack --mode development --watch & node_modules/.bin/webpack-dev-server --mode development --open --hot",
     "serve:prod": "node_modules/webpack/.bin/webpack --mode production",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "uikit": "^3.0.0-rc.22"
   },
   "devDependencies": {
+    "@storybook/html": "^4.1.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
