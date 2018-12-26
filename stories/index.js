@@ -1,13 +1,24 @@
 import { storiesOf } from '@storybook/html';
 import '../dist/main.css';
 
+storiesOf('DIFC Components/Avatar', module).add(
+  'Avatar',
+  () => `
+  <img 
+    src="/assets/svg/avatar-placeholder.svg" 
+    alt="avatar image" 
+    class="main-navigation__user-avatar-image icon-image" 
+  />
+  `
+);
+
 storiesOf('DIFC Components/Buttons', module)
   .add(
     'Default',
     () => `
-      <div class="button-group">
-        <button class="button button--default">Default</button>
-      </div>
+    <div class="button-group">
+      <button class="button button--default">Default</button>
+    </div>
     `
   )
   .add(
@@ -19,17 +30,89 @@ storiesOf('DIFC Components/Buttons', module)
     `
   )
   .add(
+    'Destructive',
+    () => `
+    <div class="button-group">
+      <button class="button button--destructive">Destructive</button>
+    </div>
+    `
+  )
+  .add(
+    'Disabled',
+    () => `
+    <div class="button-group">
+      <button class="button button--disabled" disabled>Disabled</button>
+    </div>
+    `
+  )
+  .add(
+    'Upload',
+    () => `
+    <div class="button-group">
+      <button class="button button--upload">
+        <img
+          src="/assets/svg/plus.svg"
+          alt=""
+        />
+        <span>Upload</span>
+      </button>
+    </div>
+    `
+  )
+  .add(
+    'Upload disabled',
+    () => `
+    <div class="button-group">
+      <button class="button button--upload-disabled" disabled>
+        <img
+          src="/assets/svg/plus.svg"
+          alt=""
+        />
+        <span>Upload</span>
+      </button>
+    </div>
+    `
+  )
+  .add(
+    'Not selected',
+    () => `
+    <div class="button-group">
+      <button class="button button--not-selected">
+        <img
+          src="/assets/svg/plus-blue.svg"
+          alt=""
+        />
+        <span>Follow</span>
+      </button>
+    </div>
+    `
+  )
+  .add(
+    'Selected',
+    () => `
+    <div class="button-group">
+      <button class="button button--selected">
+        <img
+          src="/assets/svg/tick-blue.svg"
+          alt=""
+        />
+        <span>Following</span>
+      </button>
+    </div>
+    `
+  )
+  .add(
     'Toggle',
     () => `
     <div class="button-group">
-    <button class="button button--toggle">
-      <span class="button__text">View details</span>
-      <img
-        class="button__icon--arrow"
-        src="/assets/svg/arrow-line-right-dark.svg"
-        alt=""
-      />
-    </button>
+      <button class="button button--toggle">
+        <span class="button__text">View details</span>
+        <img
+          class="button__icon--arrow"
+          src="/assets/svg/arrow-line-right-dark.svg"
+          alt=""
+        />
+      </button>
     </div>
     `
   );
@@ -165,4 +248,70 @@ storiesOf('DIFC Components/Progress Indicators', module)
       </div>
     </div>
   `
+  );
+
+storiesOf('DIFC Components/Breadcrumbs', module)
+  .add(
+    'Breadcrumb',
+    () => `
+      <div class="demo-only" style="height: 150px;padding: 16px;">
+        <!-- below is the real component -->
+        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumbs">
+          <ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+            <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Parent Name</a></li>
+            <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Child Name</a></li>
+          </ol>
+        </nav>
+      </div>
+      `
+  )
+  .add(
+    'Breadcrumb overflow',
+    () => `
+    <div class="demo-only" style="height: 150px;">
+      <nav class="breadcrumb" role="navigation" aria-label="Breadcrumbs">
+        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center">
+          <li class="slds-breadcrumb__item">
+          <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+            <button class="button button--breadcrumb slds-button" aria-haspopup="true" title="Show More">
+              <span>...</span>
+              <span class="slds-assistive-text">Show More</span>
+            </button>
+            <div class="slds-dropdown slds-dropdown_left slds-dropdown_actions">
+              <ul class="slds-dropdown__list" role="menu">
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                    <span class="slds-truncate" title="Menu Item One">
+                      Menu Item One
+                    </span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Menu Item Two">
+                      Menu Item Two
+                    </span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Menu Item Three">
+                      Menu Item Three
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </li>
+          <li class="slds-breadcrumb__item slds-text-title_caps">
+            <a href="javascript:void(0);">Parent Name</a>
+          </li>
+          <li class="slds-breadcrumb__item slds-text-title_caps">
+            <a href="javascript:void(0);">Child Name</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+      `
   );

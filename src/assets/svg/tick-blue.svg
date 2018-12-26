@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Components-/Button/Stateful---Selected" transform="translate(-16.000000, -11.000000)" fill="#0076CF">
+            <g id="Button-Staeful---Selected">
+                <g id="Button-Stateful-Copy">
+                    <g id="Button-Stateful-">
+                        <path d="M16.1218962,15.2392777 C15.9593679,15.0767494 15.9593679,14.8058691 16.1218962,14.6433409 L16.6636569,14.1015801 C16.8261851,13.9390519 17.0970655,13.9390519 17.2054176,14.1015801 L20.3476298,17.2437923 C20.4018059,17.3521445 20.6185102,17.3521445 20.6726862,17.2437923 L26.7945824,11.1218962 C26.9029345,10.9593679 27.1738149,10.9593679 27.3363431,11.1218962 L27.8781038,11.6636569 C28.0406321,11.8261851 28.0406321,12.0428894 27.8781038,12.2054176 L20.7810384,19.3566591 C20.6726862,19.5191874 20.4018059,19.5191874 20.2392777,19.3566591 L16.1218962,15.2392777 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
