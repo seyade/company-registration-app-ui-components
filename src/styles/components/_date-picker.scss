@@ -1,0 +1,17 @@
+.date-picker {
+  .form-element__label {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 8px;
+    padding-right: 12px;
+
+    img {
+      max-width: auto;
+    }
+  }
+
+  .slds-dropdown {
+    top: 80%;
+  }
+}

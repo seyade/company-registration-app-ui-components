@@ -1,0 +1,16 @@
+.pw-accordion {
+  .slds-accordion__summary-heading {
+    position: relative;
+
+    .pw-icon {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .slds-is-open {
+    .pw-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -39,34 +39,34 @@
     border-radius: 2px;
   }
 
-  .slds-progress_vertical &__list-item {
-    &:nth-child(1) {
-      position: relative;
+  // .slds-progress_vertical &__list-item {
+  //   &:nth-child(1) {
+  //     position: relative;
 
-      &::before {
-        position: absolute;
-        display: block;
-        top: 0;
-        bottom: auto;
-        left: 7px;
-        z-index: 10000;
-        width: 2px;
-        height: 30px;
-        content: '';
-        background-color: $brandPrimaryColor;
-      }
-    }
-  }
+  //     &::before {
+  //       position: absolute;
+  //       display: block;
+  //       top: 0;
+  //       bottom: auto;
+  //       left: 7px;
+  //       z-index: 10000;
+  //       width: 2px;
+  //       height: 30px;
+  //       content: '';
+  //       background-color: $brandPrimaryColor;
+  //     }
+  //   }
+  // }
 
-  // salesforce override
-  .slds-progress_vertical .slds-progress__item:after,
-  .slds-progress_vertical .slds-progress__item:before {
-    left: 8px;
-  }
+  // // salesforce override
+  // .slds-progress_vertical .slds-progress__item:after,
+  // .slds-progress_vertical .slds-progress__item:before {
+  //   left: 8px;
+  // }
 
-  .slds-progress__marker {
-    margin-left: 1px;
-  }
+  // .slds-progress__marker {
+  //   margin-left: 1px;
+  // }
 }
 
 .form-card__title {

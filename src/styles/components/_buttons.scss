@@ -4,7 +4,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-evenly;
-  min-width: 150px;
+  min-width: 120px;
   padding: 8px;
   margin-right: 16px;
   font-size: 14px;
@@ -12,12 +12,6 @@
   border: none;
   transition: all 200ms ease-in-out;
   text-align: center;
-
-  &:hover {
-    color: #373737;
-    transform: scaleX(1.03);
-    text-decoration: none;
-  }
 
   &:last-child {
     margin-right: 0;
@@ -37,18 +31,99 @@
   }
 
   &--default {
-    border: 1px solid #171717;
+    color: #002f6c;
+    border: 1px solid #002f6c;
+    background-color: #fff;
+
+    &:hover {
+      color: #002f6c;
+      border: 1px solid #002f6c;
+      background-color: #f3f2f2;
+    }
+
+    &:focus {
+      color: #2b2826;
+      border: 1px solid #2b2826;
+      background-color: #fff;
+    }
   }
 
   &--primary {
     color: #fff;
-    border: 1px solid #171717;
-    background-color: #171717;
+    border: 1px solid #0076cf;
+    background-color: #0076cf;
 
     &:hover {
       color: #fff;
-      background-color: #373737;
+      border: 1px solid #002f6c;
+      background-color: #002f6c;
     }
+  }
+
+  &--disabled {
+    color: #dddbda;
+    border: 1px solid #dddbda;
+    background-color: #fff;
+    cursor: not-allowed;
+    outline: none;
+  }
+
+  &--destructive {
+    color: #fff;
+    border: 1px solid #c23934;
+    background-color: #c23934;
+  }
+
+  &--upload {
+    justify-content: center;
+    color: #fff;
+    border: 1px solid #0076cf;
+    border-radius: 2px;
+    background-color: #0076cf;
+
+    &:hover {
+      color: #fff;
+      border: 1px solid #002f6c;
+      background-color: #002f6c;
+    }
+
+    img {
+      position: absolute;
+      left: 16px;
+    }
+  }
+
+  &--upload-disabled {
+    color: #fff;
+    border-radius: 2px;
+    background-color: #dddbda;
+    cursor: not-allowed;
+
+    img {
+      position: absolute;
+      left: 16px;
+    }
+  }
+
+  &--selected {
+    color: #0076cf;
+    border: 1px solid #0076cf;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  &--not-selected {
+    color: #0076cf;
+    border: 1px solid #dddbda;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  &--breadcrumb {
+    min-width: auto;
+    margin-right: 4px;
+    padding: 0;
+    color: #0076cf;
   }
 
   &--close {

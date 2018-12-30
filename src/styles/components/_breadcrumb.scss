@@ -1,0 +1,13 @@
+.breadcrumb {
+  .slds-breadcrumb__item {
+    &::before {
+      color: #0076cf;
+    }
+
+    > a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
