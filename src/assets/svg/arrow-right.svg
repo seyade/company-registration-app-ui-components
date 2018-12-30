@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Utility Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.30769231,13.7376745 L4.30769231,2.84536682 C4.30769231,2.53767451 4.70769231,2.32228989 4.98461538,2.56844374 L11.5076923,7.89152066 C11.7538462,8.07613605 11.7538462,8.47613605 11.5076923,8.66075143 L4.98461538,14.0453668 C4.70769231,14.2607514 4.30769231,14.076136 4.30769231,13.7376745 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Components-/-Datepicker-/-z-embedded-/-calendar" transform="translate(-184.000000, -22.000000)">
+            <g id="Month" transform="translate(15.000000, 20.000000)">
+                <g id="Icons-/-Utility-Icon" transform="translate(165.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                    <g id="Icons-/-z-embedded-/-icon-glyphs-/-utility-/right">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <g id="z-embedded-/-Color-Tokens-/-PALETTE_GRAY_9" mask="url(#mask-2)" fill="#706E6B" fill-rule="evenodd">
+                            <polygon id="Rectangle" points="0 0 16 0 16 16 0 16"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
