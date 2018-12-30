@@ -103,6 +103,16 @@ storiesOf('DIFC Components/Buttons', module)
     `
   );
 
+storiesOf('DIFC Components/Cards', module)
+  .add('Card Base', () => ``)
+  .add('Card Base With Content', () => ``)
+  .add('Card Guide', () => ``)
+  .add('Card Next Stepw', () => ``)
+  .add('Card Marketing', () => ``)
+  .add('Card Pathway', () => ``)
+  .add('Card With Header and Button', () => ``)
+  .add('Card With Realted List', () => ``);
+
 storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Base',
