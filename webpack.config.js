@@ -28,6 +28,11 @@ module.exports = {
         ],
       },
       {
+        test: /\.stories\.(js|jsx)$/,
+        loader: [require.resolve('@storybook/addon-storysource/loader')],
+        enforce: 'pre',
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
