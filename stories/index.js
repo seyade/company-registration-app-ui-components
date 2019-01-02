@@ -104,14 +104,360 @@ storiesOf('DIFC Components/Buttons', module)
   );
 
 storiesOf('DIFC Components/Cards', module)
-  .add('Card Base', () => ``)
-  .add('Card Base With Content', () => ``)
-  .add('Card Guide', () => ``)
-  .add('Card Next Stepw', () => ``)
-  .add('Card Marketing', () => ``)
-  .add('Card Pathway', () => ``)
-  .add('Card With Header and Button', () => ``)
-  .add('Card With Realted List', () => ``);
+  .add(
+    'Card Base',
+    () => `
+    <div class="card" style="min-height:100px;width:400px;margin-left:16px">
+      
+    </div>
+  `
+  )
+  .add(
+    'Card Base With Content',
+    () => `
+    <div class="card" style="min-height:100px;width:320px;margin-left:16px">
+      <div class="card__content card__content--padding-med">
+        <span class="card__title">Card heading herer and also on this second line if needed...</span>
+        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
+          sapiente eius eum commodi
+          illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
+          molestiae!
+        </p>
+
+        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
+          sapiente eius eum commodi
+          illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
+          molestiae!
+        </p>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card Guide',
+    () => `
+    <div 
+      class="card card--light-blue"
+      style="min-height:100px;width:320px;margin-left:16px"
+    >
+      <div class="card__header">
+        <span class="card__header-title">
+          Pathway Guide
+        </span>
+        <span class="card__header-subtitle">
+          Section One: Prepare company documents
+        </span>
+      </div>
+      <div class="card__content card__content--padding-med">
+        <p class="card__paragraph">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
+          sapiente eius eum commodi
+          illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
+          molestiae!
+        </p>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card Next Steps',
+    () => `
+    <div
+      class="card card--very-light-blue card--next-steps"
+      style="min-height:100px;width:456px;margin-left:16px"
+    >
+      <div class="card__content">
+        <span class="card__title">Next Steps</span>
+        <p class="card__subtitle">Sed do eiusm Company Profile. Here are your next 3 steps</p>
+        <ul class="next-steps__list">
+          <li class="next-steps__item">
+            <a class="next-steps__item-link" href="#">
+              <span class="next-steps__item-description">
+                Create your busniess structure
+              </span>
+              <span class="next-steps__item-info">4 questions</span>
+            </a>
+          </li>
+          <li class="next-steps__item">
+            <a class="next-steps__item-link" href="#">
+              <span class="next-steps__item-description">
+                Reserve your company name
+              </span>
+              <span class="next-steps__item-info">10 minutes</span>
+            </a>
+          </li>
+          <li class="next-steps__item">
+            <a class="next-steps__item-link" href="#">
+              <span class="next-steps__item-description">
+                Fill in company details
+              </span>
+              <span class="next-steps__item-info">12 questions</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card__action">
+        <div class="button-group button-group--right">
+          <a class="button button--default">Continue</a>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card Marketing',
+    () => `
+    <div
+      class="card card--marketing"
+      style="width:1140px;margin-left:16px;margin-right:16px"
+    >
+      <button class="button button--close">
+        <span class="button__text button__text--hidden">Close</span>
+        <img
+          class="button__icon--close icon-image"
+          src="/assets/svg/close-dark.svg"
+          alt="cross"
+        />
+      </button>
+
+      <div class="card__content card__content--padding-med">
+        <h2 class="card__title">Marketing service information here </h2>
+        <div class="card__content-section">
+          <p class="card__paragraph">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
+          </p>
+          <div class="card__action">
+            <a href="" class="button button--primary">Call to action here</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card Marketing without button',
+    () => `
+    <div
+      class="card card--marketing"
+      style="width:1140px;margin-left:16px;margin-right:16px"
+    >
+      <button class="button button--close">
+        <span class="button__text button__text--hidden">Close</span>
+        <img
+          class="button__icon--close icon-image"
+          src="/assets/svg/close-dark.svg"
+          alt="cross"
+        />
+      </button>
+
+      <div class="card__content card__content--padding-med">
+        <h2 class="card__title">Marketing service information here </h2>
+        <div class="card__content-section">
+          <p class="card__paragraph">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
+          </p>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card Pathway',
+    () => `
+    <div
+      class="card card--pathway"
+      style="margin-left:16px;margin-right:16px"
+    >
+      <div class="card__content card__content--padding-med">
+        <div class="card__content--head">
+          <h2 class="card__title">
+            Heading of section here and here but only on one...
+          </h2>
+          <span>2 mins</span>
+        </div>
+        <div class="card__content--body">
+          <p class="card__paragraph">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
+          </p>
+        </div>
+
+        <div class="card__action card__action--spread">
+          <button class="button button--toggle">
+            Show details
+            <img
+              class="pw-icon"
+              src="/assets/svg/arrow-down.svg"
+            />
+          </button>
+          <a href="#" class="button button--primary">Start Path</a>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card With Header and Button',
+    () => `
+    <div
+      class="card"
+      style="width:320px;margin-left:16px;margin-right:16px"
+    >
+      <div class="card__content card__content--padding-med">
+        <span class="card__title">
+          <img
+            class="pw-icon"
+            src="/assets/svg/contact.svg"
+          />
+          <span class="card__title-text">Contact details</span>
+          <button 
+            class="button button--tertiary"
+            style="min-width:64px;position:absolute;right:0;"
+          >
+            New
+          </button>
+        </span>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Card With Related List',
+    () => `
+    <div
+      class="card"
+      style="width:320px;margin-left:16px;margin-right:16px"
+    >
+      <div class="card__content">
+        <span class="card__title">
+          <img
+            class="pw-icon"
+            src="/assets/svg/contact.svg"
+          />
+          <span class="card__title-text">
+            Contacts
+            (<span class="">3</span>)
+          </span>
+          <button 
+            class="button button--tertiary"
+            style="min-width:64px;position:absolute;right:0;"
+          >
+            New
+          </button>
+        </span>
+        <div class="pw-accordion">
+          <ul>
+            <li class="slds-accordion__list-item">
+              <section class="slds-accordion__section slds-is-open">
+                <div class="slds-accordion__summary">
+                  <h3 class="slds-accordion__summary-heading">
+                    <button
+                      aria-controls="accordion-details-01"
+                      aria-expanded="true"
+                      class="slds-button slds-button_reset slds-accordion__summary-action"
+                    >
+                      <img src="/assets/svg/contact-light.svg" />
+                      <span class="pw-accordion__title slds-truncate">
+                        Related Record Title 2
+                      </span>
+                      <img
+                        class="pw-icon"
+                        src="/assets/svg/arrow-down.svg"
+                      />
+                    </button>
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="false"
+                  class="slds-accordion__content"
+                  id="accordion-details-01"
+                >
+                  <dl>
+                    <dt>Label:</dt>
+                      <dd>Description for first label</dd>
+                    <dt>Label 2:</dt>
+                      <dd>Description for second label</dd>
+                  </dl>
+                </div>
+              </section>
+            </li>
+            <li class="slds-accordion__list-item">
+              <section class="slds-accordion__section slds-is-open">
+                <div class="slds-accordion__summary">
+                  <h3 class="slds-accordion__summary-heading">
+                    <button
+                      aria-controls="accordion-details-01"
+                      aria-expanded="true"
+                      class="slds-button slds-button_reset slds-accordion__summary-action"
+                    >
+                      <img src="/assets/svg/contact-light.svg" />
+                      <span class="pw-accordion__title slds-truncate">
+                        Related Record Title 2
+                      </span>
+                      <img
+                        class="pw-icon"
+                        src="/assets/svg/arrow-down.svg"
+                      />
+                    </button>
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="false"
+                  class="slds-accordion__content"
+                  id="accordion-details-01"
+                >
+                  <dl>
+                    <dt>Label:</dt>
+                      <dd>Description for first label</dd>
+                    <dt>Label 2:</dt>
+                      <dd>Description for second label</dd>
+                  </dl>
+                </div>
+              </section>
+            </li>
+            <li class="slds-accordion__list-item">
+              <section class="slds-accordion__section slds-is-open">
+                <div class="slds-accordion__summary">
+                  <h3 class="slds-accordion__summary-heading">
+                    <button
+                      aria-controls="accordion-details-01"
+                      aria-expanded="true"
+                      class="slds-button slds-button_reset slds-accordion__summary-action"
+                    >
+                      <img src="/assets/svg/contact-light.svg" />
+                      <span class="pw-accordion__title slds-truncate">
+                        Related Record Title 2
+                      </span>
+                      <img
+                        class="pw-icon"
+                        src="/assets/svg/arrow-down.svg"
+                      />
+                    </button>
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="false"
+                  class="slds-accordion__content"
+                  id="accordion-details-01"
+                >
+                  <dl>
+                    <dt>Label:</dt>
+                      <dd>Description for first label</dd>
+                    <dt>Label 2:</dt>
+                      <dd>Description for second label</dd>
+                  </dl>
+                </div>
+              </section>
+            </li>
+          </ul>
+        </div>
+        <div class="card__action">
+          <button class="pw-accordion__button button button--default">See more</button>
+        </div>
+      </div>
+    </div>
+  `
+  );
 
 storiesOf('DIFC Components/Progress Indicators', module)
   .add(
