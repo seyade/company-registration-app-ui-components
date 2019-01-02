@@ -3,54 +3,234 @@
   background-color: #fff;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
 
-  &__title {
-    padding-bottom: 16px;
-    color: #171717;
+  // &__title {
+  //   padding-bottom: 16px;
+  //   color: #171717;
 
-    &--level-2 {
-      font-size: 36px;
-      font-weight: 600;
+  //   &--level-2 {
+  //     font-size: 36px;
+  //     font-weight: 600;
+  //   }
+
+  //   &--level-3 {
+  //     font-size: 18px;
+  //     font-weight: 600;
+  //   }
+  // }
+
+  // &__paragraph {
+  //   font-size: 14px;
+  //   line-height: 1.4;
+  //   padding-bottom: 16px;
+  // }
+
+  // &--grey {
+  //   background-color: #f5f5f5;
+  // }
+
+  // &--hidden {
+  //   animation: slideUp 700ms 300ms forwards cubic-bezier(0.23, 1, 0.32, 1);
+
+  //   .card__content {
+  //     animation: fadeOut 300ms ease-out forwards;
+  //   }
+  // }
+
+  // &--disabled {
+  //   > * {
+  //     opacity: 0.6;
+
+  //     &::before,
+  //     &::after {
+  //       opacity: 0.6;
+  //     }
+  //   }
+
+  //   .button {
+  //     &--primary {
+  //       cursor: not-allowed;
+  //       pointer-events: none;
+  //     }
+  //   }
+  // }
+
+  &__header {
+    padding: 28px 28px 52px;
+    color: #fff;
+    background-color: #0076cf;
+
+    &-title {
+      display: block;
+      font-size: 20px;
     }
 
-    &--level-3 {
-      font-size: 18px;
-      font-weight: 600;
+    &-subtitle {
+      display: block;
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    padding: 16px;
+
+    &--padding-med {
+      padding: 28px;
+    }
+
+    &--padding-lrg {
+      padding: 64px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    // display: block;
+    font-size: 16px;
+
+    &-text {
+      padding-left: 10px;
+    }
+
+    & + .card__paragraph {
+      padding-top: 32px;
+    }
+
+    & + .card__subtitle {
+      padding: 16px 0 32px;
     }
   }
 
   &__paragraph {
+    padding-bottom: 16px;
     font-size: 14px;
     line-height: 1.4;
-    padding-bottom: 16px;
   }
 
-  &--grey {
-    background-color: #f5f5f5;
-  }
+  &__action {
+    display: flex;
 
-  &--hidden {
-    animation: slideUp 700ms 300ms forwards cubic-bezier(0.23, 1, 0.32, 1);
-
-    .card__content {
-      animation: fadeOut 300ms ease-out forwards;
+    &--spread {
+      justify-content: space-between;
     }
   }
 
-  &--disabled {
-    > * {
-      opacity: 0.6;
+  &--light-blue {
+    background-color: #f4f6fa;
+  }
 
-      &::before,
-      &::after {
-        opacity: 0.6;
-      }
+  &--very-light-blue {
+    background-color: #f2f8fc;
+  }
+
+  &--next-steps {
+    .card__title {
+      color: #0076cf;
     }
-
     .button {
-      &--primary {
-        cursor: not-allowed;
-        pointer-events: none;
+      background-color: transparent;
+    }
+  }
+
+  &--marketing {
+    position: relative;
+    min-height: 258px;
+
+    .button--close {
+      position: absolute;
+      top: 16px;
+      right: 0;
+    }
+
+    .card__content-section {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card__paragraph {
+      flex: 0 0 50%;
+    }
+
+    .card__title {
+      padding-bottom: 128px;
+      color: #0076cf;
+      font-size: 36px;
+    }
+  }
+
+  &--pathway {
+    .card__content {
+      padding-right: 16px;
+      padding-left: 16px;
+
+      @include screen-medium {
+        padding-right: 48px;
+        padding-left: 256px;
       }
     }
+  }
+
+  &__content--head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eaeaea;
+
+    .card__title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  // Accordion inside card
+  .pw-accordion {
+    margin-top: 28px;
+    padding-bottom: 16px;
+
+    .slds-accordion__list-item {
+      border: 0;
+    }
+  }
+
+  .slds-is-open > .slds-accordion__summary {
+    margin-bottom: 0;
+  }
+
+  .slds-accordion__section {
+    padding: 0;
+
+    .pw-accordion__title {
+      padding-left: 10px;
+      font-size: 12px;
+      color: #0076cf;
+    }
+  }
+
+  dl {
+    padding-left: 34px;
+    font-size: 12px;
+
+    dt {
+      width: 30%;
+      float: left;
+      clear: left;
+    }
+
+    dd {
+      width: 70%;
+      margin-bottom: 4px;
+      float: left;
+    }
+
+    &::after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+  }
+
+  .pw-accordion__button {
+    width: 100%;
   }
 }
