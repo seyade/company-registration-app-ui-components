@@ -1,0 +1,19 @@
+.data-table {
+  thead {
+    .slds-icon_container {
+      margin-left: 8px;
+    }
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  td {
+    font-weight: 600;
+
+    a {
+      color: #0076cf;
+    }
+  }
+}
