@@ -1,0 +1,133 @@
+.global-navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  color: #fff;
+  background-color: #002f6c;
+
+  @include screen-medium() {
+    min-height: 112px;
+  }
+
+  &__title {
+    flex: 0 0 25%;
+    padding-left: 56px;
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  &__title-text {
+    padding-left: 16px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 75%;
+    height: 100%;
+    padding-right: 56px;
+    font-size: 16px;
+
+    &-col {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+
+    &--private {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: 0;
+
+    &--search,
+    &--icon {
+      margin-right: 62px;
+    }
+  }
+
+  &__link {
+    margin-right: 64px;
+    color: #fff;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      color: #59cbe8;
+      text-decoration: none;
+      transform: scale(0.8);
+    }
+  }
+
+  &__user {
+    &-link {
+      margin-right: 0;
+    }
+
+    &-name {
+      margin-right: 8px;
+    }
+  }
+
+  &__search-bar {
+    display: none; // use in JS interaction
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #0076cf;
+
+    .global-navigation--expanded & {
+      display: block;
+    }
+
+    &-action {
+      display: flex;
+      justify-content: space-between;
+      padding: 32px 32px 0 0;
+
+      @include screen-medium() {
+        padding-left: 198px;
+      }
+    }
+
+    &-field {
+      width: 100%;
+      margin: 0 32px 0 96px;
+      font-size: 24px;
+      color: #fff;
+      border: 0;
+      background-color: #0076cf;
+
+      &::placeholder {
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &-results {
+      @include screen-medium() {
+        padding-top: 16px;
+        padding-left: 314px;
+      }
+
+      li {
+        padding-bottom: 8px;
+      }
+
+      a {
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
+}
