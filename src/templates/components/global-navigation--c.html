@@ -1,4 +1,4 @@
-<div class="global-navigation global-navigation--expanded">
+<div class="global-navigation">
   <h1 class="global-navigation__title">
     <img
       class="global-navigation__title-icon"
@@ -66,7 +66,25 @@
           class="global-navigation__button-image icon-image"
         />
       </button>
+      <button
+        class="global-navigation__button global-navigation__button--hidden global-navigation__button--menu-close"
+      >
+        <img
+          src="/assets/svg/cross-line.svg"
+          alt="notification bell"
+          class="global-navigation__button-image icon-image"
+        />
+      </button>
     </div>
+  </div>
+
+  <div class="global-navigation__menu global-navigation__menu--hidden">
+    <ul class="global-navigation__menu-list">
+      <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+      <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+      <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+      <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+    </ul>
   </div>
 
   <div class="global-navigation__search-bar">
@@ -77,11 +95,13 @@
         class="search-bar__icon-image icon-image"
       />
       <input
-        class="global-navigation__search-bar-field"
+        class="global-navigation__search-bar-input"
         placeholder="Search item here with csv, for data entry"
         type="text"
       />
-      <button class="global-navigation__button">
+      <button
+        class="global-navigation__button global-navigation__button--search-close"
+      >
         <img
           src="/assets/svg/cross-line.svg"
           alt="search icon"
@@ -96,6 +116,15 @@
         </li>
         <li class="global-navigation__search-bar-results-link">
           <a href="#">Search you are looking for here</a>
+        </li>
+        <li class="global-navigation__search-bar-results-link">
+          <a href="#">Search item article here</a>
+        </li>
+        <li class="global-navigation__search-bar-results-link">
+          <a href="#">Search you are looking for here</a>
+        </li>
+        <li class="global-navigation__search-bar-results-link">
+          <a href="#">Search item article here</a>
         </li>
       </ul>
     </div>

@@ -1,3 +1,4 @@
+import GlobalNavigation from './global-navigation';
 import SelectBox from './selectBox';
 import SearchBar from './searchBar';
 
@@ -43,6 +44,10 @@ class App {
 
     this._toggle();
     this._closePanel();
+
+    // global navigation
+    const globalNavigation = new GlobalNavigation();
+    globalNavigation.init();
 
     // seacrhbar
     const searcheBar = new SearchBar();

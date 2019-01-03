@@ -582,7 +582,7 @@ storiesOf('DIFC Components/Global Navigation', module)
   `
   )
   .add(
-    'Logged In Expanded',
+    'Logged In Expanded with Search Bar',
     () => `
     <div class="global-navigation global-navigation--expanded" style="height: 160px">
       <h1 class="global-navigation__title">
@@ -664,11 +664,13 @@ storiesOf('DIFC Components/Global Navigation', module)
             class="search-bar__icon-image icon-image"
           />
           <input
-            class="global-navigation__search-bar-field"
+            class="global-navigation__search-bar-input"
             placeholder="Search item here with csv, for data entry"
             type="text"
           />
-          <button class="global-navigation__button">
+          <button 
+            class="global-navigation__button global-navigation__button--search-close"
+          >
             <img
               src="/assets/svg/cross-line.svg"
               alt="search icon"
