@@ -1,6 +1,10 @@
 .progress-bar {
   position: relative;
   z-index: 1000;
+
+  .slds-progress-bar__value {
+    background-color: #0076cf;
+  }
 }
 
 .progress-bar__label {
