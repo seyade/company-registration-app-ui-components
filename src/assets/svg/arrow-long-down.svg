@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>arrowdown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Components-/Data-Table/Data-Table---Striped-Rows" transform="translate(-96.000000, -8.000000)" fill="#706E6B">
+            <g id="Data-Table---Striped-Rows">
+                <g id="Columns">
+                    <g id="arrowdown" transform="translate(96.000000, 8.000000)">
+                        <path d="M0.15,7 C-0.05,7.2 -0.05,7.475 0.15,7.675 L3.9,11.35 C4.1,11.55 4.4,11.55 4.6,11.35 L8.375,7.675 C8.575,7.475 8.575,7.2 8.375,7 L7.675,6.325 C7.475,6.125 7.175,6.125 6.975,6.325 L5.8,7.475 C5.6,7.675 5.25,7.55 5.25,7.25 L5.25,0.5 C5.25,0.25 5.025,0 4.75,0 L3.75,0 C3.475,0 3.25,0.275 3.25,0.5 L3.25,7.25 C3.25,7.55 2.9,7.675 2.7,7.475 L1.525,6.325 C1.325,6.125 1.025,6.125 0.825,6.325 L0.15,7 L0.15,7 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
