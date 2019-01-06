@@ -1,7 +1,29 @@
 .ui-popover {
   .slds-popover {
+    min-width: 384px;
+    border: 0;
+    border-radius: 0;
+
+    &_walkthrough {
+      background-color: #002f6c;
+    }
+
+    .slds-popover__header {
+      border: 0;
+    }
+
+    &_warning .slds-popover__header {
+      border-radius: 0;
+    }
+
     &_error .slds-popover__header {
+      border-radius: 0;
       background-color: #fc4c02;
     }
+  }
+
+  .slds-button {
+    line-height: inherit;
+    border-radius: 0;
   }
 }
