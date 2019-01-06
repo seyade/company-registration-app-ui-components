@@ -1,21 +1,29 @@
 .global-navigation {
   position: relative;
-  display: flex;
-  align-items: center;
   flex-wrap: wrap;
   min-height: 80px;
   color: #fff;
   background-color: #002f6c;
 
   @include screen-medium() {
-    min-height: 112px;
+    min-height: 94px;
+  }
+
+  &__inner-wrap {
+    display: flex;
+    align-items: center;
   }
 
   &__title {
-    flex: 0 0 25%;
-    padding-left: 56px;
+    flex: 0 0 30%;
+    padding-left: 16px;
     font-size: 22px;
     font-weight: 300;
+
+    @include screen-large() {
+      flex: 0 0 25%;
+      padding-left: 56px;
+    }
   }
 
   &__title-text {
@@ -53,7 +61,11 @@
 
     &--search,
     &--icon {
-      margin-right: 62px;
+      margin-right: 32px;
+
+      @include screen-large() {
+        margin-right: 62px;
+      }
     }
 
     &--hidden {
@@ -138,9 +150,9 @@
     &-action {
       display: flex;
       justify-content: space-between;
-      padding: 32px 32px 0 0;
+      padding: 32px 32px 0 32px;
 
-      @include screen-medium() {
+      @include screen-large() {
         padding-left: 198px;
       }
     }
@@ -160,8 +172,10 @@
     }
 
     &-results {
-      @include screen-medium() {
-        padding-top: 16px;
+      padding-top: 16px;
+      padding-left: 148px;
+
+      @include screen-large() {
         padding-left: 314px;
       }
 

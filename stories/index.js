@@ -464,41 +464,43 @@ storiesOf('DIFC Components/Global Navigation', module)
     'Base',
     () => `
     <div class="global-navigation">
-      <h1 class="global-navigation__title">
-        <img
-          class="global-navigation__title-icon"
-          src="/assets/svg/difc-logo.svg"
-          alt="DIFC"
-        />
-        <span class="global-navigation__title-text">One DIFC</span>
-      </h1>
+      <div class="global-navigation__inner-wrap">
+        <h1 class="global-navigation__title">
+          <img
+            class="global-navigation__title-icon"
+            src="/assets/svg/difc-logo.svg"
+            alt="DIFC"
+          />
+          <span class="global-navigation__title-text">One DIFC</span>
+        </h1>
 
-      <div class="global-navigation__content">
-        <div class="global-navigation__content-col">
-          <div class="global-navigation__action">
-            <button
-              class="global-navigation__button global-navigation__button--search"
+        <div class="global-navigation__content">
+          <div class="global-navigation__content-col">
+            <div class="global-navigation__action">
+              <button
+                class="global-navigation__button global-navigation__button--search"
+              >
+                <img
+                  src="/assets/svg/magnifier-icon.svg"
+                  alt="search icon"
+                  class="search-bar__icon-image icon-image"
+                />
+              </button>
+            </div>
+            <div class="global-navigation__user">
+              <a href="#" class="global-navigation__link">Register</a>
+              <a href="#" class="global-navigation__link">Login</a>
+            </div>
+            <button 
+              class="global-navigation__button global-navigation__button--menu"
             >
               <img
-                src="/assets/svg/magnifier-icon.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="global-navigation__button-image icon-image"
               />
             </button>
           </div>
-          <div class="global-navigation__user">
-            <a href="#" class="global-navigation__link">Register</a>
-            <a href="#" class="global-navigation__link">Login</a>
-          </div>
-          <button 
-            class="global-navigation__button global-navigation__button--menu"
-          >
-            <img
-              src="/assets/svg/hamburger-line.svg"
-              alt="notification bell"
-              class="global-navigation__button-image icon-image"
-            />
-          </button>
         </div>
       </div>
     </div>
@@ -508,185 +510,329 @@ storiesOf('DIFC Components/Global Navigation', module)
     'Logged In',
     () => `
     <div class="global-navigation">
-      <h1 class="global-navigation__title">
-        <img
-          class="global-navigation__title-icon"
-          src="/assets/svg/difc-logo.svg"
-          alt="DIFC"
-        />
-        <span class="global-navigation__title-text">One DIFC</span>
-      </h1>
+      <div class="global-navigation__inner-wrap">
+        <h1 class="global-navigation__title">
+          <img
+            class="global-navigation__title-icon"
+            src="/assets/svg/difc-logo.svg"
+            alt="DIFC"
+          />
+          <span class="global-navigation__title-text">One DIFC</span>
+        </h1>
 
-      <div class="global-navigation__content">
-        <div class="global-navigation__content-col">
-          <div class="global-navigation__action">
-            <div class="global-navigation__action--private">
+        <div class="global-navigation__content">
+          <div class="global-navigation__content-col">
+            <div class="global-navigation__action">
+              <div class="global-navigation__action--private">
+                <button
+                  class="global-navigation__button global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/answer-public.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+                <button
+                  class="global-navigation__button global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/announcement.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+              </div>
+              
               <button
-                class="global-navigation__button global-navigation__button--icon"
+                class="global-navigation__button global-navigation__button--search"
               >
                 <img
-                  src="/assets/svg/answer-public.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-              <button
-                class="global-navigation__button global-navigation__button--icon"
-              >
-                <img
-                  src="/assets/svg/announcement.svg"
+                  src="/assets/svg/magnifier-icon.svg"
                   alt="search icon"
                   class="search-bar__icon-image icon-image"
                 />
               </button>
             </div>
-            
-            <button
-              class="global-navigation__button global-navigation__button--search"
+
+            <div class="global-navigation__user">
+              <a 
+                class="global-navigation__user-link global-navigation__link" href="#"
+              >
+                <span class="global-navigation__user-name">Company name</span>
+                <span class="global-navigation__user-avatar">
+                  <img
+                    src="/assets/svg/avatar-placeholder.svg"
+                    alt="avatar image"
+                    class="global-navigation__button-image icon-image"
+                  />
+                </span>
+              </a>
+            </div>
+
+            <button 
+              class="global-navigation__button global-navigation__button--menu"
             >
               <img
-                src="/assets/svg/magnifier-icon.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="global-navigation__button-image icon-image"
               />
             </button>
           </div>
-
-          <div class="global-navigation__user">
-            <a 
-              class="global-navigation__user-link global-navigation__link" href="#"
-            >
-              <span class="global-navigation__user-name">Company name</span>
-              <span class="global-navigation__user-avatar">
-                <img
-                  src="/assets/svg/avatar-placeholder.svg"
-                  alt="avatar image"
-                  class="global-navigation__button-image icon-image"
-                />
-              </span>
-            </a>
-          </div>
-
-          <button 
-            class="global-navigation__button global-navigation__button--menu"
-          >
-            <img
-              src="/assets/svg/hamburger-line.svg"
-              alt="notification bell"
-              class="global-navigation__button-image icon-image"
-            />
-          </button>
         </div>
       </div>
     </div>
   `
   )
   .add(
-    'Logged In Expanded with Search Bar',
+    'Logged In Expanded with Menu',
     () => `
-    <div class="global-navigation global-navigation--expanded" style="height: 160px">
-      <h1 class="global-navigation__title">
-        <img
-          class="global-navigation__title-icon"
-          src="/assets/svg/difc-logo.svg"
-          alt="DIFC"
-        />
-        <span class="global-navigation__title-text">One DIFC</span>
-      </h1>
+    <div class="global-navigation">
+      <div class="global-navigation__inner-wrap">
+        <h1 class="global-navigation__title">
+          <img
+            class="global-navigation__title-icon"
+            src="/assets/svg/difc-logo.svg"
+            alt="DIFC"
+          />
+          <span class="global-navigation__title-text">One DIFC</span>
+        </h1>
 
-      <div class="global-navigation__content">
-        <div class="global-navigation__content-col">
-          <div class="global-navigation__action">
-            <div class="global-navigation__action--private">
+        <div class="global-navigation__content">
+          <div class="global-navigation__content-col">
+            <div class="global-navigation__action">
+              <div class="global-navigation__action--private">
+                <button
+                  class="global-navigation__button global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/answer-public.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+                <button
+                  class="global-navigation__button global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/announcement.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+              </div>
+
               <button
-                class="global-navigation__button global-navigation__button--icon"
+                class="global-navigation__button global-navigation__button--search"
               >
                 <img
-                  src="/assets/svg/answer-public.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-              <button
-                class="global-navigation__button global-navigation__button--icon"
-              >
-                <img
-                  src="/assets/svg/announcement.svg"
+                  src="/assets/svg/magnifier-icon.svg"
                   alt="search icon"
                   class="search-bar__icon-image icon-image"
                 />
               </button>
             </div>
-            
-            <button
-              class="global-navigation__button global-navigation__button--search"
+
+            <div class="global-navigation__user">
+              <a
+                class="global-navigation__user-link global-navigation__link"
+                href="#"
+              >
+                <span class="global-navigation__user-name">Company name</span>
+                <span class="global-navigation__user-avatar">
+                  <img
+                    src="/assets/svg/avatar-placeholder.svg"
+                    alt="avatar image"
+                    class="global-navigation__button-image icon-image"
+                  />
+                </span>
+              </a>
+            </div>
+
+            <button 
+              class="global-navigation__button global-navigation__button--menu global-navigation__button--hidden"
             >
               <img
-                src="/assets/svg/magnifier-icon.svg"
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="global-navigation__button-image icon-image"
+              />
+            </button>
+            <button
+              class="global-navigation__button global-navigation__button--menu-close"
+            >
+              <img
+                src="/assets/svg/cross-line.svg"
+                alt="notification bell"
+                class="global-navigation__button-image icon-image"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="global-navigation__search-bar">
+          <div class="global-navigation__search-bar-action">
+            <img
+              src="/assets/svg/magnifier-icon.svg"
+              alt="search icon"
+              class="search-bar__icon-image icon-image"
+            />
+            <input
+              class="global-navigation__search-bar-input"
+              placeholder="Search item here with csv, for data entry"
+              type="text"
+            />
+            <button
+              class="global-navigation__button global-navigation__button--search-close"
+            >
+              <img
+                src="/assets/svg/cross-line.svg"
                 alt="search icon"
                 class="search-bar__icon-image icon-image"
               />
             </button>
           </div>
-
-          <div class="global-navigation__user">
-            <a 
-              class="global-navigation__user-link global-navigation__link" href="#"
-            >
-              <span class="global-navigation__user-name">Company name</span>
-              <span class="global-navigation__user-avatar">
-                <img
-                  src="/assets/svg/avatar-placeholder.svg"
-                  alt="avatar image"
-                  class="global-navigation__button-image icon-image"
-                />
-              </span>
-            </a>
+          <div class="global-navigation__search-bar-results">
+            <ul class="global-navigation__search-bar-results-list">
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search you are looking for here</a>
+              </li>
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search you are looking for here</a>
+              </li>
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+            </ul>
           </div>
-
-          <button 
-            class="global-navigation__button global-navigation__button--menu"
-          >
-            <img
-              src="/assets/svg/hamburger-line.svg"
-              alt="notification bell"
-              class="global-navigation__button-image icon-image"
-            />
-          </button>
         </div>
       </div>
-
-      <div class="global-navigation__search-bar">
-        <div class="global-navigation__search-bar-action">
+      <div class="global-navigation__menu">
+        <ul class="global-navigation__menu-list">
+          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+        </ul>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Logged In Expanded with Search Bar',
+    () => `
+    <div class="global-navigation global-navigation--expanded">
+      <div class="global-navigation__inner-wrap">
+        <h1 class="global-navigation__title">
           <img
-            src="/assets/svg/magnifier-icon.svg"
-            alt="search icon"
-            class="search-bar__icon-image icon-image"
+            class="global-navigation__title-icon"
+            src="/assets/svg/difc-logo.svg"
+            alt="DIFC"
           />
-          <input
-            class="global-navigation__search-bar-input"
-            placeholder="Search item here with csv, for data entry"
-            type="text"
-          />
-          <button 
-            class="global-navigation__button global-navigation__button--search-close"
-          >
+          <span class="global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="global-navigation__content">
+          <div class="global-navigation__content-col">
+            <div class="global-navigation__action">
+              <div class="global-navigation__action--private">
+                <button
+                  class="global-navigation__button global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/answer-public.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+                <button
+                  class="global-navigation__button global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/announcement.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+              </div>
+              
+              <button
+                class="global-navigation__button global-navigation__button--search"
+              >
+                <img
+                  src="/assets/svg/magnifier-icon.svg"
+                  alt="search icon"
+                  class="search-bar__icon-image icon-image"
+                />
+              </button>
+            </div>
+
+            <div class="global-navigation__user">
+              <a 
+                class="global-navigation__user-link global-navigation__link" href="#"
+              >
+                <span class="global-navigation__user-name">Company name</span>
+                <span class="global-navigation__user-avatar">
+                  <img
+                    src="/assets/svg/avatar-placeholder.svg"
+                    alt="avatar image"
+                    class="global-navigation__button-image icon-image"
+                  />
+                </span>
+              </a>
+            </div>
+
+            <button 
+              class="global-navigation__button global-navigation__button--menu"
+            >
+              <img
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="global-navigation__button-image icon-image"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="global-navigation__search-bar">
+          <div class="global-navigation__search-bar-action">
             <img
-              src="/assets/svg/cross-line.svg"
+              src="/assets/svg/magnifier-icon.svg"
               alt="search icon"
               class="search-bar__icon-image icon-image"
             />
-          </button>
-        </div>
-        <div class="global-navigation__search-bar-results">
-          <ul class="global-navigation__search-bar-results-list">
-            <li class="global-navigation__search-bar-results-link">
-              <a href="#">Search item article here</a>
-            </li>
-            <li class="global-navigation__search-bar-results-link">
-              <a href="#">Search you are looking for here</a>
-            </li>
-          </ul>
+            <input
+              class="global-navigation__search-bar-input"
+              placeholder="Search item here with csv, for data entry"
+              type="text"
+            />
+            <button 
+              class="global-navigation__button global-navigation__button--search-close"
+            >
+              <img
+                src="/assets/svg/cross-line.svg"
+                alt="search icon"
+                class="search-bar__icon-image icon-image"
+              />
+            </button>
+          </div>
+          <div class="global-navigation__search-bar-results">
+            <ul class="global-navigation__search-bar-results-list">
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+              <li class="global-navigation__search-bar-results-link">
+                <a href="#">Search you are looking for here</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
