@@ -1,0 +1,7 @@
+.ui-popover {
+  .slds-popover {
+    &_error .slds-popover__header {
+      background-color: #fc4c02;
+    }
+  }
+}
