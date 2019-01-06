@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="28px" viewBox="0 0 30 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / z-embedded / icon glyphs / standard /announcement</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.9750416,0 C6.68885191,0 0,6.25 0,14 C0,16.5 0.698835275,18.8 1.8968386,20.85 C2.04658902,21.1 2.09650582,21.4 1.99667221,21.65 L0.599001664,26.1 C0.349417637,26.9 1.09816972,27.6 1.8968386,27.35 L6.28951747,25.8 C6.5890183,25.7 6.88851913,25.75 7.13810316,25.9 C9.43427621,27.25 12.1297837,28 15.0249584,28 C23.3111481,28 30,21.75 30,14 C29.9500832,6.25 23.2612313,7.10542736e-15 14.9750416,7.10542736e-15 L14.9750416,0 Z M22.1630616,10.9 L14.5257903,18.55 C14.2262895,18.85 13.8768719,19 13.4775374,19 C13.078203,19 12.7287854,18.85 12.4292845,18.55 L8.73544093,14.85 C8.4359401,14.55 8.4359401,14.1 8.73544093,13.8 L9.78369384,12.75 C10.0831947,12.45 10.5324459,12.45 10.8319468,12.75 L13.4775374,15.4 L20.0665557,8.8 C20.3660566,8.5 20.8153078,8.5 21.1148087,8.8 L22.1630616,9.85 C22.4625624,10.15 22.4625624,10.65 22.1630616,10.9 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-/-Header---Logged-In" transform="translate(-773.000000, -42.000000)">
+            <g id="Icons-/-z-embedded-/-icon-glyphs-/-standard-/answer_public" transform="translate(768.000000, 36.000000)">
+                <g id="answer_public" transform="translate(5.000000, 6.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
