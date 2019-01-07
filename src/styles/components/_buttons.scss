@@ -1,5 +1,5 @@
 // own comp. file
-.button {
+.ui-button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -14,6 +14,10 @@
   transition: all 200ms ease-in-out;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -175,7 +179,7 @@
     }
 
     &--open {
-      .button__icon--arrow {
+      .ui-button__icon--arrow {
         transition: all 300ms ease-in-out;
         transform: rotate(270deg);
       }

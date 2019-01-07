@@ -36,11 +36,11 @@ class App {
   init() {
     console.log('APP IS RUNNING!!!!');
 
-    this.toggleButtons = document.querySelectorAll('.button--toggle');
+    this.toggleButtons = document.querySelectorAll('.ui-button--toggle');
     this.pathsSummaryDetails = document.querySelectorAll(
       '.path-summary__details'
     );
-    this.closeButtons = document.querySelectorAll('.button--close');
+    this.closeButtons = document.querySelectorAll('.ui-button--close');
 
     this._toggle();
     this._closePanel();
@@ -75,12 +75,12 @@ class App {
           details.classList.remove(App.CLASSES.pathSummaryDetailsHidden);
           details.classList.add(App.CLASSES.pathSummaryDetailsOpen);
 
-          event.currentTarget.classList.add('button--toggle--open');
+          event.currentTarget.classList.add('ui-button--toggle--open');
         } else {
           details.classList.add(App.CLASSES.pathSummaryDetailsHidden);
           details.classList.remove(App.CLASSES.pathSummaryDetailsOpen);
 
-          event.currentTarget.classList.remove('button--toggle--open');
+          event.currentTarget.classList.remove('ui-button--toggle--open');
         }
       });
     }
@@ -96,7 +96,7 @@ class App {
 
     for (closeButton of this.closeButtons) {
       closeButton.addEventListener('click', event => {
-        event.currentTarget.parentElement.classList.add('card--hidden');
+        event.currentTarget.parentElement.classList.add('ui-card--hidden');
       });
     }
   }

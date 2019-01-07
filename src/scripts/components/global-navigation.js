@@ -49,36 +49,34 @@ class GlobalNavigation {
   }
 
   init() {
-    console.log('GLOBAL HEADER STARTED!!!!!');
-
-    this.component = document.querySelector('.global-navigation');
+    this.component = document.querySelector('.ui-global-navigation');
 
     this.navigationMenu = this.component.querySelector(
-      '.global-navigation__menu'
+      '.ui-global-navigation__menu'
     );
 
     this.navigationMenuButton = this.component.querySelector(
-      '.global-navigation__button--menu'
+      '.ui-global-navigation__button--menu'
     );
 
     this.navigationMenuCloseButton = this.component.querySelector(
-      '.global-navigation__button--menu-close'
+      '.ui-global-navigation__button--menu-close'
     );
 
     this.searchBar = this.component.querySelector(
-      '.global-navigation__search-bar'
+      '.ui-global-navigation__search-bar'
     );
 
     this.searchBarInput = this.component.querySelector(
-      '.global-navigation__search-bar-input'
+      '.ui-global-navigation__search-bar-input'
     );
 
     this.searchButton = this.component.querySelector(
-      '.global-navigation__button--search'
+      '.ui-global-navigation__button--search'
     );
 
     this.searchBarCloseButton = this.component.querySelector(
-      '.global-navigation__button--search-close'
+      '.ui-global-navigation__button--search-close'
     );
 
     this._addEvents();
@@ -137,10 +135,10 @@ class GlobalNavigation {
  * classes use by component
  */
 GlobalNavigation.CLASS = {
-  container: 'global-navigation',
-  containerExpanded: 'global-navigation--expanded',
-  containerMenuHidden: 'global-navigation__menu--hidden',
-  buttonHidden: 'global-navigation__button--hidden',
+  container: 'ui-global-navigation',
+  containerExpanded: 'ui-global-navigation--expanded',
+  containerMenuHidden: 'ui-global-navigation__menu--hidden',
+  buttonHidden: 'ui-global-navigation__button--hidden',
 };
 
 export default GlobalNavigation;

@@ -1,7 +1,13 @@
-.progress-indicator {
+.ui-progress-indicator {
   background-color: #fff;
 
   .slds-popover_tooltip {
     background: #0076cf;
+  }
+
+  .slds-progress__item {
+    &.slds-has-error .slds-progress__marker {
+      display: flex;
+    }
   }
 }
