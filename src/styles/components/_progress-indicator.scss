@@ -4,4 +4,10 @@
   .slds-popover_tooltip {
     background: #0076cf;
   }
+
+  .slds-progress__item {
+    &.slds-has-error .slds-progress__marker {
+      display: flex;
+    }
+  }
 }
