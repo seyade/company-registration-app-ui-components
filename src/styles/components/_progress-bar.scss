@@ -1,6 +1,7 @@
-.progress-bar {
+.ui-progress-bar {
   position: relative;
   z-index: 1000;
+  max-width: 800px;
 
   .slds-progress-bar__value {
     background-color: #0076cf;

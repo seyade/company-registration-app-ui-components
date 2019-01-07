@@ -107,7 +107,7 @@ storiesOf('DIFC Components/Cards', module)
   .add(
     'Card Base',
     () => `
-    <div class="card" style="min-height:100px;width:400px;margin-left:16px">
+    <div class="card" style="min-height:100px;width:400px;">
       
     </div>
   `
@@ -115,7 +115,7 @@ storiesOf('DIFC Components/Cards', module)
   .add(
     'Card Base With Content',
     () => `
-    <div class="card" style="min-height:100px;width:320px;margin-left:16px">
+    <div class="card" style="min-height:100px;width:320px;">
       <div class="card__content card__content--padding-med">
         <span class="card__title">Card heading herer and also on this second line if needed...</span>
         <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
@@ -138,7 +138,7 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div 
       class="card card--light-blue"
-      style="min-height:100px;width:320px;margin-left:16px"
+      style="min-height:100px;width:320px;"
     >
       <div class="card__header">
         <span class="card__header-title">
@@ -164,7 +164,7 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div
       class="card card--very-light-blue card--next-steps"
-      style="min-height:100px;width:456px;margin-left:16px"
+      style="min-height:100px;width:456px;"
     >
       <div class="card__content">
         <span class="card__title">Next Steps</span>
@@ -209,7 +209,7 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div
       class="card card--marketing"
-      style="width:1140px;margin-left:16px;margin-right:16px"
+      style="width:1140px;"
     >
       <button class="button button--close">
         <span class="button__text button__text--hidden">Close</span>
@@ -240,7 +240,7 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div
       class="card card--marketing"
-      style="width:1140px;margin-left:16px;margin-right:16px"
+      style="width:1140px;"
     >
       <button class="button button--close">
         <span class="button__text button__text--hidden">Close</span>
@@ -267,7 +267,6 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div
       class="card card--pathway"
-      style="margin-left:16px;margin-right:16px"
     >
       <div class="card__content card__content--padding-med">
         <div class="card__content--head">
@@ -301,7 +300,7 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div
       class="card"
-      style="width:320px;margin-left:16px;margin-right:16px"
+      style="width:320px;"
     >
       <div class="card__content card__content--padding-med">
         <span class="card__title">
@@ -326,7 +325,7 @@ storiesOf('DIFC Components/Cards', module)
     () => `
     <div
       class="card"
-      style="width:320px;margin-left:16px;margin-right:16px"
+      style="width:320px;"
     >
       <div class="card__content">
         <span class="card__title">
@@ -843,7 +842,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Base',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal"  style="padding:3.5rem 1rem 0">
+    <div class="progress-indicator progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-active">
@@ -884,7 +883,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Error',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal"  style="padding:3.5rem 1rem 0">
+    <div class="progress-indicator progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-completed">
@@ -940,7 +939,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Next Step',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal"  style="padding:3.5rem 1rem 0">
+    <div class="progress-indicator progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-completed">
@@ -991,7 +990,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Tooltip',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal"  style="padding:3.5rem 1rem 0">
+    <div class="progress-indicator progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-completed">
@@ -1199,7 +1198,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
 storiesOf('DIFC Components/Progress Bars', module).add(
   'Base with descriptions',
   () => `
-    <div class="progress-bar" style="padding: 16px;">
+    <div class="ui-progress-bar">
       <div
         class="slds-grid slds-grid_align-spread slds-p-bottom_large"
         id="progress-bar-label-id-1"
@@ -1402,7 +1401,7 @@ storiesOf('DIFC Components/Breadcrumb', module)
   .add(
     'Breadcrumb',
     () => `
-    <div class="demo-only" style="height: 150px;padding: 16px;">
+    <div class="demo-only" style="height:150px;">
       <!-- below is the real component -->
       <nav class="breadcrumb" role="navigation" aria-label="Breadcrumbs">
         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
@@ -1416,7 +1415,7 @@ storiesOf('DIFC Components/Breadcrumb', module)
   .add(
     'Breadcrumb overflow',
     () => `
-    <div class="demo-only" style="height: 150px;">
+    <div class="demo-only" style="height:150px;">
       <nav class="breadcrumb" role="navigation" aria-label="Breadcrumbs">
         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center">
           <li class="slds-breadcrumb__item">
@@ -3468,7 +3467,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Base',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-nubbin_left"
         role="dialog"
@@ -3500,7 +3499,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Error',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_error slds-nubbin_bottom-left"
         role="dialog"
@@ -3555,7 +3554,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Warning',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_warning slds-nubbin_bottom-left"
         role="dialog"
@@ -3617,7 +3616,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Walkthrough',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_walkthrough slds-nubbin_left"
         role="dialog"
@@ -3662,7 +3661,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Walkthrough Inline Form',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_walkthrough slds-nubbin_left"
         role="dialog"
@@ -3728,7 +3727,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Feature',
     () => `
-    <div class="ui-popover" style="padding:16px">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
         role="dialog"
@@ -3763,7 +3762,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Feature with Icon',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
         role="dialog"
@@ -3816,7 +3815,7 @@ storiesOf('DIFC Components/Popovers', module)
   .add(
     'Feature with Header and Footer',
     () => `
-    <div class="ui-popover" style="padding:16px;">
+    <div class="ui-popover">
       <section
         class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
         role="dialog"
