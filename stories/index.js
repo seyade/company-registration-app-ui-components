@@ -17,40 +17,40 @@ storiesOf('DIFC Components/Buttons', module)
   .add(
     'Default',
     () => `
-    <div class="button-group">
-      <button class="button button--default">Default</button>
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--default">Default</button>
     </div>
     `
   )
   .add(
     'Primary',
     () => `
-    <div class="button-group">
-      <button class="button button--primary">Primary</button>
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--primary">Primary</button>
     </div>
     `
   )
   .add(
     'Destructive',
     () => `
-    <div class="button-group">
-      <button class="button button--destructive">Destructive</button>
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--destructive">Destructive</button>
     </div>
     `
   )
   .add(
     'Disabled',
     () => `
-    <div class="button-group">
-      <button class="button button--disabled" disabled>Disabled</button>
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--disabled" disabled>Disabled</button>
     </div>
     `
   )
   .add(
     'Upload',
     () => `
-    <div class="button-group">
-      <button class="button button--upload">
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--upload">
         <img
           src="/assets/svg/plus.svg"
           alt=""
@@ -63,8 +63,8 @@ storiesOf('DIFC Components/Buttons', module)
   .add(
     'Upload disabled',
     () => `
-    <div class="button-group">
-      <button class="button button--upload-disabled" disabled>
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--upload-disabled" disabled>
         <img
           src="/assets/svg/plus.svg"
           alt=""
@@ -77,8 +77,8 @@ storiesOf('DIFC Components/Buttons', module)
   .add(
     'Not selected',
     () => `
-    <div class="button-group">
-      <button class="button button--not-selected">
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--not-selected">
         <img
           src="/assets/svg/plus-blue.svg"
           alt=""
@@ -91,8 +91,8 @@ storiesOf('DIFC Components/Buttons', module)
   .add(
     'Selected',
     () => `
-    <div class="button-group">
-      <button class="button button--selected">
+    <div class="ui-button-group">
+      <button class="ui-button ui-button--selected">
         <img
           src="/assets/svg/tick-blue.svg"
           alt=""
@@ -107,7 +107,7 @@ storiesOf('DIFC Components/Cards', module)
   .add(
     'Card Base',
     () => `
-    <div class="card" style="min-height:100px;width:400px;">
+    <div class="ui-card" style="min-height:100px;width:400px;">
       
     </div>
   `
@@ -115,16 +115,16 @@ storiesOf('DIFC Components/Cards', module)
   .add(
     'Card Base With Content',
     () => `
-    <div class="card" style="min-height:100px;width:320px;">
-      <div class="card__content card__content--padding-med">
-        <span class="card__title">Card heading herer and also on this second line if needed...</span>
-        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
+    <div class="ui-card" style="min-height:100px;width:320px;">
+      <div class="ui-card__content ui-card__content--padding-med">
+        <span class="ui-card__title">Card heading herer and also on this second line if needed...</span>
+        <p class="ui-card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
           sapiente eius eum commodi
           illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
           molestiae!
         </p>
 
-        <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
+        <p class="ui-card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
           sapiente eius eum commodi
           illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
           molestiae!
@@ -137,19 +137,19 @@ storiesOf('DIFC Components/Cards', module)
     'Card Guide',
     () => `
     <div 
-      class="card card--light-blue"
+      class="ui-card ui-card--light-blue"
       style="min-height:100px;width:320px;"
     >
-      <div class="card__header">
-        <span class="card__header-title">
+      <div class="ui-card__header">
+        <span class="ui-card__header-title">
           Pathway Guide
         </span>
-        <span class="card__header-subtitle">
+        <span class="ui-card__header-subtitle">
           Section One: Prepare company documents
         </span>
       </div>
-      <div class="card__content card__content--padding-med">
-        <p class="card__paragraph">
+      <div class="ui-card__content ui-card__content--padding-med">
+        <p class="ui-card__paragraph">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
           sapiente eius eum commodi
           illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
@@ -163,12 +163,12 @@ storiesOf('DIFC Components/Cards', module)
     'Card Next Steps',
     () => `
     <div
-      class="card card--very-light-blue card--next-steps"
+      class="ui-card ui-card--very-light-blue ui-card--next-steps"
       style="min-height:100px;width:456px;"
     >
-      <div class="card__content">
-        <span class="card__title">Next Steps</span>
-        <p class="card__subtitle">Sed do eiusm Company Profile. Here are your next 3 steps</p>
+      <div class="ui-card__content">
+        <span class="ui-card__title">Next Steps</span>
+        <p class="ui-card__subtitle">Sed do eiusm Company Profile. Here are your next 3 steps</p>
         <ul class="next-steps__list">
           <li class="next-steps__item">
             <a class="next-steps__item-link" href="#">
@@ -196,9 +196,9 @@ storiesOf('DIFC Components/Cards', module)
           </li>
         </ul>
       </div>
-      <div class="card__action">
-        <div class="button-group button-group--right">
-          <a class="button button--default">Continue</a>
+      <div class="ui-card__action">
+        <div class="ui-button-group ui-button-group--right">
+          <a class="ui-button ui-button--default">Continue</a>
         </div>
       </div>
     </div>
@@ -208,26 +208,28 @@ storiesOf('DIFC Components/Cards', module)
     'Card Marketing',
     () => `
     <div
-      class="card card--marketing"
-      style="width:1140px;"
+      class="ui-card ui-card--marketing"
+      style="min-width:800px;"
     >
-      <button class="button button--close">
-        <span class="button__text button__text--hidden">Close</span>
+      <button class="ui-button ui-button--close">
+        <span class="ui-button__text ui-button__text--hidden">Close</span>
         <img
-          class="button__icon--close icon-image"
+          class="ui-button__icon--close icon-image"
           src="/assets/svg/close-dark.svg"
           alt="cross"
         />
       </button>
 
-      <div class="card__content card__content--padding-med">
-        <h2 class="card__title">Marketing service information here </h2>
-        <div class="card__content-section">
-          <p class="card__paragraph">
+      <div class="ui-card__content ui-card__content--padding-med">
+        <h2 class="ui-card__title">Marketing service information here </h2>
+        <div class="ui-card__content-section">
+          <p class="ui-card__paragraph">
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
           </p>
-          <div class="card__action">
-            <a href="" class="button button--primary">Call to action here</a>
+          <div class="ui-card__action">
+            <a href="#" class="ui-button ui-button--primary">
+              Call to action here
+            </a>
           </div>
         </div>
         
@@ -239,22 +241,22 @@ storiesOf('DIFC Components/Cards', module)
     'Card Marketing without button',
     () => `
     <div
-      class="card card--marketing"
-      style="width:1140px;"
+      class="ui-card ui-card--marketing"
+      style="min-width:800px;"
     >
-      <button class="button button--close">
-        <span class="button__text button__text--hidden">Close</span>
+      <button class="ui-button ui-button--close">
+        <span class="ui-button__text ui-button__text--hidden">Close</span>
         <img
-          class="button__icon--close icon-image"
+          class="ui-button__icon--close icon-image"
           src="/assets/svg/close-dark.svg"
           alt="cross"
         />
       </button>
 
-      <div class="card__content card__content--padding-med">
-        <h2 class="card__title">Marketing service information here </h2>
-        <div class="card__content-section">
-          <p class="card__paragraph">
+      <div class="ui-card__content ui-card__content--padding-med">
+        <h2 class="ui-card__title">Marketing service information here </h2>
+        <div class="ui-card__content-section">
+          <p class="ui-card__paragraph">
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
           </p>
         </div>
@@ -266,30 +268,30 @@ storiesOf('DIFC Components/Cards', module)
     'Card Pathway',
     () => `
     <div
-      class="card card--pathway"
+      class="ui-card ui-card--pathway"
     >
-      <div class="card__content card__content--padding-med">
-        <div class="card__content--head">
-          <h2 class="card__title">
+      <div class="ui-card__content ui-card__content--padding-med">
+        <div class="ui-card__content--head">
+          <h2 class="ui-card__title">
             Heading of section here and here but only on one...
           </h2>
           <span>2 mins</span>
         </div>
-        <div class="card__content--body">
-          <p class="card__paragraph">
+        <div class="ui-card__content--body">
+          <p class="ui-card__paragraph">
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
           </p>
         </div>
 
-        <div class="card__action card__action--spread">
-          <button class="button button--toggle">
+        <div class="ui-card__action ui-card__action--spread">
+          <button class="ui-button ui-button--toggle">
             Show details
             <img
               class="pw-icon"
               src="/assets/svg/arrow-down.svg"
             />
           </button>
-          <a href="#" class="button button--primary">Start Path</a>
+          <a href="#" class="ui-button ui-button--primary">Start Path</a>
         </div>
       </div>
     </div>
@@ -299,18 +301,18 @@ storiesOf('DIFC Components/Cards', module)
     'Card With Header and Button',
     () => `
     <div
-      class="card"
+      class="ui-card"
       style="width:320px;"
     >
-      <div class="card__content card__content--padding-med">
-        <span class="card__title">
+      <div class="ui-card__content ui-card__content--padding-med">
+        <span class="ui-card__title">
           <img
             class="pw-icon"
             src="/assets/svg/contact.svg"
           />
-          <span class="card__title-text">Contact details</span>
+          <span class="ui-card__title-text">Contact details</span>
           <button 
-            class="button button--tertiary"
+            class="ui-button ui-button--tertiary"
             style="min-width:64px;position:absolute;right:0;"
           >
             New
@@ -324,27 +326,27 @@ storiesOf('DIFC Components/Cards', module)
     'Card With Related List',
     () => `
     <div
-      class="card"
+      class="ui-card"
       style="width:320px;"
     >
-      <div class="card__content">
-        <span class="card__title">
+      <div class="ui-card__content">
+        <span class="ui-card__title">
           <img
-            class="pw-icon"
+            class="ui-icon"
             src="/assets/svg/contact.svg"
           />
-          <span class="card__title-text">
+          <span class="ui-card__title-text">
             Contacts
             (<span class="">3</span>)
           </span>
           <button 
-            class="button button--tertiary"
+            class="ui-button ui-button--tertiary"
             style="min-width:64px;position:absolute;right:0;"
           >
             New
           </button>
         </span>
-        <div class="pw-accordion">
+        <div class="ui-accordion">
           <ul>
             <li class="slds-accordion__list-item">
               <section class="slds-accordion__section slds-is-open">
@@ -356,11 +358,11 @@ storiesOf('DIFC Components/Cards', module)
                       class="slds-button slds-button_reset slds-accordion__summary-action"
                     >
                       <img src="/assets/svg/contact-light.svg" />
-                      <span class="pw-accordion__title slds-truncate">
+                      <span class="ui-accordion__title slds-truncate">
                         Related Record Title 2
                       </span>
                       <img
-                        class="pw-icon"
+                        class="ui-icon"
                         src="/assets/svg/arrow-down.svg"
                       />
                     </button>
@@ -390,11 +392,11 @@ storiesOf('DIFC Components/Cards', module)
                       class="slds-button slds-button_reset slds-accordion__summary-action"
                     >
                       <img src="/assets/svg/contact-light.svg" />
-                      <span class="pw-accordion__title slds-truncate">
+                      <span class="ui-accordion__title slds-truncate">
                         Related Record Title 2
                       </span>
                       <img
-                        class="pw-icon"
+                        class="ui-icon"
                         src="/assets/svg/arrow-down.svg"
                       />
                     </button>
@@ -424,11 +426,11 @@ storiesOf('DIFC Components/Cards', module)
                       class="slds-button slds-button_reset slds-accordion__summary-action"
                     >
                       <img src="/assets/svg/contact-light.svg" />
-                      <span class="pw-accordion__title slds-truncate">
+                      <span class="ui-accordion__title slds-truncate">
                         Related Record Title 2
                       </span>
                       <img
-                        class="pw-icon"
+                        class="ui-icon"
                         src="/assets/svg/arrow-down.svg"
                       />
                     </button>
@@ -450,8 +452,8 @@ storiesOf('DIFC Components/Cards', module)
             </li>
           </ul>
         </div>
-        <div class="card__action">
-          <button class="pw-accordion__button button button--default">See more</button>
+        <div class="ui-card__action">
+          <button class="ui-accordion__button ui-button ui-button--default">See more</button>
         </div>
       </div>
     </div>
@@ -462,22 +464,22 @@ storiesOf('DIFC Components/Global Navigation', module)
   .add(
     'Base',
     () => `
-    <div class="global-navigation">
-      <div class="global-navigation__inner-wrap">
-        <h1 class="global-navigation__title">
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
           <img
-            class="global-navigation__title-icon"
+            class="ui-global-navigation__title-icon"
             src="/assets/svg/difc-logo.svg"
             alt="DIFC"
           />
-          <span class="global-navigation__title-text">One DIFC</span>
+          <span class="ui-global-navigation__title-text">One DIFC</span>
         </h1>
 
-        <div class="global-navigation__content">
-          <div class="global-navigation__content-col">
-            <div class="global-navigation__action">
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
               <button
-                class="global-navigation__button global-navigation__button--search"
+                class="ui-global-navigation__button ui-global-navigation__button--search"
               >
                 <img
                   src="/assets/svg/magnifier-icon.svg"
@@ -486,17 +488,17 @@ storiesOf('DIFC Components/Global Navigation', module)
                 />
               </button>
             </div>
-            <div class="global-navigation__user">
-              <a href="#" class="global-navigation__link">Register</a>
-              <a href="#" class="global-navigation__link">Login</a>
+            <div class="ui-global-navigation__user">
+              <a href="#" class="ui-global-navigation__link">Register</a>
+              <a href="#" class="ui-global-navigation__link">Login</a>
             </div>
             <button 
-              class="global-navigation__button global-navigation__button--menu"
+              class="ui-global-navigation__button ui-global-navigation__button--menu"
             >
               <img
                 src="/assets/svg/hamburger-line.svg"
                 alt="notification bell"
-                class="global-navigation__button-image icon-image"
+                class="ui-global-navigation__button-image icon-image"
               />
             </button>
           </div>
@@ -508,23 +510,23 @@ storiesOf('DIFC Components/Global Navigation', module)
   .add(
     'Logged In',
     () => `
-    <div class="global-navigation">
-      <div class="global-navigation__inner-wrap">
-        <h1 class="global-navigation__title">
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
           <img
-            class="global-navigation__title-icon"
+            class="ui-global-navigation__title-icon"
             src="/assets/svg/difc-logo.svg"
             alt="DIFC"
           />
-          <span class="global-navigation__title-text">One DIFC</span>
+          <span class="ui-global-navigation__title-text">One DIFC</span>
         </h1>
 
-        <div class="global-navigation__content">
-          <div class="global-navigation__content-col">
-            <div class="global-navigation__action">
-              <div class="global-navigation__action--private">
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__action--private">
                 <button
-                  class="global-navigation__button global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
                 >
                   <img
                     src="/assets/svg/answer-public.svg"
@@ -533,7 +535,7 @@ storiesOf('DIFC Components/Global Navigation', module)
                   />
                 </button>
                 <button
-                  class="global-navigation__button global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
                 >
                   <img
                     src="/assets/svg/announcement.svg"
@@ -544,7 +546,7 @@ storiesOf('DIFC Components/Global Navigation', module)
               </div>
               
               <button
-                class="global-navigation__button global-navigation__button--search"
+                class="ui-global-navigation__button ui-global-navigation__button--search"
               >
                 <img
                   src="/assets/svg/magnifier-icon.svg"
@@ -554,28 +556,28 @@ storiesOf('DIFC Components/Global Navigation', module)
               </button>
             </div>
 
-            <div class="global-navigation__user">
+            <div class="ui-global-navigation__user">
               <a 
-                class="global-navigation__user-link global-navigation__link" href="#"
+                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
               >
-                <span class="global-navigation__user-name">Company name</span>
-                <span class="global-navigation__user-avatar">
+                <span class="ui-global-navigation__user-name">Company name</span>
+                <span class="ui-global-navigation__user-avatar">
                   <img
                     src="/assets/svg/avatar-placeholder.svg"
                     alt="avatar image"
-                    class="global-navigation__button-image icon-image"
+                    class="ui-global-navigation__button-image icon-image"
                   />
                 </span>
               </a>
             </div>
 
             <button 
-              class="global-navigation__button global-navigation__button--menu"
+              class="ui-global-navigation__button ui-global-navigation__button--menu"
             >
               <img
                 src="/assets/svg/hamburger-line.svg"
                 alt="notification bell"
-                class="global-navigation__button-image icon-image"
+                class="ui-global-navigation__button-image icon-image"
               />
             </button>
           </div>
@@ -587,23 +589,23 @@ storiesOf('DIFC Components/Global Navigation', module)
   .add(
     'Logged In Expanded with Menu',
     () => `
-    <div class="global-navigation">
-      <div class="global-navigation__inner-wrap">
-        <h1 class="global-navigation__title">
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
           <img
-            class="global-navigation__title-icon"
+            class="ui-global-navigation__title-icon"
             src="/assets/svg/difc-logo.svg"
             alt="DIFC"
           />
-          <span class="global-navigation__title-text">One DIFC</span>
+          <span class="ui-global-navigation__title-text">One DIFC</span>
         </h1>
 
-        <div class="global-navigation__content">
-          <div class="global-navigation__content-col">
-            <div class="global-navigation__action">
-              <div class="global-navigation__action--private">
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__action--private">
                 <button
-                  class="global-navigation__button global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
                 >
                   <img
                     src="/assets/svg/answer-public.svg"
@@ -612,7 +614,7 @@ storiesOf('DIFC Components/Global Navigation', module)
                   />
                 </button>
                 <button
-                  class="global-navigation__button global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
                 >
                   <img
                     src="/assets/svg/announcement.svg"
@@ -623,7 +625,7 @@ storiesOf('DIFC Components/Global Navigation', module)
               </div>
 
               <button
-                class="global-navigation__button global-navigation__button--search"
+                class="ui-global-navigation__button ui-global-navigation__button--search"
               >
                 <img
                   src="/assets/svg/magnifier-icon.svg"
@@ -633,57 +635,57 @@ storiesOf('DIFC Components/Global Navigation', module)
               </button>
             </div>
 
-            <div class="global-navigation__user">
+            <div class="ui-global-navigation__user">
               <a
-                class="global-navigation__user-link global-navigation__link"
+                class="ui-global-navigation__user-link ui-global-navigation__link"
                 href="#"
               >
-                <span class="global-navigation__user-name">Company name</span>
-                <span class="global-navigation__user-avatar">
+                <span class="ui-global-navigation__user-name">Company name</span>
+                <span class="ui-global-navigation__user-avatar">
                   <img
                     src="/assets/svg/avatar-placeholder.svg"
                     alt="avatar image"
-                    class="global-navigation__button-image icon-image"
+                    class="ui-global-navigation__button-image icon-image"
                   />
                 </span>
               </a>
             </div>
 
             <button 
-              class="global-navigation__button global-navigation__button--menu global-navigation__button--hidden"
+              class="ui-global-navigation__button ui-global-navigation__button--menu ui-global-navigation__button--hidden"
             >
               <img
                 src="/assets/svg/hamburger-line.svg"
                 alt="notification bell"
-                class="global-navigation__button-image icon-image"
+                class="ui-global-navigation__button-image icon-image"
               />
             </button>
             <button
-              class="global-navigation__button global-navigation__button--menu-close"
+              class="ui-global-navigation__button ui-global-navigation__button--menu-close"
             >
               <img
                 src="/assets/svg/cross-line.svg"
                 alt="notification bell"
-                class="global-navigation__button-image icon-image"
+                class="ui-global-navigation__button-image icon-image"
               />
             </button>
           </div>
         </div>
 
-        <div class="global-navigation__search-bar">
-          <div class="global-navigation__search-bar-action">
+        <div class="ui-global-navigation__search-bar">
+          <div class="ui-global-navigation__search-bar-action">
             <img
               src="/assets/svg/magnifier-icon.svg"
               alt="search icon"
               class="search-bar__icon-image icon-image"
             />
             <input
-              class="global-navigation__search-bar-input"
+              class="ui-global-navigation__search-bar-input"
               placeholder="Search item here with csv, for data entry"
               type="text"
             />
             <button
-              class="global-navigation__button global-navigation__button--search-close"
+              class="ui-global-navigation__button ui-global-navigation__button--search-close"
             >
               <img
                 src="/assets/svg/cross-line.svg"
@@ -692,33 +694,33 @@ storiesOf('DIFC Components/Global Navigation', module)
               />
             </button>
           </div>
-          <div class="global-navigation__search-bar-results">
-            <ul class="global-navigation__search-bar-results-list">
-              <li class="global-navigation__search-bar-results-link">
+          <div class="ui-global-navigation__search-bar-results">
+            <ul class="ui-global-navigation__search-bar-results-list">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search item article here</a>
               </li>
-              <li class="global-navigation__search-bar-results-link">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search you are looking for here</a>
               </li>
-              <li class="global-navigation__search-bar-results-link">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search item article here</a>
               </li>
-              <li class="global-navigation__search-bar-results-link">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search you are looking for here</a>
               </li>
-              <li class="global-navigation__search-bar-results-link">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search item article here</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="global-navigation__menu">
-        <ul class="global-navigation__menu-list">
-          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="global-navigation__menu-item"><a href="#">Menu item</a></li>
+      <div class="ui-global-navigation__menu">
+        <ul class="ui-global-navigation__menu-list">
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
         </ul>
       </div>
     </div>
@@ -727,23 +729,23 @@ storiesOf('DIFC Components/Global Navigation', module)
   .add(
     'Logged In Expanded with Search Bar',
     () => `
-    <div class="global-navigation global-navigation--expanded">
-      <div class="global-navigation__inner-wrap">
-        <h1 class="global-navigation__title">
+    <div class="ui-global-navigation ui-global-navigation--expanded">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
           <img
-            class="global-navigation__title-icon"
+            class="ui-global-navigation__title-icon"
             src="/assets/svg/difc-logo.svg"
             alt="DIFC"
           />
-          <span class="global-navigation__title-text">One DIFC</span>
+          <span class="ui-global-navigation__title-text">One DIFC</span>
         </h1>
 
-        <div class="global-navigation__content">
-          <div class="global-navigation__content-col">
-            <div class="global-navigation__action">
-              <div class="global-navigation__action--private">
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__action--private">
                 <button
-                  class="global-navigation__button global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
                 >
                   <img
                     src="/assets/svg/answer-public.svg"
@@ -752,7 +754,7 @@ storiesOf('DIFC Components/Global Navigation', module)
                   />
                 </button>
                 <button
-                  class="global-navigation__button global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
                 >
                   <img
                     src="/assets/svg/announcement.svg"
@@ -763,7 +765,7 @@ storiesOf('DIFC Components/Global Navigation', module)
               </div>
               
               <button
-                class="global-navigation__button global-navigation__button--search"
+                class="ui-global-navigation__button ui-global-navigation__button--search"
               >
                 <img
                   src="/assets/svg/magnifier-icon.svg"
@@ -773,47 +775,47 @@ storiesOf('DIFC Components/Global Navigation', module)
               </button>
             </div>
 
-            <div class="global-navigation__user">
+            <div class="ui-global-navigation__user">
               <a 
-                class="global-navigation__user-link global-navigation__link" href="#"
+                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
               >
-                <span class="global-navigation__user-name">Company name</span>
-                <span class="global-navigation__user-avatar">
+                <span class="ui-global-navigation__user-name">Company name</span>
+                <span class="ui-global-navigation__user-avatar">
                   <img
                     src="/assets/svg/avatar-placeholder.svg"
                     alt="avatar image"
-                    class="global-navigation__button-image icon-image"
+                    class="ui-global-navigation__button-image icon-image"
                   />
                 </span>
               </a>
             </div>
 
             <button 
-              class="global-navigation__button global-navigation__button--menu"
+              class="ui-global-navigation__button ui-global-navigation__button--menu"
             >
               <img
                 src="/assets/svg/hamburger-line.svg"
                 alt="notification bell"
-                class="global-navigation__button-image icon-image"
+                class="ui-global-navigation__button-image icon-image"
               />
             </button>
           </div>
         </div>
 
-        <div class="global-navigation__search-bar">
-          <div class="global-navigation__search-bar-action">
+        <div class="ui-global-navigation__search-bar">
+          <div class="ui-global-navigation__search-bar-action">
             <img
               src="/assets/svg/magnifier-icon.svg"
               alt="search icon"
               class="search-bar__icon-image icon-image"
             />
             <input
-              class="global-navigation__search-bar-input"
+              class="ui-global-navigation__search-bar-input"
               placeholder="Search item here with csv, for data entry"
               type="text"
             />
             <button 
-              class="global-navigation__button global-navigation__button--search-close"
+              class="ui-global-navigation__button ui-global-navigation__button--search-close"
             >
               <img
                 src="/assets/svg/cross-line.svg"
@@ -822,12 +824,12 @@ storiesOf('DIFC Components/Global Navigation', module)
               />
             </button>
           </div>
-          <div class="global-navigation__search-bar-results">
-            <ul class="global-navigation__search-bar-results-list">
-              <li class="global-navigation__search-bar-results-link">
+          <div class="ui-global-navigation__search-bar-results">
+            <ul class="ui-global-navigation__search-bar-results-list">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search item article here</a>
               </li>
-              <li class="global-navigation__search-bar-results-link">
+              <li class="ui-global-navigation__search-bar-results-link">
                 <a href="#">Search you are looking for here</a>
               </li>
             </ul>
@@ -842,7 +844,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Base',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal">
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-active">
@@ -883,7 +885,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Error',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal">
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-completed">
@@ -939,7 +941,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Next Step',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal">
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-completed">
@@ -990,7 +992,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Horizontal Tooltip',
     () => `
-    <div class="progress-indicator progress-indicator--horizontal">
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
       <div class="slds-progress">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-completed">
@@ -1048,7 +1050,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Vertical Base',
     () => `
-    <div class="progress-indicator progress-indicator--vertical slds-progress slds-progress_vertical">
+    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
       <ol class="form__list slds-progress__list">
         <li class="slds-progress__item slds-is-active">
           <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
@@ -1110,7 +1112,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
   .add(
     'Vertical Next Step',
     () => `
-    <div class="progress-indicator progress-indicator--vertical slds-progress slds-progress_vertical">
+    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
       <ol class="form__list slds-progress__list">
         <li class="form__list-item slds-progress__item slds-is-completed">
           <span
@@ -1397,13 +1399,13 @@ storiesOf('DIFC Components/Progress Rings', module)
     `
   );
 
-storiesOf('DIFC Components/Breadcrumb', module)
+storiesOf('DIFC Components/Breadcrumbs', module)
   .add(
-    'Breadcrumb',
+    'Base',
     () => `
     <div class="demo-only" style="height:150px;">
       <!-- below is the real component -->
-      <nav class="breadcrumb" role="navigation" aria-label="Breadcrumbs">
+      <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
           <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Parent Name</a></li>
           <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Child Name</a></li>
@@ -1413,10 +1415,10 @@ storiesOf('DIFC Components/Breadcrumb', module)
     `
   )
   .add(
-    'Breadcrumb overflow',
+    'Overflow',
     () => `
     <div class="demo-only" style="height:150px;">
-      <nav class="breadcrumb" role="navigation" aria-label="Breadcrumbs">
+      <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center">
           <li class="slds-breadcrumb__item">
             <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
@@ -1467,7 +1469,7 @@ storiesOf('DIFC Components/Accordion', module)
   .add(
     'Accordion Base',
     () => `
-    <div class="pw-accordion">
+    <div class="ui-accordion">
       <ul class="slds-accordion">
         <li class="slds-accordion__list-item">
           <section class="slds-accordion__section">
@@ -1479,7 +1481,7 @@ storiesOf('DIFC Components/Accordion', module)
                   class="slds-button slds-button_reset slds-accordion__summary-action"
                 >
                   <img
-                    class="pw-icon"
+                    class="ui-icon"
                     src="/assets/svg/arrow-down.svg"
                   />
                   <span class="slds-truncate" title="Accordion summary">
@@ -1507,7 +1509,7 @@ storiesOf('DIFC Components/Accordion', module)
                   class="slds-button slds-button_reset slds-accordion__summary-action"
                 >
                   <img
-                    class="pw-icon"
+                    class="ui-icon"
                     src="/assets/svg/arrow-down.svg"
                   />
                   <span class="slds-truncate" title="Accordion summary">
@@ -1535,7 +1537,7 @@ storiesOf('DIFC Components/Accordion', module)
                   class="slds-button slds-button_reset slds-accordion__summary-action"
                 >
                   <img
-                    class="pw-icon"
+                    class="ui-icon"
                     src="/assets/svg/arrow-down.svg"
                   />
                   <span class="slds-truncate" title="Accordion summary">
@@ -1560,7 +1562,7 @@ storiesOf('DIFC Components/Accordion', module)
   .add(
     'Accordion Expanded',
     () => `
-      <div class="pw-accordion">
+      <div class="ui-accordion">
         <ul class="slds-accordion">
           <li class="slds-accordion__list-item">
             <section class="slds-accordion__section slds-is-open">
@@ -1572,7 +1574,7 @@ storiesOf('DIFC Components/Accordion', module)
                     class="slds-button slds-button_reset slds-accordion__summary-action"
                   >
                     <img
-                      class="pw-icon"
+                      class="ui-icon"
                       src="/assets/svg/arrow-down.svg"
                     />
                     <span class="slds-truncate" title="Accordion summary">
@@ -1600,7 +1602,7 @@ storiesOf('DIFC Components/Accordion', module)
                     class="slds-button slds-button_reset slds-accordion__summary-action"
                   >
                     <img
-                      class="pw-icon"
+                      class="ui-icon"
                       src="/assets/svg/arrow-down.svg"
                     />
                     <span class="slds-truncate" title="Accordion summary">
@@ -1628,7 +1630,7 @@ storiesOf('DIFC Components/Accordion', module)
                     class="slds-button slds-button_reset slds-accordion__summary-action"
                   >
                     <img
-                      class="pw-icon"
+                      class="ui-icon"
                       src="/assets/svg/arrow-down.svg"
                     />
                     <span class="slds-truncate" title="Accordion summary">
@@ -1655,14 +1657,14 @@ storiesOf('DIFC Components/Forms/Inputs', module)
   .add(
     'Input Field Base',
     () => `
-    <div class="form-element slds-form-element">
-      <label class="form-element__label slds-form-element__label" for="text-input-id-1">
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
         Input Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <input
           id="text-input-id-1"
-          class="form-element__control-input slds-input"
+          class="ui-form-element__control-input slds-input"
           type="text"
         />
       </div>
@@ -1672,15 +1674,15 @@ storiesOf('DIFC Components/Forms/Inputs', module)
   .add(
     'Input Field Required',
     () => `
-    <div class="form-element slds-form-element">
-      <label class="form-element__label slds-form-element__label" for="text-input-id-1">
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
         <abbr class="slds-required">*</abbr>
         Input Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <input
           id="text-input-id-1"
-          class="form-element__control-input slds-input"
+          class="ui-form-element__control-input slds-input"
           type="text"
           required
         />
@@ -1691,14 +1693,14 @@ storiesOf('DIFC Components/Forms/Inputs', module)
   .add(
     'Input Field Disabled',
     () => `
-    <div class="form-element slds-form-element">
-      <label class="form-element__label slds-form-element__label" for="text-input-id-1">
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
         Input Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <input
           id="text-input-id-1"
-          class="form-element__control-input slds-input"
+          class="ui-form-element__control-input slds-input"
           type="text"
           disabled
         />
@@ -1709,16 +1711,16 @@ storiesOf('DIFC Components/Forms/Inputs', module)
   .add(
     'Input Field Error',
     () => `
-    <div class="form-element slds-form-element slds-has-error">
-      <label class="form-element__label slds-form-element__label" for="text-input-id-1">
+    <div class="ui-form-element slds-form-element slds-has-error">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
         <abbr class="slds-required">*</abbr>
         Input Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <input
           id="text-input-id-1"
           aria-describedby="error-message-unique-id"
-          class="form-element__control-input slds-input"
+          class="ui-form-element__control-input slds-input"
           type="text"
           required
         />
@@ -1734,17 +1736,17 @@ storiesOf('DIFC Components/Forms/Textareas', module)
   .add(
     'Textarea Base',
     () => `
-    <div class="form-element slds-form-element">
+    <div class="ui-form-element slds-form-element">
       <label
-        class="form-element__label slds-form-element__label"
+        class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
         Textarea Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <textarea
           id="textarea-id-01"
-          class="form-element__control-textarea slds-textarea"
+          class="ui-form-element__control-textarea slds-textarea"
           placeholder="Placeholder Text"
         ></textarea>
       </div>
@@ -1754,18 +1756,18 @@ storiesOf('DIFC Components/Forms/Textareas', module)
   .add(
     'Textarea Required',
     () => `
-    <div class="form-element slds-form-element">
+    <div class="ui-form-element slds-form-element">
       <label
-        class="form-element__label slds-form-element__label"
+        class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
         <abbr class="slds-required">*</abbr>
         Textarea Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <textarea
           id="textarea-id-01"
-          class="form-element__control-textarea slds-textarea"
+          class="ui-form-element__control-textarea slds-textarea"
           placeholder="Placeholder Text"
           required
         ></textarea>
@@ -1776,17 +1778,17 @@ storiesOf('DIFC Components/Forms/Textareas', module)
   .add(
     'Textarea Disabled',
     () => `
-    <div class="form-element slds-form-element">
+    <div class="ui-form-element slds-form-element">
       <label
-        class="form-element__label slds-form-element__label"
+        class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
         Textarea Label
       </label>
-      <div class="form-element__control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <textarea
           id="textarea-id-01"
-          class="form-element__control-textarea slds-textarea"
+          class="ui-form-element__control-textarea slds-textarea"
           placeholder="Placeholder Text"
           disabled
         ></textarea>
@@ -1797,19 +1799,19 @@ storiesOf('DIFC Components/Forms/Textareas', module)
   .add(
     'Textarea Error',
     () => `
-    <div class="form-element slds-form-element slds-has-error">
+    <div class="ui-form-element slds-form-element slds-has-error">
       <label
-        class="form-element__label slds-form-element__label"
+        class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
         <abbr class="slds-required">*</abbr>
         Textarea Label
       </label>
-      <div class="form-element __control slds-form-element__control">
+      <div class="ui-form-element __control slds-form-element__control">
         <textarea
           id="textarea-id-01"
           aria-describedby="error-01"
-          class="form-element__control-textarea slds-textarea"
+          class="ui-form-element__control-textarea slds-textarea"
           placeholder="Placeholder Text"
           required
         ></textarea>
@@ -1825,12 +1827,12 @@ storiesOf('DIFC Components/Date Picker', module)
   .add(
     'Date Picker Base',
     () => `
-    <div class="date-picker" style="height: 25rem;">
+    <div class="ui-date-picker" style="height: 25rem;">
       <div
-        class="form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        class="ui-form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
       >
         <label
-          class="form-element__label slds-form-element__label"
+          class="ui-form-element__label slds-form-element__label"
           for="date-input-id"
         >
           Date
@@ -1840,11 +1842,11 @@ storiesOf('DIFC Components/Date Picker', module)
           />
         </label>
         <div
-          class="form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+          class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
         >
           <input id="date-input-id"
             placeholder=""
-            class="slds-input"
+            class="ui-form-element__control-input slds-input"
             type="text"
           />
           <button
@@ -1861,12 +1863,12 @@ storiesOf('DIFC Components/Date Picker', module)
   .add(
     'Date Picker Open',
     () => `
-    <div class="date-picker" style="height: 25rem;">
+    <div class="ui-date-picker" style="height: 25rem;">
       <div
-        class="form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        class="ui-form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
       >
         <label
-          class="form-element__label slds-form-element__label"
+          class="ui-form-element__label slds-form-element__label"
           for="date-input-id"
         >
           Date
@@ -1876,9 +1878,13 @@ storiesOf('DIFC Components/Date Picker', module)
           />
         </label>
         <div
-          class="form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+          class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
         >
-          <input id="date-input-id" placeholder="" class="slds-input" type="text" />
+          <input 
+            id="date-input-id"
+            placeholder=""
+            class="ui-form-element__control-input slds-input" type="text"
+          />
           <button
             class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
             title="Select a date"
@@ -2118,20 +2124,20 @@ storiesOf('DIFC Components/Date Picker', module)
   .add(
     'Date Picker Range Selection',
     () => `
-    <div class="date-picker" style="height: 25rem;">
+    <div class="ui-date-picker" style="height: 25rem;">
       <div class="slds-form slds-form_compound">
         <fieldset class="slds-form-element">
-          <legend class="form-element slds-form-element__label slds-form-element__legend">
+          <legend class="ui-form-element slds-form-element__label slds-form-element__legend">
             Start and End Date
           </legend>
-          <div class="form-element_-control slds-form-element__control">
-            <div class="form-element__group slds-form-element__group">
+          <div class="ui-form-element_element-control slds-form-element__control">
+            <div class="ui-form-element__group slds-form-element__group">
               <div class="slds-form-element__row">
                 <div
-                  class="form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click"
+                  class="ui-form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click"
                 >
                   <label 
-                    class="form-element__label slds-form-element__label" for="date-input-id-01"
+                    class="ui-form-element__label slds-form-element__label" for="date-input-id-01"
                   >
                     Start Date
                     <img 
@@ -2140,12 +2146,12 @@ storiesOf('DIFC Components/Date Picker', module)
                     />
                   </label>
                   <div
-                    class="form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+                    class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
                   >
                     <input
                       id="date-input-id-01"
                       placeholder=""
-                      class="form-element__control-input slds-input"
+                      class="ui-form-element__control-input slds-input"
                       type="text"
                       value="06/24/2014"
                     />
@@ -2160,7 +2166,7 @@ storiesOf('DIFC Components/Date Picker', module)
                 <div
                   class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
                 >
-                  <label class="form-element__label slds-form-element__label" for="date-input-id-02">
+                  <label class="ui-form-element__label slds-form-element__label" for="date-input-id-02">
                     End Date
                     <img 
                       src="/assets/svg/event.svg" 
@@ -2173,7 +2179,7 @@ storiesOf('DIFC Components/Date Picker', module)
                     <input
                       id="date-input-id-02"
                       placeholder=" "
-                      class="form-element__control-input slds-input"
+                      class="ui-form-element__control-input slds-input"
                       type="text"
                       value="06/27/2014"
                     />
@@ -2455,7 +2461,7 @@ storiesOf('DIFC Components/Data Table', module)
   .add(
     'Base',
     () => `
-    <div class="data-table">
+    <div class="ui-data-table">
       <table class="slds-table slds-table_cell-buffer slds-table_bordered">
         <thead>
           <tr class="slds-line-height_reset">
@@ -2656,7 +2662,7 @@ storiesOf('DIFC Components/Data Table', module)
   .add(
     'Stripped Rows',
     () => `
-    <div class="data-table">
+    <div class="ui-data-table">
       <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
         <thead>
           <tr class="slds-line-height_reset">
@@ -2857,7 +2863,7 @@ storiesOf('DIFC Components/Data Table', module)
   .add(
     'Advanced Rows Selection',
     () => `
-    <div class="data-table">
+    <div class="ui-data-table">
       <table
         aria-multiselectable="true"
         class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
@@ -3649,7 +3655,7 @@ storiesOf('DIFC Components/Popovers', module)
         <footer class="slds-popover__footer">
           <div class="slds-grid slds-grid_vertical-align-center">
             <span class="slds-text-title">Step 2 of 4</span>
-            <button class="button button--primary slds-button slds-button_brand slds-col_bump-left">
+            <button class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left">
               Next
             </button>
           </div>
@@ -3690,17 +3696,17 @@ storiesOf('DIFC Components/Popovers', module)
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <div class="form-element slds-form-element slds-p-top_small">
+          <div class="ui-form-element slds-form-element slds-p-top_small">
             <label
-              class="form-element__label slds-form-element__label slds-assistive-text"
+              class="ui-form-element__label slds-form-element__label slds-assistive-text"
               for="email-text-input-01"
             >
               Email Address
             </label>
-            <div class="form-element__control slds-form-element__control">
+            <div class="ui-form-element__control slds-form-element__control">
               <input
                 id="email-text-input-01"
-                class="form-element__control-input slds-input"
+                class="ui-form-element__control-input slds-input"
                 type="text"
                 placeholder="Email Address"
               />
@@ -3710,11 +3716,11 @@ storiesOf('DIFC Components/Popovers', module)
         <footer class="slds-popover__footer">
           <div class="slds-grid slds-grid_vertical-align-center">
             <span class="slds-text-title">Step 2 of 4</span>
-            <button class="button button--default slds-button slds-button_inverse slds-col_bump-left">
+            <button class="ui-button ui-button--default slds-button slds-button_inverse slds-col_bump-left">
               Previous
             </button>
             <button
-              class="button button--primary slds-button slds-button_brand slds-col_bump-left"
+              class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left"
             >
               Next
             </button>
@@ -3867,7 +3873,7 @@ storiesOf('DIFC Components/Popovers', module)
         <footer class="slds-popover__footer">
           <div class="slds-grid slds-grid_vertical-align-center">
             <button
-              class="button button-default slds-button slds-button_neutral slds-col_bump-left"
+              class="ui-button ui-button-default slds-button slds-button_neutral slds-col_bump-left"
             >
               Neutral
             </button>

@@ -1,5 +1,5 @@
-.date-picker {
-  .form-element__label {
+.ui-date-picker {
+  .ui-form-element__label {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
@@ -9,6 +9,10 @@
     img {
       max-width: auto;
     }
+  }
+
+  .ui-form-element__control-input {
+    border-radius: 2px;
   }
 
   .slds-dropdown {

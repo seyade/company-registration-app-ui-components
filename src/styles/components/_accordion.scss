@@ -1,15 +1,15 @@
-.pw-accordion {
+.ui-accordion {
   .slds-accordion__summary-heading {
     position: relative;
 
-    .pw-icon {
+    .ui-icon {
       position: absolute;
       right: 0;
     }
   }
 
   .slds-is-open {
-    .pw-icon {
+    .ui-icon {
       transform: rotate(180deg);
     }
   }
