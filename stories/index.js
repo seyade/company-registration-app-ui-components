@@ -1228,7 +1228,7 @@ storiesOf('DIFC Components/Progress Rings', module)
   .add(
     'Fill',
     () => `
-    <div class="slds-progress-ring">
+    <div class="ui-progress-ring slds-progress-ring">
       <div 
         class="slds-progress-ring__progress" 
         role="progressbar" 
@@ -1251,7 +1251,7 @@ storiesOf('DIFC Components/Progress Rings', module)
   .add(
     'Partially Drain',
     () => `
-    <div class="slds-progress-ring">
+    <div class="ui-progress-ring slds-progress-ring">
       <div 
         class="slds-progress-ring__progress" 
         role="progressbar" 
@@ -1274,7 +1274,7 @@ storiesOf('DIFC Components/Progress Rings', module)
   .add(
     'Complete',
     () => `
-    <div class="slds-progress-ring slds-progress-ring_complete">
+    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_complete">
       <div
         class="slds-progress-ring__progress"
         role="progressbar"
@@ -1307,7 +1307,7 @@ storiesOf('DIFC Components/Progress Rings', module)
   .add(
     'Warning',
     () => `
-    <div class="slds-progress-ring slds-progress-ring_warning">
+    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_warning">
       <div
         class="slds-progress-ring__progress"
         role="progressbar"
@@ -1340,7 +1340,7 @@ storiesOf('DIFC Components/Progress Rings', module)
   .add(
     'Error',
     () => `
-    <div class="slds-progress-ring slds-progress-ring_expired">
+    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_expired">
       <div
         class="slds-progress-ring__progress"
         role="progressbar"
@@ -1373,7 +1373,7 @@ storiesOf('DIFC Components/Progress Rings', module)
   .add(
     'Count',
     () => `
-    <div class="slds-progress-ring slds-progress-ring_expired">
+    <div class="ui-progress-ring slds-progress-ring">
       <div
         class="slds-progress-ring__progress"
         role="progressbar"
