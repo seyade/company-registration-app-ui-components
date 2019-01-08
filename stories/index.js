@@ -1420,38 +1420,10 @@ storiesOf('DIFC Components/Breadcrumbs', module)
     <div class="demo-only" style="height:150px;">
       <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center">
-          <li class="slds-breadcrumb__item">
-            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-              <button class="button button--breadcrumb slds-button" aria-haspopup="true" title="Show More">
-                <span>...</span>
-                <span class="slds-assistive-text">Show More</span>
-              </button>
-              <div class="slds-dropdown slds-dropdown_left slds-dropdown_actions">
-                <ul class="slds-dropdown__list" role="menu">
-                  <li class="slds-dropdown__item" role="presentation">
-                    <a href="javascript:void(0);" role="menuitem" tabindex="0">
-                      <span class="slds-truncate" title="Menu Item One">
-                        Menu Item One
-                      </span>
-                    </a>
-                  </li>
-                  <li class="slds-dropdown__item" role="presentation">
-                    <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                      <span class="slds-truncate" title="Menu Item Two">
-                        Menu Item Two
-                      </span>
-                    </a>
-                  </li>
-                  <li class="slds-dropdown__item" role="presentation">
-                    <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                      <span class="slds-truncate" title="Menu Item Three">
-                        Menu Item Three
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <li class="slds-breadcrumb__item slds-text-title_caps">
+            <span class="ui-breadcrumbs__text ui-breadcrumbs__text--truncated">
+              ...
+            </span>
           </li>
           <li class="slds-breadcrumb__item slds-text-title_caps">
             <a href="javascript:void(0);">Parent Name</a>
