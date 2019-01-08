@@ -1,0 +1,14 @@
+.ui-guide-card {
+  width: 320px;
+  min-height: 100px;
+
+  .ui-card__content *:last-child {
+    margin-top: 64px;
+  }
+
+  &__notice {
+    &-text {
+      color: #0076cf;
+    }
+  }
+}

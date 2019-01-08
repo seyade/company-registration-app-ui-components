@@ -137,7 +137,7 @@ storiesOf('DIFC Components/Cards', module)
     'Card Guide',
     () => `
     <div 
-      class="ui-card ui-card--light-blue"
+      class="ui-guide-card ui-card ui-card--light-blue"
       style="min-height:100px;width:320px;"
     >
       <div class="ui-card__header">
