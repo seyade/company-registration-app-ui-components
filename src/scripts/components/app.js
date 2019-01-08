@@ -4,6 +4,7 @@ import UISelectBox from './select-box';
 import UISearchBar from './search-bar';
 import UIAccordion from './accordion';
 import UIDataTable from './data-table';
+import UIDatePicker from './date-picker';
 
 /**
  * @name App
@@ -74,6 +75,7 @@ class App {
       UISelectBox,
       UIAccordion,
       UIDataTable,
+      UIDatePicker,
     ]).render();
   }
 

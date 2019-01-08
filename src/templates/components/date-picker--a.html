@@ -1,25 +1,29 @@
 <div class="ui-date-picker" style="height: 25rem;">
   <div
-    class="form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+    class="ui-form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click"
   >
     <label
-      class="form-element__label slds-form-element__label"
+      class="ui-form-element__label slds-form-element__label"
       for="date-input-id"
     >
       Date
+      <button class="ui-date-picker__button">
+        <img src="/assets/svg/event.svg" alt="" />
+      </button>
     </label>
     <div
-      class="form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+      class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
     >
-      <input id="date-input-id" placeholder="" class="slds-input" type="text" />
+      <input
+        id="date-input-id"
+        placeholder=""
+        class="ui-form-element__control-input slds-input"
+        type="text"
+      />
       <button
         class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
         title="Select a date"
       >
-        <img 
-          src="/assets/svg/event.svg" 
-          alt=""
-        />
         <span class="slds-assistive-text">Select a date</span>
       </button>
     </div>
@@ -38,10 +42,7 @@
               class="slds-button slds-button_icon slds-button_icon-container"
               title="Previous Month"
             >
-              <img 
-                src="/assets/svg/arrow-left.svg" 
-                alt=""
-              />
+              <img src="/assets/svg/arrow-left.svg" alt="" />
               <span class="slds-assistive-text">Previous Month</span>
             </button>
           </div>
@@ -58,10 +59,7 @@
               class="slds-button slds-button_icon slds-button_icon-container"
               title="Next Month"
             >
-              <img 
-                src="/assets/svg/arrow-right.svg" 
-                alt=""
-              />
+              <img src="/assets/svg/arrow-right.svg" alt="" />
               <span class="slds-assistive-text">Next Month</span>
             </button>
           </div>

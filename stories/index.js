@@ -2164,7 +2164,7 @@ storiesOf('DIFC Components/Date Picker', module)
                   </div>
                 </div>
                 <div
-                  class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+                  class="ui-form-element slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
                 >
                   <label class="ui-form-element__label slds-form-element__label" for="date-input-id-02">
                     End Date
