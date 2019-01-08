@@ -1,7 +1,13 @@
+.ui-form-element__label {
+  margin-bottom: 12px;
+}
+
 .ui-form-element__control-input {
-  border-radius: 0;
+  max-width: 560px;
+  border-radius: 2px;
 }
 
 .ui-form-element__control-textarea {
-  border-radius: 0;
+  max-width: 560px;
+  border-radius: 2px;
 }
