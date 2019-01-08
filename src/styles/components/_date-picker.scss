@@ -11,12 +11,25 @@
     }
   }
 
+  .ui-date-picker__button {
+    border: 0;
+    background-color: transparent;
+  }
+
   .ui-form-element__control-input {
     border-radius: 2px;
   }
 
   .slds-dropdown {
     top: 80%;
+    // display: block;
+    transition: all 300ms ease-in-out;
+  }
+
+  .slds-is-open {
+    .slds-dropdown {
+      // display: block;
+    }
   }
 
   .slds-form_compound .slds-form-element {

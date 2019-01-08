@@ -24,6 +24,14 @@ body {
     max-width: 1440px;
     margin: 0 auto;
   }
+
+  &--ui-components {
+    .page-section {
+      padding: 16px;
+      margin-bottom: 16px;
+      background-color: #fff;
+    }
+  }
 }
 
 .page-header__tier-inner {

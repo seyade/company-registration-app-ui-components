@@ -1,7 +1,7 @@
 {% extends '_layout.html' %}
 
 {% block content %}
-<article class="page">
+<article class="page page--ui-components">
   <header class="page-header">
     <div class="page-header__top-tier">
       {% include 'components/global-navigation--c.html' %}
@@ -14,10 +14,14 @@
   </header>
   <div class="page__inner">
 
-    <section class="page-section">
+    <section class="ui-card page-section">
       <h1>Accordion</h1>
       {% include 'components/accordion.html' %}
+    </section>
 
+    <section class="ui-card page-section">
+      <h1>Date Picker</h1>
+      {% include 'components/date-picker--a.html' %}
     </section>
 
   </div>
