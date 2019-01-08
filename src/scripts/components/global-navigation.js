@@ -3,7 +3,7 @@ import * as utils from '../utils';
 /**
  * GlobalNavigation
  */
-class GlobalNavigation {
+class UIGlobalNavigation {
   constructor() {
     /**
      * component
@@ -80,6 +80,8 @@ class GlobalNavigation {
     );
 
     this._addEvents();
+
+    return this.component;
   }
 
   /**
@@ -89,43 +91,43 @@ class GlobalNavigation {
   _addEvents() {
     this.navigationMenuButton.addEventListener('click', e => {
       this.navigationMenu.classList.remove(
-        GlobalNavigation.CLASS.containerMenuHidden
+        UIGlobalNavigation.CLASS.containerMenuHidden
       );
 
-      e.currentTarget.classList.add(GlobalNavigation.CLASS.buttonHidden);
+      e.currentTarget.classList.add(UIGlobalNavigation.CLASS.buttonHidden);
       this.navigationMenuCloseButton.classList.remove(
-        GlobalNavigation.CLASS.buttonHidden
+        UIGlobalNavigation.CLASS.buttonHidden
       );
     });
 
     this.navigationMenuCloseButton.addEventListener('click', e => {
       this.navigationMenu.classList.add(
-        GlobalNavigation.CLASS.containerMenuHidden
+        UIGlobalNavigation.CLASS.containerMenuHidden
       );
 
-      e.currentTarget.classList.add(GlobalNavigation.CLASS.buttonHidden);
+      e.currentTarget.classList.add(UIGlobalNavigation.CLASS.buttonHidden);
       this.navigationMenuButton.classList.remove(
-        GlobalNavigation.CLASS.buttonHidden
+        UIGlobalNavigation.CLASS.buttonHidden
       );
     });
 
     this.searchButton.addEventListener('click', e => {
       const ancestor = utils.findParent(
         e.currentTarget,
-        GlobalNavigation.CLASS.container
+        UIGlobalNavigation.CLASS.container
       );
 
-      ancestor.classList.add(GlobalNavigation.CLASS.containerExpanded);
+      ancestor.classList.add(UIGlobalNavigation.CLASS.containerExpanded);
       this.searchBarInput.focus();
     });
 
     this.searchBarCloseButton.addEventListener('click', e => {
       const ancestor = utils.findParent(
         e.currentTarget,
-        GlobalNavigation.CLASS.container
+        UIGlobalNavigation.CLASS.container
       );
 
-      ancestor.classList.remove(GlobalNavigation.CLASS.containerExpanded);
+      ancestor.classList.remove(UIGlobalNavigation.CLASS.containerExpanded);
       ancestor.removeAttribute('style');
     });
   }
@@ -134,11 +136,11 @@ class GlobalNavigation {
 /**
  * classes use by component
  */
-GlobalNavigation.CLASS = {
+UIGlobalNavigation.CLASS = {
   container: 'ui-global-navigation',
   containerExpanded: 'ui-global-navigation--expanded',
   containerMenuHidden: 'ui-global-navigation__menu--hidden',
   buttonHidden: 'ui-global-navigation__button--hidden',
 };
 
-export default GlobalNavigation;
+export default UIGlobalNavigation;

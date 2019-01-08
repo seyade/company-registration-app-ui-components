@@ -5,10 +5,25 @@
     .ui-icon {
       position: absolute;
       right: 0;
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+  .slds-accordion__content {
+    transition: all 1000ms ease-in-out;
+  }
+
+  .slds-is-close {
+    > .slds-accordion__content {
+      max-height: 0;
     }
   }
 
   .slds-is-open {
+    > .slds-accordion__content {
+      max-height: 1200px;
+    }
+
     .ui-icon {
       transform: rotate(180deg);
     }

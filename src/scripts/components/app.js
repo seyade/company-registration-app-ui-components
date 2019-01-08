@@ -1,6 +1,9 @@
-import GlobalNavigation from './global-navigation';
-import SelectBox from './selectBox';
-import SearchBar from './searchBar';
+import { AppComponents } from '../app-core';
+import UIGlobalNavigation from './global-navigation';
+import UISelectBox from './select-box';
+import UISearchBar from './search-bar';
+import UIAccordion from './accordion';
+import UIDataTable from './data-table';
 
 /**
  * @name App
@@ -45,17 +48,33 @@ class App {
     this._toggle();
     this._closePanel();
 
-    // global navigation
-    const globalNavigation = new GlobalNavigation();
-    globalNavigation.init();
+    // // global navigation
+    // const globalNavigation = new UIGlobalNavigation();
+    // globalNavigation.init();
 
-    // seacrhbar
-    const searcheBar = new SearchBar();
-    searcheBar.init();
+    // // seacrhbar
+    // const searcheBar = new UISearchBar();
+    // // searcheBar.init();
 
-    // start selectbox
-    const selectBox = new SelectBox();
-    selectBox.init();
+    // // start selectbox
+    // const selectBox = new UISelectBox();
+    // selectBox.init();
+
+    // // accordion
+    // const accordion = new UIAccordion();
+    // accordion.init();
+
+    // // data table
+    // const dataTable = new UIDataTable();
+    // dataTable.init();
+
+    new AppComponents([
+      UIGlobalNavigation,
+      // UISearchBar,
+      UISelectBox,
+      UIAccordion,
+      UIDataTable,
+    ]).render();
   }
 
   /**

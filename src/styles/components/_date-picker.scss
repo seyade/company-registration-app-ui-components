@@ -18,4 +18,15 @@
   .slds-dropdown {
     top: 80%;
   }
+
+  .slds-form_compound .slds-form-element {
+    margin-right: 8px;
+  }
+
+  .slds-form_compound
+    .slds-form-element__row
+    .slds-form-element
+    + .slds-form-element {
+    padding-left: 0;
+  }
 }

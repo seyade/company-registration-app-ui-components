@@ -469,7 +469,7 @@ storiesOf('DIFC Components/Global Navigation', module)
         <h1 class="ui-global-navigation__title">
           <img
             class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-logo.svg"
+            src="/assets/svg/difc-diamond.svg"
             alt="DIFC"
           />
           <span class="ui-global-navigation__title-text">One DIFC</span>
@@ -515,7 +515,7 @@ storiesOf('DIFC Components/Global Navigation', module)
         <h1 class="ui-global-navigation__title">
           <img
             class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-logo.svg"
+            src="/assets/svg/difc-diamond.svg"
             alt="DIFC"
           />
           <span class="ui-global-navigation__title-text">One DIFC</span>
@@ -594,7 +594,7 @@ storiesOf('DIFC Components/Global Navigation', module)
         <h1 class="ui-global-navigation__title">
           <img
             class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-logo.svg"
+            src="/assets/svg/difc-diamond.svg"
             alt="DIFC"
           />
           <span class="ui-global-navigation__title-text">One DIFC</span>
@@ -734,7 +734,7 @@ storiesOf('DIFC Components/Global Navigation', module)
         <h1 class="ui-global-navigation__title">
           <img
             class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-logo.svg"
+            src="/assets/svg/difc-diamond.svg"
             alt="DIFC"
           />
           <span class="ui-global-navigation__title-text">One DIFC</span>
@@ -2126,11 +2126,11 @@ storiesOf('DIFC Components/Date Picker', module)
     () => `
     <div class="ui-date-picker" style="height: 25rem;">
       <div class="slds-form slds-form_compound">
-        <fieldset class="slds-form-element">
-          <legend class="ui-form-element slds-form-element__label slds-form-element__legend">
-            Start and End Date
+        <fieldset class="ui-form-element slds-form-element">
+          <legend class="ui-form-element__label slds-form-element__label slds-form-element__legend">
+            Please select Start and End Date
           </legend>
-          <div class="ui-form-element_element-control slds-form-element__control">
+          <div class="ui-form-element__control slds-form-element__control">
             <div class="ui-form-element__group slds-form-element__group">
               <div class="slds-form-element__row">
                 <div

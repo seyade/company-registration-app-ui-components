@@ -1,0 +1,25 @@
+{% extends '_layout.html' %}
+
+{% block content %}
+<article class="page">
+  <header class="page-header">
+    <div class="page-header__top-tier">
+      {% include 'components/global-navigation--c.html' %}
+    </div>
+    <div class="page-header__bottom-tier">
+      <div class="page-header__tier-inner">
+        {% include 'components/page-tabs.html' %}
+      </div>
+    </div>
+  </header>
+  <div class="page__inner">
+
+    <section class="page-section">
+      <h1>Accordion</h1>
+      {% include 'components/accordion.html' %}
+
+    </section>
+
+  </div>
+</article>
+{% endblock %}

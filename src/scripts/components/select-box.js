@@ -4,7 +4,7 @@ import * as utils from '../utils';
  * SelectBox component
  * @description styled select dropdown to replace native HTML select.
  */
-class SelectBox {
+class UISelectBox {
   constructor() {
     /**
      * selectBoxes array
@@ -67,15 +67,15 @@ class SelectBox {
     this.selectBoxes.forEach(selectBox => {
       const parentItem = selectBox.parentElement;
 
-      selectBox.classList.add(SelectBox.CLASSES.selectBoxHidden);
+      selectBox.classList.add(UISelectBox.CLASSES.selectBoxHidden);
 
       this.options = selectBox.querySelectorAll('option');
 
       this.selectBoxWrap = document.createElement('div');
-      this.selectBoxWrap.className = SelectBox.CLASSES.selectBoxWrap;
+      this.selectBoxWrap.className = UISelectBox.CLASSES.selectBoxWrap;
 
       this.pseudoSelect = document.createElement('span');
-      this.pseudoSelect.className = SelectBox.CLASSES.pseudoSelect;
+      this.pseudoSelect.className = UISelectBox.CLASSES.pseudoSelect;
       this.pseudoSelect.innerText = 'Type of business in DIFC';
 
       let arrowImage = document.createElement('img');
@@ -136,13 +136,13 @@ class SelectBox {
       this.marker = listItemContent.previousElementSibling;
 
       if (
-        !thisPseudoList.classList.contains(SelectBox.CLASSES.pseudoListHidden)
+        !thisPseudoList.classList.contains(UISelectBox.CLASSES.pseudoListHidden)
       ) {
-        thisPseudoList.classList.add(SelectBox.CLASSES.pseudoListHidden);
+        thisPseudoList.classList.add(UISelectBox.CLASSES.pseudoListHidden);
         this.marker.removeAttribute('style');
         this.selectBoxWrap.classList.remove('select-box-wrap--expanded');
       } else {
-        thisPseudoList.classList.remove(SelectBox.CLASSES.pseudoListHidden);
+        thisPseudoList.classList.remove(UISelectBox.CLASSES.pseudoListHidden);
         this.marker.style.transform = 'translateY(-69px)';
         this.selectBoxWrap.classList.add('select-box-wrap--expanded');
       }
@@ -157,11 +157,11 @@ class SelectBox {
 }
 
 // classes used by component
-SelectBox.CLASSES = {
+UISelectBox.CLASSES = {
   selectBoxWrap: 'select-box-wrap',
   selectBoxHidden: 'select-box--hidden',
   pseudoSelect: 'pseudo-select',
   pseudoListHidden: 'pseudo-select__option-list--hidden',
 };
 
-export default SelectBox;
+export default UISelectBox;

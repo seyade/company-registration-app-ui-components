@@ -79,6 +79,12 @@ module.exports = {
       inject: true,
       hash: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/ui-components.html',
+      filename: 'components.html',
+      inject: true,
+      hash: true,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
