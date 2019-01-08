@@ -136,25 +136,31 @@ storiesOf('DIFC Components/Cards', module)
   .add(
     'Card Guide',
     () => `
-    <div 
-      class="ui-guide-card ui-card ui-card--light-blue"
-      style="min-height:100px;width:320px;"
-    >
+    <div class="ui-guide-card ui-card ui-card--light-blue">
       <div class="ui-card__header">
-        <span class="ui-card__header-title">
-          Pathway Guide
-        </span>
+        <span class="ui-card__header-title">Pathway Guide</span>
         <span class="ui-card__header-subtitle">
           Section One: Prepare company documents
         </span>
       </div>
       <div class="ui-card__content ui-card__content--padding-med">
         <p class="ui-card__paragraph">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni repellat nesciunt
-          sapiente eius eum commodi
-          illo voluptates vel ratione consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga, illum
-          molestiae!
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni
+          repellat nesciunt sapiente eius eum commodi.
         </p>
+
+        <p class="ui-card__paragraph">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia magni
+          repellat nesciunt sapiente eius eum commodi illo voluptates vel ratione
+          consectetur, laborum earum blanditiis officiis, adipisci cumque. Fuga,
+          illum molestiae.
+        </p>
+
+        <div class="ui-guide-card__notice">
+          <p class="ui-guide-card__notice-text">
+            Please make sure you fill in all details on each part of the section.
+          </p>
+        </div>
       </div>
     </div>
   `
@@ -163,35 +169,34 @@ storiesOf('DIFC Components/Cards', module)
     'Card Next Steps',
     () => `
     <div
-      class="ui-card ui-card--very-light-blue ui-card--next-steps"
-      style="min-height:100px;width:456px;"
+      class="ui-next-step-card ui-card ui-card--very-light-blue ui-card--next-steps"
     >
-      <div class="ui-card__content">
+      <div class="ui-card__content ui-card__content--padding-med">
         <span class="ui-card__title">Next Steps</span>
         <p class="ui-card__subtitle">Sed do eiusm Company Profile. Here are your next 3 steps</p>
-        <ul class="next-steps__list">
-          <li class="next-steps__item">
-            <a class="next-steps__item-link" href="#">
-              <span class="next-steps__item-description">
+        <ul class="ui-next-step-card__list">
+          <li class="ui-next-step-card__item">
+            <a class="ui-next-step-card__item-link" href="#">
+              <span class="ui-next-step-card__item-description">
                 Create your busniess structure
               </span>
-              <span class="next-steps__item-info">4 questions</span>
+              <span class="ui-next-step-card__item-info">4 questions</span>
             </a>
           </li>
-          <li class="next-steps__item">
-            <a class="next-steps__item-link" href="#">
-              <span class="next-steps__item-description">
+          <li class="ui-next-step-card__item">
+            <a class="ui-next-step-card__item-link" href="#">
+              <span class="ui-next-step-card__item-description">
                 Reserve your company name
               </span>
-              <span class="next-steps__item-info">10 minutes</span>
+              <span class="ui-next-step-card__item-info">10 minutes</span>
             </a>
           </li>
-          <li class="next-steps__item">
-            <a class="next-steps__item-link" href="#">
-              <span class="next-steps__item-description">
+          <li class="ui-next-step-card__item">
+            <a class="ui-next-step-card__item-link" href="#">
+              <span class="ui-next-step-card__item-description">
                 Fill in company details
               </span>
-              <span class="next-steps__item-info">12 questions</span>
+              <span class="ui-next-step-card__item-info">12 questions</span>
             </a>
           </li>
         </ul>

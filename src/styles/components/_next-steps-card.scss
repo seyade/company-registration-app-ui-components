@@ -1,0 +1,55 @@
+.ui-next-step-card {
+  width: 456px;
+  min-height: 100px;
+
+  .ui-card__content {
+    font-family: 'EuclidSquareTrial-Medium', sans-serif;
+  }
+
+  .ui-card__title {
+    color: #0076cf;
+  }
+
+  .ui-button-group {
+    padding: 16px 28px 32px;
+  }
+
+  .ui-button {
+    &--default {
+      background-color: transparent;
+
+      &:hover {
+        background-color: #f3f2f2;
+      }
+    }
+  }
+
+  &_list {
+    padding-bottom: 32px;
+  }
+
+  &__item {
+    font-size: 14px;
+    border-top: 1px solid #c4c4c4;
+
+    &:last-child {
+      border-bottom: 1px solid #c4c4c4;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      color: #4a4a4a;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        // padding: 16px 1px;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+      }
+    }
+  }
+}
