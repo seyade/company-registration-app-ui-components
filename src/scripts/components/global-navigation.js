@@ -40,12 +40,6 @@ class UIGlobalNavigation {
      * @type {Element}
      */
     this.searchBarInput;
-
-    /**
-     * searchbar close button
-     * @type {Element}
-     */
-    this.searchBarCloseButton;
   }
 
   init() {
@@ -67,16 +61,10 @@ class UIGlobalNavigation {
       '.ui-global-navigation__search-bar'
     );
 
-    this.searchBarInput = this.component.querySelector(
-      '.ui-global-navigation__search-bar-input'
-    );
+    this.searchBarInput = this.component.querySelector('.ui-search-bar__input');
 
     this.searchButton = this.component.querySelector(
       '.ui-global-navigation__button--search'
-    );
-
-    this.searchBarCloseButton = this.component.querySelector(
-      '.ui-global-navigation__button--search-close'
     );
 
     this._addEvents();
@@ -89,46 +77,42 @@ class UIGlobalNavigation {
    * @private
    */
   _addEvents() {
-    this.navigationMenuButton.addEventListener('click', e => {
+    this.navigationMenuButton.addEventListener('click', event => {
       this.navigationMenu.classList.remove(
-        UIGlobalNavigation.CLASS.containerMenuHidden
+        UIGlobalNavigation.CLASSES.containerMenuHidden
       );
 
-      e.currentTarget.classList.add(UIGlobalNavigation.CLASS.buttonHidden);
+      event.currentTarget.classList.add(
+        UIGlobalNavigation.CLASSES.buttonHidden
+      );
+
       this.navigationMenuCloseButton.classList.remove(
-        UIGlobalNavigation.CLASS.buttonHidden
+        UIGlobalNavigation.CLASSES.buttonHidden
       );
     });
 
-    this.navigationMenuCloseButton.addEventListener('click', e => {
+    this.navigationMenuCloseButton.addEventListener('click', event => {
       this.navigationMenu.classList.add(
-        UIGlobalNavigation.CLASS.containerMenuHidden
+        UIGlobalNavigation.CLASSES.containerMenuHidden
       );
 
-      e.currentTarget.classList.add(UIGlobalNavigation.CLASS.buttonHidden);
+      event.currentTarget.classList.add(
+        UIGlobalNavigation.CLASSES.buttonHidden
+      );
+
       this.navigationMenuButton.classList.remove(
-        UIGlobalNavigation.CLASS.buttonHidden
+        UIGlobalNavigation.CLASSES.buttonHidden
       );
     });
 
-    this.searchButton.addEventListener('click', e => {
-      const ancestor = utils.findParent(
-        e.currentTarget,
-        UIGlobalNavigation.CLASS.container
-      );
+    this.searchButton.addEventListener('click', event => {
+      const searchBar = this.component.getElementsByClassName(
+        UIGlobalNavigation.CLASSES.searchBar
+      )[0];
 
-      ancestor.classList.add(UIGlobalNavigation.CLASS.containerExpanded);
+      searchBar.classList.add(UIGlobalNavigation.CLASSES.searchBarOpen);
+
       this.searchBarInput.focus();
-    });
-
-    this.searchBarCloseButton.addEventListener('click', e => {
-      const ancestor = utils.findParent(
-        e.currentTarget,
-        UIGlobalNavigation.CLASS.container
-      );
-
-      ancestor.classList.remove(UIGlobalNavigation.CLASS.containerExpanded);
-      ancestor.removeAttribute('style');
     });
   }
 }
@@ -136,11 +120,13 @@ class UIGlobalNavigation {
 /**
  * classes use by component
  */
-UIGlobalNavigation.CLASS = {
+UIGlobalNavigation.CLASSES = {
   container: 'ui-global-navigation',
   containerExpanded: 'ui-global-navigation--expanded',
   containerMenuHidden: 'ui-global-navigation__menu--hidden',
   buttonHidden: 'ui-global-navigation__button--hidden',
+  searchBarOpen: 'ui-search-bar--is-open',
+  searchBar: 'ui-search-bar',
 };
 
 export default UIGlobalNavigation;

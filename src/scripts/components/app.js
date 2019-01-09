@@ -71,7 +71,7 @@ class App {
 
     new AppComponents([
       UIGlobalNavigation,
-      // UISearchBar,
+      UISearchBar,
       UISelectBox,
       UIAccordion,
       UIDataTable,
