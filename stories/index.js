@@ -2,6 +2,194 @@ import { storiesOf } from '@storybook/html';
 import { action, configureActions } from '@storybook/addon-actions';
 import '../dist/main.css';
 
+storiesOf('DIFC Components/Accordion', module)
+  .add(
+    'Accordion Base',
+    () => `
+    <div class="ui-accordion">
+      <ul class="slds-accordion">
+        <li class="slds-accordion__list-item">
+          <section class="slds-accordion__section">
+            <div class="slds-accordion__summary">
+              <h3 class="slds-accordion__summary-heading">
+                <button
+                  aria-controls="accordion-details-01"
+                  aria-expanded="true"
+                  class="slds-button slds-button_reset slds-accordion__summary-action"
+                >
+                  <img
+                    class="ui-icon"
+                    src="/assets/svg/arrow-down.svg"
+                  />
+                  <span class="slds-truncate" title="Accordion summary">
+                    Accordion Summary
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slds-accordion__content"
+              id="accordion-details-01"
+            >
+              Accordion Details
+            </div>
+          </section>
+        </li>
+        <li class="slds-accordion__list-item">
+          <section class="slds-accordion__section">
+            <div class="slds-accordion__summary">
+              <h3 class="slds-accordion__summary-heading">
+                <button
+                  aria-controls="accordion-details-02"
+                  aria-expanded="false"
+                  class="slds-button slds-button_reset slds-accordion__summary-action"
+                >
+                  <img
+                    class="ui-icon"
+                    src="/assets/svg/arrow-down.svg"
+                  />
+                  <span class="slds-truncate" title="Accordion summary">
+                    Accordion Summary
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slds-accordion__content"
+              id="accordion-details-02"
+            >
+              Accordion Details - B
+            </div>
+          </section>
+        </li>
+        <li class="slds-accordion__list-item">
+          <section class="slds-accordion__section">
+            <div class="slds-accordion__summary">
+              <h3 class="slds-accordion__summary-heading">
+                <button
+                  aria-controls="accordion-details-03"
+                  aria-expanded="false"
+                  class="slds-button slds-button_reset slds-accordion__summary-action"
+                >
+                  <img
+                    class="ui-icon"
+                    src="/assets/svg/arrow-down.svg"
+                  />
+                  <span class="slds-truncate" title="Accordion summary">
+                    Accordion Summary
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slds-accordion__content"
+              id="accordion-details-03"
+            >
+              Accordion Details - C
+            </div>
+          </section>
+        </li>
+      </ul>
+    </div>
+    `
+  )
+  .add(
+    'Accordion Expanded',
+    () => `
+    <div class="ui-accordion">
+      <ul class="slds-accordion">
+        <li class="slds-accordion__list-item">
+          <section class="slds-accordion__section slds-is-open">
+            <div class="slds-accordion__summary">
+              <h3 class="slds-accordion__summary-heading">
+                <button
+                  aria-controls="accordion-details-01"
+                  aria-expanded="true"
+                  class="slds-button slds-button_reset slds-accordion__summary-action"
+                >
+                  <img
+                    class="ui-icon"
+                    src="/assets/svg/arrow-down.svg"
+                  />
+                  <span class="slds-truncate" title="Accordion summary">
+                    Accordion Summary
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slds-accordion__content"
+              id="accordion-details-01"
+            >
+              Accordion Details
+            </div>
+          </section>
+        </li>
+        <li class="slds-accordion__list-item">
+          <section class="slds-accordion__section">
+            <div class="slds-accordion__summary">
+              <h3 class="slds-accordion__summary-heading">
+                <button
+                  aria-controls="accordion-details-02"
+                  aria-expanded="false"
+                  class="slds-button slds-button_reset slds-accordion__summary-action"
+                >
+                  <img
+                    class="ui-icon"
+                    src="/assets/svg/arrow-down.svg"
+                  />
+                  <span class="slds-truncate" title="Accordion summary">
+                    Accordion Summary
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slds-accordion__content"
+              id="accordion-details-02"
+            >
+              Accordion Details - B
+            </div>
+          </section>
+        </li>
+        <li class="slds-accordion__list-item">
+          <section class="slds-accordion__section">
+            <div class="slds-accordion__summary">
+              <h3 class="slds-accordion__summary-heading">
+                <button
+                  aria-controls="accordion-details-03"
+                  aria-expanded="false"
+                  class="slds-button slds-button_reset slds-accordion__summary-action"
+                >
+                  <img
+                    class="ui-icon"
+                    src="/assets/svg/arrow-down.svg"
+                  />
+                  <span class="slds-truncate" title="Accordion summary">
+                    Accordion Summary
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slds-accordion__content"
+              id="accordion-details-03"
+            >
+              Accordion Details - C
+            </div>
+          </section>
+        </li>
+      </ul>
+    </div>
+    `
+  );
+
 storiesOf('DIFC Components/Avatar', module).add(
   'Avatar',
   () => `
@@ -12,6 +200,44 @@ storiesOf('DIFC Components/Avatar', module).add(
   />
   `
 );
+
+storiesOf('DIFC Components/Breadcrumbs', module)
+  .add(
+    'Base',
+    () => `
+    <div class="demo-only" style="height:150px;">
+      <!-- below is the real component -->
+      <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
+        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+          <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Parent Name</a></li>
+          <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Child Name</a></li>
+        </ol>
+      </nav>
+    </div>
+    `
+  )
+  .add(
+    'Overflow',
+    () => `
+    <div class="demo-only" style="height:150px;">
+      <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
+        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center">
+          <li class="slds-breadcrumb__item slds-text-title_caps">
+            <span class="ui-breadcrumbs__text ui-breadcrumbs__text--truncated">
+              ...
+            </span>
+          </li>
+          <li class="slds-breadcrumb__item slds-text-title_caps">
+            <a href="javascript:void(0);">Parent Name</a>
+          </li>
+          <li class="slds-breadcrumb__item slds-text-title_caps">
+            <a href="javascript:void(0);">Child Name</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+      `
+  );
 
 storiesOf('DIFC Components/Buttons', module)
   .add(
@@ -463,1341 +689,6 @@ storiesOf('DIFC Components/Cards', module)
       </div>
     </div>
   `
-  );
-
-storiesOf('DIFC Components/Global Navigation', module)
-  .add(
-    'Base',
-    () => `
-    <div class="ui-global-navigation">
-      <div class="ui-global-navigation__inner-wrap">
-        <h1 class="ui-global-navigation__title">
-          <img
-            class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-diamond.svg"
-            alt="DIFC"
-          />
-          <span class="ui-global-navigation__title-text">One DIFC</span>
-        </h1>
-
-        <div class="ui-global-navigation__content">
-          <div class="ui-global-navigation__content-col">
-            <div class="ui-global-navigation__action">
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-            </div>
-            <div class="ui-global-navigation__user">
-              <a href="#" class="ui-global-navigation__link">Register</a>
-              <a href="#" class="ui-global-navigation__link">Login</a>
-            </div>
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu"
-            >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Logged In',
-    () => `
-    <div class="ui-global-navigation">
-      <div class="ui-global-navigation__inner-wrap">
-        <h1 class="ui-global-navigation__title">
-          <img
-            class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-diamond.svg"
-            alt="DIFC"
-          />
-          <span class="ui-global-navigation__title-text">One DIFC</span>
-        </h1>
-
-        <div class="ui-global-navigation__content">
-          <div class="ui-global-navigation__content-col">
-            <div class="ui-global-navigation__action">
-              <div class="ui-global-navigation__action--private">
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/answer-public.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/announcement.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-              </div>
-              
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-            </div>
-
-            <div class="ui-global-navigation__user">
-              <a 
-                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
-              >
-                <span class="ui-global-navigation__user-name">Company name</span>
-                <span class="ui-global-navigation__user-avatar">
-                  <img
-                    src="/assets/svg/avatar-placeholder.svg"
-                    alt="avatar image"
-                    class="ui-global-navigation__button-image icon-image"
-                  />
-                </span>
-              </a>
-            </div>
-
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu"
-            >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Logged In Expanded with Menu',
-    () => `
-    <div class="ui-global-navigation">
-      <div class="ui-global-navigation__inner-wrap">
-        <h1 class="ui-global-navigation__title">
-          <img
-            class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-diamond.svg"
-            alt="DIFC"
-          />
-          <span class="ui-global-navigation__title-text">One DIFC</span>
-        </h1>
-
-        <div class="ui-global-navigation__content">
-          <div class="ui-global-navigation__content-col">
-            <div class="ui-global-navigation__action">
-              <div class="ui-global-navigation__action--private">
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/answer-public.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/announcement.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-              </div>
-
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-            </div>
-
-            <div class="ui-global-navigation__user">
-              <a
-                class="ui-global-navigation__user-link ui-global-navigation__link"
-                href="#"
-              >
-                <span class="ui-global-navigation__user-name">Company name</span>
-                <span class="ui-global-navigation__user-avatar">
-                  <img
-                    src="/assets/svg/avatar-placeholder.svg"
-                    alt="avatar image"
-                    class="ui-global-navigation__button-image icon-image"
-                  />
-                </span>
-              </a>
-            </div>
-
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu ui-global-navigation__button--hidden"
-            >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
-            <button
-              class="ui-global-navigation__button ui-global-navigation__button--menu-close"
-            >
-              <img
-                src="/assets/svg/cross-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
-          </div>
-        </div>
-
-        <div class="ui-global-navigation__search-bar">
-          <div class="ui-global-navigation__search-bar-action">
-            <img
-              src="/assets/svg/magnifier-icon.svg"
-              alt="search icon"
-              class="search-bar__icon-image icon-image"
-            />
-            <input
-              class="ui-global-navigation__search-bar-input"
-              placeholder="Search item here with csv, for data entry"
-              type="text"
-            />
-            <button
-              class="ui-global-navigation__button ui-global-navigation__button--search-close"
-            >
-              <img
-                src="/assets/svg/cross-line.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
-              />
-            </button>
-          </div>
-          <div class="ui-global-navigation__search-bar-results">
-            <ul class="ui-global-navigation__search-bar-results-list">
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
-              </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search you are looking for here</a>
-              </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
-              </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search you are looking for here</a>
-              </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="ui-global-navigation__menu">
-        <ul class="ui-global-navigation__menu-list">
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-        </ul>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Logged In Expanded with Search Bar',
-    () => `
-    <div class="ui-global-navigation ui-global-navigation--expanded">
-      <div class="ui-global-navigation__inner-wrap">
-        <h1 class="ui-global-navigation__title">
-          <img
-            class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-diamond.svg"
-            alt="DIFC"
-          />
-          <span class="ui-global-navigation__title-text">One DIFC</span>
-        </h1>
-
-        <div class="ui-global-navigation__content">
-          <div class="ui-global-navigation__content-col">
-            <div class="ui-global-navigation__action">
-              <div class="ui-global-navigation__action--private">
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/answer-public.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/announcement.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-              </div>
-              
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-            </div>
-
-            <div class="ui-global-navigation__user">
-              <a 
-                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
-              >
-                <span class="ui-global-navigation__user-name">Company name</span>
-                <span class="ui-global-navigation__user-avatar">
-                  <img
-                    src="/assets/svg/avatar-placeholder.svg"
-                    alt="avatar image"
-                    class="ui-global-navigation__button-image icon-image"
-                  />
-                </span>
-              </a>
-            </div>
-
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu"
-            >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
-          </div>
-        </div>
-
-        <div class="ui-global-navigation__search-bar">
-          <div class="ui-global-navigation__search-bar-action">
-            <img
-              src="/assets/svg/magnifier-icon.svg"
-              alt="search icon"
-              class="search-bar__icon-image icon-image"
-            />
-            <input
-              class="ui-global-navigation__search-bar-input"
-              placeholder="Search item here with csv, for data entry"
-              type="text"
-            />
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--search-close"
-            >
-              <img
-                src="/assets/svg/cross-line.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
-              />
-            </button>
-          </div>
-          <div class="ui-global-navigation__search-bar-results">
-            <ul class="ui-global-navigation__search-bar-results-list">
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
-              </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search you are looking for here</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  `
-  );
-
-storiesOf('DIFC Components/Progress Indicators', module)
-  .add(
-    'Horizontal Base',
-    () => `
-    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
-      <div class="slds-progress">
-        <ol class="slds-progress__list">
-          <li class="slds-progress__item slds-is-active">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-1-tooltip">
-              <span class="slds-assistive-text">Step 1 - Active</span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 2 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 3 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 4 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 5 </span>
-            </button>
-          </li>
-        </ol>
-        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
-          <span class="slds-progress-bar__value" style="width:0%">
-            <span class="slds-assistive-text">Progress: 0%</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Horizontal Error',
-    () => `
-    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
-      <div class="slds-progress">
-        <ol class="slds-progress__list">
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
-              <img
-                src="/assets/svg/progress-ring-complete.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 1 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
-              <img
-                src="/assets/svg/progress-ring-complete.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 2 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-has-error">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
-              <img
-                src="/assets/svg/error.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 2 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 4 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 5 </span>
-            </button>
-          </li>
-        </ol>
-        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
-          <span class="slds-progress-bar__value" style="width: 50%">
-            <span class="slds-assistive-text">Progress: 50%</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Horizontal Next Step',
-    () => `
-    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
-      <div class="slds-progress">
-        <ol class="slds-progress__list">
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
-              <img
-                src="/assets/svg/progress-ring-complete.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 1 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
-              <img
-                src="/assets/svg/progress-ring-complete.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 2 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-is-active">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
-              <span class="slds-assistive-text">Step 3 - Active</span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 4 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 5 </span>
-            </button>
-          </li>
-        </ol>
-        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
-          <span class="slds-progress-bar__value" style="width: 50%">
-            <span class="slds-assistive-text">Progress: 50%</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Horizontal Tooltip',
-    () => `
-    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
-      <div class="slds-progress">
-        <ol class="slds-progress__list">
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
-              <img
-                src="/assets/svg/progress-ring-complete.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 1 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
-              <img
-                src="/assets/svg/progress-ring-complete.svg"
-                alt="complete icon"
-                class="icon-image"
-              />
-              <span class="slds-assistive-text">Step 2 - Completed</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-is-active">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
-              <span class="slds-assistive-text">Step 3 - Active</span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 4 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker">
-              <span class="slds-assistive-text">Step 5 </span>
-            </button>
-          </li>
-        </ol>
-        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
-          <span class="slds-progress-bar__value" style="width:50%">
-            <span class="slds-assistive-text">Progress: 50%</span>
-          </span>
-        </div>
-      </div>
-      <div 
-        class="popover slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" 
-        id="step-3-tooltip" 
-        style="position:absolute;top:8px;left:calc(50% + 6px);transform:translateX(-50%)"
-      >
-        <div class="slds-popover__body">Submit info</div>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Vertical Base',
-    () => `
-    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
-      <ol class="form__list slds-progress__list">
-        <li class="slds-progress__item slds-is-active">
-          <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
-            <span class="slds-assistive-text">Step 3 - Active</span>
-          </button>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-      </ol>
-      <div
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="25"
-        role="progressbar"
-      >
-        <span class="slds-assistive-text">Progress: 25%</span>
-      </div>
-    </div>
-  `
-  )
-  .add(
-    'Vertical Next Step',
-    () => `
-    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
-      <ol class="form__list slds-progress__list">
-        <li class="form__list-item slds-progress__item slds-is-completed">
-          <span
-            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
-            title="Complete"
-          >
-            <img
-              src="/assets/svg/progress-ring-complete.svg"
-              alt="complete icon"
-              class="icon-image"
-            />
-            <span class="slds-assistive-text">Complete</span>
-          </span>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item slds-is-completed">
-          <span
-            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
-            title="Complete"
-          >
-            <img
-              src="/assets/svg/progress-ring-complete.svg"
-              alt="complete icon"
-              class="icon-image"
-            />
-            <span class="slds-assistive-text">Complete</span>
-          </span>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item slds-is-active">
-          <div class="slds-progress__marker">
-            <span class="slds-assistive-text">Active</span>
-          </div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-        <li class="form__list-item slds-progress__item">
-          <div class="slds-progress__marker"></div>
-          <div
-            class="slds-progress__item_content slds-grid slds-grid_align-spread"
-          >
-            [Content Here]
-          </div>
-        </li>
-      </ol>
-      <div
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="25"
-        role="progressbar"
-      >
-        <span class="slds-assistive-text">Progress: 25%</span>
-      </div>
-    </div>
-  `
-  );
-
-storiesOf('DIFC Components/Progress Bars', module).add(
-  'Base with descriptions',
-  () => `
-    <div class="ui-progress-bar">
-      <div
-        class="slds-grid slds-grid_align-spread slds-p-bottom_large"
-        id="progress-bar-label-id-1"
-      >
-        <strong>Your pathway</strong>
-        <span aria-hidden="true"><strong>25% Complete</strong></span>
-      </div>
-      <div
-        class="slds-progress-bar slds-progress-bar_small"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="25"
-        aria-labelledby="progress-bar-label-id-1"
-        role="progressbar"
-      >
-        <span class="slds-progress-bar__value" style="width: 25%;">
-          <span class="slds-assistive-text">Progress: 25%</span>
-        </span>
-      </div>
-    </div>
-  `
-);
-
-storiesOf('DIFC Components/Progress Rings', module)
-  .add(
-    'Fill',
-    () => `
-    <div class="ui-progress-ring slds-progress-ring">
-      <div 
-        class="slds-progress-ring__progress" 
-        role="progressbar" 
-        aria-valuemin="0" 
-        aria-valuemax="100" 
-        aria-valuenow="100"
-      >
-        <svg viewBox="-1 -1 2 2">
-          <path 
-            class="slds-progress-ring__path" 
-            id="slds-progress-ring-path-2" 
-            d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0" 
-          />
-        </svg>
-      </div>
-      <div class="slds-progress-ring__content"></div>
-    </div>
-    `
-  )
-  .add(
-    'Partially Drain',
-    () => `
-    <div class="ui-progress-ring slds-progress-ring">
-      <div 
-        class="slds-progress-ring__progress" 
-        role="progressbar" 
-        aria-valuemin="0" 
-        aria-valuemax="100" 
-        aria-valuenow="88"
-      >
-        <svg viewBox="-1 -1 2 2">
-          <path 
-            class="slds-progress-ring__path" 
-            id="slds-progress-ring-path-15" 
-            d="M 1 0 A 1 1 0 1 1 0.7289686274214112 -0.684547105928689 L 0 0" 
-          />
-        </svg>
-      </div>
-      <div class="slds-progress-ring__content"></div>
-    </div>
-    `
-  )
-  .add(
-    'Complete',
-    () => `
-    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_complete">
-      <div
-        class="slds-progress-ring__progress"
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="100"
-      >
-        <svg viewBox="-1 -1 2 2">
-          <path
-            class="slds-progress-ring__path"
-            id="slds-progress-ring-path-16"
-            d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
-          />
-        </svg>
-      </div>
-      <div class="slds-progress-ring__content">
-        <span class="slds-icon_container slds-icon-utility-check" title="Complete">
-          <svg class="slds-icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
-            />
-          </svg>
-          <span class="slds-assistive-text">Complete</span>
-        </span>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Warning',
-    () => `
-    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_warning">
-      <div
-        class="slds-progress-ring__progress"
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="20"
-      >
-        <svg viewBox="-1 -1 2 2">
-          <path
-            class="slds-progress-ring__path"
-            id="slds-progress-ring-path-22"
-            d="M 1 0 A 1 1 0 0 1 0.30901699437494745 0.9510565162951535 L 0 0"
-          />
-        </svg>
-      </div>
-      <div class="slds-progress-ring__content">
-        <span class="slds-icon_container slds-icon-utility-warning" title="Warning">
-          <svg class="slds-icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"
-            />
-          </svg>
-          <span class="slds-assistive-text">Warning</span>
-        </span>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Error',
-    () => `
-    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_expired">
-      <div
-        class="slds-progress-ring__progress"
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="0"
-      >
-        <svg viewBox="-1 -1 2 2">
-          <path
-            class="slds-progress-ring__path"
-            id="slds-progress-ring-path-23"
-            d="M 1 0 A 1 1 0 0 1 1 0 L 0 0"
-          />
-        </svg>
-      </div>
-      <div class="slds-progress-ring__content">
-        <span class="slds-icon_container slds-icon-utility-error" title="Expired">
-          <svg class="slds-icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"
-            />
-          </svg>
-          <span class="slds-assistive-text">Expired</span>
-        </span>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Count',
-    () => `
-    <div class="ui-progress-ring slds-progress-ring">
-      <div
-        class="slds-progress-ring__progress"
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow="0"
-      >
-        <svg viewBox="-1 -1 2 2">
-          <path
-            class="slds-progress-ring__path"
-            id="slds-progress-ring-path-23"
-            d="M 1 0 A 1 1 0 0 1 1 0 L 0 0"
-          />
-        </svg>
-      </div>
-      <div class="slds-progress-ring__content">
-        <span class="slds-icon_container slds-icon-utility-error" title="Expired">
-          <span class="progress-count-number">1</span>
-          <span class="slds-assistive-text">Expired</span>
-        </span>
-      </div>
-    </div>
-    `
-  );
-
-storiesOf('DIFC Components/Breadcrumbs', module)
-  .add(
-    'Base',
-    () => `
-    <div class="demo-only" style="height:150px;">
-      <!-- below is the real component -->
-      <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
-        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
-          <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Parent Name</a></li>
-          <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);">Child Name</a></li>
-        </ol>
-      </nav>
-    </div>
-    `
-  )
-  .add(
-    'Overflow',
-    () => `
-    <div class="demo-only" style="height:150px;">
-      <nav class="ui-breadcrumbs" role="navigation" aria-label="Breadcrumbs">
-        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-grid_vertical-align-center">
-          <li class="slds-breadcrumb__item slds-text-title_caps">
-            <span class="ui-breadcrumbs__text ui-breadcrumbs__text--truncated">
-              ...
-            </span>
-          </li>
-          <li class="slds-breadcrumb__item slds-text-title_caps">
-            <a href="javascript:void(0);">Parent Name</a>
-          </li>
-          <li class="slds-breadcrumb__item slds-text-title_caps">
-            <a href="javascript:void(0);">Child Name</a>
-          </li>
-        </ol>
-      </nav>
-    </div>
-      `
-  );
-
-storiesOf('DIFC Components/Accordion', module)
-  .add(
-    'Accordion Base',
-    () => `
-    <div class="ui-accordion">
-      <ul class="slds-accordion">
-        <li class="slds-accordion__list-item">
-          <section class="slds-accordion__section">
-            <div class="slds-accordion__summary">
-              <h3 class="slds-accordion__summary-heading">
-                <button
-                  aria-controls="accordion-details-01"
-                  aria-expanded="true"
-                  class="slds-button slds-button_reset slds-accordion__summary-action"
-                >
-                  <img
-                    class="ui-icon"
-                    src="/assets/svg/arrow-down.svg"
-                  />
-                  <span class="slds-truncate" title="Accordion summary">
-                    Accordion Summary
-                  </span>
-                </button>
-              </h3>
-            </div>
-            <div
-              aria-hidden="false"
-              class="slds-accordion__content"
-              id="accordion-details-01"
-            >
-              Accordion Details
-            </div>
-          </section>
-        </li>
-        <li class="slds-accordion__list-item">
-          <section class="slds-accordion__section">
-            <div class="slds-accordion__summary">
-              <h3 class="slds-accordion__summary-heading">
-                <button
-                  aria-controls="accordion-details-02"
-                  aria-expanded="false"
-                  class="slds-button slds-button_reset slds-accordion__summary-action"
-                >
-                  <img
-                    class="ui-icon"
-                    src="/assets/svg/arrow-down.svg"
-                  />
-                  <span class="slds-truncate" title="Accordion summary">
-                    Accordion Summary
-                  </span>
-                </button>
-              </h3>
-            </div>
-            <div
-              aria-hidden="true"
-              class="slds-accordion__content"
-              id="accordion-details-02"
-            >
-              Accordion Details - B
-            </div>
-          </section>
-        </li>
-        <li class="slds-accordion__list-item">
-          <section class="slds-accordion__section">
-            <div class="slds-accordion__summary">
-              <h3 class="slds-accordion__summary-heading">
-                <button
-                  aria-controls="accordion-details-03"
-                  aria-expanded="false"
-                  class="slds-button slds-button_reset slds-accordion__summary-action"
-                >
-                  <img
-                    class="ui-icon"
-                    src="/assets/svg/arrow-down.svg"
-                  />
-                  <span class="slds-truncate" title="Accordion summary">
-                    Accordion Summary
-                  </span>
-                </button>
-              </h3>
-            </div>
-            <div
-              aria-hidden="true"
-              class="slds-accordion__content"
-              id="accordion-details-03"
-            >
-              Accordion Details - C
-            </div>
-          </section>
-        </li>
-      </ul>
-    </div>
-    `
-  )
-  .add(
-    'Accordion Expanded',
-    () => `
-      <div class="ui-accordion">
-        <ul class="slds-accordion">
-          <li class="slds-accordion__list-item">
-            <section class="slds-accordion__section slds-is-open">
-              <div class="slds-accordion__summary">
-                <h3 class="slds-accordion__summary-heading">
-                  <button
-                    aria-controls="accordion-details-01"
-                    aria-expanded="true"
-                    class="slds-button slds-button_reset slds-accordion__summary-action"
-                  >
-                    <img
-                      class="ui-icon"
-                      src="/assets/svg/arrow-down.svg"
-                    />
-                    <span class="slds-truncate" title="Accordion summary">
-                      Accordion Summary
-                    </span>
-                  </button>
-                </h3>
-              </div>
-              <div
-                aria-hidden="false"
-                class="slds-accordion__content"
-                id="accordion-details-01"
-              >
-                Accordion Details
-              </div>
-            </section>
-          </li>
-          <li class="slds-accordion__list-item">
-            <section class="slds-accordion__section">
-              <div class="slds-accordion__summary">
-                <h3 class="slds-accordion__summary-heading">
-                  <button
-                    aria-controls="accordion-details-02"
-                    aria-expanded="false"
-                    class="slds-button slds-button_reset slds-accordion__summary-action"
-                  >
-                    <img
-                      class="ui-icon"
-                      src="/assets/svg/arrow-down.svg"
-                    />
-                    <span class="slds-truncate" title="Accordion summary">
-                      Accordion Summary
-                    </span>
-                  </button>
-                </h3>
-              </div>
-              <div
-                aria-hidden="true"
-                class="slds-accordion__content"
-                id="accordion-details-02"
-              >
-                Accordion Details - B
-              </div>
-            </section>
-          </li>
-          <li class="slds-accordion__list-item">
-            <section class="slds-accordion__section">
-              <div class="slds-accordion__summary">
-                <h3 class="slds-accordion__summary-heading">
-                  <button
-                    aria-controls="accordion-details-03"
-                    aria-expanded="false"
-                    class="slds-button slds-button_reset slds-accordion__summary-action"
-                  >
-                    <img
-                      class="ui-icon"
-                      src="/assets/svg/arrow-down.svg"
-                    />
-                    <span class="slds-truncate" title="Accordion summary">
-                      Accordion Summary
-                    </span>
-                  </button>
-                </h3>
-              </div>
-              <div
-                aria-hidden="true"
-                class="slds-accordion__content"
-                id="accordion-details-03"
-              >
-                Accordion Details - C
-              </div>
-            </section>
-          </li>
-        </ul>
-      </div>
-      `
-  );
-
-storiesOf('DIFC Components/Forms/Inputs', module)
-  .add(
-    'Input Field Base',
-    () => `
-    <div class="ui-form-element slds-form-element">
-      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        Input Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <input
-          id="text-input-id-1"
-          class="ui-form-element__control-input slds-input"
-          type="text"
-        />
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Input Field Required',
-    () => `
-    <div class="ui-form-element slds-form-element">
-      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        <abbr class="slds-required">*</abbr>
-        Input Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <input
-          id="text-input-id-1"
-          class="ui-form-element__control-input slds-input"
-          type="text"
-          required
-        />
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Input Field Disabled',
-    () => `
-    <div class="ui-form-element slds-form-element">
-      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        Input Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <input
-          id="text-input-id-1"
-          class="ui-form-element__control-input slds-input"
-          type="text"
-          disabled
-        />
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Input Field Error',
-    () => `
-    <div class="ui-form-element slds-form-element slds-has-error">
-      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        <abbr class="slds-required">*</abbr>
-        Input Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <input
-          id="text-input-id-1"
-          aria-describedby="error-message-unique-id"
-          class="ui-form-element__control-input slds-input"
-          type="text"
-          required
-        />
-      </div>
-      <div class="slds-form-element__help" id="error-message-unique-id">
-        This field is required
-      </div>
-    </div>
-    `
-  );
-
-storiesOf('DIFC Components/Forms/Textareas', module)
-  .add(
-    'Textarea Base',
-    () => `
-    <div class="ui-form-element slds-form-element">
-      <label
-        class="ui-form-element__label slds-form-element__label"
-        for="textarea-id-01"
-      >
-        Textarea Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <textarea
-          id="textarea-id-01"
-          class="ui-form-element__control-textarea slds-textarea"
-          placeholder="Placeholder Text"
-        ></textarea>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Textarea Required',
-    () => `
-    <div class="ui-form-element slds-form-element">
-      <label
-        class="ui-form-element__label slds-form-element__label"
-        for="textarea-id-01"
-      >
-        <abbr class="slds-required">*</abbr>
-        Textarea Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <textarea
-          id="textarea-id-01"
-          class="ui-form-element__control-textarea slds-textarea"
-          placeholder="Placeholder Text"
-          required
-        ></textarea>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Textarea Disabled',
-    () => `
-    <div class="ui-form-element slds-form-element">
-      <label
-        class="ui-form-element__label slds-form-element__label"
-        for="textarea-id-01"
-      >
-        Textarea Label
-      </label>
-      <div class="ui-form-element__control slds-form-element__control">
-        <textarea
-          id="textarea-id-01"
-          class="ui-form-element__control-textarea slds-textarea"
-          placeholder="Placeholder Text"
-          disabled
-        ></textarea>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Textarea Error',
-    () => `
-    <div class="ui-form-element slds-form-element slds-has-error">
-      <label
-        class="ui-form-element__label slds-form-element__label"
-        for="textarea-id-01"
-      >
-        <abbr class="slds-required">*</abbr>
-        Textarea Label
-      </label>
-      <div class="ui-form-element __control slds-form-element__control">
-        <textarea
-          id="textarea-id-01"
-          aria-describedby="error-01"
-          class="ui-form-element__control-textarea slds-textarea"
-          placeholder="Placeholder Text"
-          required
-        ></textarea>
-      </div>
-      <div class="slds-form-element__help" id="error-01">
-        This field is required
-      </div>
-    </div>
-    `
   );
 
 storiesOf('DIFC Components/Date Picker', module)
@@ -3372,457 +2263,704 @@ storiesOf('DIFC Components/Data Table', module)
     `
   );
 
-storiesOf('DIFC Components/Popovers', module)
+storiesOf('DIFC Components/Forms/Inputs', module)
   .add(
-    'Base',
+    'Input Field Base',
     () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-nubbin_left"
-        role="dialog"
-        aria-label="Dialog Title"
-        aria-describedby="dialog-body-id-2"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <div class="slds-popover__body" id="dialog-body-id-2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </section>
-    </div>
-  `
-  )
-  .add(
-    'Error',
-    () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_error slds-nubbin_bottom-left"
-        role="dialog"
-        aria-labelledby="dialog-heading-id-1"
-        aria-describedby="dialog-body-id-5"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <header class="slds-popover__header">
-          <div class="slds-media slds-media_center slds-has-flexi-truncate ">
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-utility-error">
-                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                  <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div class="slds-media__body">
-              <h2
-                class="slds-truncate slds-text-heading_medium"
-                id="dialog-heading-id-1"
-              >
-                Manage your details
-              </h2>
-            </div>
-          </div>
-        </header>
-        <div class="slds-popover__body" id="dialog-body-id-5">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore.
-            <a href="javascript:void(0);" title="Learn More">Learn More</a>
-          </p>
-        </div>
-      </section>
-    </div>
-  `
-  )
-  .add(
-    'Warning',
-    () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_warning slds-nubbin_bottom-left"
-        role="dialog"
-        aria-labelledby="dialog-heading-id-2"
-        aria-describedby="dialog-body-id-5"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <header class="slds-popover__header">
-          <div class="slds-media slds-media_center slds-has-flexi-truncate ">
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-utility-warning">
-                <svg
-                  class="slds-icon slds-icon_x-small slds-icon-text-default"
-                  aria-hidden="true"
-                >
-                  <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div class="slds-media__body">
-              <h2
-                class="slds-truncate slds-text-heading_medium"
-                id="dialog-heading-id-2"
-                title="Review warning"
-              >
-                Manage your pathways
-              </h2>
-            </div>
-          </div>
-        </header>
-        <div
-          class="slds-popover__body slds-popover_warning__body"
-          id="dialog-body-id-5"
-        >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore.
-            <a href="javascript:void(0);" title="Learn More">Learn More</a>
-          </p>
-        </div>
-      </section>
-    </div>
-  `
-  )
-  .add(
-    'Walkthrough',
-    () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_walkthrough slds-nubbin_left"
-        role="dialog"
-        aria-labelledby="dialog-heading-id-1"
-        aria-describedby="dialog-body-id-5"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <header class="slds-popover__header slds-p-vertical_medium">
-          <h2 id="dialog-heading-id-1" class="slds-text-heading_medium">
-            Manage your channels
-          </h2>
-        </header>
-        <div class="slds-popover__body" id="dialog-body-id-5">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <footer class="slds-popover__footer">
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <span class="slds-text-title">Step 2 of 4</span>
-            <button class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left">
-              Next
-            </button>
-          </div>
-        </footer>
-      </section>
-    </div>
-  `
-  )
-  .add(
-    'Walkthrough Inline Form',
-    () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_walkthrough slds-nubbin_left"
-        role="dialog"
-        aria-labelledby="dialog-heading-id-1"
-        aria-describedby="dialog-body-id-23"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <header class="slds-popover__header slds-p-vertical_medium">
-          <h2 id="dialog-heading-id-1" class="slds-text-heading_medium">
-            Manage your channels
-          </h2>
-        </header>
-        <div class="slds-popover__body" id="dialog-body-id-23">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div class="ui-form-element slds-form-element slds-p-top_small">
-            <label
-              class="ui-form-element__label slds-form-element__label slds-assistive-text"
-              for="email-text-input-01"
-            >
-              Email Address
-            </label>
-            <div class="ui-form-element__control slds-form-element__control">
-              <input
-                id="email-text-input-01"
-                class="ui-form-element__control-input slds-input"
-                type="text"
-                placeholder="Email Address"
-              />
-            </div>
-          </div>
-        </div>
-        <footer class="slds-popover__footer">
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <span class="slds-text-title">Step 2 of 4</span>
-            <button class="ui-button ui-button--default slds-button slds-button_inverse slds-col_bump-left">
-              Previous
-            </button>
-            <button
-              class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left"
-            >
-              Next
-            </button>
-          </div>
-        </footer>
-      </section>
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
+        Input Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <input
+          id="text-input-id-1"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Type something..."
+        />
+      </div>
     </div>
     `
   )
   .add(
-    'Feature',
+    'Input Field Required',
     () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-        role="dialog"
-        aria-label="Dialog Title"
-        aria-describedby="dialog-body-id-5"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <div class="slds-popover__body" id="dialog-body-id-5">
-          <div class="slds-media">
-            <div class="slds-media__body">
-              <p class="slds-text-heading_small">
-                User name, it seems you frequent this record. Try favoriting it for easy access.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
+        <abbr class="slds-required">*</abbr>
+        Input Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <input
+          id="text-input-id-1"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Type something..."
+          required
+        />
+      </div>
     </div>
-  `
+    `
   )
   .add(
-    'Feature with Icon',
+    'Input Field Disabled',
     () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-        role="dialog"
-        aria-label="Dialog Title"
-        aria-describedby="dialog-body-id-6"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <div class="slds-popover__body" id="dialog-body-id-6">
-          <div class="slds-media">
-            <div class="slds-media__figure">
-              <span
-                class="slds-icon_container"
-                title="description of icon when needed"
-              >
-                <svg
-                  class="slds-icon slds-icon_small slds-icon-text-default"
-                  aria-hidden="true"
-                >
-                  <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
-                  />
-                </svg>
-                <span class="slds-assistive-text">Description of icon</span>
-              </span>
-            </div>
-            <div class="slds-media__body">
-              <p class="slds-text-heading_small">
-                User name, it seems you frequent this record. Try favoriting it for
-                easy access.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
+        Input Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <input
+          id="text-input-id-1"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Disabled..."
+          disabled
+        />
+      </div>
     </div>
-  `
+    `
   )
   .add(
-    'Feature with Header and Footer',
+    'Input Field Error',
     () => `
-    <div class="ui-popover">
-      <section
-        class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-        role="dialog"
-        aria-labelledby="dialog-heading-id-2"
-        aria-describedby="dialog-body-id-7"
-      >
-        <button
-          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-          title="Close dialog"
-        >
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span class="slds-assistive-text">Close dialog</span>
-        </button>
-        <div class="slds-popover__body" id="dialog-body-id-7">
-          <div class="slds-media">
-            <div class="slds-media__figure">
-              <span
-                class="slds-icon_container"
-                title="description of icon when needed"
-              >
-                <svg
-                  class="slds-icon slds-icon_small slds-icon-text-default"
-                  aria-hidden="true"
-                >
-                  <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
-                  />
-                </svg>
-                <span class="slds-assistive-text">Description of icon</span>
-              </span>
-            </div>
-            <div class="slds-media__body">
-              <h2 id="dialog-heading-id-2" class="slds-text-heading_small">
-                Title
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
-        <footer class="slds-popover__footer">
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <button
-              class="ui-button ui-button-default slds-button slds-button_neutral slds-col_bump-left"
-            >
-              Neutral
-            </button>
-          </div>
-        </footer>
-      </section>
+    <div class="ui-form-element slds-form-element slds-has-error">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
+        <abbr class="slds-required">*</abbr>
+        Input Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <input
+          id="text-input-id-1"
+          aria-describedby="error-message-unique-id"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Type something..."
+          required
+        />
+      </div>
+      <div class="slds-form-element__help" id="error-message-unique-id">
+        This field is required
+      </div>
     </div>
-  `
+    `
   );
 
-storiesOf('DIFC Components/Tooltip', module).add(
-  'Base',
-  () => `
-    <div class="ui-tooltip">
-      <div class="slds-form-element">
-        <div class="slds-form-element__icon slds-align-middle">
-          <button
-            class="slds-button slds-button_icon slds-button slds-button_icon"
-            aria-describedby="help"
-            title="Help"
-          >
-            <svg class="slds-button__icon" aria-hidden="true">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"
-              />
-            </svg>
-            <span class="slds-assistive-text">Help</span>
-          </button>
+storiesOf('DIFC Components/Forms/Radios', module)
+  .add(
+    'Base',
+    () => `
+    <div class="ui-radio-group">
+      <fieldset class="ui-form-element slds-form-element">
+        <legend class="ui-form-element__legend slds-form-element__legend slds-form-element__label">
+          Radio Group Label
+        </legend>
+        <div class="ui-form-element__control slds-form-element__control">
+          <span class="ui-form-element__radio slds-radio">
+            <input type="radio" id="radio-19" name="options" value="radio-19" />
+            <label class="slds-radio__label" for="radio-19">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value One</span>
+            </label>
+          </span>
+          <span class="ui-form-element__radio slds-radio">
+            <input type="radio" id="radio-20" name="options" value="radio-20" />
+            <label class="slds-radio__label" for="radio-20">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value Two</span>
+            </label>
+          </span>
         </div>
-      </div>
-      <div
-        class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
-        role="tooltip"
-        id="help"
-        style="position: absolute; top: 0px; left: 15px;"
+      </fieldset>
+    </div>
+    `
+  )
+  .add(
+    'Checked / Selected',
+    () => `
+    <div class="ui-radio-group">
+      <fieldset class="ui-form-element slds-form-element">
+        <legend class="ui-form-element__legend slds-form-element__legend slds-form-element__label">
+          Radio Group Label
+        </legend>
+        <div class="ui-form-element__control slds-form-element__control">
+          <span class="ui-form-element__radio slds-radio">
+            <input 
+              type="radio"
+              id="radio-19"
+              name="options"
+              value="radio-19" 
+              checked
+            />
+            <label class="slds-radio__label" for="radio-19">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value One</span>
+            </label>
+          </span>
+          <span class="ui-form-element__radio slds-radio">
+            <input type="radio" id="radio-20" name="options" value="radio-20" />
+            <label class="slds-radio__label" for="radio-20">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value Two</span>
+            </label>
+          </span>
+        </div>
+      </fieldset>
+    </div>
+    `
+  )
+  .add(
+    'Disabled',
+    () => `
+    <div class="ui-radio-group">
+      <fieldset class="ui-form-element slds-form-element">
+        <legend class="ui-form-element__legend slds-form-element__legend slds-form-element__label">
+          Radio Group Label
+        </legend>
+        <div class="ui-form-element__control slds-form-element__control">
+          <span class="ui-form-element__radio slds-radio">
+            <input
+              type="radio"
+              id="radio-23"
+              name="options"
+              value="radio-23"
+              disabled
+            />
+            <label class="slds-radio__label" for="radio-23">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value One</span>
+            </label>
+          </span>
+          <span class="ui-form-element__radio slds-radio">
+            <input
+              type="radio"
+              id="radio-24"
+              name="options"
+              value="radio-24"
+              disabled
+            />
+            <label class="slds-radio__label" for="radio-24">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value Two</span>
+            </label>
+          </span>
+        </div>
+      </fieldset>
+    </div>
+    `
+  )
+  .add(
+    'Disabled and Checked',
+    () => `
+    <div class="ui-radio-group">
+      <fieldset class="ui-form-element slds-form-element">
+        <legend class="ui-form-element__legend slds-form-element__legend slds-form-element__label">
+          Radio Group Label
+        </legend>
+        <div class="ui-form-element__control slds-form-element__control">
+          <span class="ui-form-element__radio slds-radio">
+            <input
+              type="radio"
+              id="radio-23"
+              name="options"
+              value="radio-23"
+              disabled
+              checked
+            />
+            <label class="slds-radio__label" for="radio-23">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value One</span>
+            </label>
+          </span>
+          <span class="ui-form-element__radio slds-radio">
+            <input
+              type="radio"
+              id="radio-24"
+              name="options"
+              value="radio-24"
+              disabled
+            />
+            <label class="slds-radio__label" for="radio-24">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">Radio Value Two</span>
+            </label>
+          </span>
+        </div>
+      </fieldset>
+    </div>
+    `
+  );
+
+storiesOf('DIFC Components/Forms/Textareas', module)
+  .add(
+    'Textarea Base',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="textarea-id-01"
       >
-        <div class="slds-popover__body">
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+        Textarea Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <textarea
+          id="textarea-id-01"
+          class="ui-form-element__control-textarea slds-textarea"
+          placeholder="Placeholder Text"
+        ></textarea>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Textarea Required',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="textarea-id-01"
+      >
+        <abbr class="slds-required">*</abbr>
+        Textarea Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <textarea
+          id="textarea-id-01"
+          class="ui-form-element__control-textarea slds-textarea"
+          placeholder="Placeholder Text"
+          required
+        ></textarea>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Textarea Disabled',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="textarea-id-01"
+      >
+        Textarea Label
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <textarea
+          id="textarea-id-01"
+          class="ui-form-element__control-textarea slds-textarea"
+          placeholder="Placeholder Text"
+          disabled
+        ></textarea>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Textarea Error',
+    () => `
+    <div class="ui-form-element slds-form-element slds-has-error">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="textarea-id-01"
+      >
+        <abbr class="slds-required">*</abbr>
+        Textarea Label
+      </label>
+      <div class="ui-form-element __control slds-form-element__control">
+        <textarea
+          id="textarea-id-01"
+          aria-describedby="error-01"
+          class="ui-form-element__control-textarea slds-textarea"
+          placeholder="Placeholder Text"
+          required
+        ></textarea>
+      </div>
+      <div class="slds-form-element__help" id="error-01">
+        This field is required
+      </div>
+    </div>
+    `
+  );
+
+storiesOf('DIFC Components/Global Navigation', module)
+  .add(
+    'Base',
+    () => `
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
+          <img
+            class="ui-global-navigation__title-icon"
+            src="/assets/svg/difc-diamond.svg"
+            alt="DIFC"
+          />
+          <span class="ui-global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <button
+                class="ui-global-navigation__button ui-global-navigation__button--search"
+              >
+                <img
+                  src="/assets/svg/magnifier-icon.svg"
+                  alt="search icon"
+                  class="search-bar__icon-image icon-image"
+                />
+              </button>
+            </div>
+            <div class="ui-global-navigation__user">
+              <a href="#" class="ui-global-navigation__link">Register</a>
+              <a href="#" class="ui-global-navigation__link">Login</a>
+            </div>
+            <button 
+              class="ui-global-navigation__button ui-global-navigation__button--menu"
+            >
+              <img
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="ui-global-navigation__button-image icon-image"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
   `
-);
+  )
+  .add(
+    'Logged In',
+    () => `
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
+          <img
+            class="ui-global-navigation__title-icon"
+            src="/assets/svg/difc-diamond.svg"
+            alt="DIFC"
+          />
+          <span class="ui-global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__action--private">
+                <button
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/answer-public.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+                <button
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/announcement.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+              </div>
+              
+              <button
+                class="ui-global-navigation__button ui-global-navigation__button--search"
+              >
+                <img
+                  src="/assets/svg/magnifier-icon.svg"
+                  alt="search icon"
+                  class="search-bar__icon-image icon-image"
+                />
+              </button>
+            </div>
+
+            <div class="ui-global-navigation__user">
+              <a 
+                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
+              >
+                <span class="ui-global-navigation__user-name">Company name</span>
+                <span class="ui-global-navigation__user-avatar">
+                  <img
+                    src="/assets/svg/avatar-placeholder.svg"
+                    alt="avatar image"
+                    class="ui-global-navigation__button-image icon-image"
+                  />
+                </span>
+              </a>
+            </div>
+
+            <button 
+              class="ui-global-navigation__button ui-global-navigation__button--menu"
+            >
+              <img
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="ui-global-navigation__button-image icon-image"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Logged In Expanded with Menu',
+    () => `
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
+          <img
+            class="ui-global-navigation__title-icon"
+            src="/assets/svg/difc-diamond.svg"
+            alt="DIFC"
+          />
+          <span class="ui-global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__action--private">
+                <button
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/answer-public.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+                <button
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/announcement.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+              </div>
+
+              <button
+                class="ui-global-navigation__button ui-global-navigation__button--search"
+              >
+                <img
+                  src="/assets/svg/magnifier-icon.svg"
+                  alt="search icon"
+                  class="search-bar__icon-image icon-image"
+                />
+              </button>
+            </div>
+
+            <div class="ui-global-navigation__user">
+              <a
+                class="ui-global-navigation__user-link ui-global-navigation__link"
+                href="#"
+              >
+                <span class="ui-global-navigation__user-name">Company name</span>
+                <span class="ui-global-navigation__user-avatar">
+                  <img
+                    src="/assets/svg/avatar-placeholder.svg"
+                    alt="avatar image"
+                    class="ui-global-navigation__button-image icon-image"
+                  />
+                </span>
+              </a>
+            </div>
+
+            <button 
+              class="ui-global-navigation__button ui-global-navigation__button--menu ui-global-navigation__button--hidden"
+            >
+              <img
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="ui-global-navigation__button-image icon-image"
+              />
+            </button>
+            <button
+              class="ui-global-navigation__button ui-global-navigation__button--menu-close"
+            >
+              <img
+                src="/assets/svg/cross-line.svg"
+                alt="notification bell"
+                class="ui-global-navigation__button-image icon-image"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="ui-global-navigation__search-bar">
+          <div class="ui-global-navigation__search-bar-action">
+            <img
+              src="/assets/svg/magnifier-icon.svg"
+              alt="search icon"
+              class="search-bar__icon-image icon-image"
+            />
+            <input
+              class="ui-global-navigation__search-bar-input"
+              placeholder="Search item here with csv, for data entry"
+              type="text"
+            />
+            <button
+              class="ui-global-navigation__button ui-global-navigation__button--search-close"
+            >
+              <img
+                src="/assets/svg/cross-line.svg"
+                alt="search icon"
+                class="search-bar__icon-image icon-image"
+              />
+            </button>
+          </div>
+          <div class="ui-global-navigation__search-bar-results">
+            <ul class="ui-global-navigation__search-bar-results-list">
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search you are looking for here</a>
+              </li>
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search you are looking for here</a>
+              </li>
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ui-global-navigation__menu">
+        <ul class="ui-global-navigation__menu-list">
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+        </ul>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Logged In Expanded with Search Bar',
+    () => `
+    <div class="ui-global-navigation ui-global-navigation--expanded">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
+          <img
+            class="ui-global-navigation__title-icon"
+            src="/assets/svg/difc-diamond.svg"
+            alt="DIFC"
+          />
+          <span class="ui-global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__action--private">
+                <button
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/answer-public.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+                <button
+                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                >
+                  <img
+                    src="/assets/svg/announcement.svg"
+                    alt="search icon"
+                    class="search-bar__icon-image icon-image"
+                  />
+                </button>
+              </div>
+              
+              <button
+                class="ui-global-navigation__button ui-global-navigation__button--search"
+              >
+                <img
+                  src="/assets/svg/magnifier-icon.svg"
+                  alt="search icon"
+                  class="search-bar__icon-image icon-image"
+                />
+              </button>
+            </div>
+
+            <div class="ui-global-navigation__user">
+              <a 
+                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
+              >
+                <span class="ui-global-navigation__user-name">Company name</span>
+                <span class="ui-global-navigation__user-avatar">
+                  <img
+                    src="/assets/svg/avatar-placeholder.svg"
+                    alt="avatar image"
+                    class="ui-global-navigation__button-image icon-image"
+                  />
+                </span>
+              </a>
+            </div>
+
+            <button 
+              class="ui-global-navigation__button ui-global-navigation__button--menu"
+            >
+              <img
+                src="/assets/svg/hamburger-line.svg"
+                alt="notification bell"
+                class="ui-global-navigation__button-image icon-image"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="ui-global-navigation__search-bar">
+          <div class="ui-global-navigation__search-bar-action">
+            <img
+              src="/assets/svg/magnifier-icon.svg"
+              alt="search icon"
+              class="search-bar__icon-image icon-image"
+            />
+            <input
+              class="ui-global-navigation__search-bar-input"
+              placeholder="Search item here with csv, for data entry"
+              type="text"
+            />
+            <button 
+              class="ui-global-navigation__button ui-global-navigation__button--search-close"
+            >
+              <img
+                src="/assets/svg/cross-line.svg"
+                alt="search icon"
+                class="search-bar__icon-image icon-image"
+              />
+            </button>
+          </div>
+          <div class="ui-global-navigation__search-bar-results">
+            <ul class="ui-global-navigation__search-bar-results-list">
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search item article here</a>
+              </li>
+              <li class="ui-global-navigation__search-bar-results-link">
+                <a href="#">Search you are looking for here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+  );
 
 storiesOf('DIFC Components/Menu', module)
   .add(
@@ -4154,5 +3292,1015 @@ storiesOf('DIFC Components/Menu', module)
         </div>
       </div>
     </div>
+    `
+  );
+
+storiesOf('DIFC Components/Popovers', module)
+  .add(
+    'Base',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-nubbin_left"
+        role="dialog"
+        aria-label="Dialog Title"
+        aria-describedby="dialog-body-id-2"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <div class="slds-popover__body" id="dialog-body-id-2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Error',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_error slds-nubbin_bottom-left"
+        role="dialog"
+        aria-labelledby="dialog-heading-id-1"
+        aria-describedby="dialog-body-id-5"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+          <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-error">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                  <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2
+                class="slds-truncate slds-text-heading_medium"
+                id="dialog-heading-id-1"
+              >
+                Manage your details
+              </h2>
+            </div>
+          </div>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-5">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore.
+            <a href="javascript:void(0);" title="Learn More">Learn More</a>
+          </p>
+        </div>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Warning',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_warning slds-nubbin_bottom-left"
+        role="dialog"
+        aria-labelledby="dialog-heading-id-2"
+        aria-describedby="dialog-body-id-5"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+          <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-warning">
+                <svg
+                  class="slds-icon slds-icon_x-small slds-icon-text-default"
+                  aria-hidden="true"
+                >
+                  <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2
+                class="slds-truncate slds-text-heading_medium"
+                id="dialog-heading-id-2"
+                title="Review warning"
+              >
+                Manage your pathways
+              </h2>
+            </div>
+          </div>
+        </header>
+        <div
+          class="slds-popover__body slds-popover_warning__body"
+          id="dialog-body-id-5"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore.
+            <a href="javascript:void(0);" title="Learn More">Learn More</a>
+          </p>
+        </div>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Walkthrough',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_walkthrough slds-nubbin_left"
+        role="dialog"
+        aria-labelledby="dialog-heading-id-1"
+        aria-describedby="dialog-body-id-5"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header slds-p-vertical_medium">
+          <h2 id="dialog-heading-id-1" class="slds-text-heading_medium">
+            Manage your channels
+          </h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-5">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <footer class="slds-popover__footer">
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <span class="slds-text-title">Step 2 of 4</span>
+            <button class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left">
+              Next
+            </button>
+          </div>
+        </footer>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Walkthrough Inline Form',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_walkthrough slds-nubbin_left"
+        role="dialog"
+        aria-labelledby="dialog-heading-id-1"
+        aria-describedby="dialog-body-id-23"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header slds-p-vertical_medium">
+          <h2 id="dialog-heading-id-1" class="slds-text-heading_medium">
+            Manage your channels
+          </h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-23">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="ui-form-element slds-form-element slds-p-top_small">
+            <label
+              class="ui-form-element__label slds-form-element__label slds-assistive-text"
+              for="email-text-input-01"
+            >
+              Email Address
+            </label>
+            <div class="ui-form-element__control slds-form-element__control">
+              <input
+                id="email-text-input-01"
+                class="ui-form-element__control-input slds-input"
+                type="text"
+                placeholder="Email Address"
+              />
+            </div>
+          </div>
+        </div>
+        <footer class="slds-popover__footer">
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <span class="slds-text-title">Step 2 of 4</span>
+            <button class="ui-button ui-button--default slds-button slds-button_inverse slds-col_bump-left">
+              Previous
+            </button>
+            <button
+              class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left"
+            >
+              Next
+            </button>
+          </div>
+        </footer>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Feature',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
+        role="dialog"
+        aria-label="Dialog Title"
+        aria-describedby="dialog-body-id-5"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <div class="slds-popover__body" id="dialog-body-id-5">
+          <div class="slds-media">
+            <div class="slds-media__body">
+              <p class="slds-text-heading_small">
+                User name, it seems you frequent this record. Try favoriting it for easy access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Feature with Icon',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
+        role="dialog"
+        aria-label="Dialog Title"
+        aria-describedby="dialog-body-id-6"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span
+                class="slds-icon_container"
+                title="description of icon when needed"
+              >
+                <svg
+                  class="slds-icon slds-icon_small slds-icon-text-default"
+                  aria-hidden="true"
+                >
+                  <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+                  />
+                </svg>
+                <span class="slds-assistive-text">Description of icon</span>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <p class="slds-text-heading_small">
+                User name, it seems you frequent this record. Try favoriting it for
+                easy access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    `
+  )
+  .add(
+    'Feature with Header and Footer',
+    () => `
+    <div class="ui-popover">
+      <section
+        class="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
+        role="dialog"
+        aria-labelledby="dialog-heading-id-2"
+        aria-describedby="dialog-body-id-7"
+      >
+        <button
+          class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+          title="Close dialog"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <div class="slds-popover__body" id="dialog-body-id-7">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span
+                class="slds-icon_container"
+                title="description of icon when needed"
+              >
+                <svg
+                  class="slds-icon slds-icon_small slds-icon-text-default"
+                  aria-hidden="true"
+                >
+                  <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+                  />
+                </svg>
+                <span class="slds-assistive-text">Description of icon</span>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2 id="dialog-heading-id-2" class="slds-text-heading_small">
+                Title
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <footer class="slds-popover__footer">
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <button
+              class="ui-button ui-button-default slds-button slds-button_neutral slds-col_bump-left"
+            >
+              Neutral
+            </button>
+          </div>
+        </footer>
+      </section>
+    </div>
+    `
+  );
+
+storiesOf('DIFC Components/Progress Bars', module).add(
+  'Base with descriptions',
+  () => `
+  <div class="ui-progress-bar">
+    <div
+      class="slds-grid slds-grid_align-spread slds-p-bottom_large"
+      id="progress-bar-label-id-1"
+    >
+      <strong>Your pathway</strong>
+      <span aria-hidden="true"><strong>25% Complete</strong></span>
+    </div>
+    <div
+      class="slds-progress-bar slds-progress-bar_small"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="25"
+      aria-labelledby="progress-bar-label-id-1"
+      role="progressbar"
+    >
+      <span class="slds-progress-bar__value" style="width: 25%;">
+        <span class="slds-assistive-text">Progress: 25%</span>
+      </span>
+    </div>
+  </div>
+  `
+);
+
+storiesOf('DIFC Components/Progress Indicators', module)
+  .add(
+    'Horizontal Base',
+    () => `
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
+      <div class="slds-progress">
+        <ol class="slds-progress__list">
+          <li class="slds-progress__item slds-is-active">
+            <button class="slds-button slds-progress__marker" aria-describedby="step-1-tooltip">
+              <span class="slds-assistive-text">Step 1 - Active</span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 2 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 3 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 4 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 5 </span>
+            </button>
+          </li>
+        </ol>
+        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+          <span class="slds-progress-bar__value" style="width:0%">
+            <span class="slds-assistive-text">Progress: 0%</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Horizontal Error',
+    () => `
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
+      <div class="slds-progress">
+        <ol class="slds-progress__list">
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
+              <img
+                src="/assets/svg/progress-ring-complete.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 1 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
+              <img
+                src="/assets/svg/progress-ring-complete.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 2 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-has-error">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
+              <img
+                src="/assets/svg/error.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 2 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 4 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 5 </span>
+            </button>
+          </li>
+        </ol>
+        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+          <span class="slds-progress-bar__value" style="width: 50%">
+            <span class="slds-assistive-text">Progress: 50%</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Horizontal Next Step',
+    () => `
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
+      <div class="slds-progress">
+        <ol class="slds-progress__list">
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
+              <img
+                src="/assets/svg/progress-ring-complete.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 1 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
+              <img
+                src="/assets/svg/progress-ring-complete.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 2 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-active">
+            <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
+              <span class="slds-assistive-text">Step 3 - Active</span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 4 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 5 </span>
+            </button>
+          </li>
+        </ol>
+        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+          <span class="slds-progress-bar__value" style="width: 50%">
+            <span class="slds-assistive-text">Progress: 50%</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Horizontal Tooltip',
+    () => `
+    <div class="ui-progress-indicator ui-progress-indicator--horizontal">
+      <div class="slds-progress">
+        <ol class="slds-progress__list">
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
+              <img
+                src="/assets/svg/progress-ring-complete.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 1 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 2 - Completed">
+              <img
+                src="/assets/svg/progress-ring-complete.svg"
+                alt="complete icon"
+                class="icon-image"
+              />
+              <span class="slds-assistive-text">Step 2 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-active">
+            <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
+              <span class="slds-assistive-text">Step 3 - Active</span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 4 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker">
+              <span class="slds-assistive-text">Step 5 </span>
+            </button>
+          </li>
+        </ol>
+        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+          <span class="slds-progress-bar__value" style="width:50%">
+            <span class="slds-assistive-text">Progress: 50%</span>
+          </span>
+        </div>
+      </div>
+      <div 
+        class="popover slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" 
+        id="step-3-tooltip" 
+        style="position:absolute;top:8px;left:calc(50% + 6px);transform:translateX(-50%)"
+      >
+        <div class="slds-popover__body">Submit info</div>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Vertical Base',
+    () => `
+    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
+      <ol class="form__list slds-progress__list">
+        <li class="slds-progress__item slds-is-active">
+          <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
+            <span class="slds-assistive-text">Step 3 - Active</span>
+          </button>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+      </ol>
+      <div
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="25"
+        role="progressbar"
+      >
+        <span class="slds-assistive-text">Progress: 25%</span>
+      </div>
+    </div>
+  `
+  )
+  .add(
+    'Vertical Next Step',
+    () => `
+    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
+      <ol class="form__list slds-progress__list">
+        <li class="form__list-item slds-progress__item slds-is-completed">
+          <span
+            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+            title="Complete"
+          >
+            <img
+              src="/assets/svg/progress-ring-complete.svg"
+              alt="complete icon"
+              class="icon-image"
+            />
+            <span class="slds-assistive-text">Complete</span>
+          </span>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item slds-is-completed">
+          <span
+            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+            title="Complete"
+          >
+            <img
+              src="/assets/svg/progress-ring-complete.svg"
+              alt="complete icon"
+              class="icon-image"
+            />
+            <span class="slds-assistive-text">Complete</span>
+          </span>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item slds-is-active">
+          <div class="slds-progress__marker">
+            <span class="slds-assistive-text">Active</span>
+          </div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+      </ol>
+      <div
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="25"
+        role="progressbar"
+      >
+        <span class="slds-assistive-text">Progress: 25%</span>
+      </div>
+    </div>
   `
   );
+
+storiesOf('DIFC Components/Progress Rings', module)
+  .add(
+    'Fill',
+    () => `
+    <div class="ui-progress-ring slds-progress-ring">
+      <div 
+        class="slds-progress-ring__progress" 
+        role="progressbar" 
+        aria-valuemin="0" 
+        aria-valuemax="100" 
+        aria-valuenow="100"
+      >
+        <svg viewBox="-1 -1 2 2">
+          <path 
+            class="slds-progress-ring__path" 
+            id="slds-progress-ring-path-2" 
+            d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0" 
+          />
+        </svg>
+      </div>
+      <div class="slds-progress-ring__content"></div>
+    </div>
+    `
+  )
+  .add(
+    'Partially Drain',
+    () => `
+    <div class="ui-progress-ring slds-progress-ring">
+      <div 
+        class="slds-progress-ring__progress" 
+        role="progressbar" 
+        aria-valuemin="0" 
+        aria-valuemax="100" 
+        aria-valuenow="88"
+      >
+        <svg viewBox="-1 -1 2 2">
+          <path 
+            class="slds-progress-ring__path" 
+            id="slds-progress-ring-path-15" 
+            d="M 1 0 A 1 1 0 1 1 0.7289686274214112 -0.684547105928689 L 0 0" 
+          />
+        </svg>
+      </div>
+      <div class="slds-progress-ring__content"></div>
+    </div>
+    `
+  )
+  .add(
+    'Complete',
+    () => `
+    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_complete">
+      <div
+        class="slds-progress-ring__progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="100"
+      >
+        <svg viewBox="-1 -1 2 2">
+          <path
+            class="slds-progress-ring__path"
+            id="slds-progress-ring-path-16"
+            d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+          />
+        </svg>
+      </div>
+      <div class="slds-progress-ring__content">
+        <span class="slds-icon_container slds-icon-utility-check" title="Complete">
+          <svg class="slds-icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            />
+          </svg>
+          <span class="slds-assistive-text">Complete</span>
+        </span>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Warning',
+    () => `
+    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_warning">
+      <div
+        class="slds-progress-ring__progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="20"
+      >
+        <svg viewBox="-1 -1 2 2">
+          <path
+            class="slds-progress-ring__path"
+            id="slds-progress-ring-path-22"
+            d="M 1 0 A 1 1 0 0 1 0.30901699437494745 0.9510565162951535 L 0 0"
+          />
+        </svg>
+      </div>
+      <div class="slds-progress-ring__content">
+        <span class="slds-icon_container slds-icon-utility-warning" title="Warning">
+          <svg class="slds-icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+            />
+          </svg>
+          <span class="slds-assistive-text">Warning</span>
+        </span>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Error',
+    () => `
+    <div class="ui-progress-ring slds-progress-ring slds-progress-ring_expired">
+      <div
+        class="slds-progress-ring__progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <svg viewBox="-1 -1 2 2">
+          <path
+            class="slds-progress-ring__path"
+            id="slds-progress-ring-path-23"
+            d="M 1 0 A 1 1 0 0 1 1 0 L 0 0"
+          />
+        </svg>
+      </div>
+      <div class="slds-progress-ring__content">
+        <span class="slds-icon_container slds-icon-utility-error" title="Expired">
+          <svg class="slds-icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"
+            />
+          </svg>
+          <span class="slds-assistive-text">Expired</span>
+        </span>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Count',
+    () => `
+    <div class="ui-progress-ring slds-progress-ring">
+      <div
+        class="slds-progress-ring__progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <svg viewBox="-1 -1 2 2">
+          <path
+            class="slds-progress-ring__path"
+            id="slds-progress-ring-path-23"
+            d="M 1 0 A 1 1 0 0 1 1 0 L 0 0"
+          />
+        </svg>
+      </div>
+      <div class="slds-progress-ring__content">
+        <span class="slds-icon_container slds-icon-utility-error" title="Expired">
+          <span class="progress-count-number">1</span>
+          <span class="slds-assistive-text">Expired</span>
+        </span>
+      </div>
+    </div>
+    `
+  );
+
+storiesOf('DIFC Components/Tooltip', module).add(
+  'Base',
+  () => `
+  <div class="ui-tooltip">
+    <div class="slds-form-element">
+      <div class="slds-form-element__icon slds-align-middle">
+        <button
+          class="slds-button slds-button_icon slds-button slds-button_icon"
+          aria-describedby="help"
+          title="Help"
+        >
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"
+            />
+          </svg>
+          <span class="slds-assistive-text">Help</span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
+      role="tooltip"
+      id="help"
+      style="position: absolute; top: 0px; left: 15px;"
+    >
+      <div class="slds-popover__body">
+        Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+        deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+      </div>
+    </div>
+  </div>
+  `
+);
