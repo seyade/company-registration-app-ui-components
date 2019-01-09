@@ -123,32 +123,6 @@
     background-color: #f2f8fc;
   }
 
-  &--marketing {
-    position: relative;
-    min-height: 258px;
-
-    .ui-button--close {
-      position: absolute;
-      top: 16px;
-      right: 0;
-    }
-
-    .ui-card__content-section {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .ui-card__paragraph {
-      flex: 0 0 50%;
-    }
-
-    .ui-card__title {
-      padding-bottom: 128px;
-      color: #0076cf;
-      font-size: 36px;
-    }
-  }
-
   &--pathway {
     .ui-card__content {
       padding-right: 16px;

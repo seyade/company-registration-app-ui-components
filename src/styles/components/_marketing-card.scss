@@ -1,0 +1,29 @@
+.ui-marketing-card {
+  position: relative;
+  min-width: 600px;
+  max-width: 1140px;
+  min-height: 258px;
+
+  .ui-button--close {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  .ui-card__content-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .ui-card__paragraph {
+    flex: 0 0 50%;
+    padding-bottom: 0;
+  }
+
+  .ui-card__title {
+    padding-bottom: 128px;
+    color: #0076cf;
+    font-size: 36px;
+  }
+}
