@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: space-evenly;
   height: 32px;
-  min-width: 120px;
   padding: 8px 16px;
   margin-right: 16px;
   font-size: 14px;
@@ -102,8 +101,7 @@
     }
 
     img {
-      position: absolute;
-      left: 16px;
+      margin-right: 8px;
     }
   }
 
@@ -114,8 +112,7 @@
     cursor: not-allowed;
 
     img {
-      position: absolute;
-      left: 16px;
+      margin-right: 8px;
     }
   }
 
@@ -125,6 +122,10 @@
     border: 1px solid #0076cf;
     border-radius: 2px;
     background-color: #fff;
+
+    img {
+      margin-right: 8px;
+    }
   }
 
   &--not-selected {
@@ -133,6 +134,10 @@
     border: 1px solid #dddbda;
     border-radius: 2px;
     background-color: #fff;
+
+    img {
+      margin-right: 8px;
+    }
   }
 
   &--breadcrumb {

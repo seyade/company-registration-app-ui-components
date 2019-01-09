@@ -543,7 +543,7 @@ storiesOf('DIFC Components/Cards', module)
           />
           <span class="ui-card__title-text">Contact details</span>
           <button 
-            class="ui-button ui-button--tertiary"
+            class="ui-button ui-button--default"
             style="min-width:64px;position:absolute;right:0;"
           >
             New
@@ -571,7 +571,7 @@ storiesOf('DIFC Components/Cards', module)
             (<span class="">3</span>)
           </span>
           <button 
-            class="ui-button ui-button--tertiary"
+            class="ui-button ui-button--default"
             style="min-width:64px;position:absolute;right:0;"
           >
             New
