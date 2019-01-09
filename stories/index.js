@@ -2344,6 +2344,50 @@ storiesOf('DIFC Components/Forms/Inputs', module)
       </div>
     </div>
     `
+  )
+  .add(
+    'Left Icon and Clear Button',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="text-input-id-1"
+      >
+        Input Label
+      </label>
+      <div
+        class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+      >
+        <svg
+          class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+          aria-hidden="true"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+          />
+        </svg>
+        <input
+          id="text-input-id-1"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Search something..."
+        />
+        <button
+          class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+          title="Clear"
+        >
+          <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"
+            />
+          </svg>
+          <span class="slds-assistive-text">Clear</span>
+        </button>
+      </div>
+    </div>
+    `
   );
 
 storiesOf('DIFC Components/Forms/Radios', module)
@@ -2566,7 +2610,7 @@ storiesOf('DIFC Components/Forms/Textareas', module)
         <abbr class="slds-required">*</abbr>
         Textarea Label
       </label>
-      <div class="ui-form-element __control slds-form-element__control">
+      <div class="ui-form-element__control slds-form-element__control">
         <textarea
           id="textarea-id-01"
           aria-describedby="error-01"
@@ -2627,7 +2671,7 @@ storiesOf('DIFC Components/Global Navigation', module)
         </div>
       </div>
     </div>
-  `
+    `
   )
   .add(
     'Logged In',
@@ -2706,7 +2750,7 @@ storiesOf('DIFC Components/Global Navigation', module)
         </div>
       </div>
     </div>
-  `
+    `
   )
   .add(
     'Logged In Expanded with Menu',
@@ -2839,10 +2883,18 @@ storiesOf('DIFC Components/Global Navigation', module)
       </div>
       <div class="ui-global-navigation__menu">
         <ul class="ui-global-navigation__menu-list">
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-          <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+          </li>
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link ui-global-navigation__menu-link--selected" href="#">Menu item</a>
+          </li>
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+          </li>
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+          </li>
         </ul>
       </div>
     </div>

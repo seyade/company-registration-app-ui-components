@@ -108,16 +108,22 @@
       width: 100%;
     }
 
-    .ui-global-navigation__menu-item {
-      a {
-        color: #fff;
-        opacity: 0.5;
-        transition: all 300ms ease-in-out;
+    .ui-global-navigation__menu-link {
+      color: #fff;
+      opacity: 0.5;
+      transition: all 300ms ease-in-out;
 
-        &:hover {
-          opacity: 1;
-          text-decoration: none;
-        }
+      &:hover,
+      &:focus,
+      &:active,
+      &:visited {
+        opacity: 1;
+        text-decoration: none;
+      }
+
+      &--selected {
+        color: #fff;
+        opacity: 1;
       }
     }
 

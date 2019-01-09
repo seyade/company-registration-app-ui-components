@@ -1,91 +1,22 @@
-.form {
-  padding: 0 32px 8px 0;
-
-  &-control-group {
-    width: 100%;
-    padding-left: 32px;
+.ui-form-element {
+  &__label {
+    margin-bottom: 12px;
   }
 
-  label {
-    display: inline-block;
-    margin-bottom: 8px;
-  }
+  &__control {
+    max-width: 560px;
 
-  input[type='text'],
-  textarea {
-    &::placeholder {
-      color: #dadada;
+    *::placeholder {
+      color: rgba(0, 0, 0, 0.25);
     }
   }
 
-  &__list {
-    padding: 16px 256px 16px 56px;
-  }
-
-  &-control-label {
-    &--hidden {
-      width: 0;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
-    }
-  }
-
-  &-control {
-    display: block;
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #eaeaea;
+  &__control-input,
+  &__control-textarea {
     border-radius: 2px;
   }
 
-  // .slds-progress_vertical &__list-item {
-  //   &:nth-child(1) {
-  //     position: relative;
-
-  //     &::before {
-  //       position: absolute;
-  //       display: block;
-  //       top: 0;
-  //       bottom: auto;
-  //       left: 7px;
-  //       z-index: 10000;
-  //       width: 2px;
-  //       height: 30px;
-  //       content: '';
-  //       background-color: $brandPrimaryColor;
-  //     }
-  //   }
-  // }
-
-  // // salesforce override
-  // .slds-progress_vertical .slds-progress__item:after,
-  // .slds-progress_vertical .slds-progress__item:before {
-  //   left: 8px;
-  // }
-
-  // .slds-progress__marker {
-  //   margin-left: 1px;
-  // }
-}
-
-.form-card__title {
-  position: relative;
-  display: flex;
-  padding: 32px 32px 16px;
-
-  &::before {
-    position: absolute;
-    left: 64px;
-    content: '';
-    height: 64px;
-    width: 2px;
-    background-color: #333;
-  }
-
-  span {
-    &:first-child {
-      margin-right: 80px;
-    }
+  .slds-form-element__help {
+    padding-top: 8px;
   }
 }

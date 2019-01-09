@@ -84,12 +84,25 @@
     {% include 'components/search-bar.html' %}
   </div>
 
-  <div class="ui-global-navigation__menu ui-global-navigation__menu--hidden">
+  <div class="ui-global-navigation__menu">
     <ul class="ui-global-navigation__menu-list">
-      <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-      <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-      <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
-      <li class="ui-global-navigation__menu-item"><a href="#">Menu item</a></li>
+      <li class="ui-global-navigation__menu-item">
+        <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+      </li>
+      <li class="ui-global-navigation__menu-item">
+        <a
+          class="ui-global-navigation__menu-link ui-global-navigation__menu-link--selected"
+          href="#"
+        >
+          Menu item
+        </a>
+      </li>
+      <li class="ui-global-navigation__menu-item">
+        <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+      </li>
+      <li class="ui-global-navigation__menu-item">
+        <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+      </li>
     </ul>
   </div>
 </div>
