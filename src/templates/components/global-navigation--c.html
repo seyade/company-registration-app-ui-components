@@ -81,48 +81,7 @@
       </div>
     </div>
 
-    <div class="ui-global-navigation__search-bar">
-      <div class="ui-global-navigation__search-bar-action">
-        <img
-          src="/assets/svg/magnifier-icon.svg"
-          alt="search icon"
-          class="search-bar__icon-image icon-image"
-        />
-        <input
-          class="ui-global-navigation__search-bar-input"
-          placeholder="Search item here with csv, for data entry"
-          type="text"
-        />
-        <button
-          class="ui-global-navigation__button ui-global-navigation__button--search-close"
-        >
-          <img
-            src="/assets/svg/cross-line.svg"
-            alt="search icon"
-            class="search-bar__icon-image icon-image"
-          />
-        </button>
-      </div>
-      <div class="ui-global-navigation__search-bar-results">
-        <ul class="ui-global-navigation__search-bar-results-list">
-          <li class="ui-global-navigation__search-bar-results-link">
-            <a href="#">Search item article here</a>
-          </li>
-          <li class="ui-global-navigation__search-bar-results-link">
-            <a href="#">Search you are looking for here</a>
-          </li>
-          <li class="ui-global-navigation__search-bar-results-link">
-            <a href="#">Search item article here</a>
-          </li>
-          <li class="ui-global-navigation__search-bar-results-link">
-            <a href="#">Search you are looking for here</a>
-          </li>
-          <li class="ui-global-navigation__search-bar-results-link">
-            <a href="#">Search item article here</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    {% include 'components/search-bar.html' %}
   </div>
 
   <div class="ui-global-navigation__menu ui-global-navigation__menu--hidden">

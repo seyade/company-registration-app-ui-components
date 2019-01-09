@@ -1,20 +1,51 @@
-<div class="search-bar search-bar--collapsed">
-  <button class="search-bar__button">
-    <span class="search-bar__icon">
+<div class="ui-search-bar">
+  <div class="ui-search-bar__action">
+    <img
+      src="/assets/svg/magnifier-icon.svg"
+      alt="search icon"
+      class="search-bar__icon-image icon-image"
+    />
+    <input
+      class="ui-search-bar__input"
+      placeholder="Search item here with csv, for data entry"
+      type="text"
+      autocomplete
+    />
+    <button class="ui-search-bar__button ui-search-bar__button--close">
       <img
-        src="/assets/svg/magnifier-icon-dark.svg"
+        src="/assets/svg/cross-line.svg"
         alt="search icon"
         class="search-bar__icon-image icon-image"
       />
-    </span>
-  </button>
-  <div class="control-group">
-    <label class="search-bar__label" for="search-bar__field"></label>
-    <input
-      class="search-bar__field"
-      id="search-bar__field"
-      placeholder="Search for information or documents"
-      type="text"
-    />
+    </button>
+  </div>
+  <div class="ui-search-bar__results">
+    <ul class="ui-search-bar__results-list">
+      <li class="ui-search-bar__results-item">
+        <a class="ui-search-bar__results-link" href="#">
+          Search item article here
+        </a>
+      </li>
+      <li class="ui-search-bar__results-item">
+        <a class="ui-search-bar__results-link" href="#">
+          Search you are looking for here
+        </a>
+      </li>
+      <li class="ui-search-bar__results-item">
+        <a class="ui-search-bar__results-link" href="#">
+          Search item article here
+        </a>
+      </li>
+      <li class="ui-search-bar__results-item">
+        <a class="ui-search-bar__results-link" href="#">
+          Search you are looking for here
+        </a>
+      </li>
+      <li class="ui-search-bar-results-item">
+        <a class="ui-search-bar__results-link" href="#">
+          Search item article here
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

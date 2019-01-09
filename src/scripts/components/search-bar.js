@@ -1,58 +1,75 @@
+import * as utils from '../utils';
+
 /**
  * Search bar component
  */
 class UISearchBar {
   constructor() {
-    this.component;
     /**
-     * @name searchBarButton
+     * component container
      * @type {Element}
      */
-    this.searchBarButton;
+    this.component;
 
     /**
-     * @name searchbarField
+     * search button
      * @type {Element}
      */
-    this.searchbarField;
+    this.searchBarInput;
+
+    /**
+     * searchbar close button
+     * @type {Element}
+     */
+    this.searchBarCloseButton;
+
+    /**
+     * fake data for search
+     * @type {Array}
+     * @private
+     */
+    this._data = [
+      'dragon ball z',
+      'my hero academia',
+      'ranma 1/2',
+      'astro boy',
+      'japan financial report 2018',
+      'city hunter marketing strategy',
+    ];
   }
 
   /**
    * Initialise component
    */
   init() {
-    this.component = document.querySelector('.search-bar');
-    this.searchBarButton = this.component.querySelector('.search-bar__button');
-    this.searchbarField = this.component.querySelector('.search-bar__field');
+    this.component = document.querySelector('.ui-search-bar');
+
+    this.searchBarCloseButton = this.component.querySelector(
+      '.ui-search-bar__button--close'
+    );
 
     this._addEvents();
+
+    return this.component;
   }
 
   _addEvents() {
-    this.searchBarButton.addEventListener('click', event => {
-      const searchBarPanel = event.currentTarget.parentElement;
+    this.searchBarCloseButton.addEventListener('click', event => {
+      const ancestor = utils.findParent(
+        event.currentTarget,
+        UISearchBar.CLASSES.container
+      );
 
-      if (
-        searchBarPanel.classList.contains(
-          UISearchBar.CLASSES.searchBarCollapsed
-        )
-      ) {
-        searchBarPanel.classList.remove(UISearchBar.CLASSES.searchBarCollapsed);
-        searchBarPanel.classList.add(UISearchBar.CLASSES.searchBarExpanded);
-
-        this.searchbarField.focus();
-      } else {
-        searchBarPanel.classList.remove(UISearchBar.CLASSES.searchBarExpanded);
-        searchBarPanel.classList.add(UISearchBar.CLASSES.searchBarCollapsed);
-      }
+      ancestor.classList.remove(UISearchBar.CLASSES.containerOpen);
+      ancestor.removeAttribute('style');
     });
   }
 }
 
 // classes used by component
 UISearchBar.CLASSES = {
-  searchBarCollapsed: 'search-bar--collapsed',
-  searchBarExpanded: 'search-bar--expanded',
+  container: 'ui-search-bar',
+  containerOpen: 'ui-search-bar--is-open',
 };
 
 export default UISearchBar;

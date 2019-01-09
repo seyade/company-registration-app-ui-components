@@ -213,7 +213,7 @@ storiesOf('DIFC Components/Cards', module)
     'Card Marketing',
     () => `
     <div
-      class="ui-card ui-card--marketing"
+      class="ui-marketing-card ui-card"
       style="min-width:800px;"
     >
       <button class="ui-button ui-button--close">
@@ -246,7 +246,7 @@ storiesOf('DIFC Components/Cards', module)
     'Card Marketing without button',
     () => `
     <div
-      class="ui-card ui-card--marketing"
+      class="ui-marketing-card ui-card"
       style="min-width:800px;"
     >
       <button class="ui-button ui-button--close">
