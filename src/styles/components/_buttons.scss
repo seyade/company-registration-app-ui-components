@@ -7,6 +7,7 @@
   height: 32px;
   padding: 8px 16px;
   margin-right: 16px;
+  font-family: 'EuclidSquare-Medium', sans-serif;
   font-size: 14px;
   color: #171717;
   border: 0;
@@ -36,8 +37,8 @@
   }
 
   &--default {
-    color: #002f6c;
-    border: 1px solid #002f6c;
+    color: #0076cf;
+    border: 1px solid #0076cf;
     background-color: #fff;
 
     &:hover {

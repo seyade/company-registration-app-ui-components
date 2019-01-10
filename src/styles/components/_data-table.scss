@@ -5,18 +5,48 @@
     }
   }
 
-  th {
-    font-weight: 600;
+  .slds-checkbox {
+    padding: 8px 0;
+  }
+
+  tr {
+    th {
+      font-family: 'EuclidSquare-Medium', sans-serif;
+    }
   }
 
   td {
-    font-weight: 600;
-
     a {
+      line-height: 1.4;
       color: #0076cf;
 
       &:hover {
         text-decoration: none;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        &:nth-child(1),
+        &:nth-child(2) {
+          font-family: 'EuclidSquare-Medium', sans-serif;
+        }
+      }
+    }
+  }
+
+  [aria-multiselectable='true'] tr th {
+    padding: inherit;
+  }
+
+  [aria-multiselectable='true'] tbody {
+    tr {
+      td {
+        &:nth-child(3) {
+          font-family: 'EuclidSquare-Medium', sans-serif;
+        }
       }
     }
   }

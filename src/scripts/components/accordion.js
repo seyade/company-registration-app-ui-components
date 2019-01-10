@@ -9,30 +9,32 @@ class UIAccordion {
      * component
      * @type {Element}
      */
-    this.component;
+    this.components;
 
     /**
      * header buttons to toggle accordion
      * @type {Element}
      */
-    this.headerToggles;
+    this.accordionTogglers;
   }
 
   init() {
-    this.component = document.querySelector('.ui-accordion');
+    this.components = document.querySelectorAll('.ui-accordion');
 
-    this.headerToggles = this.component.querySelectorAll(
-      '.slds-accordion__summary-action'
-    );
+    for (let component of this.components) {
+      this.accordionTogglers = component.querySelectorAll(
+        '.slds-accordion__summary-heading'
+      );
 
-    this._addEvents();
+      this._addEvents();
+    }
   }
 
   _addEvents() {
-    for (let headerToggle of this.headerToggles) {
-      headerToggle.addEventListener('click', e => {
+    for (let toggle of this.accordionTogglers) {
+      toggle.addEventListener('click', event => {
         let ancestor = utils.findParent(
-          e.currentTarget,
+          event.currentTarget,
           UIAccordion.CLASSES.accordionSection
         );
 

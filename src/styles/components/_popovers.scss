@@ -2,7 +2,8 @@
   .slds-popover {
     min-width: 384px;
     border: 0;
-    border-radius: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
 
     &_walkthrough {
       background-color: #002f6c;
@@ -19,6 +20,10 @@
     &_error .slds-popover__header {
       border-radius: 0;
       background-color: #fc4c02;
+    }
+
+    p {
+      line-height: 1.4;
     }
   }
 

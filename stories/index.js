@@ -446,7 +446,7 @@ storiesOf('DIFC Components/Cards', module)
         <span class="ui-button__text ui-button__text--hidden">Close</span>
         <img
           class="ui-button__icon--close icon-image"
-          src="/assets/svg/close-dark.svg"
+          src="/assets/svg/close-light.svg"
           alt="cross"
         />
       </button>
@@ -479,7 +479,7 @@ storiesOf('DIFC Components/Cards', module)
         <span class="ui-button__text ui-button__text--hidden">Close</span>
         <img
           class="ui-button__icon--close icon-image"
-          src="/assets/svg/close-dark.svg"
+          src="/assets/svg/close-light.svg"
           alt="cross"
         />
       </button>
@@ -557,7 +557,7 @@ storiesOf('DIFC Components/Cards', module)
     'Card With Related List',
     () => `
     <div
-      class="ui-card"
+      class="ui-related-list-card ui-card"
       style="width:320px;"
     >
       <div class="ui-card__content">
@@ -688,7 +688,7 @@ storiesOf('DIFC Components/Cards', module)
         </div>
       </div>
     </div>
-  `
+    `
   );
 
 storiesOf('DIFC Components/Date Picker', module)
@@ -704,10 +704,9 @@ storiesOf('DIFC Components/Date Picker', module)
           for="date-input-id"
         >
           Date
-          <img 
-            src="/assets/svg/event.svg" 
-            alt=""
-          />
+          <button class="ui-date-picker__button">
+            <img src="/assets/svg/event.svg" alt="" />
+          </button>
         </label>
         <div
           class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
@@ -740,10 +739,9 @@ storiesOf('DIFC Components/Date Picker', module)
           for="date-input-id"
         >
           Date
-          <img 
-            src="/assets/svg/event.svg" 
-            alt=""
-          />
+          <button class="ui-date-picker__button">
+            <img src="/assets/svg/event.svg" alt="" />
+          </button>
         </label>
         <div
           class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
@@ -1001,18 +999,18 @@ storiesOf('DIFC Components/Date Picker', module)
           for="date-input-id"
         >
           Date
-          <img 
-            src="/assets/svg/event.svg" 
-            alt=""
-          />
+          <button class="ui-date-picker__button">
+            <img src="/assets/svg/event.svg" alt="" />
+          </button>
         </label>
         <div
           class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
         >
-          <input 
+          <input
             id="date-input-id"
             placeholder=""
-            class="ui-form-element__control-input slds-input" type="text"
+            class="ui-form-element__control-input slds-input"
+            type="text"
           />
           <button
             class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
@@ -1036,10 +1034,12 @@ storiesOf('DIFC Components/Date Picker', module)
                   class="slds-button slds-button_icon slds-button_icon-container"
                   title="Previous Month"
                 >
-                  <img 
-                    src="/assets/svg/arrow-left.svg" 
-                    alt=""
-                  />
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"
+                    />
+                  </svg>
                   <span class="slds-assistive-text">Previous Month</span>
                 </button>
               </div>
@@ -1056,10 +1056,12 @@ storiesOf('DIFC Components/Date Picker', module)
                   class="slds-button slds-button_icon slds-button_icon-container"
                   title="Next Month"
                 >
-                  <img 
-                    src="/assets/svg/arrow-right.svg" 
-                    alt=""
-                  />
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#right"
+                    />
+                  </svg>
                   <span class="slds-assistive-text">Next Month</span>
                 </button>
               </div>
@@ -1174,7 +1176,7 @@ storiesOf('DIFC Components/Date Picker', module)
                   <span class="slds-day">20</span>
                 </td>
               </tr>
-              <tr class="">
+              <tr class="slds-has-multi-selection">
                 <td aria-selected="false" role="gridcell">
                   <span class="slds-day">21</span>
                 </td>
@@ -1184,16 +1186,32 @@ storiesOf('DIFC Components/Date Picker', module)
                 <td aria-selected="false" role="gridcell">
                   <span class="slds-day">23</span>
                 </td>
-                <td aria-selected="false" class="slds-is-selected" role="gridcell">
+                <td
+                  aria-selected="true"
+                  class="slds-is-selected slds-is-selected-multi"
+                  role="gridcell"
+                >
                   <span class="slds-day">24</span>
                 </td>
-                <td aria-selected="false" class="" role="gridcell">
+                <td
+                  aria-selected="true"
+                  class="slds-is-selected slds-is-selected-multi"
+                  role="gridcell"
+                >
                   <span class="slds-day">25</span>
                 </td>
-                <td aria-selected="false" role="gridcell">
+                <td
+                  aria-selected="true"
+                  class="slds-is-selected slds-is-selected-multi"
+                  role="gridcell"
+                >
                   <span class="slds-day">26</span>
                 </td>
-                <td aria-selected="false" role="gridcell">
+                <td
+                  aria-selected="true"
+                  class="slds-is-selected slds-is-selected-multi"
+                  role="gridcell"
+                >
                   <span class="slds-day">27</span>
                 </td>
               </tr>
@@ -1978,7 +1996,7 @@ storiesOf('DIFC Components/Data Table', module)
             <td role="gridcell"><div class="slds-truncate">Not Contacted</div></td>
             <td role="gridcell">
               <button
-                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                class="slds-button slds-button_icon slds-button_icon-x-small"
                 aria-haspopup="true"
                 tabindex="0"
               >
@@ -2032,7 +2050,7 @@ storiesOf('DIFC Components/Data Table', module)
             <td role="gridcell"><div class="slds-truncate">Not Contacted</div></td>
             <td role="gridcell">
               <button
-                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                class="slds-button slds-button_icon slds-button_icon-x-small"
                 aria-haspopup="true"
                 tabindex="0"
               >
@@ -2086,7 +2104,7 @@ storiesOf('DIFC Components/Data Table', module)
             <td role="gridcell"><div class="slds-truncate">Not Contacted</div></td>
             <td role="gridcell">
               <button
-                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                class="slds-button slds-button_icon slds-button_icon-x-small"
                 aria-haspopup="true"
                 tabindex="0"
               >
@@ -2140,7 +2158,7 @@ storiesOf('DIFC Components/Data Table', module)
             <td role="gridcell"><div class="slds-truncate">Not Contacted</div></td>
             <td role="gridcell">
               <button
-                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                class="slds-button slds-button_icon slds-button_icon-x-small"
                 aria-haspopup="true"
                 tabindex="0"
               >
@@ -2194,7 +2212,7 @@ storiesOf('DIFC Components/Data Table', module)
             <td role="gridcell"><div class="slds-truncate">Not Contacted</div></td>
             <td role="gridcell">
               <button
-                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                class="slds-button slds-button_icon slds-button_icon-x-small"
                 aria-haspopup="true"
                 tabindex="0"
               >
@@ -2248,7 +2266,7 @@ storiesOf('DIFC Components/Data Table', module)
             <td role="gridcell"><div class="slds-truncate">Not Contacted</div></td>
             <td role="gridcell">
               <button
-                class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                class="slds-button slds-button_icon slds-button_icon-x-small"
                 aria-haspopup="true"
                 tabindex="0"
               >
@@ -2287,8 +2305,8 @@ storiesOf('DIFC Components/Forms/Inputs', module)
     () => `
     <div class="ui-form-element slds-form-element">
       <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        <abbr class="slds-required">*</abbr>
         Input Label
+        <abbr class="slds-required">*</abbr>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <input
@@ -2326,7 +2344,6 @@ storiesOf('DIFC Components/Forms/Inputs', module)
     () => `
     <div class="ui-form-element slds-form-element slds-has-error">
       <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        <abbr class="slds-required">*</abbr>
         Input Label
       </label>
       <div class="ui-form-element__control slds-form-element__control">
@@ -2340,7 +2357,7 @@ storiesOf('DIFC Components/Forms/Inputs', module)
         />
       </div>
       <div class="slds-form-element__help" id="error-message-unique-id">
-        This field is required
+      <abbr class="slds-required">*</abbr> This field is required
       </div>
     </div>
     `
@@ -2838,21 +2855,20 @@ storiesOf('DIFC Components/Global Navigation', module)
           </div>
         </div>
 
-        <div class="ui-global-navigation__search-bar">
-          <div class="ui-global-navigation__search-bar-action">
+        <div class="ui-search-bar">
+          <div class="ui-search-bar__action">
             <img
               src="/assets/svg/magnifier-icon.svg"
               alt="search icon"
               class="search-bar__icon-image icon-image"
             />
             <input
-              class="ui-global-navigation__search-bar-input"
+              class="ui-search-bar__input"
               placeholder="Search item here with csv, for data entry"
               type="text"
+              autocomplete
             />
-            <button
-              class="ui-global-navigation__button ui-global-navigation__button--search-close"
-            >
+            <button class="ui-search-bar__button ui-search-bar__button--close">
               <img
                 src="/assets/svg/cross-line.svg"
                 alt="search icon"
@@ -2860,34 +2876,50 @@ storiesOf('DIFC Components/Global Navigation', module)
               />
             </button>
           </div>
-          <div class="ui-global-navigation__search-bar-results">
-            <ul class="ui-global-navigation__search-bar-results-list">
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
+          <div class="ui-search-bar__results">
+            <ul class="ui-search-bar__results-list">
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search item article here
+                </a>
               </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search you are looking for here</a>
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search you are looking for here
+                </a>
               </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search item article here
+                </a>
               </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search you are looking for here</a>
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search you are looking for here
+                </a>
               </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
+              <li class="ui-search-bar-results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search item article here
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="ui-global-navigation__menu">
         <ul class="ui-global-navigation__menu-list">
           <li class="ui-global-navigation__menu-item">
             <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
           </li>
           <li class="ui-global-navigation__menu-item">
-            <a class="ui-global-navigation__menu-link ui-global-navigation__menu-link--selected" href="#">Menu item</a>
+            <a
+              class="ui-global-navigation__menu-link ui-global-navigation__menu-link--selected"
+              href="#"
+            >
+              Menu item
+            </a>
           </li>
           <li class="ui-global-navigation__menu-item">
             <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
@@ -2901,7 +2933,7 @@ storiesOf('DIFC Components/Global Navigation', module)
     `
   )
   .add(
-    'Logged In Expanded with Search Bar',
+    'Expanded with Search Bar',
     () => `
     <div class="ui-global-navigation ui-global-navigation--expanded">
       <div class="ui-global-navigation__inner-wrap">
@@ -2976,21 +3008,21 @@ storiesOf('DIFC Components/Global Navigation', module)
           </div>
         </div>
 
-        <div class="ui-global-navigation__search-bar">
-          <div class="ui-global-navigation__search-bar-action">
+        <div class="ui-search-bar ui-search-bar--is-open">
+          <div class="ui-search-bar__action">
             <img
               src="/assets/svg/magnifier-icon.svg"
               alt="search icon"
               class="search-bar__icon-image icon-image"
             />
             <input
-              class="ui-global-navigation__search-bar-input"
+              class="ui-search-bar__input"
               placeholder="Search item here with csv, for data entry"
               type="text"
+              autocomplete
+              focus
             />
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--search-close"
-            >
+            <button class="ui-search-bar__button ui-search-bar__button--close">
               <img
                 src="/assets/svg/cross-line.svg"
                 alt="search icon"
@@ -2998,13 +3030,32 @@ storiesOf('DIFC Components/Global Navigation', module)
               />
             </button>
           </div>
-          <div class="ui-global-navigation__search-bar-results">
-            <ul class="ui-global-navigation__search-bar-results-list">
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search item article here</a>
+          <div class="ui-search-bar__results">
+            <ul class="ui-search-bar__results-list">
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search item article here
+                </a>
               </li>
-              <li class="ui-global-navigation__search-bar-results-link">
-                <a href="#">Search you are looking for here</a>
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search you are looking for here
+                </a>
+              </li>
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search item article here
+                </a>
+              </li>
+              <li class="ui-search-bar__results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search you are looking for here
+                </a>
+              </li>
+              <li class="ui-search-bar-results-item">
+                <a class="ui-search-bar__results-link" href="#">
+                  Search item article here
+                </a>
               </li>
             </ul>
           </div>
@@ -3426,9 +3477,8 @@ storiesOf('DIFC Components/Popovers', module)
         </header>
         <div class="slds-popover__body" id="dialog-body-id-5">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore.
-            <a href="javascript:void(0);" title="Learn More">Learn More</a>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            sed do eiusmod tempor incididunt ut labore.
           </p>
         </div>
       </section>
@@ -3488,9 +3538,8 @@ storiesOf('DIFC Components/Popovers', module)
           id="dialog-body-id-5"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore.
-            <a href="javascript:void(0);" title="Learn More">Learn More</a>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            sed do eiusmod tempor incididunt ut labore
           </p>
         </div>
       </section>
@@ -3751,7 +3800,7 @@ storiesOf('DIFC Components/Popovers', module)
         <footer class="slds-popover__footer">
           <div class="slds-grid slds-grid_vertical-align-center">
             <button
-              class="ui-button ui-button-default slds-button slds-button_neutral slds-col_bump-left"
+              class="ui-button ui-button--default slds-button slds-button_neutral slds-col_bump-left"
             >
               Neutral
             </button>
