@@ -1,6 +1,11 @@
 .ui-accordion {
   .slds-accordion__summary-heading {
     position: relative;
+    font-family: 'EuclidSquare-Medium', sans-serif;
+
+    .slds-button:focus {
+      text-decoration: none;
+    }
 
     .ui-icon {
       position: absolute;
@@ -10,13 +15,9 @@
   }
 
   .slds-accordion__content {
-    transition: all 1000ms ease-in-out;
-  }
-
-  .slds-is-close {
-    > .slds-accordion__content {
-      max-height: 0;
-    }
+    transition: all 300ms ease-in-out;
+    height: auto;
+    max-height: 0;
   }
 
   .slds-is-open {

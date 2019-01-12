@@ -84,3 +84,15 @@ $TSTARRoot: '/assets/fonts/TSTAR'; // root folder
 //     url('#{$EuclidSquareTrial_Path}/webfont.ttf') format('truetype'),
 //     url('#{$EuclidSquareTrial_Path}/webfont.svg#svgFontName') format('svg');
 // }
+
+$EuclidSquareRoot: '/assets/fonts/EuclidSquare'; // root folder
+
+@font-face {
+  font-family: 'EuclidSquare-Light';
+  src: url('#{$EuclidSquareRoot}/EuclidSquare-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'EuclidSquare-Medium';
+  src: url('#{$EuclidSquareRoot}/EuclidSquare-Medium.otf') format('opentype');
+}

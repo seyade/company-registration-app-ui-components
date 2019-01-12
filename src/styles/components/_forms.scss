@@ -1,12 +1,14 @@
 .ui-form-element {
   &__label {
     margin-bottom: 12px;
+    font-family: 'EuclidSquare-Medium', sans-serif;
   }
 
   &__control {
     max-width: 560px;
 
     *::placeholder {
+      font-family: 'EuclidSquare-Medium', sans-serif;
       color: rgba(0, 0, 0, 0.25);
     }
   }

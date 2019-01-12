@@ -2,9 +2,14 @@
   position: relative;
   padding-left: 32px;
   padding-top: 62px;
+  line-height: 1.4;
 
   .slds-popover {
     border-radius: 0;
     background-color: #0076cf;
+  }
+
+  .slds-form-element {
+    padding-top: 8px;
   }
 }

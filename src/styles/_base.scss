@@ -1,6 +1,6 @@
 body {
   position: relative;
-  font-family: 'EuclidSquareTrial', sans-serif;
+  font-family: 'EuclidSquare-Light', sans-serif;
 }
 
 .page {
@@ -45,9 +45,9 @@ body {
     content: '';
     position: absolute;
     top: -64px;
-    z-index: 1;
+    z-index: -1;
     left: 98px;
-    background-color: #171717;
+    background-color: #1361f6;
     width: 2px;
     height: 512px;
   }

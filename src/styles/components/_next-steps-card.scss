@@ -2,12 +2,12 @@
   width: 456px;
   min-height: 100px;
 
-  .ui-card__content {
-    font-family: 'EuclidSquareTrial-Medium', sans-serif;
-  }
-
   .ui-card__title {
     color: #0076cf;
+  }
+
+  .ui-card__subtitle {
+    font-family: 'EuclidSquare-Medium', sans-serif;
   }
 
   .ui-button-group {

@@ -1,39 +1,22 @@
-<div class="ui-form-element slds-form-element">
+<div class="ui-form-element slds-form-element slds-has-error">
   <label
     class="ui-form-element__label slds-form-element__label"
     for="text-input-id-1"
   >
     Input Label
   </label>
-  <div
-    class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
-  >
-    <svg
-      class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
-      aria-hidden="true"
-    >
-      <use
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
-      />
-    </svg>
+  <div class="ui-form-element__control slds-form-element__control">
     <input
       id="text-input-id-1"
+      aria-describedby="error-message-unique-id"
       class="ui-form-element__control-input slds-input"
       type="text"
-      placeholder="Search something..."
+      placeholder="Type something..."
+      required
     />
-    <button
-      class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-      title="Clear"
-    >
-      <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
-        <use
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"
-        />
-      </svg>
-      <span class="slds-assistive-text">Clear</span>
-    </button>
+  </div>
+  <div class="slds-form-element__help" id="error-message-unique-id">
+    <abbr class="slds-required">*</abbr>
+    This field is required
   </div>
 </div>

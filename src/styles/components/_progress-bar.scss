@@ -2,6 +2,7 @@
   position: relative;
   z-index: 1000;
   max-width: 800px;
+  font-family: 'EuclidSquare-Medium', sans-serif;
 
   .slds-progress-bar__value {
     background-color: #0076cf;
@@ -9,7 +10,7 @@
 }
 
 .progress-bar__label {
-  font-family: 'TSTAR-Bold', sans-serif;
+  font-family: 'EuclidSquare-Medium', sans-serif;
 }
 
 .progress-bar__bar {
