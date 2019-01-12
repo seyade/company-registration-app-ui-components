@@ -7,10 +7,17 @@
 
     &_walkthrough {
       background-color: #002f6c;
+
+      .slds-popover__header {
+        padding: 16px;
+        background-color: #0076cf;
+      }
     }
 
     .slds-popover__header {
       border: 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
     }
 
     &_warning .slds-popover__header {
@@ -24,6 +31,14 @@
 
     p {
       line-height: 1.4;
+
+      &:last-child {
+        padding-bottom: 8px;
+      }
+    }
+
+    .slds-popover__close {
+      margin: 6px;
     }
   }
 

@@ -2624,7 +2624,6 @@ storiesOf('DIFC Components/Forms/Textareas', module)
         class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
-        <abbr class="slds-required">*</abbr>
         Textarea Label
       </label>
       <div class="ui-form-element__control slds-form-element__control">
@@ -2637,7 +2636,7 @@ storiesOf('DIFC Components/Forms/Textareas', module)
         ></textarea>
       </div>
       <div class="slds-form-element__help" id="error-01">
-        This field is required
+      <abbr class="slds-required">*</abbr> This field is required
       </div>
     </div>
     `
@@ -4036,9 +4035,8 @@ storiesOf('DIFC Components/Progress Indicators', module)
         </div>
       </div>
       <div 
-        class="popover slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" 
-        id="step-3-tooltip" 
-        style="position:absolute;top:8px;left:calc(50% + 6px);transform:translateX(-50%)"
+        class="ui-popover slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" 
+        id="step-3-tooltip"
       >
         <div class="slds-popover__body">Submit info</div>
       </div>

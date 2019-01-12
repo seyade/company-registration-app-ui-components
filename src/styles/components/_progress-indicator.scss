@@ -1,8 +1,25 @@
 .ui-progress-indicator {
+  padding: 36px;
   background-color: #fff;
 
   .slds-popover_tooltip {
+    position: absolute;
+    top: 8px;
+    left: calc(50% + 6px);
     background: #0076cf;
+    transform: translateX(-50%);
+
+    &.slds-nubbin--bottom::before,
+    &.slds-nubbin_bottom::before {
+      display: none;
+    }
+
+    &.slds-nubbin--bottom::after,
+    &.slds-nubbin_bottom::after {
+      bottom: -2px;
+      width: 14px;
+      height: 14px;
+    }
   }
 
   .slds-progress__item {
