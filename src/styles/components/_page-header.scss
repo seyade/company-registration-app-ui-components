@@ -1,0 +1,33 @@
+.ui-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+  font-family: 'EuclidSquare-Medium', sans-serif;
+  color: #515151;
+  background-color: #fff;
+
+  &__col {
+    flex: 1 0 50%;
+    &:first-child {
+      padding-right: 32px;
+    }
+
+    &:last-child {
+      padding-left: 32px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 32px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+
+    & ~ .ui-breadcrumbs {
+      padding-top: 32px;
+    }
+  }
+}
