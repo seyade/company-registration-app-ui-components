@@ -1,0 +1,12 @@
+.ui-tab-bar {
+  font-family: 'EuclidSquare-Medium', sans-serif;
+  color: #706e6b;
+
+  .slds-tabs_default__item {
+    color: #706e6b;
+
+    &.slds-is-active {
+      color: #3e3e3c;
+    }
+  }
+}
