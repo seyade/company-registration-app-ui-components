@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Footer/WhiteOneDIFC" transform="translate(-447.000000, -177.000000)" fill="#171717">
+            <g id="Footer">
+                <g id="Group" transform="translate(148.000000, 92.000000)">
+                    <g id="Social" transform="translate(286.000000, 77.000000)">
+                        <g id="Fb">
+                            <path d="M18.3238067,24 L18.3238067,15.9990633 L20.6923649,15.9990633 L21.00625,13.2418961 L18.3238067,13.2418961 L18.3278308,11.8619075 C18.3278308,11.1427958 18.4011042,10.7574794 19.5087565,10.7574794 L20.9894826,10.7574794 L20.9894826,8 L18.620589,8 C15.7751669,8 14.7736521,9.33752269 14.7736521,11.5868152 L14.7736521,13.2422084 L13,13.2422084 L13,15.9993755 L14.7736521,15.9993755 L14.7736521,24 L18.3238067,24 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
