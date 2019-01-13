@@ -141,6 +141,22 @@
     }
   }
 
+  &--default-outline {
+    border: 1px solid #0076cf;
+
+    &:hover {
+      border: 1px solid #0076cf;
+    }
+  }
+
+  &--primary-outline {
+    border: 1px solid #fff;
+
+    &:hover {
+      border: 1px solid #fff;
+    }
+  }
+
   &--breadcrumb {
     min-width: auto;
     margin-right: 4px;

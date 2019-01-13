@@ -249,10 +249,26 @@ storiesOf('DIFC Components/Buttons', module)
     `
   )
   .add(
+    'Default Ouline',
+    () => `
+    <div class="ui-button-group" style="background: #002f6c;">
+      <button class="ui-button ui-button--default ui-button--default-outline">Default</button>
+    </div>
+    `
+  )
+  .add(
     'Primary',
     () => `
     <div class="ui-button-group">
       <button class="ui-button ui-button--primary">Primary</button>
+    </div>
+    `
+  )
+  .add(
+    'Primary Outline',
+    () => `
+    <div class="ui-button-group" style="background: #002f6c;">
+      <button class="ui-button ui-button--primary ui-button--primary-outline">Primary</button>
     </div>
     `
   )
@@ -3581,7 +3597,7 @@ storiesOf('DIFC Components/Popovers', module)
         <footer class="slds-popover__footer">
           <div class="slds-grid slds-grid_vertical-align-center">
             <span class="slds-text-title">Step 2 of 4</span>
-            <button class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left">
+            <button class="ui-button ui-button--primary ui-button--primary-outline slds-button slds-button_brand slds-col_bump-left">
               Next
             </button>
           </div>
