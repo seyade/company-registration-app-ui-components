@@ -2721,12 +2721,22 @@ storiesOf('DIFC Components/Footer', module).add(
             <ul class="ui-footer__list">
               <li><a href="#">OneDIFC Support</a></li>
               <li><a href="#">OneDIFC Account view</a></li>
-              <li>
-                <a href="#">facebook</a>
-                <a href="#">linkedin</a>
-                <a href="#">twitter</a>
-                <a href="#">youtube</a>
-                <a href="#">instagram</a>
+              <li class="social-icons-panel">
+                <a href="#">
+                  <img src="/assets/svg/facebook.svg" alt="" />
+                </a>
+                <a href="#">
+                  <img src="/assets/svg/linkedin.svg" alt="" />
+                </a>
+                <a href="#">
+                  <img src="/assets/svg/twitter.svg" alt="" />
+                </a>
+                <a href="#">
+                <img src="/assets/svg/youtube.svg" alt="" />
+                </a>
+                <a href="#">
+                  <img src="/assets/svg/instagram.svg" alt="" />
+                </a>
               </li>
             </ul>
           </div>

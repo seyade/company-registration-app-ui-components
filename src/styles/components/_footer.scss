@@ -1,12 +1,17 @@
 .ui-footer {
   width: 100%;
+  padding: 32px;
   color: #8b8b8b;
   background-color: #fff;
 
   .ui-footer__top {
     display: flex;
     border-bottom: 1px solid #eaeaea;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+
+    .ui-form {
+      padding-left: 128px;
+    }
   }
 
   .ui-footer__bottom {
@@ -38,5 +43,18 @@
     justify-content: flex-end;
     margin-top: 48px;
     margin-bottom: 16px;
+  }
+
+  .social-icons-panel {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
