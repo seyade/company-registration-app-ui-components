@@ -1,0 +1,42 @@
+.ui-footer {
+  width: 100%;
+  color: #8b8b8b;
+  background-color: #fff;
+
+  .ui-footer__top {
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 16px;
+  }
+
+  .ui-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ui-footer__col {
+    flex: 1 0 25%;
+
+    &:last-child {
+      flex: 1 0 50%;
+    }
+  }
+
+  .ui-footer__list {
+    li {
+      padding-bottom: 16px;
+    }
+
+    a {
+      color: #8b8b8b;
+    }
+  }
+
+  .ui-form-element__action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
+}

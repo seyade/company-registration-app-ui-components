@@ -2704,6 +2704,71 @@ storiesOf('DIFC Components/Forms/Textareas', module)
     `
   );
 
+storiesOf('DIFC Components/Footer', module).add(
+  'Base',
+  () => `
+      <div class="ui-footer">
+        <div class="ui-footer__top">
+          <div class="ui-footer__col">
+            <ul class="ui-footer__list">
+              <li><a href="#">Data Protection</a></li>
+              <li><a href="#">Terms and Privacy</a></li>
+              <li><a href="#">Information security</a></li>
+            </ul>
+          </div>
+
+          <div class="ui-footer__col">
+            <ul class="ui-footer__list">
+              <li><a href="#">OneDIFC Support</a></li>
+              <li><a href="#">OneDIFC Account view</a></li>
+              <li>
+                <a href="#">facebook</a>
+                <a href="#">linkedin</a>
+                <a href="#">twitter</a>
+                <a href="#">youtube</a>
+                <a href="#">instagram</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ui-footer__col">
+            <form class="ui-form">
+              <div class="ui-form-element slds-form-element">
+                <label
+                  class="ui-form-element__label slds-form-element__label"
+                  for="text-input-id-1"
+                >
+                  Who do you need to contact?
+                </label>
+                <div class="ui-form-element__control slds-form-element__control">
+                  <input
+                    id="text-input-id-1"
+                    class="ui-form-element__control-input slds-input"
+                    type="text"
+                    placeholder="Type something..."
+                  />
+                </div>
+              </div>
+              <div class="ui-form-element__action">
+                <button class="ui-button ui-button--primary">Contact us</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="ui-footer__bottom">
+          <p>COPYRIGHTS &copy; 2019 DIFC. ALL RIGHTS RESERVED.</p>
+          <button class="ui-button-icon slds-button slds-button_icon" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronup"></use>
+            </svg>
+            <span class="slds-assistive-text">Back to top</span>
+          </button>
+        </div>
+      </div>
+      `
+);
+
 storiesOf('DIFC Components/Global Navigation', module)
   .add(
     'Base',
