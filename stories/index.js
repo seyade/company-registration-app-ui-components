@@ -190,16 +190,58 @@ storiesOf('DIFC Components/Accordion', module)
     `
   );
 
-storiesOf('DIFC Components/Avatar', module).add(
-  'Avatar',
-  () => `
-  <img 
-    src="/assets/svg/avatar-placeholder.svg" 
-    alt="avatar image" 
-    class="main-navigation__user-avatar-image icon-image" 
-  />
-  `
-);
+storiesOf('DIFC Components/Avatar', module)
+  .add(
+    'Avatar Image',
+    () => `
+    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
+      <img 
+        src="/assets/svg/avatar-placeholder.svg" 
+        alt="avatar image" 
+        class="main-navigation__user-avatar-image icon-image" 
+      />
+    </span>
+    `
+  )
+  .add(
+    'Avatar Initials',
+    () => `
+    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
+      <abbr 
+        class="slds-avatar__initials slds-icon-standard-account"
+        title="company name"
+      >
+        Ac
+      </abbr>
+    </span>
+    `
+  )
+  .add(
+    'Avatar User Icon',
+    () => `
+    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
+      <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
+        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
+        </svg>
+        <span class="slds-assistive-text">Description of icon when needed</span>
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'Avatar User Icon Small',
+    () => `
+    <span class="ui-avatar slds-avatar slds-avatar_circle">
+      <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
+        <svg class="slds-icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
+        </svg>
+        <span class="slds-assistive-text">Description of icon when needed</span>
+      </span>
+    </span>
+    `
+  );
 
 storiesOf('DIFC Components/Breadcrumbs', module)
   .add(
@@ -752,6 +794,10 @@ storiesOf('DIFC Components/Cards', module)
     </div>
     `
   );
+
+storiesOf('DIFC Components/Comments', module)
+  .add('Base', () => ``)
+  .add('With Reply', () => ``);
 
 storiesOf('DIFC Components/Date Picker', module)
   .add(
