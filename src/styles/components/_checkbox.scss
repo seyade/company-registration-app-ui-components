@@ -1,0 +1,26 @@
+.ui-form-element__checkbox {
+  .slds-checkbox__label {
+    display: flex;
+    align-items: center;
+    font-family: 'EuclidSquare-Medium', sans-serif;
+    font-size: 13px;
+
+    .slds-radio_faux {
+      margin-right: 8px;
+    }
+  }
+}
+
+.slds-form-element__label {
+  padding-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.ui-checkbox {
+  &--button {
+    .slds-checkbox_faux {
+      border-radius: 2px;
+    }
+  }
+}
