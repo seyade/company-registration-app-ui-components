@@ -2746,6 +2746,183 @@ storiesOf('DIFC Components/Data Table', module)
     `
   );
 
+storiesOf('DIFC Components/Forms/Checkboxes', module)
+  .add(
+    'Base',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <div class="ui-form-element__control slds-form-element__control">
+        <div class="ui-form-element__checkbox slds-checkbox">
+          <input
+            type="checkbox"
+            name="options"
+            id="checkbox-23"
+            value="checkbox-23"
+          />
+          <label
+            class="ui-form-element__checkbox-label slds-checkbox__label" 
+            for="checkbox-23"
+          >
+            <span class="slds-checkbox_faux"></span>
+            <span 
+              class="ui-form-element__label slds-form-element__label"
+            >
+              Checkbox Value
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Selected',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <div class="ui-form-element__control slds-form-element__control">
+        <div class="ui-form-element__checkbox slds-checkbox">
+          <input
+            type="checkbox"
+            name="options"
+            id="checkbox-23"
+            value="checkbox-23"
+            checked
+          />
+          <label
+            class="ui-form-element__checkbox-label slds-checkbox__label" 
+            for="checkbox-23"
+          >
+            <span class="slds-checkbox_faux"></span>
+            <span 
+              class="ui-form-element__label slds-form-element__label"
+            >
+              Checkbox Value
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Group',
+    () => `
+    <div class="ui-checkbox-group">
+      <fieldset class="ui-form-element slds-form-element">
+        <legend
+          class="ui-form-element__legend slds-form-element__legend slds-form-element__label"
+        >
+          Checkbox Group Label
+        </legend>
+        <div class="ui-form-element__control slds-form-element__control">
+          <div class="ui-form-element__checkbox slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="checkbox-30"
+              value="checkbox-30"
+            />
+            <label
+              class="ui-form-element__checkbox-label slds-checkbox__label"
+              for="checkbox-30"
+            >
+              <span class="slds-checkbox_faux"></span>
+              <span class="ui-form-element__label slds-form-element__label">
+                Checkbox Value
+              </span>
+            </label>
+          </div>
+          <div class="ui-form-element__checkbox slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="checkbox-31"
+              value="checkbox-31"
+            />
+            <label
+              class="ui-form-element__checkbox-label slds-checkbox__label"
+              for="checkbox-31"
+            >
+              <span class="slds-checkbox_faux"></span>
+              <span class="ui-form-element__label slds-form-element__label">
+                Checkbox Value
+              </span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    `
+  )
+  .add(
+    'As Button Base',
+    () => `
+    <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
+      <input 
+        class="slds-assistive-text" 
+        type="checkbox" 
+        id="add-checkbox-13" 
+        value="add-checkbox-13"
+      />
+      <label for="add-checkbox-13" class="slds-checkbox_faux">
+        <span class="slds-assistive-text">Add product</span>
+      </label>
+    </div>
+    `
+  )
+  .add(
+    'As Button Checked',
+    () => `
+    <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
+      <input 
+        class="slds-assistive-text" 
+        type="checkbox" 
+        id="add-checkbox-20" 
+        value="add-checkbox-20" 
+        checked
+      />
+      <label for="add-checkbox-20" class="slds-checkbox_faux">
+        <span class="slds-assistive-text">Add product</span>
+      </label>
+    </div>
+    `
+  )
+  .add(
+    'As Button Disabled',
+    () => `
+    <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
+      <input 
+        class="slds-assistive-text" 
+        type="checkbox" 
+        id="add-checkbox-21" 
+        value="add-checkbox-21"
+        disabled
+      />
+      <label for="add-checkbox-21" class="slds-checkbox_faux">
+        <span class="slds-assistive-text">Add product</span>
+      </label>
+    </div>
+    `
+  )
+  .add(
+    'As Button Checked Disabled',
+    () => `
+    <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
+      <input 
+        class="slds-assistive-text" 
+        type="checkbox" 
+        id="add-checkbox-21" 
+        value="add-checkbox-21"
+        checked
+        disabled
+      />
+      <label for="add-checkbox-21" class="slds-checkbox_faux">
+        <span class="slds-assistive-text">Add product</span>
+      </label>
+    </div>
+    `
+  );
+
 storiesOf('DIFC Components/Forms/Inputs', module)
   .add(
     'Input Field Base',
@@ -2876,9 +3053,49 @@ storiesOf('DIFC Components/Forms/Radios', module)
   .add(
     'Base',
     () => `
+    <div class="ui-form-element slds-form-element">
+      <div class="ui-form-element__control slds-form-element__control">
+        <span class="ui-form-element__radio slds-radio">
+          <input type="radio" id="radio-19" name="options" value="radio-19" />
+          <label class="slds-radio__label" for="radio-19">
+            <span class="slds-radio_faux"></span>
+            <span class="slds-form-element__label">Radio Value One</span>
+          </label>
+        </span>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Checked',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <div class="ui-form-element__control slds-form-element__control">
+        <span class="ui-form-element__radio slds-radio">
+          <input 
+            type="radio" 
+            id="radio-19" 
+            name="options" 
+            value="radio-19" 
+            checked
+          />
+          <label class="slds-radio__label" for="radio-19">
+            <span class="slds-radio_faux"></span>
+            <span class="slds-form-element__label">Radio Value One</span>
+          </label>
+        </span>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Group Base',
+    () => `
     <div class="ui-radio-group">
       <fieldset class="ui-form-element slds-form-element">
-        <legend class="ui-form-element__legend slds-form-element__legend slds-form-element__label">
+        <legend 
+          class="ui-form-element__legend slds-form-element__legend slds-form-element__label"
+        >
           Radio Group Label
         </legend>
         <div class="ui-form-element__control slds-form-element__control">
@@ -2902,7 +3119,7 @@ storiesOf('DIFC Components/Forms/Radios', module)
     `
   )
   .add(
-    'Checked / Selected',
+    'Group Checked / Selected',
     () => `
     <div class="ui-radio-group">
       <fieldset class="ui-form-element slds-form-element">
@@ -2936,7 +3153,7 @@ storiesOf('DIFC Components/Forms/Radios', module)
     `
   )
   .add(
-    'Disabled',
+    'Group Disabled',
     () => `
     <div class="ui-radio-group">
       <fieldset class="ui-form-element slds-form-element">
@@ -2976,7 +3193,7 @@ storiesOf('DIFC Components/Forms/Radios', module)
     `
   )
   .add(
-    'Disabled and Checked',
+    'Group Disabled and Checked',
     () => `
     <div class="ui-radio-group">
       <fieldset class="ui-form-element slds-form-element">
