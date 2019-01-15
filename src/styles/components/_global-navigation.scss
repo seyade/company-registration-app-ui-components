@@ -75,6 +75,7 @@
     &--menu,
     &--menu-close {
       width: 40px;
+      outline: none;
     }
 
     &--hidden {
@@ -143,11 +144,35 @@
     }
 
     &--hidden {
-      // opacity: 0;
-      // padding: 0;
-      // height: 0;
       padding: 0 174px;
       max-height: 0;
+    }
+  }
+
+  // Hamburger plugin override
+  // https://jonsuh.com/hamburgers/
+  .hamburger {
+    padding: 0;
+
+    &-inner,
+    &-inner::before,
+    &-inner::after {
+      width: 32px;
+      height: 1px;
+      background-color: #fff;
+      border-radius: 0;
+    }
+
+    &.is-active {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: #fff;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 }

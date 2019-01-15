@@ -78,31 +78,23 @@ class UIGlobalNavigation {
    */
   _addEvents() {
     this.navigationMenuButton.addEventListener('click', event => {
-      this.navigationMenu.classList.remove(
-        UIGlobalNavigation.CLASSES.containerMenuHidden
-      );
+      const _thisButton = event.currentTarget;
 
-      event.currentTarget.classList.add(
-        UIGlobalNavigation.CLASSES.buttonHidden
-      );
+      if (
+        !_thisButton.classList.contains(UIGlobalNavigation.CLASSES.isActive)
+      ) {
+        _thisButton.classList.add(UIGlobalNavigation.CLASSES.isActive);
 
-      this.navigationMenuCloseButton.classList.remove(
-        UIGlobalNavigation.CLASSES.buttonHidden
-      );
-    });
+        this.navigationMenu.classList.remove(
+          UIGlobalNavigation.CLASSES.containerMenuHidden
+        );
+      } else {
+        _thisButton.classList.remove(UIGlobalNavigation.CLASSES.isActive);
 
-    this.navigationMenuCloseButton.addEventListener('click', event => {
-      this.navigationMenu.classList.add(
-        UIGlobalNavigation.CLASSES.containerMenuHidden
-      );
-
-      event.currentTarget.classList.add(
-        UIGlobalNavigation.CLASSES.buttonHidden
-      );
-
-      this.navigationMenuButton.classList.remove(
-        UIGlobalNavigation.CLASSES.buttonHidden
-      );
+        this.navigationMenu.classList.add(
+          UIGlobalNavigation.CLASSES.containerMenuHidden
+        );
+      }
     });
 
     this.searchButton.addEventListener('click', event => {
@@ -127,6 +119,7 @@ UIGlobalNavigation.CLASSES = {
   buttonHidden: 'ui-global-navigation__button--hidden',
   searchBarOpen: 'ui-search-bar--is-open',
   searchBar: 'ui-search-bar',
+  isActive: 'is-active',
 };
 
 export default UIGlobalNavigation;

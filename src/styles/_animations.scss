@@ -8,6 +8,36 @@
   }
 }
 
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes slideUp {
   100% {
     min-height: 0;
@@ -16,5 +46,62 @@
     height: 0px;
     overflow: hidden;
     box-shadow: none;
+  }
+}
+
+@-moz-keyframes slideUp {
+  100% {
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+  }
+}
+
+@-ms-keyframes slideUp {
+  100% {
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+  }
+}
+
+@keyframes slideUp {
+  100% {
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+  }
+}
+
+@-webkit-keyframes expandProgressBar {
+  0% {
+    width: 0;
+  }
+}
+
+@-moz-keyframes expandProgressBar {
+  0% {
+    width: 0;
+  }
+}
+
+@-ms-keyframes expandProgressBar {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes expandProgressBar {
+  0% {
+    width: 0;
   }
 }

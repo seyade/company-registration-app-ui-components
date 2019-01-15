@@ -3431,15 +3431,17 @@ storiesOf('DIFC Components/Global Navigation', module)
               <a href="#" class="ui-global-navigation__link">Register</a>
               <a href="#" class="ui-global-navigation__link">Login</a>
             </div>
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu"
+            
+            <!-- HAMBURGERS PLUGIN -->
+            <button
+              class="ui-global-navigation__button ui-global-navigation__button--menu hamburger hamburger--collapse"
+              type="button"
             >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
             </button>
+            <!-- HAMBURGERS PLUGIN -->
           </div>
         </div>
       </div>
@@ -3510,15 +3512,16 @@ storiesOf('DIFC Components/Global Navigation', module)
               </a>
             </div>
 
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu"
+            <!-- HAMBURGERS PLUGIN -->
+            <button
+              class="ui-global-navigation__button ui-global-navigation__button--menu hamburger hamburger--collapse"
+              type="button"
             >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
             </button>
+            <!-- HAMBURGERS PLUGIN -->
           </div>
         </div>
       </div>
@@ -3590,24 +3593,16 @@ storiesOf('DIFC Components/Global Navigation', module)
               </a>
             </div>
 
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu ui-global-navigation__button--hidden"
-            >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
+            <!-- HAMBURGERS PLUGIN -->
             <button
-              class="ui-global-navigation__button ui-global-navigation__button--menu-close"
+              class="ui-global-navigation__button ui-global-navigation__button--menu hamburger hamburger--collapse"
+              type="button"
             >
-              <img
-                src="/assets/svg/cross-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
             </button>
+            <!-- HAMBURGERS PLUGIN -->
           </div>
         </div>
 
