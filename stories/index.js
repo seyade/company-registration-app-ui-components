@@ -4323,14 +4323,13 @@ storiesOf('DIFC Components/Picklists', module)
                 role="none"
               >
                 <input
-                  class="ui-form-element__control-input slds-input slds-combobox__input"
+                  class="ui-form-element__control-input slds-input ui-form-element__combobox-input slds-combobox__input"
                   id="combobox-unique-id-33"
                   aria-controls="listbox-unique-id"
                   autocomplete="off"
                   role="textbox"
                   type="text"
                   placeholder="Select an Option"
-                  readonly=""
                   value=""
                 />
                 <span
@@ -4382,14 +4381,13 @@ storiesOf('DIFC Components/Picklists', module)
                 role="none"
               >
                 <input
-                  class="ui-form-element__control-input slds-input slds-combobox__input"
+                  class="ui-form-element__control-input slds-input ui-form-element__combobox-input slds-combobox__input"
                   id="combobox-unique-id-33"
                   aria-controls="listbox-unique-id"
                   autocomplete="off"
                   role="textbox"
                   type="text"
                   placeholder="Select an Option"
-                  readonly=""
                   value=""
                 />
                 <span
@@ -4544,14 +4542,13 @@ storiesOf('DIFC Components/Picklists', module)
                 role="none"
               >
                 <input
-                  class="ui-form-element__control-input slds-input slds-combobox__input"
+                  class="ui-form-element__control-input slds-input ui-form-element__combobox-input slds-combobox__input"
                   id="combobox-unique-id-33"
                   aria-controls="listbox-unique-id"
                   autocomplete="off"
                   role="textbox"
                   type="text"
                   placeholder="Select an Option"
-                  readonly=""
                   value=""
                 />
                 <span
