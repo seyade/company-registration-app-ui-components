@@ -85,8 +85,6 @@ class UIPicklist {
           listItem.style.display = 'none';
         }
       }
-
-      event.stopPropagation();
     });
 
     this.comboboxInput.addEventListener('click', event =>
@@ -120,7 +118,11 @@ class UIPicklist {
       let environment = event.target;
 
       for (let component of this.components) {
-        if (environment !== component) {
+        let comboboxInput = component.querySelector(
+          UIPicklist.SELECTORS.comboBoxInput
+        );
+
+        if (environment !== comboboxInput) {
           component
             .querySelector(UIPicklist.SELECTORS.comboBox)
             .classList.remove(UIPicklist.CLASSES.isOpen);

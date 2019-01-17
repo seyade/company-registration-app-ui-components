@@ -1,4 +1,18 @@
 .ui-picklist {
   height: 14rem;
   font-family: 'EuclidSquare-Medium', sans-serif;
+  color: #2b2826;
+
+  ::placeholder {
+    color: #2b2826;
+  }
+
+  .slds-is-open ::placeholder {
+    color: #0076cf;
+  }
+
+  .slds-listbox__option-header {
+    color: #706e6b;
+    text-transform: uppercase;
+  }
 }

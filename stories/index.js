@@ -4577,7 +4577,7 @@ storiesOf('DIFC Components/Picklists', module)
                   <li role="presentation" class="slds-listbox__item">
                     <div
                       id="listbox-option-unique-id-01"
-                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
+                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                       role="option"
                     >
                       <span class="slds-media__body">
@@ -4744,14 +4744,14 @@ storiesOf('DIFC Components/Picklists', module)
                       id="listbox-option-unique-id-00"
                     >
                       <h3 class="slds-listbox__option-header" role="presentation">
-                        Recently Viewed
+                        Recently List Viewed
                       </h3>
                     </div>
                   </li>
                   <li role="presentation" class="slds-listbox__item">
                     <div
                       id="listbox-option-unique-id-01"
-                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
+                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                       role="option"
                     >
                       <span class="slds-media__body">
