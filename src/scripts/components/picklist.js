@@ -23,6 +23,8 @@ class UIPicklist {
      */
     this.comboboxInput;
 
+    this.listBoxOptions;
+
     /**
      * option data
      * @type {Array}
@@ -36,11 +38,15 @@ class UIPicklist {
   }
 
   init() {
-    this.components = document.querySelectorAll('.ui-picklist');
+    this.components = document.querySelectorAll(UIPicklist.SELECTORS.picklist);
 
     for (let component of this.components) {
       this.comboboxInput = component.querySelector(
-        '.ui-form-element__combobox-input'
+        UIPicklist.SELECTORS.comboBoxInput
+      );
+
+      this.listBoxOptions = component.querySelectorAll(
+        UIPicklist.SELECTORS.listBoxOption
       );
 
       this._addEvents();
@@ -50,25 +56,10 @@ class UIPicklist {
   _addEvents() {
     this.comboboxInput.addEventListener('focus', event => {
       const _thisInput = event.currentTarget;
-      const ancestor = utils.findParent(
-        _thisInput,
-        UIPicklist.CLASSES.comboBox
-      );
+      this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
 
-      if (!ancestor.classList.contains(UIPicklist.CLASSES.isOpen)) {
-        ancestor.classList.add(UIPicklist.CLASSES.isOpen);
-      }
-    });
-
-    this.comboboxInput.addEventListener('blur', event => {
-      const _thisInput = event.currentTarget;
-      const ancestor = utils.findParent(
-        _thisInput,
-        UIPicklist.CLASSES.comboBox
-      );
-
-      if (ancestor.classList.contains(UIPicklist.CLASSES.isOpen)) {
-        ancestor.classList.remove(UIPicklist.CLASSES.isOpen);
+      if (!this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
+        this.combobox.classList.add(UIPicklist.CLASSES.isOpen);
       }
     });
 
@@ -78,7 +69,9 @@ class UIPicklist {
       this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
 
       let filter = _thisInput.value.toUpperCase();
-      let queries = this.combobox.querySelectorAll('.slds-media__body > span');
+      let queries = this.combobox.querySelectorAll(
+        UIPicklist.SELECTORS.optionBodySpan
+      );
       let listItem;
       let queryText;
 
@@ -92,6 +85,47 @@ class UIPicklist {
           listItem.style.display = 'none';
         }
       }
+
+      event.stopPropagation();
+    });
+
+    this.comboboxInput.addEventListener('click', event =>
+      event.stopPropagation()
+    );
+
+    for (let listBoxOption of this.listBoxOptions) {
+      listBoxOption.addEventListener('click', event => {
+        const _thisOption = event.currentTarget;
+
+        this.combobox = utils.findParent(
+          _thisOption,
+          UIPicklist.CLASSES.comboBox
+        );
+
+        const _thisComboInput = this.combobox.querySelector(
+          UIPicklist.SELECTORS.comboBoxInput
+        );
+
+        _thisComboInput.value = _thisOption.querySelector(
+          UIPicklist.SELECTORS.optionBodySpan
+        ).innerText;
+
+        if (this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
+          this.combobox.classList.remove(UIPicklist.CLASSES.isOpen);
+        }
+      });
+    }
+
+    document.body.addEventListener('click', event => {
+      let environment = event.target;
+
+      for (let component of this.components) {
+        if (environment !== component) {
+          component
+            .querySelector(UIPicklist.SELECTORS.comboBox)
+            .classList.remove(UIPicklist.CLASSES.isOpen);
+        }
+      }
     });
   }
 }
@@ -99,8 +133,18 @@ class UIPicklist {
 // classes used by components
 UIPicklist.CLASSES = {
   isOpen: 'slds-is-open',
+  isSelected: 'slds-is-selected',
   comboBox: 'slds-combobox',
   listBoxItem: 'slds-listbox__item',
+  listBoxOption: 'slds-listbox__option',
+};
+
+UIPicklist.SELECTORS = {
+  picklist: '.ui-picklist',
+  comboBox: '.slds-combobox',
+  comboBoxInput: '.ui-form-element__combobox-input',
+  optionBodySpan: '.slds-media__body > span',
+  listBoxOption: '.slds-listbox__option',
 };
 
 export default UIPicklist;

@@ -39,8 +39,6 @@ class App {
    * @description initialise the app
    */
   init() {
-    console.log('APP IS RUNNING!!!!');
-
     this.toggleButtons = document.querySelectorAll('.ui-button--toggle');
     this.pathsSummaryDetails = document.querySelectorAll(
       '.path-summary__details'
@@ -49,26 +47,6 @@ class App {
 
     this._toggle();
     this._closePanel();
-
-    // // global navigation
-    // const globalNavigation = new UIGlobalNavigation();
-    // globalNavigation.init();
-
-    // // seacrhbar
-    // const searcheBar = new UISearchBar();
-    // // searcheBar.init();
-
-    // // start selectbox
-    // const selectBox = new UISelectBox();
-    // selectBox.init();
-
-    // // accordion
-    // const accordion = new UIAccordion();
-    // accordion.init();
-
-    // // data table
-    // const dataTable = new UIDataTable();
-    // dataTable.init();
 
     new AppComponents([
       UIGlobalNavigation,
@@ -79,6 +57,8 @@ class App {
       UIDatePicker,
       UIPickList,
     ]).render();
+
+    console.log('Welcome to DIFC App!');
   }
 
   /**

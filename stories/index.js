@@ -4756,9 +4756,6 @@ storiesOf('DIFC Components/Picklists', module)
                     >
                       <span class="slds-media__body">
                         <span class="slds-truncate" title="Option A">
-                          <span class="slds-assistive-text">
-                            Current Selection:
-                          </span>
                           Option A
                         </span>
                       </span>
