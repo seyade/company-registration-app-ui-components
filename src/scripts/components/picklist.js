@@ -104,9 +104,11 @@ class UIPicklist {
           UIPicklist.SELECTORS.comboBoxInput
         );
 
-        _thisComboInput.value = _thisOption.querySelector(
+        let optionText = _thisOption.querySelector(
           UIPicklist.SELECTORS.optionBodySpan
         ).innerText;
+
+        _thisComboInput.value = optionText;
 
         if (this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
           this.combobox.classList.remove(UIPicklist.CLASSES.isOpen);
