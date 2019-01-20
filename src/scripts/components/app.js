@@ -6,6 +6,7 @@ import UIAccordion from './accordion';
 import UIDataTable from './data-table';
 import UIDatePicker from './date-picker';
 import UIPickList from './picklist';
+import UIToast from './toast';
 
 /**
  * @name App
@@ -56,6 +57,7 @@ class App {
       UIDataTable,
       UIDatePicker,
       UIPickList,
+      UIToast,
     ]).render();
 
     console.log('Welcome to DIFC App!');

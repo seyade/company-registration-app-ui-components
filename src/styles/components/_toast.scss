@@ -1,0 +1,57 @@
+.ui-toast {
+  height: 64px;
+  font-family: 'EuclidSquare-Medium', sans-serif;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+
+  h2 {
+    ~ * {
+      padding-top: 8px;
+    }
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .slds-theme--success,
+  .slds-theme_success {
+    color: #fff;
+    background-color: #706e6b;
+  }
+
+  &--success {
+    .slds-theme--success,
+    .slds-theme_success {
+      color: #fff;
+      background-color: #4bca81;
+    }
+  }
+
+  &--warning {
+    .slds-theme--success,
+    .slds-theme_success {
+      color: #fff;
+      background-color: #ffb75d;
+    }
+  }
+
+  &--error {
+    .slds-theme--success,
+    .slds-theme_success {
+      color: #fff;
+      background-color: #fc4c02;
+    }
+  }
+
+  &--is-close {
+    opacity: 0;
+  }
+
+  .slds-notify--toast,
+  .slds-notify_toast {
+    display: flex;
+    padding: 14px 60px;
+    border-radius: 2px;
+  }
+}

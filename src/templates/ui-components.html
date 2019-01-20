@@ -1,6 +1,4 @@
-{% extends '_layout.html' %}
-
-{% block content %}
+{% extends '_layout.html' %} {% block content %}
 <article class="page page--ui-components">
   <header class="page-header">
     <div class="page-header__top-tier">
@@ -13,7 +11,6 @@
     </div>
   </header>
   <div class="page__inner">
-
     <section class="ui-card page-section">
       <div class="slds-grid slds-gutters">
         <div class="slds-col slds-p-horizontal_x-large">
@@ -78,7 +75,6 @@
     <section class="ui-card page-section">
       <div class="slds-grid slds-gutters">
         <div class="slds-col slds-p-horizontal_x-large">
-
           <h1>Page Header with Progress bar</h1>
           {% include 'components/page-header--b.html' %}
         </div>
@@ -104,7 +100,8 @@
           <h1>Tab Bar Long text</h1>
           {% include 'components/tab-bar--b.html' %}
         </div>
-      </div>a
+      </div>
+      a
     </section>
 
     <section class="ui-card page-section">
@@ -145,14 +142,35 @@
     <section class="ui-card page-section">
       <div class="slds-grid slds-gutters">
         <div class="slds-col slds-p-horizontal_x-large">
-          <span>1</span>
+          <h1>Toast</h1>
+          {% include 'components/toast--a.html' %}
         </div>
         <div class="slds-col slds-p-horizontal_x-large">
-          <span>2</span>
+          <h1>Toast Success</h1>
+          {% include 'components/toast--b.html' %}
         </div>
       </div>
     </section>
 
+    <section class="ui-card page-section">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Toast Warning</h1>
+          {% include 'components/toast--c.html' %}
+        </div>
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Toast Error</h1>
+          {% include 'components/toast--d.html' %}
+        </div>
+      </div>
+    </section>
+
+    <section class="ui-card page-section">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-p-horizontal_x-large"><span>1</span></div>
+        <div class="slds-col slds-p-horizontal_x-large"><span>2</span></div>
+      </div>
+    </section>
   </div>
 </article>
 {% endblock %}
