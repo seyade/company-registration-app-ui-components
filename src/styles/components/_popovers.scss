@@ -37,12 +37,12 @@
       background-color: #fc4c02;
     }
 
+    .slds-popover__body {
+      padding: 12px;
+    }
+
     p {
       line-height: 1.4;
-
-      &:last-child {
-        padding-bottom: 8px;
-      }
     }
 
     .slds-popover__close {

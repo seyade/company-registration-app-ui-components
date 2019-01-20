@@ -5098,7 +5098,7 @@ storiesOf('DIFC Components/Popovers', module)
               Previous
             </button>
             <button
-              class="ui-button ui-button--primary slds-button slds-button_brand slds-col_bump-left"
+              class="ui-button ui-button--primary ui-button--primary-outline slds-button slds-button_brand slds-col_bump-left"
             >
               Next
             </button>
