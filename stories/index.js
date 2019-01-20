@@ -3331,7 +3331,7 @@ storiesOf('DIFC Components/Footer', module).add(
         <div class="ui-footer__top">
           <div class="ui-footer__col">
             <ul class="ui-footer__list">
-              <li><a href="#">Data Protection</a></li>
+              <li><a href="#">Data Protections</a></li>
               <li><a href="#">Terms and Privacy</a></li>
               <li><a href="#">Information security</a></li>
             </ul>
@@ -3389,6 +3389,7 @@ storiesOf('DIFC Components/Footer', module).add(
         <div class="ui-footer__bottom">
           <p>COPYRIGHTS &copy; 2019 DIFC. ALL RIGHTS RESERVED.</p>
           <button class="ui-button-icon slds-button slds-button_icon" aria-pressed="false">
+            <span>Back to top</span>
             <svg class="slds-button__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronup"></use>
             </svg>

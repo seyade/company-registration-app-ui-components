@@ -1,13 +1,14 @@
 .ui-footer {
   width: 100%;
   padding: 32px;
+  font-family: 'EuclidSquare-Medium', sans-serif;
   color: #8b8b8b;
   background-color: #fff;
 
   .ui-footer__top {
     display: flex;
     border-bottom: 1px solid #eaeaea;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     font-size: 16px;
 
     .ui-form {
@@ -19,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'EuclidSquare-Light', sans-serif;
     font-size: 12px;
   }
 
@@ -30,21 +32,32 @@
     }
   }
 
+  .ui-form-element__label {
+    color: #706e6b;
+  }
+
   .ui-footer__list {
+    font-size: 16px;
+
     li {
-      padding-bottom: 16px;
+      padding-bottom: 24px;
     }
 
     a {
-      color: #8b8b8b;
+      color: #171717;
+
+      &:hover {
+        color: #0076cf;
+        text-decoration: none;
+      }
     }
   }
 
   .ui-form-element__action {
     display: flex;
     justify-content: flex-end;
-    margin-top: 48px;
-    margin-bottom: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   .social-icons-panel {
@@ -52,11 +65,19 @@
     align-items: center;
 
     a {
-      margin-right: 24px;
+      margin-right: 28px;
 
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+
+  .ui-button-icon {
+    text-transform: uppercase;
+
+    span {
+      margin-right: 10px;
     }
   }
 }
