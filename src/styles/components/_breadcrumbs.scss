@@ -2,13 +2,28 @@
   font-family: 'EuclidSquare-Medium', sans-serif;
 
   .slds-breadcrumb__item {
+    font-size: 13px;
+
     &::before {
+      top: 6px;
       color: #0076cf;
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-top: 1px solid;
+      border-right: 1px solid;
+      transform: rotate(45deg);
     }
 
     > a {
       &:hover {
         text-decoration: underline;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        display: none;
       }
     }
   }
