@@ -4,7 +4,7 @@ import '../dist/main.css';
 
 storiesOf('DIFC Components/Accordion', module)
   .add(
-    'Accordion Base',
+    'Base',
     () => `
     <div class="ui-accordion">
       <ul class="slds-accordion">
@@ -97,7 +97,7 @@ storiesOf('DIFC Components/Accordion', module)
     `
   )
   .add(
-    'Accordion Expanded',
+    'Expanded',
     () => `
     <div class="ui-accordion">
       <ul class="slds-accordion">
@@ -192,11 +192,11 @@ storiesOf('DIFC Components/Accordion', module)
 
 storiesOf('DIFC Components/Avatars', module)
   .add(
-    'Avatar Image',
+    'With image',
     () => `
     <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
       <img 
-        src="/assets/svg/avatar-placeholder.svg" 
+        src="/assets/images/rihanna-gopal.jpg" 
         alt="avatar image" 
         class="main-navigation__user-avatar-image icon-image" 
       />
@@ -204,7 +204,7 @@ storiesOf('DIFC Components/Avatars', module)
     `
   )
   .add(
-    'Avatar Initials',
+    'With initials',
     () => `
     <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
       <abbr 
@@ -217,7 +217,7 @@ storiesOf('DIFC Components/Avatars', module)
     `
   )
   .add(
-    'Avatar User Icon',
+    'User icon',
     () => `
     <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
       <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
@@ -230,7 +230,7 @@ storiesOf('DIFC Components/Avatars', module)
     `
   )
   .add(
-    'Avatar User Icon Small',
+    'User icon small',
     () => `
     <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_medium">
       <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
@@ -422,7 +422,7 @@ storiesOf('DIFC Components/Button Icons', module)
     `
   )
   .add(
-    'Stateful Selected',
+    'Stateful selected',
     () => `
     <button class="ui-button-icon  slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled" aria-pressed="true" title="Like">
       <svg class="slds-button__icon" aria-hidden="true">
@@ -435,7 +435,7 @@ storiesOf('DIFC Components/Button Icons', module)
 
 storiesOf('DIFC Components/Cards', module)
   .add(
-    'Card Base',
+    'Base',
     () => `
     <div class="ui-card" style="min-height:100px;width:400px;">
       
@@ -443,7 +443,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card Base With Content',
+    'Base with content',
     () => `
     <div class="ui-card" style="min-height:100px;width:320px;">
       <div class="ui-card__content ui-card__content--padding-med">
@@ -464,7 +464,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card Guide',
+    'Guide card',
     () => `
     <div class="ui-guide-card ui-card ui-card--light-blue">
       <div class="ui-card__header">
@@ -496,7 +496,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card Next Steps',
+    'Next Steps card',
     () => `
     <div
       class="ui-next-step-card ui-card ui-card--very-light-blue ui-card--next-steps"
@@ -540,7 +540,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card Marketing',
+    'Marketing card',
     () => `
     <div
       class="ui-marketing-card ui-card"
@@ -573,7 +573,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card Marketing without button',
+    'Marketing card without button',
     () => `
     <div
       class="ui-marketing-card ui-card"
@@ -600,7 +600,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card Pathway',
+    'Pathway card (not finished yet!)',
     () => `
     <div
       class="ui-card ui-card--pathway"
@@ -633,7 +633,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card With Header and Button',
+    'With header and button',
     () => `
     <div
       class="ui-card"
@@ -658,7 +658,7 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Card With Related List',
+    'With Related list',
     () => `
     <div
       class="ui-related-list-card ui-card"
@@ -936,7 +936,7 @@ storiesOf('DIFC Components/Comments', module)
     `
   )
   .add(
-    'With Reply',
+    'With reply',
     () => `
     <div class="ui-comment slds-feed">
       <ul class="ui-comment__list slds-feed__list">
@@ -1158,7 +1158,7 @@ storiesOf('DIFC Components/Comments', module)
 
 storiesOf('DIFC Components/Date Picker', module)
   .add(
-    'Date Picker Base',
+    'Base',
     () => `
     <div class="ui-date-picker" style="height: 25rem;">
       <div
@@ -1193,7 +1193,7 @@ storiesOf('DIFC Components/Date Picker', module)
     `
   )
   .add(
-    'Date Picker Open',
+    'Open',
     () => `
     <div class="ui-date-picker" style="height: 25rem;">
       <div
@@ -1453,7 +1453,7 @@ storiesOf('DIFC Components/Date Picker', module)
     `
   )
   .add(
-    'Date Picker Range Selection',
+    'With range selection',
     () => `
     <div class="ui-date-picker" style="height: 25rem;">
       <div
@@ -1937,7 +1937,7 @@ storiesOf('DIFC Components/Data Table', module)
   `
   )
   .add(
-    'Stripped Rows',
+    'Stripped rows',
     () => `
     <div class="ui-data-table">
       <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
@@ -2138,7 +2138,7 @@ storiesOf('DIFC Components/Data Table', module)
     `
   )
   .add(
-    'Advanced Rows Selection',
+    'Advanced rows selection',
     () => `
     <div class="ui-data-table">
       <table
@@ -2855,7 +2855,7 @@ storiesOf('DIFC Components/Forms/Checkboxes', module)
     `
   )
   .add(
-    'As Button Base',
+    'As button base',
     () => `
     <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
       <input 
@@ -2871,7 +2871,7 @@ storiesOf('DIFC Components/Forms/Checkboxes', module)
     `
   )
   .add(
-    'As Button Checked',
+    'As button checked',
     () => `
     <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
       <input 
@@ -2888,7 +2888,7 @@ storiesOf('DIFC Components/Forms/Checkboxes', module)
     `
   )
   .add(
-    'As Button Disabled',
+    'As button disabled',
     () => `
     <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
       <input 
@@ -2905,7 +2905,7 @@ storiesOf('DIFC Components/Forms/Checkboxes', module)
     `
   )
   .add(
-    'As Button Checked Disabled',
+    'As button checked disabled',
     () => `
     <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
       <input 
@@ -2923,13 +2923,13 @@ storiesOf('DIFC Components/Forms/Checkboxes', module)
     `
   );
 
-storiesOf('DIFC Components/Forms/Inputs', module)
+storiesOf('DIFC Components/Forms/Inputs Fields', module)
   .add(
-    'Input Field Base',
+    'Base',
     () => `
     <div class="ui-form-element slds-form-element">
       <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        Input Label
+        <span class="ui-form-element__label-name">Input Label</span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <input
@@ -2943,12 +2943,34 @@ storiesOf('DIFC Components/Forms/Inputs', module)
     `
   )
   .add(
-    'Input Field Required',
+    'Base with description',
     () => `
     <div class="ui-form-element slds-form-element">
       <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        Input Label
-        <abbr class="slds-required">*</abbr>
+        <span class="ui-form-element__label-name">Input Label</span>
+        <span class="ui-form-element__label-description">
+          Description of input label here
+        </span>
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <input
+          id="text-input-id-1"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Type something..."
+        />
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Optional',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
+        <span class="ui-form-element__label-name">
+          Input Label <span class="ui-form-element__label-optional">(optional)</span>
+        </span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <input
@@ -2963,11 +2985,35 @@ storiesOf('DIFC Components/Forms/Inputs', module)
     `
   )
   .add(
-    'Input Field Disabled',
+    'Optional with description',
     () => `
     <div class="ui-form-element slds-form-element">
       <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        Input Label
+        <span class="ui-form-element__label-name">
+          Input Label <span class="ui-form-element__label-optional">(optional)</span>
+          <span class="ui-form-element__label-description">
+            Description of input label here
+          </span>
+        </span>
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <input
+          id="text-input-id-1"
+          class="ui-form-element__control-input slds-input"
+          type="text"
+          placeholder="Type something..."
+          required
+        />
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Disabled',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
+        <span class="ui-form-element__label-name">Input Label</span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <input
@@ -2982,11 +3028,11 @@ storiesOf('DIFC Components/Forms/Inputs', module)
     `
   )
   .add(
-    'Input Field Error',
+    'Error',
     () => `
     <div class="ui-form-element slds-form-element slds-has-error">
       <label class="ui-form-element__label slds-form-element__label" for="text-input-id-1">
-        Input Label
+        <span class="ui-form-element__label-name">Input Label</span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <input
@@ -3005,14 +3051,14 @@ storiesOf('DIFC Components/Forms/Inputs', module)
     `
   )
   .add(
-    'Left Icon and Clear Button',
+    'Left icon and "clear" button',
     () => `
     <div class="ui-form-element slds-form-element">
       <label
         class="ui-form-element__label slds-form-element__label"
         for="text-input-id-1"
       >
-        Input Label
+        <span class="ui-form-element__label-name">Input Label</span>
       </label>
       <div
         class="ui-form-element__control slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
@@ -3193,7 +3239,7 @@ storiesOf('DIFC Components/Forms/Radios', module)
     `
   )
   .add(
-    'Group Disabled and Checked',
+    'Group Disabled and checked',
     () => `
     <div class="ui-radio-group">
       <fieldset class="ui-form-element slds-form-element">
@@ -3236,14 +3282,14 @@ storiesOf('DIFC Components/Forms/Radios', module)
 
 storiesOf('DIFC Components/Forms/Textareas', module)
   .add(
-    'Textarea Base',
+    'Base',
     () => `
     <div class="ui-form-element slds-form-element">
       <label
         class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
-        Textarea Label
+        <span class="ui-form-element__label-name">Textarea Label</span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <textarea
@@ -3256,15 +3302,39 @@ storiesOf('DIFC Components/Forms/Textareas', module)
     `
   )
   .add(
-    'Textarea Required',
+    'Base with description',
     () => `
     <div class="ui-form-element slds-form-element">
       <label
         class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
-        <abbr class="slds-required">*</abbr>
-        Textarea Label
+        <span class="ui-form-element__label-name">Textarea Label</span>
+        <span class="ui-form-element__label-description">
+          Description of input label here
+        </span>
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <textarea
+          id="textarea-id-01"
+          class="ui-form-element__control-textarea slds-textarea"
+          placeholder="Placeholder Text"
+        ></textarea>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Optional',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="textarea-id-01"
+      >
+        <span class="ui-form-element__label-name">
+          Textarea Label <span class="ui-form-element__label-optional">(optional)</span>
+        </span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <textarea
@@ -3278,14 +3348,40 @@ storiesOf('DIFC Components/Forms/Textareas', module)
     `
   )
   .add(
-    'Textarea Disabled',
+    'Optional with description',
     () => `
     <div class="ui-form-element slds-form-element">
       <label
         class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
-        Textarea Label
+        <span class="ui-form-element__label-name">
+          Textarea Label <span class="ui-form-element__label-optional">(optional)</span>
+        </span>
+        <span class="ui-form-element__label-description">
+          Description of input label here
+        </span>
+      </label>
+      <div class="ui-form-element__control slds-form-element__control">
+        <textarea
+          id="textarea-id-01"
+          class="ui-form-element__control-textarea slds-textarea"
+          placeholder="Placeholder Text"
+          required
+        ></textarea>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Disabled',
+    () => `
+    <div class="ui-form-element slds-form-element">
+      <label
+        class="ui-form-element__label slds-form-element__label"
+        for="textarea-id-01"
+      >
+        <span class="ui-form-element__label-name">Textarea Label</span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <textarea
@@ -3299,14 +3395,14 @@ storiesOf('DIFC Components/Forms/Textareas', module)
     `
   )
   .add(
-    'Textarea Error',
+    'Error',
     () => `
     <div class="ui-form-element slds-form-element slds-has-error">
       <label
         class="ui-form-element__label slds-form-element__label"
         for="textarea-id-01"
       >
-        Textarea Label
+        <span class="ui-form-element__label-name">Textarea Label</span>
       </label>
       <div class="ui-form-element__control slds-form-element__control">
         <textarea
@@ -3439,7 +3535,7 @@ storiesOf('DIFC Components/Global Navigation', module)
     `
   )
   .add(
-    'Base Small Height',
+    'Base smaller height',
     () => `
     <div class="ui-global-navigation">
       <div class="ui-global-navigation__inner-wrap">
@@ -3476,7 +3572,7 @@ storiesOf('DIFC Components/Global Navigation', module)
     `
   )
   .add(
-    'Logged In',
+    'Logged in',
     () => `
     <div class="ui-global-navigation">
       <div class="ui-global-navigation__inner-wrap">
@@ -3541,7 +3637,7 @@ storiesOf('DIFC Components/Global Navigation', module)
     `
   )
   .add(
-    'Logged In Expanded with Menu',
+    'Logged in and expanded with menu',
     () => `
     <div class="ui-global-navigation">
       <div class="ui-global-navigation__inner-wrap">
@@ -3685,7 +3781,7 @@ storiesOf('DIFC Components/Menu', module)
   `
   )
   .add(
-    'With Header and Sub Items',
+    'With header and sub items',
     () => `
     <div class="ui-menu">
       <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
@@ -3784,7 +3880,7 @@ storiesOf('DIFC Components/Menu', module)
     `
   )
   .add(
-    'Item Selected',
+    'Item selected',
     () => `
     <div class="ui-menu">
       <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
@@ -3869,7 +3965,7 @@ storiesOf('DIFC Components/Menu', module)
     `
   )
   .add(
-    'With Icons on Both Sides of Item',
+    'With icons on both sides of item',
     () => `
     <div class="ui-menu">
       <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
@@ -4332,168 +4428,7 @@ storiesOf('DIFC Components/Picklists', module)
     `
   )
   .add(
-    'Selected',
-    () => `
-    <div class="ui-picklist">
-      <div class="ui-form-element slds-form-element">
-        <label
-          class="ui-form-element__label slds-form-element__label"
-          for="combobox-unique-id-33"
-        >
-          Search
-        </label>
-        <div class="ui-form-element__control slds-form-element__control">
-          <div class="slds-combobox_container slds-size_small">
-            <div
-              class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-              aria-expanded="true"
-              aria-haspopup="listbox"
-              role="combobox"
-            >
-              <div
-                class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
-                role="none"
-              >
-                <input
-                  class="ui-form-element__control-input slds-input ui-form-element__combobox-input slds-combobox__input"
-                  id="combobox-unique-id-33"
-                  aria-controls="listbox-unique-id"
-                  autocomplete="off"
-                  role="textbox"
-                  type="text"
-                  placeholder="Select an Option"
-                  value=""
-                />
-                <span
-                  class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
-                  title="Description of icon when needed"
-                >
-                  <svg
-                    class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
-                    aria-hidden="true"
-                  >
-                    <use
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
-                    />
-                  </svg>
-                  <span class="slds-assistive-text">
-                    Description of icon when needed
-                  </span>
-                </span>
-              </div>
-              <div id="listbox-unique-id" role="listbox">
-                <ul
-                  class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
-                  role="presentation"
-                >
-                  <li role="presentation" class="slds-listbox__item">
-                    <div
-                      id="listbox-option-unique-id-01"
-                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                      role="option"
-                    >
-                      <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option A">
-                          Option A
-                        </span>
-                      </span>
-                      <span class="slds-media__figure">
-                        <svg
-                          class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
-                          aria-hidden="true"
-                        >
-                          <use
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                  <li role="presentation" class="slds-listbox__item">
-                    <div
-                      id="listbox-option-unique-id-02"
-                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                      role="option"
-                    >
-                      <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option B">
-                          Option B
-                        </span>
-                      </span>
-                      <span class="slds-media__figure">
-                        <svg
-                          class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
-                          aria-hidden="true"
-                        >
-                          <use
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                  <li role="presentation" class="slds-listbox__item">
-                    <div
-                      id="listbox-option-unique-id-03"
-                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                      role="option"
-                    >
-                      <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option C">
-                          Option C
-                        </span>
-                      </span>
-                      <span class="slds-media__figure">
-                        <svg
-                          class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
-                          aria-hidden="true"
-                        >
-                          <use
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                  <li role="presentation" class="slds-listbox__item">
-                    <div
-                      id="listbox-option-unique-id-03"
-                      class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                      role="option"
-                    >
-                      <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option D">
-                          Option D
-                        </span>
-                      </span>
-                      <span class="slds-media__figure">
-                        <svg
-                          class="slds-icon slds-icon_x-small slds-listbox__icon-selected"
-                          aria-hidden="true"
-                        >
-                          <use
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'With Heading',
+    'With heading',
     () => `
     <div class="ui-picklist">
       <div class="ui-form-element slds-form-element">
@@ -4855,7 +4790,7 @@ storiesOf('DIFC Components/Popovers', module)
     `
   )
   .add(
-    'Walkthrough Inline Form',
+    'Walkthrough inline form',
     () => `
     <div class="ui-popover">
       <section
@@ -4956,7 +4891,7 @@ storiesOf('DIFC Components/Popovers', module)
     `
   )
   .add(
-    'Feature with Icon',
+    'Feature with icon',
     () => `
     <div class="ui-popover">
       <section
@@ -5009,7 +4944,7 @@ storiesOf('DIFC Components/Popovers', module)
     `
   )
   .add(
-    'Feature with Header and Footer',
+    'Feature with header and footer',
     () => `
     <div class="ui-popover">
       <section
@@ -5482,7 +5417,7 @@ storiesOf('DIFC Components/Progress Rings', module)
     `
   )
   .add(
-    'Partially Drain',
+    'Partially drain',
     () => `
     <div class="ui-progress-ring slds-progress-ring">
       <div 
@@ -5716,7 +5651,7 @@ storiesOf('DIFC Components/Tab Bars', module)
     `
   )
   .add(
-    'Long Text',
+    'With longer text',
     () => `
     <div class="ui-tab-bar">
       <div class="slds-tabs_default">
@@ -5834,7 +5769,7 @@ storiesOf('DIFC Components/Toasts', module)
     `
   )
   .add(
-    'Base With extra text',
+    'Base with extra text',
     () => `
     <div class="ui-toast">
       <div class="slds-notify_container slds-is-relative">

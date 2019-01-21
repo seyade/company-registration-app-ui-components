@@ -2,6 +2,18 @@
   &__label {
     margin-bottom: 12px;
     font-family: 'EuclidSquare-Medium', sans-serif;
+    color: #706e6b;
+
+    &-description {
+      display: block;
+      padding-top: 10px;
+      font-family: 'EuclidSquare-Light', sans-serif;
+    }
+
+    &-optional {
+      font-family: 'EuclidSquare-Light', sans-serif;
+      // color: #dddbda;
+    }
   }
 
   &__control {
