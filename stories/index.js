@@ -190,41 +190,76 @@ storiesOf('DIFC Components/Accordion', module)
     `
   );
 
-storiesOf('DIFC Components/Avatars', module)
+storiesOf('DIFC Components/Avatars/Circles', module)
   .add(
-    'With image',
+    'With user picture',
     () => `
-    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
-      <img 
-        src="/assets/images/rihanna-gopal.jpg" 
-        alt="avatar image" 
-        class="main-navigation__user-avatar-image icon-image" 
-      />
+    <span class="ui-avatar ui-avatar--circle">
+      <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+        <img 
+          src="/assets/images/rihanna-gopal.jpg" 
+          alt="avatar image" 
+          class="ui-avatar__image icon-image" 
+        />
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'With user picture small',
+    () => `
+    <span class="ui-avatar ui-avatar--small ui-avatar--circle">
+      <span class="slds-avatar slds-avatar_circle">
+        <img 
+          src="/assets/images/rihanna-gopal.jpg" 
+          alt="avatar image" 
+          class="ui-avatar__image icon-image" 
+        />
+      </span>
     </span>
     `
   )
   .add(
     'With initials',
     () => `
-    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
-      <abbr 
-        class="slds-avatar__initials slds-icon-standard-account"
-        title="company name"
-      >
-        Ac
-      </abbr>
+    <span class="ui-avatar ui-avatar--circle">
+      <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+        <abbr 
+          class="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'With initials small',
+    () => `
+    <span class="ui-avatar ui-avatar--small ui-avatar--circle">
+      <span class="slds-avatar slds-avatar_circle">
+        <abbr 
+          class="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
+      </span>
     </span>
     `
   )
   .add(
     'User icon',
     () => `
-    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_large">
-      <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
-        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
-        </svg>
-        <span class="slds-assistive-text">Description of icon when needed</span>
+    <span class="ui-avatar ui-avatar--circle">
+      <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+        <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
+          <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
+          </svg>
+          <span class="slds-assistive-text">Description of icon when needed</span>
+        </span>
       </span>
     </span>
     `
@@ -232,12 +267,104 @@ storiesOf('DIFC Components/Avatars', module)
   .add(
     'User icon small',
     () => `
-    <span class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_medium">
-      <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
-        <svg class="slds-icon" aria-hidden="true">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
-        </svg>
-        <span class="slds-assistive-text">Description of icon when needed</span>
+    <span class="ui-avatar ui-avatar--small ui-avatar--circle">
+      <span class="slds-avatar slds-avatar_circle slds-avatar_small">
+        <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
+          <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
+          </svg>
+          <span class="slds-assistive-text">Description of icon when needed</span>
+        </span>
+      </span>
+    </span>
+    `
+  );
+
+storiesOf('DIFC Components/Avatars/Squares', module)
+  .add(
+    'With user picture',
+    () => `
+    <span class="ui-avatar">
+      <span class="slds-avatar slds-avatar_large">
+        <img 
+          src="/assets/images/rihanna-gopal.jpg" 
+          alt="avatar image" 
+          class="ui-avatar__image icon-image" 
+        />
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'With user picture small',
+    () => `
+    <span class="ui-avatar ui-avatar--small">
+      <span class="slds-avatar">
+        <img 
+          src="/assets/images/rihanna-gopal.jpg" 
+          alt="avatar image" 
+          class="ui-avatar__image icon-image" 
+        />
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'With initials',
+    () => `
+    <span class="ui-avatar">
+      <span class="slds-avatar slds-avatar_large">
+        <abbr 
+          class="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'With initials small',
+    () => `
+    <span class="ui-avatar ui-avatar--small">
+      <span class="slds-avatar">
+        <abbr 
+          class="slds-avatar__initials slds-icon-standard-account"
+          title="company name"
+        >
+          Ac
+        </abbr>
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'User icon',
+    () => `
+    <span class="ui-avatar">
+      <span class="slds-avatar slds-avatar_medium">
+        <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
+          <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
+          </svg>
+          <span class="slds-assistive-text">Description of icon when needed</span>
+        </span>
+      </span>
+    </span>
+    `
+  )
+  .add(
+    'User icon small',
+    () => `
+    <span class="ui-avatar ui-avatar--small">
+      <span class="slds-avatar slds-avatar_small">
+        <span class="slds-icon_container slds-icon-standard-user" title="Description of icon when needed">
+          <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user" />
+          </svg>
+          <span class="slds-assistive-text">Description of icon when needed</span>
+        </span>
       </span>
     </span>
     `
@@ -819,22 +946,21 @@ storiesOf('DIFC Components/Comments', module)
           <article class="ui-comment__post slds-post">
             <header class="slds-post__header slds-media">
               <div class="slds-media__figure">
-                <a
-                  href="#"
-                  class="slds-avatar slds-avatar_circle slds-avatar_large"
-                >
-                  <span
-                    class="slds-icon_container slds-icon-standard-user"
-                    title="Description of icon when needed"
-                  >
-                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"
-                      />
-                    </svg>
-                    <span class="slds-assistive-text">
-                      Description of icon when needed
+                <a class="ui-avatar ui-avatar--circle" href="#">
+                  <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                    <span
+                      class="slds-icon_container slds-icon-standard-user"
+                      title="Description of icon when needed"
+                    >
+                      <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                        <use
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"
+                        />
+                      </svg>
+                      <span class="slds-assistive-text">
+                        Description of icon when needed
+                      </span>
                     </span>
                   </span>
                 </a>
@@ -958,22 +1084,21 @@ storiesOf('DIFC Components/Comments', module)
           <article class="ui-comment__post slds-post">
             <header class="slds-post__header slds-media">
               <div class="slds-media__figure">
-                <a
-                  href="javascript:void(0);"
-                  class="slds-avatar slds-avatar_circle slds-avatar_large"
-                >
-                  <span
-                    class="slds-icon_container slds-icon-standard-user"
-                    title="Description of icon when needed"
-                  >
-                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"
-                      />
-                    </svg>
-                    <span class="slds-assistive-text">
-                      Description of icon when needed
+                <a class="ui-avatar ui-avatar--circle" href="#">
+                  <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                    <span
+                      class="slds-icon_container slds-icon-standard-user"
+                      title="Description of icon when needed"
+                    >
+                      <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                        <use
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"
+                        />
+                      </svg>
+                      <span class="slds-assistive-text">
+                        Description of icon when needed
+                      </span>
                     </span>
                   </span>
                 </a>
@@ -983,11 +1108,11 @@ storiesOf('DIFC Components/Comments', module)
                   class="slds-grid slds-grid_align-spread slds-has-flexi-truncate"
                 >
                   <p>
-                    <a href="javascript:void(0);" title="Jason Rodgers">
+                    <a href="#" title="Jason Rodgers">
                       Jason Rogers
                     </a>
                     —
-                    <a href="javascript:void(0);" title="Design Systems">
+                    <a href="#" title="Design Systems">
                       Design Systems
                     </a>
                   </p>
@@ -1007,7 +1132,7 @@ storiesOf('DIFC Components/Comments', module)
                 </div>
                 <p class="slds-text-body_small">
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     title="Click for single-item view of this post"
                     class="ui-comment__time slds-text-link_reset"
                   >
@@ -1019,7 +1144,7 @@ storiesOf('DIFC Components/Comments', module)
             <div class="slds-post__content slds-text-longform">
               <p>
                 Hey there! Here's the latest demo presentation
-                <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>
+                <a href="#" title="Jenna Davis">@Jenna Davis</a>
                 , let me know if there are any changes. I've updated slides 3-8 and
                 slides 16-18 slides with new product shots.
               </p>
@@ -1092,18 +1217,18 @@ storiesOf('DIFC Components/Comments', module)
               <li>
                 <article class="slds-comment slds-media slds-hint-parent">
                   <div class="slds-media__figure">
-                    <a
-                      href="javascript:void(0);"
-                      class="slds-avatar slds-avatar_circle slds-avatar_medium"
-                    >
+                    <a class="ui-avatar ui-avatar--small ui-avatar--circle" href="#">
                       <span
-                        class="ui-avatar slds-avatar slds-avatar_circle slds-avatar_medium"
+                        class="slds-avatar slds-avatar_circle slds-avatar_small"
                       >
                         <span
                           class="slds-icon_container slds-icon-standard-user"
                           title="Description of icon when needed"
                         >
-                          <svg class="slds-icon" aria-hidden="true">
+                          <svg
+                            class="slds-icon slds-icon_x-small"
+                            aria-hidden="true"
+                          >
                             <use
                               xmlns:xlink="http://www.w3.org/1999/xlink"
                               xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"
@@ -1122,7 +1247,7 @@ storiesOf('DIFC Components/Comments', module)
                         class="slds-grid slds-grid_align-spread slds-has-flexi-truncate"
                       >
                         <p class="slds-truncate" title="Jenna Davis">
-                          <a href="javascript:void(0);">Jenna Davis</a>
+                          <a href="#">Jenna Davis</a>
                         </p>
                         <button
                           class="slds-button slds-button_icon slds-button_icon-x-small"

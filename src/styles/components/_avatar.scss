@@ -1,3 +1,27 @@
 .ui-avatar {
-  // display: flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 2px;
+  background-color: #34becd;
+
+  .slds-avatar__initials {
+    text-shadow: none;
+  }
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &__image {
+    width: auto;
+    max-width: 100%;
+  }
+
+  &--small {
+    width: 32px;
+    height: 32px;
+  }
 }
