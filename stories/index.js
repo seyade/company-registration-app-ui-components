@@ -2855,6 +2855,90 @@ storiesOf('DIFC Components/Forms/Checkboxes', module)
     `
   )
   .add(
+    'Group multi-select (even more options)',
+    () => `
+    <div class="ui-checkbox-group ui-checkbox-group--multiselect">
+      <fieldset class="ui-form-element slds-form-element">
+        <legend
+          class="ui-form-element__legend slds-form-element__legend slds-form-element__label"
+        >
+          Do you have systems, policies and procedures in place?
+        </legend>
+        <div class="ui-form-element__control slds-form-element__control">
+          <div class="ui-form-element__checkbox slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="checkbox-30"
+              value="checkbox-30"
+            />
+            <label
+              class="ui-form-element__checkbox-label slds-checkbox__label"
+              for="checkbox-30"
+            >
+              <span class="slds-checkbox_faux"></span>
+              <span class="ui-form-element__label slds-form-element__label">
+                Option 1
+              </span>
+            </label>
+          </div>
+          <div class="ui-form-element__checkbox slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="checkbox-31"
+              value="checkbox-31"
+            />
+            <label
+              class="ui-form-element__checkbox-label slds-checkbox__label"
+              for="checkbox-31"
+            >
+              <span class="slds-checkbox_faux"></span>
+              <span class="ui-form-element__label slds-form-element__label">
+                Option 2
+              </span>
+            </label>
+          </div>
+          <div class="ui-form-element__checkbox slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="checkbox-32"
+              value="checkbox-32"
+            />
+            <label
+              class="ui-form-element__checkbox-label slds-checkbox__label"
+              for="checkbox-32"
+            >
+              <span class="slds-checkbox_faux"></span>
+              <span class="ui-form-element__label slds-form-element__label">
+                Option 3
+              </span>
+            </label>
+          </div>
+          <div class="ui-form-element__checkbox slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="checkbox-33"
+              value="checkbox-33"
+            />
+            <label
+              class="ui-form-element__checkbox-label slds-checkbox__label"
+              for="checkbox-33"
+            >
+              <span class="slds-checkbox_faux"></span>
+              <span class="ui-form-element__label slds-form-element__label">
+                Option 4
+              </span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    `
+  )
+  .add(
     'As button base',
     () => `
     <div class="ui-checkbox ui-checkbox--button slds-checkbox_add-button">
