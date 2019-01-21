@@ -1,7 +1,6 @@
 import { AppComponents } from '../app-core';
 import UIGlobalNavigation from './global-navigation';
 import UISelectBox from './select-box';
-import UISearchBar from './search-bar';
 import UIAccordion from './accordion';
 import UIDataTable from './data-table';
 import UIDatePicker from './date-picker';
@@ -51,7 +50,6 @@ class App {
 
     new AppComponents([
       UIGlobalNavigation,
-      UISearchBar,
       UISelectBox,
       UIAccordion,
       UIDataTable,

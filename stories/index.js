@@ -3417,17 +3417,43 @@ storiesOf('DIFC Components/Global Navigation', module)
 
         <div class="ui-global-navigation__content">
           <div class="ui-global-navigation__content-col">
-            <div class="ui-global-navigation__action">
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
+            <div class="ui-global-navigation__user">
+              <a href="#" class="ui-global-navigation__link">Register</a>
+              <a href="#" class="ui-global-navigation__link">Login</a>
             </div>
+            
+            <!-- HAMBURGERS PLUGIN -->
+            <button
+              class="ui-global-navigation__button ui-global-navigation__button--menu hamburger hamburger--collapse"
+              type="button"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <!-- HAMBURGERS PLUGIN -->
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Base Small Height',
+    () => `
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title ui-global-navigation__title--compact">
+          <img
+            class="ui-global-navigation__title-icon"
+            src="/assets/svg/difc-diamond.svg"
+            alt="DIFC"
+          />
+          <span class="ui-global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
             <div class="ui-global-navigation__user">
               <a href="#" class="ui-global-navigation__link">Register</a>
               <a href="#" class="ui-global-navigation__link">Login</a>
@@ -3468,34 +3494,19 @@ storiesOf('DIFC Components/Global Navigation', module)
             <div class="ui-global-navigation__action">
               <div class="ui-global-navigation__action--private">
                 <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__action-button ui-global-navigation__button--icon"
                 >
-                  <img
-                    src="/assets/svg/answer-public.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/announcement.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
+                  <svg
+                    class="slds-button__icon slds-button__icon_large"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+                    ></use>
+                  </svg>
+                  <span class="slds-assistive-text">no new notifications</span>
                 </button>
               </div>
-              
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
             </div>
 
             <div class="ui-global-navigation__user">
@@ -3504,11 +3515,11 @@ storiesOf('DIFC Components/Global Navigation', module)
               >
                 <span class="ui-global-navigation__user-name">Company name</span>
                 <span class="ui-global-navigation__user-avatar">
-                  <img
-                    src="/assets/svg/avatar-placeholder.svg"
-                    alt="avatar image"
-                    class="ui-global-navigation__button-image icon-image"
-                  />
+                <img
+                  src="/assets/images/rihanna-gopal.jpg"
+                  alt="avatar image"
+                  class="ui-global-navigation__avatar icon-image"
+                />
                 </span>
               </a>
             </div>
@@ -3548,34 +3559,19 @@ storiesOf('DIFC Components/Global Navigation', module)
             <div class="ui-global-navigation__action">
               <div class="ui-global-navigation__action--private">
                 <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
+                  class="ui-global-navigation__button ui-global-navigation__action-button ui-global-navigation__button--icon"
                 >
-                  <img
-                    src="/assets/svg/answer-public.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/announcement.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
+                  <svg
+                    class="slds-button__icon slds-button__icon_large"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+                    ></use>
+                  </svg>
+                  <span class="slds-assistive-text">no new notifications</span>
                 </button>
               </div>
-
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
             </div>
 
             <div class="ui-global-navigation__user">
@@ -3585,11 +3581,11 @@ storiesOf('DIFC Components/Global Navigation', module)
               >
                 <span class="ui-global-navigation__user-name">Company name</span>
                 <span class="ui-global-navigation__user-avatar">
-                  <img
-                    src="/assets/svg/avatar-placeholder.svg"
-                    alt="avatar image"
-                    class="ui-global-navigation__button-image icon-image"
-                  />
+                <img
+                  src="/assets/images/rihanna-gopal.jpg"
+                  alt="avatar image"
+                  class="ui-global-navigation__avatar icon-image"
+                />
                 </span>
               </a>
             </div>
@@ -3604,58 +3600,6 @@ storiesOf('DIFC Components/Global Navigation', module)
               </span>
             </button>
             <!-- HAMBURGERS PLUGIN -->
-          </div>
-        </div>
-
-        <div class="ui-search-bar">
-          <div class="ui-search-bar__action">
-            <img
-              src="/assets/svg/magnifier-icon.svg"
-              alt="search icon"
-              class="search-bar__icon-image icon-image"
-            />
-            <input
-              class="ui-search-bar__input"
-              placeholder="Search item here with csv, for data entry"
-              type="text"
-              autocomplete
-            />
-            <button class="ui-search-bar__button ui-search-bar__button--close">
-              <img
-                src="/assets/svg/cross-line.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
-              />
-            </button>
-          </div>
-          <div class="ui-search-bar__results">
-            <ul class="ui-search-bar__results-list">
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search item article here
-                </a>
-              </li>
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search you are looking for here
-                </a>
-              </li>
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search item article here
-                </a>
-              </li>
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search you are looking for here
-                </a>
-              </li>
-              <li class="ui-search-bar-results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search item article here
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -3680,138 +3624,6 @@ storiesOf('DIFC Components/Global Navigation', module)
             <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
           </li>
         </ul>
-      </div>
-    </div>
-    `
-  )
-  .add(
-    'Expanded with Search Bar',
-    () => `
-    <div class="ui-global-navigation ui-global-navigation--expanded">
-      <div class="ui-global-navigation__inner-wrap">
-        <h1 class="ui-global-navigation__title">
-          <img
-            class="ui-global-navigation__title-icon"
-            src="/assets/svg/difc-diamond.svg"
-            alt="DIFC"
-          />
-          <span class="ui-global-navigation__title-text">One DIFC</span>
-        </h1>
-
-        <div class="ui-global-navigation__content">
-          <div class="ui-global-navigation__content-col">
-            <div class="ui-global-navigation__action">
-              <div class="ui-global-navigation__action--private">
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/answer-public.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-                <button
-                  class="ui-global-navigation__button ui-global-navigation__button--icon"
-                >
-                  <img
-                    src="/assets/svg/announcement.svg"
-                    alt="search icon"
-                    class="search-bar__icon-image icon-image"
-                  />
-                </button>
-              </div>
-              
-              <button
-                class="ui-global-navigation__button ui-global-navigation__button--search"
-              >
-                <img
-                  src="/assets/svg/magnifier-icon.svg"
-                  alt="search icon"
-                  class="search-bar__icon-image icon-image"
-                />
-              </button>
-            </div>
-
-            <div class="ui-global-navigation__user">
-              <a 
-                class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
-              >
-                <span class="ui-global-navigation__user-name">Company name</span>
-                <span class="ui-global-navigation__user-avatar">
-                  <img
-                    src="/assets/svg/avatar-placeholder.svg"
-                    alt="avatar image"
-                    class="ui-global-navigation__button-image icon-image"
-                  />
-                </span>
-              </a>
-            </div>
-
-            <button 
-              class="ui-global-navigation__button ui-global-navigation__button--menu"
-            >
-              <img
-                src="/assets/svg/hamburger-line.svg"
-                alt="notification bell"
-                class="ui-global-navigation__button-image icon-image"
-              />
-            </button>
-          </div>
-        </div>
-
-        <div class="ui-search-bar ui-search-bar--is-open">
-          <div class="ui-search-bar__action">
-            <img
-              src="/assets/svg/magnifier-icon.svg"
-              alt="search icon"
-              class="search-bar__icon-image icon-image"
-            />
-            <input
-              class="ui-search-bar__input"
-              placeholder="Search item here with csv, for data entry"
-              type="text"
-              autocomplete
-              focus
-            />
-            <button class="ui-search-bar__button ui-search-bar__button--close">
-              <img
-                src="/assets/svg/cross-line.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
-              />
-            </button>
-          </div>
-          <div class="ui-search-bar__results">
-            <ul class="ui-search-bar__results-list">
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search item article here
-                </a>
-              </li>
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search you are looking for here
-                </a>
-              </li>
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search item article here
-                </a>
-              </li>
-              <li class="ui-search-bar__results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search you are looking for here
-                </a>
-              </li>
-              <li class="ui-search-bar-results-item">
-                <a class="ui-search-bar__results-link" href="#">
-                  Search item article here
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
     `

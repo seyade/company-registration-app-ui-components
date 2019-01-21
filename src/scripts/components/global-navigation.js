@@ -9,7 +9,7 @@ class UIGlobalNavigation {
      * component
      * @type {Element}
      */
-    this.component;
+    this.components;
 
     /**
      * navigation menu
@@ -43,33 +43,17 @@ class UIGlobalNavigation {
   }
 
   init() {
-    this.component = document.querySelector('.ui-global-navigation');
+    this.components = document.querySelectorAll('.ui-global-navigation');
 
-    this.navigationMenu = this.component.querySelector(
-      '.ui-global-navigation__menu'
-    );
+    for (let component of this.components) {
+      this.navigationMenuButton = component.querySelector(
+        '.ui-global-navigation__button--menu'
+      );
 
-    this.navigationMenuButton = this.component.querySelector(
-      '.ui-global-navigation__button--menu'
-    );
+      this._addEvents();
+    }
 
-    this.navigationMenuCloseButton = this.component.querySelector(
-      '.ui-global-navigation__button--menu-close'
-    );
-
-    this.searchBar = this.component.querySelector(
-      '.ui-global-navigation__search-bar'
-    );
-
-    this.searchBarInput = this.component.querySelector('.ui-search-bar__input');
-
-    this.searchButton = this.component.querySelector(
-      '.ui-global-navigation__button--search'
-    );
-
-    this._addEvents();
-
-    return this.component;
+    return this.components;
   }
 
   /**
@@ -79,32 +63,29 @@ class UIGlobalNavigation {
   _addEvents() {
     this.navigationMenuButton.addEventListener('click', event => {
       const _thisButton = event.currentTarget;
+      const _ancestor = utils.findParent(
+        _thisButton,
+        UIGlobalNavigation.CLASSES.container
+      );
+      const _thisGlobalNavMenu = _ancestor.querySelector(
+        '.ui-global-navigation__menu'
+      );
 
       if (
         !_thisButton.classList.contains(UIGlobalNavigation.CLASSES.isActive)
       ) {
         _thisButton.classList.add(UIGlobalNavigation.CLASSES.isActive);
 
-        this.navigationMenu.classList.remove(
+        _thisGlobalNavMenu.classList.remove(
           UIGlobalNavigation.CLASSES.containerMenuHidden
         );
       } else {
         _thisButton.classList.remove(UIGlobalNavigation.CLASSES.isActive);
 
-        this.navigationMenu.classList.add(
+        _thisGlobalNavMenu.classList.add(
           UIGlobalNavigation.CLASSES.containerMenuHidden
         );
       }
-    });
-
-    this.searchButton.addEventListener('click', event => {
-      const searchBar = this.component.getElementsByClassName(
-        UIGlobalNavigation.CLASSES.searchBar
-      )[0];
-
-      searchBar.classList.add(UIGlobalNavigation.CLASSES.searchBarOpen);
-
-      this.searchBarInput.focus();
     });
   }
 }

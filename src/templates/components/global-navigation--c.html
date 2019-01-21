@@ -14,34 +14,19 @@
         <div class="ui-global-navigation__action">
           <div class="ui-global-navigation__action--private">
             <button
-              class="ui-global-navigation__button ui-global-navigation__button--icon"
+              class="ui-global-navigation__button ui-global-navigation__action-button ui-global-navigation__button--icon"
             >
-              <img
-                src="/assets/svg/answer-public.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
-              />
-            </button>
-            <button
-              class="ui-global-navigation__button ui-global-navigation__button--icon"
-            >
-              <img
-                src="/assets/svg/announcement.svg"
-                alt="search icon"
-                class="search-bar__icon-image icon-image"
-              />
+              <svg
+                class="slds-button__icon slds-button__icon_large"
+                aria-hidden="true"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+                ></use>
+              </svg>
+              <span class="slds-assistive-text">no new notifications</span>
             </button>
           </div>
-
-          <button
-            class="ui-global-navigation__button ui-global-navigation__button--search"
-          >
-            <img
-              src="/assets/svg/magnifier-icon.svg"
-              alt="search icon"
-              class="search-bar__icon-image icon-image"
-            />
-          </button>
         </div>
 
         <div class="ui-global-navigation__user">
@@ -52,9 +37,9 @@
             <span class="ui-global-navigation__user-name">Company name</span>
             <span class="ui-global-navigation__user-avatar">
               <img
-                src="/assets/svg/avatar-placeholder.svg"
+                src="/assets/images/rihanna-gopal.jpg"
                 alt="avatar image"
-                class="ui-global-navigation__button-image icon-image"
+                class="ui-global-navigation__avatar icon-image"
               />
             </span>
           </a>
@@ -72,8 +57,6 @@
         <!-- HAMBURGERS PLUGIN -->
       </div>
     </div>
-
-    {% include 'components/search-bar.html' %}
   </div>
 
   <div class="ui-global-navigation__menu ui-global-navigation__menu--hidden">
