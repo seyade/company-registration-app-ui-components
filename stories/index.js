@@ -946,7 +946,7 @@ storiesOf('DIFC Components/Comments', module)
           <article class="ui-comment__post slds-post">
             <header class="slds-post__header slds-media">
               <div class="slds-media__figure">
-                <a class="ui-avatar ui-avatar--circle">
+                <a class="ui-avatar ui-avatar--circle" href="#">
                   <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
                     <span
                       class="slds-icon_container slds-icon-standard-user"
@@ -1084,7 +1084,7 @@ storiesOf('DIFC Components/Comments', module)
           <article class="ui-comment__post slds-post">
             <header class="slds-post__header slds-media">
               <div class="slds-media__figure">
-                <a class="ui-avatar ui-avatar--circle">
+                <a class="ui-avatar ui-avatar--circle" href="#">
                   <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
                     <span
                       class="slds-icon_container slds-icon-standard-user"
@@ -1108,11 +1108,11 @@ storiesOf('DIFC Components/Comments', module)
                   class="slds-grid slds-grid_align-spread slds-has-flexi-truncate"
                 >
                   <p>
-                    <a href="javascript:void(0);" title="Jason Rodgers">
+                    <a href="#" title="Jason Rodgers">
                       Jason Rogers
                     </a>
                     —
-                    <a href="javascript:void(0);" title="Design Systems">
+                    <a href="#" title="Design Systems">
                       Design Systems
                     </a>
                   </p>
@@ -1132,7 +1132,7 @@ storiesOf('DIFC Components/Comments', module)
                 </div>
                 <p class="slds-text-body_small">
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     title="Click for single-item view of this post"
                     class="ui-comment__time slds-text-link_reset"
                   >
@@ -1144,7 +1144,7 @@ storiesOf('DIFC Components/Comments', module)
             <div class="slds-post__content slds-text-longform">
               <p>
                 Hey there! Here's the latest demo presentation
-                <a href="javascript:void(0);" title="Jenna Davis">@Jenna Davis</a>
+                <a href="#" title="Jenna Davis">@Jenna Davis</a>
                 , let me know if there are any changes. I've updated slides 3-8 and
                 slides 16-18 slides with new product shots.
               </p>
@@ -1217,7 +1217,7 @@ storiesOf('DIFC Components/Comments', module)
               <li>
                 <article class="slds-comment slds-media slds-hint-parent">
                   <div class="slds-media__figure">
-                    <a class="ui-avatar ui-avatar--small ui-avatar--circle">
+                    <a class="ui-avatar ui-avatar--small ui-avatar--circle" href="#">
                       <span
                         class="slds-avatar slds-avatar_circle slds-avatar_small"
                       >
@@ -1247,7 +1247,7 @@ storiesOf('DIFC Components/Comments', module)
                         class="slds-grid slds-grid_align-spread slds-has-flexi-truncate"
                       >
                         <p class="slds-truncate" title="Jenna Davis">
-                          <a href="javascript:void(0);">Jenna Davis</a>
+                          <a href="#">Jenna Davis</a>
                         </p>
                         <button
                           class="slds-button slds-button_icon slds-button_icon-x-small"
