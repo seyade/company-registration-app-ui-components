@@ -2,6 +2,7 @@
   position: relative;
   flex-wrap: wrap;
   min-height: 64px;
+
   font-family: 'EuclidSquare-Medium', sans-serif;
   color: #fff;
   background-color: #002f6c;
@@ -12,22 +13,23 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
     flex: 0 0 30%;
     padding-left: 16px;
+    margin: 8px 0;
     font-size: 22px;
     font-weight: 300;
 
-    &--compact {
-      margin: 8px 0;
-
-      .ui-global-navigation__title-icon {
-        max-width: 48px;
-      }
+    .ui-global-navigation__title-icon {
+      max-width: 48px;
     }
 
     @include screen-large() {
       flex: 0 0 25%;
+      min-height: 96px;
       padding-left: 56px;
+      margin: 16px 0;
 
       .ui-global-navigation__title-icon {
         max-width: 100%;
@@ -75,11 +77,11 @@
     }
 
     .ui-global-navigation__action-button {
-      opacity: 0.5;
+      opacity: 1;
       transition: opacity 300ms ease-in-out;
 
       &:hover {
-        opacity: 1;
+        opacity: 0.5;
       }
     }
   }
@@ -112,7 +114,8 @@
     transition: all 300ms ease-in-out;
 
     &:hover {
-      color: #59cbe8;
+      color: #fff;
+      opacity: 0.5;
       text-decoration: none;
     }
   }
@@ -122,17 +125,23 @@
       display: inline-flex;
       align-items: center;
       margin-right: 32px;
+      color: #fff;
     }
 
     &-avatar {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
       margin-right: 16px;
       border-radius: 50%;
       overflow: hidden;
+
+      @include screen-large() {
+        width: 64px;
+        height: 64px;
+      }
     }
 
     &-name {
@@ -145,9 +154,10 @@
   }
 
   &__menu {
-    width: 100%;
+    max-width: 1440px;
     max-height: 500px;
     padding: 32px 174px;
+    margin: auto;
     color: #fff;
     transition: all 300ms ease-in-out;
 
@@ -159,20 +169,20 @@
 
     .ui-global-navigation__menu-link {
       color: #fff;
-      opacity: 0.5;
+      opacity: 1;
       transition: all 300ms ease-in-out;
 
       &:hover,
       &:focus,
       &:active {
-        color: #59cbe8;
-        opacity: 1;
+        color: #fff;
+        opacity: 0.5;
         text-decoration: none;
       }
 
       &--selected {
         color: #fff;
-        opacity: 1;
+        opacity: 0.5;
 
         &:hover {
           color: #fff;
