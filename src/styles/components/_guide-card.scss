@@ -4,11 +4,29 @@
 
   .ui-card__content *:last-child {
     margin-top: 64px;
+    font-family: 'EuclidSquare-Medium', sans-serif;
   }
 
   &__notice {
     &-text {
       color: #0076cf;
+    }
+  }
+
+  .ui-card__header {
+    padding: 28px 28px 52px;
+    font-family: 'EuclidSquare-Medium', sans-serif;
+    color: #fff;
+    background-color: #0076cf;
+
+    &-title {
+      display: block;
+      font-size: 20px;
+    }
+
+    &-subtitle {
+      display: block;
+      font-size: 20px;
     }
   }
 }
