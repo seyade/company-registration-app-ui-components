@@ -7,6 +7,8 @@ class UIFormCard {
     this.component;
 
     this.cardHeader;
+
+    this.content;
   }
 
   init() {
@@ -21,6 +23,8 @@ class UIFormCard {
         UIFormCard.SELECTORS.cardHeader
       );
 
+      this.content = component.querySelector(UIFormCard.SELECTORS.content);
+
       this.cardHeader.addEventListener('click', event => {
         const _thisComponent = utils.findParent(
           event.currentTarget,
@@ -33,6 +37,18 @@ class UIFormCard {
           _thisComponent.classList.remove(UIFormCard.CLASSES.collapsed);
         }
       });
+
+      this.content.addEventListener('scroll', event => {
+        console.log('SCROLLLING!!!!!!!!!!!!!!!!!!!');
+
+        const _thisContent = event.currentTarget;
+
+        if (_thisContent.scrollTop > 32) {
+          component.classList.add(UIFormCard.CLASSES.sticky);
+        } else {
+          component.classList.remove(UIFormCard.CLASSES.sticky);
+        }
+      });
     }
   }
 }
@@ -41,11 +57,14 @@ UIFormCard.CLASSES = {
   container: 'ui-form-card',
   collapsed: 'ui-form-card--collapsed',
   cardHeader: 'ui-form-card__header',
+  content: 'ui-form-card__content',
+  sticky: 'ui-form-card--sticky',
 };
 
 UIFormCard.SELECTORS = {
   container: '.ui-form-card',
   cardHeader: '.ui-form-card__header',
+  content: '.ui-form-card__content',
 };
 
 export default UIFormCard;
