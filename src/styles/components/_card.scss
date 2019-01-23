@@ -6,8 +6,6 @@
   &__header {
     padding: 28px 28px 52px;
     font-family: 'EuclidSquare-Medium', sans-serif;
-    color: #fff;
-    background-color: #0076cf;
 
     &-title {
       display: block;
@@ -16,6 +14,7 @@
 
     &-subtitle {
       display: block;
+      font-family: 'EuclidSquare-Light', sans-serif;
       font-size: 20px;
     }
   }

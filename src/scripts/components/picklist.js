@@ -68,6 +68,10 @@ class UIPicklist {
 
       this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
 
+      let _allListItems = this.combobox.querySelectorAll(
+        '.slds-listbox__item[style]:not([style=""])'
+      );
+
       let filter = _thisInput.value.toUpperCase();
       let queries = this.combobox.querySelectorAll(
         UIPicklist.SELECTORS.optionBodySpan
@@ -149,6 +153,7 @@ UIPicklist.SELECTORS = {
   comboBoxInput: '.ui-form-element__combobox-input',
   optionBodySpan: '.slds-media__body > span',
   listBoxOption: '.slds-listbox__option',
+  listBoxItem: '.slds-listbox__item',
 };
 
 export default UIPicklist;

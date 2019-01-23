@@ -2,12 +2,15 @@
   &__label {
     margin-bottom: 12px;
     font-family: 'EuclidSquare-Medium', sans-serif;
-    color: #706e6b;
+    font-size: 14px;
+    color: #4a4a4a;
 
     &-description {
       display: block;
-      padding-top: 10px;
+      padding-top: 8px;
+      padding-bottom: 2px;
       font-family: 'EuclidSquare-Light', sans-serif;
+      font-size: 12px;
     }
 
     &-optional {
@@ -17,6 +20,7 @@
   }
 
   &__control {
+    width: 100%;
     max-width: 560px;
 
     *::placeholder {

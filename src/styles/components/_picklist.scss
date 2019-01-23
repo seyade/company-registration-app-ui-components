@@ -1,10 +1,14 @@
 .ui-picklist {
-  height: 14rem;
+  height: 64px;
   font-family: 'EuclidSquare-Medium', sans-serif;
   color: #2b2826;
 
   ::placeholder {
     color: #2b2826;
+  }
+
+  .ui-form-element__label {
+    font-size: 14px;
   }
 
   .slds-is-open ::placeholder,
