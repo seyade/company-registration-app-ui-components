@@ -49,7 +49,6 @@ class UIFormCard {
         const _thisContent = event.currentTarget;
 
         this.form.style.transition = 'none';
-        // this.form.style.maxHeight = 'inherit';
 
         if (_thisContent.scrollTop > 32) {
           component.classList.add(UIFormCard.CLASSES.sticky);
@@ -75,33 +74,22 @@ class UIFormCard {
       );
 
       this.form = component.querySelector(UIFormCard.SELECTORS.form);
-
       this.numberOfSteps.innerText = this.steps.length;
 
       this.steps.forEach((step, index) => {
         step.addEventListener('focus', () => {
           this.focusedStep.innerText = index + 1;
-          let offset = event.currentTarget.offsetTop;
-          // let offset_2 = event.currentTarget.getBoundingClientRect().top;
 
           let _ancestorLi = utils.findParent(
             event.currentTarget,
             'form__list-item'
           );
 
-          let offset_3 = _ancestorLi.offsetTop;
-
-          // component.scrollTop = offset / 2;
-
-          console.log('ELEM POSITION!!!!!', this.content.clientHeight / 2);
-          console.log('ELEM POSITION!!!!!', offset);
-          console.log('CONTENT POSITION!!!!!', this.content);
-
-          let pos = screen.height - component.offsetTop;
+          let offset = _ancestorLi.offsetTop;
 
           this.content = component.querySelector(UIFormCard.SELECTORS.content);
 
-          utils.scrollTo(this.content, offset_3, 300);
+          utils.scrollTo(this.content, offset, 300);
         });
 
         step.addEventListener('blur', () => {
