@@ -63,6 +63,15 @@ class UIPicklist {
       }
     });
 
+    this.comboboxInput.addEventListener('blur', event => {
+      const _thisInput = event.currentTarget;
+      this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
+
+      if (this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
+        this.combobox.classList.remove(UIPicklist.CLASSES.isOpen);
+      }
+    });
+
     this.comboboxInput.addEventListener('keyup', event => {
       const _thisInput = event.currentTarget;
 

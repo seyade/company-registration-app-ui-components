@@ -67,13 +67,18 @@
   }
 
   &__content {
-    padding: 0 52px 48px;
+    padding: 0 52px 420px;
     max-height: 780px;
     overflow-y: scroll;
+    transition: padding-top 1000ms ease-in-out;
   }
 
-  .form {
+  &__form {
+    max-height: 2000px;
     padding: 48px 0 48px 3px;
+    transition: opacity 300ms ease-in-out, max-height 300ms 200ms ease-in-out,
+      padding-top 200ms 200ms ease-in-out,
+      padding-bottom 200ms 200ms ease-in-out;
   }
 
   .form-control-group {
@@ -128,15 +133,20 @@
   }
 
   &--collapsed {
-    .ui-form-card__content {
+    .ui-form-card__form {
       max-height: 0;
       padding-top: 0;
       padding-bottom: 0;
+      overflow: hidden;
       opacity: 0;
     }
 
     .ui-form-card__progress-ring {
       opacity: 1;
+    }
+
+    .ui-form-card__content {
+      padding-bottom: 48px;
     }
   }
 
@@ -160,8 +170,8 @@
       }
     }
 
-    .form {
-      padding-top: 144px;
+    .ui-form-card__form {
+      padding-top: 180px;
     }
   }
 }

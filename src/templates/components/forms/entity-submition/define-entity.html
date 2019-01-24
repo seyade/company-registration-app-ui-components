@@ -51,7 +51,7 @@
       <div class="ui-form-card__time">about 10 min</div>
     </div>
 
-    <form class="form">
+    <form class="ui-form ui-form-card__form">
       <div class="slds-progress slds-progress_vertical">
         <ol class="form__list slds-progress__list">
           <li class="form__list-item slds-progress__item slds-is-completed">
@@ -243,7 +243,11 @@
         </div>
       </div>
       <div class="ui-form-card__action">
-        <span class="ui-form-card__field-steps">1 / 5</span>
+        <span class="ui-form-card__field-steps">
+          <span class="ui-form-card__field-steps-focused">0</span>
+          /
+          <span class="ui-form-card__field-steps-number">1</span>
+        </span>
         <div class="ui-button-group ui-button-group--right">
           <button class="ui-button ui-button--default">Edit</button>
           <button class="ui-button ui-button--primary">Confrim</button>
