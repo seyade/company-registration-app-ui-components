@@ -1,57 +1,57 @@
-<div class="ui-form-card ui-card ui-form-card--collapsed">
-  <div class="ui-form-card__header">
-    <div class="ui-form-card__progress-ring">
-      <div
-        class="ui-progress-ring slds-progress-ring slds-progress-ring_complete"
-      >
+<div class="ui-form-card ui-card ui-form-card--collapse">
+  <div class="ui-form-card__content">
+    <div class="ui-form-card__header">
+      <div class="ui-form-card__progress-ring">
         <div
-          class="slds-progress-ring__progress"
-          role="progressbar"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          aria-valuenow="100"
+          class="ui-progress-ring slds-progress-ring slds-progress-ring_complete"
         >
-          <svg viewBox="-1 -1 2 2">
-            <path
-              class="slds-progress-ring__path"
-              id="slds-progress-ring-path-16"
-              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
-            />
-          </svg>
-        </div>
-        <div class="slds-progress-ring__content">
-          <span
-            class="slds-icon_container slds-icon-utility-check"
-            title="Complete"
+          <div
+            class="slds-progress-ring__progress"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="100"
           >
-            <svg class="slds-icon" aria-hidden="true">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+            <svg viewBox="-1 -1 2 2">
+              <path
+                class="slds-progress-ring__path"
+                id="slds-progress-ring-path-16"
+                d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
               />
             </svg>
-            <span class="slds-assistive-text">Complete</span>
-          </span>
+          </div>
+          <div class="slds-progress-ring__content">
+            <span
+              class="slds-icon_container slds-icon-utility-check"
+              title="Complete"
+            >
+              <svg class="slds-icon" aria-hidden="true">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                />
+              </svg>
+              <span class="slds-assistive-text">Complete</span>
+            </span>
+          </div>
         </div>
       </div>
+
+      <div class="ui-form-card__title-panel">
+        <div class="ui-form-card__header-title">
+          Define entity structure and activities
+        </div>
+        <div class="ui-form-card__header-subtitle">
+          A description here on this line right here. Sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud.
+        </div>
+      </div>
+
+      <div class="ui-form-card__time">about 10 min</div>
     </div>
 
-    <div class="ui-form-card__title-panel">
-      <div class="ui-form-card__header-title">
-        Define entity structure and activities
-      </div>
-      <div class="ui-form-card__header-subtitle">
-        A description here on this line right here. Sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud.
-      </div>
-    </div>
-
-    <div class="ui-form-card__time">about 10 min</div>
-  </div>
-
-  <div class="ui-form-card__content">
-    <form class="form">
+    <form class="ui-form ui-form-card__form">
       <div class="slds-progress slds-progress_vertical">
         <ol class="form__list slds-progress__list">
           <li class="form__list-item slds-progress__item slds-is-completed">
@@ -242,14 +242,17 @@
           <span class="slds-assistive-text">Progress: 25%</span>
         </div>
       </div>
-    </form>
-
-    <div class="ui-form-card__action">
-      <span class="ui-form-card__field-steps">1 / 5</span>
-      <div class="ui-button-group ui-button-group--right">
-        <button class="ui-button ui-button--default">Edit</button>
-        <button class="ui-button ui-button--primary">Confrim</button>
+      <div class="ui-form-card__action">
+        <span class="ui-form-card__field-steps">
+          <span class="ui-form-card__field-steps-focused">0</span>
+          /
+          <span class="ui-form-card__field-steps-number">1</span>
+        </span>
+        <div class="ui-button-group ui-button-group--right">
+          <button class="ui-button ui-button--default">Edit</button>
+          <button class="ui-button ui-button--primary">Confrim</button>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

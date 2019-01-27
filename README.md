@@ -4,34 +4,6 @@
 2. Type `npm install` or `npm i` to intall all npm dependencies.
 3. And then run `npm run serve`. This should open the browser with the site displayed.
 4. You can copy past the code for integration as you usually do.
+5. Open another terminal window and run Storybook with `npm run storybook` while `npm run serve` is running. This should display the list of components and their different states.
 
-I haven't found a way to split the code into their own compiled css file yet! No time for that but still working on that whenever I get small time.
-
-Also this should be good enough to start integrating. Not all components will be 100% there, like the `progress-bar` as it will take some time to do animation, etc.
-But I'll be adding as we go along.
-
-Please sign up to https://github.ibm.com/new to create a Github account while waiting for Bitbucket to be ready. So we can share and update our project.
-
-## CHANGES for 11/12/2018
-
-### New/Updated Assets
-
-src/assets/svg/bell.svg
-
-### HTML
-
-1. src/templates/index.html
-2. src/templates/components/path-summary--a.html
-3. src/templates/components/path-summary--b.html
-4. src/templates/components/path-summary--c.html
-5. src/templates/components/path-summary--d.html
-
-### SASS
-
-1. src/styles/\_base.scss
-2. src/styles/components/\_main-navigation.scss
-3. src/styles/components/\_path-summary.scss
-
-### JS
-
-N/A
+Repo link: https://bitbucket.org/seyibm/difc-ui-components/

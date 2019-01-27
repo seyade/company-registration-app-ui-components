@@ -16,8 +16,14 @@
     color: #0076cf;
   }
 
-  .slds-listbox__option-header {
-    color: #706e6b;
-    text-transform: uppercase;
+  .slds-listbox__option {
+    &--highlighted {
+      background-color: #f3f2f2;
+    }
+
+    &-header {
+      color: #706e6b;
+      text-transform: uppercase;
+    }
   }
 }
