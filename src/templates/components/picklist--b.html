@@ -1,6 +1,7 @@
 <div class="ui-picklist">
   <div class="ui-form-element slds-form-element">
     <label
+      id="ui-picklist__label-01"
       class="ui-form-element__label slds-form-element__label"
       for="combobox-unique-id-33"
     >
@@ -22,6 +23,8 @@
               class="ui-form-element__control-input slds-input ui-form-element__combobox-input slds-combobox__input"
               id="combobox-unique-id-33"
               aria-controls="listbox-unique-id"
+              aria-expanded="false"
+              aria-labelledby="ui-picklist__label-01"
               autocomplete="off"
               role="textbox"
               type="text"
@@ -46,16 +49,19 @@
               </span>
             </span>
           </div>
-          <div id="listbox-unique-id" role="listbox">
+          <div id="listbox-unique-id">
             <ul
               class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
-              role="presentation"
+              role="listbox"
+              aria-labelledby="ui-picklist__label-01"
+              tabindex="-1"
             >
               <li role="presentation" class="slds-listbox__item">
                 <div
                   id="listbox-option-unique-id-01"
                   class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   role="option"
+                  tabindex="-1"
                 >
                   <span class="slds-media__body">
                     <span class="slds-truncate" title="Option A">Option A</span>
@@ -78,6 +84,7 @@
                   id="listbox-option-unique-id-02"
                   class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   role="option"
+                  tabindex="-1"
                 >
                   <span class="slds-media__body">
                     <span class="slds-truncate" title="Option B">Option B</span>
@@ -100,6 +107,7 @@
                   id="listbox-option-unique-id-03"
                   class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   role="option"
+                  tabindex="-1"
                 >
                   <span class="slds-media__body">
                     <span class="slds-truncate" title="Option C">Option C</span>
@@ -122,6 +130,7 @@
                   id="listbox-option-unique-id-03"
                   class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   role="option"
+                  tabindex="-1"
                 >
                   <span class="slds-media__body">
                     <span class="slds-truncate" title="Option D">Option D</span>

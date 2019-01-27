@@ -23,6 +23,8 @@ class UIPicklist {
      */
     this.comboboxInput;
 
+    this.listBox;
+
     this.listBoxOptions;
 
     /**
@@ -49,39 +51,34 @@ class UIPicklist {
         UIPicklist.SELECTORS.listBoxOption
       );
 
+      this.listBox = component.querySelector(UIPicklist.SELECTORS.listBox);
+
       this._addEvents();
     }
   }
 
   _addEvents() {
     this.comboboxInput.addEventListener('focus', event => {
-      const _thisInput = event.currentTarget;
-      this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
+      const _self = event.currentTarget;
+      this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
 
       if (!this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
         this.combobox.classList.add(UIPicklist.CLASSES.isOpen);
       }
-    });
 
-    this.comboboxInput.addEventListener('blur', event => {
-      const _thisInput = event.currentTarget;
-      this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
-
-      if (this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
-        this.combobox.classList.remove(UIPicklist.CLASSES.isOpen);
-      }
+      _self.setAttribute('aria-expanded', 'true');
     });
 
     this.comboboxInput.addEventListener('keyup', event => {
-      const _thisInput = event.currentTarget;
+      const _self = event.currentTarget;
 
-      this.combobox = utils.findParent(_thisInput, UIPicklist.CLASSES.comboBox);
+      this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
 
       let _allListItems = this.combobox.querySelectorAll(
         '.slds-listbox__item[style]:not([style=""])'
       );
 
-      let filter = _thisInput.value.toUpperCase();
+      let filter = _self.value.toUpperCase();
       let queries = this.combobox.querySelectorAll(
         UIPicklist.SELECTORS.optionBodySpan
       );
@@ -106,18 +103,15 @@ class UIPicklist {
 
     for (let listBoxOption of this.listBoxOptions) {
       listBoxOption.addEventListener('click', event => {
-        const _thisOption = event.currentTarget;
+        const _self = event.currentTarget;
 
-        this.combobox = utils.findParent(
-          _thisOption,
-          UIPicklist.CLASSES.comboBox
-        );
+        this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
 
         const _thisComboInput = this.combobox.querySelector(
           UIPicklist.SELECTORS.comboBoxInput
         );
 
-        let optionText = _thisOption.querySelector(
+        let optionText = _self.querySelector(
           UIPicklist.SELECTORS.optionBodySpan
         ).innerText;
 
@@ -128,6 +122,23 @@ class UIPicklist {
         }
       });
     }
+
+    this.listBox.addEventListener('focus', event => {
+      const _self = event.currentTarget;
+
+      this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
+
+      let _options = this.combobox.querySelectorAll(
+        UIPicklist.SELECTORS.listBoxOption
+      );
+
+      let ariaSelected = _self.querySelectorAll('[aria-selected="true"]');
+
+      if (!ariaSelected.length) {
+        ariaSelected[0].setAttribute('aria-selected', 'true');
+        ariaSelected[0].focus();
+      }
+    });
 
     document.body.addEventListener('click', event => {
       let environment = event.target;
@@ -141,6 +152,8 @@ class UIPicklist {
           component
             .querySelector(UIPicklist.SELECTORS.comboBox)
             .classList.remove(UIPicklist.CLASSES.isOpen);
+
+          comboboxInput.setAttribute('aria-expanded', 'false');
         }
       }
     });
@@ -152,8 +165,10 @@ UIPicklist.CLASSES = {
   isOpen: 'slds-is-open',
   isSelected: 'slds-is-selected',
   comboBox: 'slds-combobox',
+  listBox: 'slds-listbox',
   listBoxItem: 'slds-listbox__item',
   listBoxOption: 'slds-listbox__option',
+  listBoxOptionHighlighted: 'slds-listbox__option--highlighted',
 };
 
 UIPicklist.SELECTORS = {
@@ -161,6 +176,7 @@ UIPicklist.SELECTORS = {
   comboBox: '.slds-combobox',
   comboBoxInput: '.ui-form-element__combobox-input',
   optionBodySpan: '.slds-media__body > span',
+  listBox: '.slds-listbox',
   listBoxOption: '.slds-listbox__option',
   listBoxItem: '.slds-listbox__item',
 };
