@@ -19,10 +19,10 @@ class UIFormCard {
     this.components = document.querySelectorAll('.ui-form-card');
 
     this._displayStatus();
-    this._addEvents();
+    this._registerEvents();
   }
 
-  _addEvents() {
+  _registerEvents() {
     for (let component of this.components) {
       this.cardHeader = component.querySelector(
         UIFormCard.SELECTORS.cardHeader

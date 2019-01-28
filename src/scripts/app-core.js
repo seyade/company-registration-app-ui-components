@@ -12,10 +12,14 @@ export class AppComponents {
 
   render() {
     if (typeof this.components !== 'undefined') {
-      this.components.forEach(component => {
+      for (let component of this.components) {
         let element = new component();
         element.init();
-      });
+      }
+    } else {
+      throw new Error(
+        'There appear to be a problem with the component! Please make sure it is defined, exported and imported properly'
+      );
     }
   }
 }
