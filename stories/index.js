@@ -741,37 +741,360 @@ storiesOf('DIFC Components/Cards', module)
   `
   )
   .add(
-    'Pathway card (not finished yet!)',
+    'Pathway card collapsed',
     () => `
-    <div
-      class="ui-card ui-card--pathway"
-    >
-      <div class="ui-card__content ui-card__content--padding-med">
-        <div class="ui-card__content--head">
-          <h2 class="ui-card__title">
-            Heading of section here and here but only on one...
-          </h2>
-          <span>2 mins</span>
-        </div>
-        <div class="ui-card__content--body">
-          <p class="ui-card__paragraph">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venit enim an enim la enim  enimt tempor labore enim.
-          </p>
-        </div>
+    <div class="ui-card ui-path-card ui-path-card--collapsed">
+      <div class="ui-path-card__content">
+        <div class="ui-path-card__header">
+          <div class="ui-path-card__header-top">
+            <div class="ui-path-card__progress-ring">
+              <div
+                class="ui-progress-ring slds-progress-ring slds-progress-ring_complete"
+              >
+                <div
+                  class="slds-progress-ring__progress"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="100"
+                >
+                  <svg viewBox="-1 -1 2 2">
+                    <path
+                      class="slds-progress-ring__path"
+                      id="slds-progress-ring-path-16"
+                      d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+                    />
+                  </svg>
+                </div>
+                <div class="slds-progress-ring__content">
+                  <span
+                    class="slds-icon_container slds-icon-utility-check"
+                    title="Complete"
+                  >
+                    <svg class="slds-icon" aria-hidden="true">
+                      <use
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
+                    <span class="slds-assistive-text">Complete</span>
+                  </span>
+                </div>
+              </div>
+            </div>
 
-        <div class="ui-card__action ui-card__action--spread">
-          <button class="ui-button ui-button--toggle">
-            Show details
-            <img
-              class="pw-icon"
-              src="/assets/svg/arrow-down.svg"
-            />
-          </button>
-          <a href="#" class="ui-button ui-button--primary">Start Path</a>
+            <div class="ui-path-card__header-panel">
+              <div class="ui-path-card__header-title">Submit company profile</div>
+
+              <div class="ui-path-card__progress-updates">
+                <span class="ui-path-card__progress-updates-item">1/4 Steps</span>
+                |
+                <span class="ui-path-card__progress-updates-item">
+                  6/24 Questions
+                </span>
+                |
+                <span class="ui-path-card__progress-updates-item">
+                  0/4 Documents
+                </span>
+
+                <div class="ui-path-card__time">2 Days</div>
+              </div>
+
+              <p class="ui-path-card__text">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud.
+              </p>
+            </div>
+          </div>
+
+          <div class="ui-path-card__header-bottom">
+            <div class="ui-path-card__action ui-card__action">
+              <div class="ui-button-group">
+                <button class="ui-path-card__button--show-details ui-button">
+                  <span class="ui-button__text">Show details</span>
+
+                  <img class="ui-icon" src="/assets/svg/arrow-down.svg" />
+                </button>
+                <button
+                  class="ui-path-card__button--start-path ui-button ui-button--primary"
+                >
+                  Start path
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end: ui-path-card__header -->
+
+        <div
+          class="ui-path-card__details ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical"
+        >
+          <ol class="form__list slds-progress__list">
+            <li class="form__list-item slds-progress__item slds-is-completed">
+              <span
+                class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+                title="Complete"
+              >
+                <img
+                  src="/assets/svg/progress-ring-complete.svg"
+                  alt="complete icon"
+                  class="icon-image"
+                />
+                <span class="slds-assistive-text">Complete</span>
+              </span>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">
+                    Business structure
+                  </span>
+                  <span class="ui-path-card__details-item-info">4 questions</span>
+                </a>
+              </div>
+            </li>
+            <li class="form__list-item slds-progress__item slds-is-completed">
+              <span
+                class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+                title="Complete"
+              >
+                <img
+                  src="/assets/svg/progress-ring-complete.svg"
+                  alt="complete icon"
+                  class="icon-image"
+                />
+                <span class="slds-assistive-text">Complete</span>
+              </span>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">Company name</span>
+                  <span class="ui-path-card__details-item-info">10 minutes</span>
+                </a>
+              </div>
+            </li>
+            <li class="form__list-item slds-progress__item slds-is-active">
+              <div class="slds-progress__marker">
+                <span class="slds-assistive-text">Active</span>
+              </div>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">
+                    Company details
+                  </span>
+                  <span class="ui-path-card__details-item-info">12 questions</span>
+                </a>
+              </div>
+            </li>
+            <li class="form__list-item slds-progress__item">
+              <div class="slds-progress__marker"></div>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">
+                    Owners &amp; key people
+                  </span>
+                  <span class="ui-path-card__details-item-info">
+                    8 questions | 2 documents
+                  </span>
+                </a>
+              </div>
+            </li>
+          </ol>
+          <div
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="25"
+            role="progressbar"
+          >
+            <span class="slds-assistive-text">Progress: 25%</span>
+          </div>
         </div>
       </div>
     </div>
-  `
+    `
+  )
+  .add(
+    'Pathway card expanded',
+    () => `
+    <div class="ui-card ui-path-card">
+      <div class="ui-path-card__content">
+        <div class="ui-path-card__header">
+          <div class="ui-path-card__header-top">
+            <div class="ui-path-card__progress-ring">
+              <div
+                class="ui-progress-ring slds-progress-ring slds-progress-ring_complete"
+              >
+                <div
+                  class="slds-progress-ring__progress"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="100"
+                >
+                  <svg viewBox="-1 -1 2 2">
+                    <path
+                      class="slds-progress-ring__path"
+                      id="slds-progress-ring-path-16"
+                      d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+                    />
+                  </svg>
+                </div>
+                <div class="slds-progress-ring__content">
+                  <span
+                    class="slds-icon_container slds-icon-utility-check"
+                    title="Complete"
+                  >
+                    <svg class="slds-icon" aria-hidden="true">
+                      <use
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
+                    <span class="slds-assistive-text">Complete</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-path-card__header-panel">
+              <div class="ui-path-card__header-title">Submit company profile</div>
+
+              <div class="ui-path-card__progress-updates">
+                <span class="ui-path-card__progress-updates-item">1/4 Steps</span>
+                |
+                <span class="ui-path-card__progress-updates-item">
+                  6/24 Questions
+                </span>
+                |
+                <span class="ui-path-card__progress-updates-item">
+                  0/4 Documents
+                </span>
+
+                <div class="ui-path-card__time">2 Days</div>
+              </div>
+
+              <p class="ui-path-card__text">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud.
+              </p>
+            </div>
+          </div>
+
+          <div class="ui-path-card__header-bottom">
+            <div class="ui-path-card__action ui-card__action">
+              <div class="ui-button-group">
+                <button class="ui-path-card__button--show-details ui-button">
+                  <span class="ui-button__text">Show details</span>
+
+                  <img class="ui-icon" src="/assets/svg/arrow-down.svg" />
+                </button>
+                <button
+                  class="ui-path-card__button--start-path ui-button ui-button--primary"
+                >
+                  Start path
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end: ui-path-card__header -->
+
+        <div
+          class="ui-path-card__details ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical"
+        >
+          <ol class="form__list slds-progress__list">
+            <li class="form__list-item slds-progress__item slds-is-completed">
+              <span
+                class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+                title="Complete"
+              >
+                <img
+                  src="/assets/svg/progress-ring-complete.svg"
+                  alt="complete icon"
+                  class="icon-image"
+                />
+                <span class="slds-assistive-text">Complete</span>
+              </span>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">
+                    Business structure
+                  </span>
+                  <span class="ui-path-card__details-item-info">4 questions</span>
+                </a>
+              </div>
+            </li>
+            <li class="form__list-item slds-progress__item slds-is-completed">
+              <span
+                class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+                title="Complete"
+              >
+                <img
+                  src="/assets/svg/progress-ring-complete.svg"
+                  alt="complete icon"
+                  class="icon-image"
+                />
+                <span class="slds-assistive-text">Complete</span>
+              </span>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">Company name</span>
+                  <span class="ui-path-card__details-item-info">10 minutes</span>
+                </a>
+              </div>
+            </li>
+            <li class="form__list-item slds-progress__item slds-is-active">
+              <div class="slds-progress__marker">
+                <span class="slds-assistive-text">Active</span>
+              </div>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">
+                    Company details
+                  </span>
+                  <span class="ui-path-card__details-item-info">12 questions</span>
+                </a>
+              </div>
+            </li>
+            <li class="form__list-item slds-progress__item">
+              <div class="slds-progress__marker"></div>
+              <div
+                class="slds-progress__item_content slds-grid slds-grid_align-spread"
+              >
+                <a href="#" class="ui-path-card__details-item">
+                  <span class="ui-path-card__details-item-name">
+                    Owners &amp; key people
+                  </span>
+                  <span class="ui-path-card__details-item-info">
+                    8 questions | 2 documents
+                  </span>
+                </a>
+              </div>
+            </li>
+          </ol>
+          <div
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="25"
+            role="progressbar"
+          >
+            <span class="slds-assistive-text">Progress: 25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
   )
   .add(
     'With header and button',
@@ -5437,7 +5760,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
         </div>
       </div>
     </div>
-  `
+    `
   )
   .add(
     'Horizontal Error',
@@ -5493,7 +5816,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
         </div>
       </div>
     </div>
-  `
+    `
   )
   .add(
     'Horizontal Next Step',
@@ -5544,7 +5867,7 @@ storiesOf('DIFC Components/Progress Indicators', module)
         </div>
       </div>
     </div>
-  `
+    `
   )
   .add(
     'Horizontal Tooltip',
@@ -5663,12 +5986,14 @@ storiesOf('DIFC Components/Progress Indicators', module)
         <span class="slds-assistive-text">Progress: 25%</span>
       </div>
     </div>
-  `
+    `
   )
   .add(
     'Vertical Next Step',
     () => `
-    <div class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical">
+    <div 
+      class="ui-progress-indicator ui-progress-indicator--vertical slds-progress slds-progress_vertical"
+    >
       <ol class="form__list slds-progress__list">
         <li class="form__list-item slds-progress__item slds-is-completed">
           <span
@@ -5750,7 +6075,205 @@ storiesOf('DIFC Components/Progress Indicators', module)
         <span class="slds-assistive-text">Progress: 25%</span>
       </div>
     </div>
-  `
+    `
+  )
+  .add(
+    'Vertical with progress rings',
+    () => `
+    <div 
+      class="ui-progress-indicator ui-progress-indicator--vertical ui-progress-indicator--vertical-rings slds-progress slds-progress_vertical"
+    >
+      <ol class="form__list slds-progress__list">
+        <li class="form__list-item slds-progress__item slds-is-completed">
+          <span
+            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+            title="Complete"
+          >
+            <div class="ui-progress-ring slds-progress-ring slds-progress-ring_complete">
+              <div
+                class="slds-progress-ring__progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="100"
+              >
+                <svg viewBox="-1 -1 2 2">
+                  <path
+                    class="slds-progress-ring__path"
+                    id="slds-progress-ring-path-16"
+                    d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+                  />
+                </svg>
+              </div>
+              <div class="slds-progress-ring__content">
+                <span class="slds-icon_container slds-icon-utility-check" title="Complete">
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span class="slds-assistive-text">Complete</span>
+                </span>
+              </div>
+            </div>
+          </span>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <span
+            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+            title="Complete"
+          >
+            <div class="ui-progress-ring slds-progress-ring slds-progress-ring_warning">
+              <div
+                class="slds-progress-ring__progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="100"
+              >
+                <svg viewBox="-1 -1 2 2">
+                  <path
+                    class="slds-progress-ring__path"
+                    id="slds-progress-ring-path-2"
+                    d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+                  />
+                </svg>
+              </div>
+              <div class="slds-progress-ring__content">
+                <span class="slds-icon_container slds-icon-utility-warning" title="Warning">
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+                    />
+                  </svg>
+                  <span class="slds-assistive-text">Warning</span>
+                </span>
+              </div>
+            </div>
+          </span>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <span
+            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+            title="Complete"
+          >
+            <div class="ui-progress-ring slds-progress-ring slds-progress-ring_expired">
+              <div
+                class="slds-progress-ring__progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              >
+                <svg viewBox="-1 -1 2 2">
+                  <path
+                    class="slds-progress-ring__path"
+                    id="slds-progress-ring-path-23"
+                    d="M 1 0 A 1 1 0 0 1 1 0 L 0 0"
+                  />
+                </svg>
+              </div>
+              <div class="slds-progress-ring__content">
+                <span class="slds-icon_container slds-icon-utility-error" title="Expired">
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"
+                    />
+                  </svg>
+                  <span class="slds-assistive-text">Expired</span>
+                </span>
+              </div>
+            </div>
+          </span>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <span
+            class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+            title="Complete"
+          >
+            <div class="ui-progress-ring slds-progress-ring">
+              <div
+                class="slds-progress-ring__progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              >
+                <svg viewBox="-1 -1 2 2">
+                  <path
+                    class="slds-progress-ring__path"
+                    id="slds-progress-ring-path-23"
+                    d="M 1 0 A 1 1 0 0 1 1 0 L 0 0"
+                  />
+                </svg>
+              </div>
+              <div class="slds-progress-ring__content">
+                <span class="slds-icon_container slds-icon-utility-error" title="Expired">
+                  <span class="progress-count-number">4</span>
+                  <span class="slds-assistive-text">Expired</span>
+                </span>
+              </div>
+            </div>
+          </span>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+        <li class="form__list-item slds-progress__item">
+          <div class="slds-progress__marker"></div>
+          <div
+            class="slds-progress__item_content slds-grid slds-grid_align-spread"
+          >
+            [Content Here]
+          </div>
+        </li>
+      </ol>
+      <div
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="25"
+        role="progressbar"
+      >
+        <span class="slds-assistive-text">Progress: 25%</span>
+      </div>
+    </div>
+    `
   );
 
 storiesOf('DIFC Components/Progress Rings', module)
@@ -5842,13 +6365,13 @@ storiesOf('DIFC Components/Progress Rings', module)
         role="progressbar"
         aria-valuemin="0"
         aria-valuemax="100"
-        aria-valuenow="20"
+        aria-valuenow="100"
       >
         <svg viewBox="-1 -1 2 2">
           <path
             class="slds-progress-ring__path"
-            id="slds-progress-ring-path-22"
-            d="M 1 0 A 1 1 0 0 1 0.30901699437494745 0.9510565162951535 L 0 0"
+            id="slds-progress-ring-path-2"
+            d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
           />
         </svg>
       </div>

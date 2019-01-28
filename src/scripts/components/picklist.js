@@ -53,11 +53,11 @@ class UIPicklist {
 
       this.listBox = component.querySelector(UIPicklist.SELECTORS.listBox);
 
-      this._addEvents();
+      this._registerEvents();
     }
   }
 
-  _addEvents() {
+  _registerEvents() {
     this.comboboxInput.addEventListener('focus', event => {
       const _self = event.currentTarget;
       this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);

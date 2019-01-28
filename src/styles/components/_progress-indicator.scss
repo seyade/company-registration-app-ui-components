@@ -33,4 +33,15 @@
       display: flex;
     }
   }
+
+  &--vertical-rings {
+    .slds-progress__item.slds-is-completed .slds-progress__marker_icon svg {
+      fill: #fff;
+    }
+
+    .slds-progress__item:after,
+    .slds-progress__item:before {
+      // left: 12px;
+    }
+  }
 }
