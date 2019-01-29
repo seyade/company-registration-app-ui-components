@@ -1257,6 +1257,532 @@ storiesOf('DIFC Components/Cards', module)
       </div>
     </div>
     `
+  )
+  .add(
+    'Section Panel / Form panel collapsed',
+    () => `
+    <div class="ui-form-card ui-card ui-form-card--collapsed">
+      <div class="ui-form-card__content">
+        <div class="ui-form-card__header">
+          <div class="ui-form-card__progress-ring">
+            <div
+              class="ui-progress-ring slds-progress-ring slds-progress-ring_complete"
+            >
+              <div
+                class="slds-progress-ring__progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="100"
+              >
+                <svg viewBox="-1 -1 2 2">
+                  <path
+                    class="slds-progress-ring__path"
+                    id="slds-progress-ring-path-16"
+                    d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+                  />
+                </svg>
+              </div>
+              <div class="slds-progress-ring__content">
+                <span
+                  class="slds-icon_container slds-icon-utility-check"
+                  title="Complete"
+                >
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span class="slds-assistive-text">Complete</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-form-card__title-panel">
+            <div class="ui-form-card__header-title">
+              Define entity structure and activities
+            </div>
+            <div class="ui-form-card__header-subtitle">
+              A description here on this line right here. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud.
+            </div>
+          </div>
+
+          <div class="ui-form-card__time">about 10 min</div>
+        </div>
+
+        <form class="ui-form ui-form-card__form">
+          <div class="slds-progress slds-progress_vertical">
+            <ol class="form__list slds-progress__list">
+              <li class="form__list-item slds-progress__item slds-is-completed">
+                <span
+                  class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+                  title="Complete"
+                >
+                  <img
+                    src="/assets/svg/progress-ring-complete.svg"
+                    alt="complete icon"
+                    class="icon-image"
+                  />
+                  <span class="slds-assistive-text">Complete</span>
+                </span>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        What is your entity's name?
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        Don't worry. You will be able to change your name later if
+                        you need.
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item slds-is-active">
+                <div class="slds-progress__marker">
+                  <span class="slds-assistive-text">Active</span>
+                </div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        Are you a financial company?
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        A finanacial company is a bank, investment business or
+                        similar.
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        What business sector are you in?
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        Tell us what sector you work in
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="form-control-group">
+                    {% include 'components/picklist--b.html' %}
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        Stage of set up
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        Are you setting up a branch, transferring or setting up a
+                        new entity
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">Input Label</span>
+
+                      <span class="ui-form-element__label-description">
+                        Description of input label here
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="25"
+              role="progressbar"
+            >
+              <span class="slds-assistive-text">Progress: 25%</span>
+            </div>
+          </div>
+          <div class="ui-form-card__action">
+            <span class="ui-form-card__field-steps">
+              <span class="ui-form-card__field-steps-focused">0</span>
+              /
+              <span class="ui-form-card__field-steps-number">1</span>
+            </span>
+            <div class="ui-button-group ui-button-group--right">
+              <button class="ui-button ui-button--default">Edit</button>
+              <button class="ui-button ui-button--primary">Confrim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Section Panel / Form panel expanded',
+    () => `
+    <div class="ui-form-card ui-card">
+      <div class="ui-form-card__content">
+        <div class="ui-form-card__header">
+          <div class="ui-form-card__progress-ring">
+            <div
+              class="ui-progress-ring slds-progress-ring slds-progress-ring_complete"
+            >
+              <div
+                class="slds-progress-ring__progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="100"
+              >
+                <svg viewBox="-1 -1 2 2">
+                  <path
+                    class="slds-progress-ring__path"
+                    id="slds-progress-ring-path-16"
+                    d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+                  />
+                </svg>
+              </div>
+              <div class="slds-progress-ring__content">
+                <span
+                  class="slds-icon_container slds-icon-utility-check"
+                  title="Complete"
+                >
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                    />
+                  </svg>
+                  <span class="slds-assistive-text">Complete</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-form-card__title-panel">
+            <div class="ui-form-card__header-title">
+              Define entity structure and activities
+            </div>
+            <div class="ui-form-card__header-subtitle">
+              A description here on this line right here. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud.
+            </div>
+          </div>
+
+          <div class="ui-form-card__time">about 10 min</div>
+        </div>
+
+        <form class="ui-form ui-form-card__form">
+          <div class="slds-progress slds-progress_vertical">
+            <ol class="form__list slds-progress__list">
+              <li class="form__list-item slds-progress__item slds-is-completed">
+                <span
+                  class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
+                  title="Complete"
+                >
+                  <img
+                    src="/assets/svg/progress-ring-complete.svg"
+                    alt="complete icon"
+                    class="icon-image"
+                  />
+                  <span class="slds-assistive-text">Complete</span>
+                </span>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        What is your entity's name?
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        Don't worry. You will be able to change your name later if
+                        you need.
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item slds-is-active">
+                <div class="slds-progress__marker">
+                  <span class="slds-assistive-text">Active</span>
+                </div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        Are you a financial company?
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        A finanacial company is a bank, investment business or
+                        similar.
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        What business sector are you in?
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        Tell us what sector you work in
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="form-control-group">
+                    {% include 'components/picklist--b.html' %}
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">
+                        Stage of set up
+                      </span>
+
+                      <span class="ui-form-element__label-description">
+                        Are you setting up a branch, transferring or setting up a
+                        new entity
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="form__list-item slds-progress__item">
+                <div class="slds-progress__marker"></div>
+                <div
+                  class="slds-progress__item_content slds-grid slds-grid_align-spread"
+                >
+                  <div class="ui-form-element slds-form-element">
+                    <label
+                      class="ui-form-element__label slds-form-element__label"
+                      for="text-input-id-1"
+                    >
+                      <span class="ui-form-element__label-name">Input Label</span>
+
+                      <span class="ui-form-element__label-description">
+                        Description of input label here
+                      </span>
+                    </label>
+                    <div
+                      class="ui-form-element__control slds-form-element__control"
+                    >
+                      <input
+                        id="text-input-id-1"
+                        class="ui-form-element__control-input slds-input"
+                        type="text"
+                        placeholder="Type something..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="25"
+              role="progressbar"
+            >
+              <span class="slds-assistive-text">Progress: 25%</span>
+            </div>
+          </div>
+          <div class="ui-form-card__action">
+            <span class="ui-form-card__field-steps">
+              <span class="ui-form-card__field-steps-focused">0</span>
+              /
+              <span class="ui-form-card__field-steps-number">1</span>
+            </span>
+            <div class="ui-button-group ui-button-group--right">
+              <button class="ui-button ui-button--default">Edit</button>
+              <button class="ui-button ui-button--primary">Confrim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    `
   );
 
 storiesOf('DIFC Components/Comments', module)
