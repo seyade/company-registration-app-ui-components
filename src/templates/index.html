@@ -1,33 +1,27 @@
-{% extends '_layout.html' %} 
-
-{% block content %}
-<article class="page">
-  <header class="page-header">
-    <div class="page-header__top-tier">
-      {% include 'components/global-navigation--c.html' %}
-      {% include 'components/page-header--b.html' %}
-    </div>
-    <div class="page-header__bottom-tier">
-      <div class="page-header__tier-inner">
-        {% include 'components/marketing-card--a.html' %}
-        {% include 'components/tab-bar--a.html' %}
-      </div>
-    </div>
+{% extends '_layout.html' %} {% block content %}
+<article class="page landing">
+  <header class="landing__header">
+    <img
+      class="ui-global-navigation__title-icon"
+      src="/assets/svg/difc-diamond.svg"
+      alt="DIFC"
+    />
+    <span class="ui-global-navigation__title-text">
+      UI Components for DIFC App
+    </span>
   </header>
-  <div class="page__inner">
 
-    <section class="page-section slds-grid slds-gutters">
-      <div class="slds-col slds-small-size_1-of-2 slds-large-size_8-of-12">
-        {% include 'components/path-summary--a.html' %}
-        {% include 'components/path-summary--b.html' %}
-        {% include 'components/path-summary--c.html' %}
-        {% include 'components/path-summary--d.html' %}
-      </div>
-      <div class="slds-col slds-small-size_1-of-2 slds-large-size_4-of-12">
-        {% include 'components/next-steps-card.html' %}
-      </div>
-    </section>
-
+  <div class="landing__inner">
+    <nav class="landing__nav">
+      <ol>
+        <li>
+          <a href="http://localhost:9001/" target="_blank">
+            Storybook: UI components and their states
+          </a>
+        </li>
+        <li><a href="/components.html">UI components interaction</a></li>
+      </ol>
+    </nav>
   </div>
 </article>
 {% endblock %}
