@@ -39,3 +39,15 @@
     padding-top: 8px;
   }
 }
+
+.ui-form-element-group {
+  display: flex;
+
+  .ui-form-element {
+    flex: 0 0 256px;
+
+    ~ .ui-form-element {
+      margin-left: 96px;
+    }
+  }
+}
