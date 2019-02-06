@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="26px" viewBox="0 0 36 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / z-embedded / icon glyphs / standard /task2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.56,36.66 C18.84,36.66 18.12,36.36 17.58,35.82 L6.36,24.6 C5.88,24.12 5.88,23.4 6.36,22.92 L8.58,20.7 C9.06,20.22 9.78,20.22 10.26,20.7 L19.56,29.94 L37.74,11.76 C38.22,11.28 38.94,11.28 39.42,11.76 L41.64,13.98 C42.12,14.46 42.12,15.18 41.64,15.66 L21.48,35.82 C20.94,36.36 20.28,36.66 19.56,36.66 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Components-/-Cards-/-Property-Selected" transform="translate(-222.000000, -171.000000)">
+            <g id="Icons-/-z-embedded-/-icon-glyphs-/-standard-/task2" transform="translate(216.000000, 160.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

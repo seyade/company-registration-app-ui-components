@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 770px;
   color: #4a4a4a;
+  overflow: hidden;
 
   @include screen-large() {
     max-width: 966px;
@@ -83,10 +84,31 @@
   }
 
   &__content {
-    padding: 0 52px 32px;
+    padding: 0 32px 32px;
     max-height: 780px;
     overflow-y: scroll;
     transition: padding-top 1000ms ease-in-out;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      top: 64px;
+      left: 43px;
+      content: '';
+      width: 2px;
+      height: 0;
+      opacity: 0;
+      background-color: #0076cf;
+
+      animation: retractLine 1000ms ease-in-out forwards;
+    }
+
+    .ui-path-card--collapsed & {
+      &::before {
+        height: 100%;
+        animation: expandLine 1000ms 300ms ease-in-out forwards;
+      }
+    }
   }
 
   &__details {
