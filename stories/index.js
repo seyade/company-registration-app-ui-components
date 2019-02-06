@@ -2098,6 +2098,104 @@ storiesOf('DIFC Components/Cards', module)
       <img src="/assets/svg/tick-lrg.svg" alt="" />
     </div>
     `
+  )
+  .add(
+    'Property Details',
+    () => `
+    <div class="ui-property-details-card ui-card">
+      <h2 class="ui-property-details-card__title">Details</h2>
+      <button class="ui-button ui-button--close">
+        <span class="ui-button__text ui-button__text--hidden">Close</span>
+        <img
+          class="ui-button__icon--close icon-image"
+          src="/assets/svg/close-light.svg"
+          alt="cross"
+        />
+      </button>
+
+      <div class="ui-property-details-card__pictures">
+        <div class="ui-property-details-card__pictures-main">
+          <a href="#">
+            <img src="/assets/images/DIFC_General Architecture_095.jpg" alt="" />
+          </a>
+        </div>
+        <div class="ui-property-details-card__pictures-secondary">
+          <a href="#">
+            <img src="/assets/images/DIFC_General Architecture_096.jpg" alt="" />
+          </a>
+          <a href="#">
+            <img src="/assets/images/DIFC_General Architecture_097.jpg" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="ui-property-details-card__description">
+        <span class="ui-property-details-card__description-type">
+          Property type or Rent/Sale
+        </span>
+        <span class="ui-property-details-card__description-name">
+          Unit 1370, Building name
+        </span>
+        <span class="ui-property-details-card__description-price">
+          850,000 AED Year
+        </span>
+
+        <button class="ui-button ui-button--primary">Request viewing</button>
+
+        <div class="ui-property-details-card__description-info">
+          <p class="ui-property-details-card__description-info-text">
+            Suspendisse ultrices mattis erat, sit amet interdum nibh tempus sed.
+            Quisque aliquet massa et diam condimentum, nec luctus dolor tincidunt.
+            Vivamus et faucibus dolor, vitae porttitor neque. Pellentesque lobortis
+            mi arcu, sit amet egestas nibh accumsan vestibulum. Cras euismod lorem
+            in ex tincidunt varius. Quisque quis ligula sed.
+            <a href="#">See more</a>
+          </p>
+
+          <div class="ui-property-details-card__description-section">
+            <h4>Facts</h4>
+            <div class="ui-property-details-card__description-section-item">
+              <span>
+                <strong>Area:</strong>
+                11,000 sq ft
+              </span>
+              <span>
+                <strong>Price/Sq. ft:</strong>
+                270.00 AED
+              </span>
+              <span>
+                <strong>Delivery Condition:</strong>
+                Shell and Core
+              </span>
+            </div>
+          </div>
+
+          <div class="ui-property-details-card__description-section">
+            <h4>Amenities</h4>
+            <div class="ui-property-details-card__description-section-item">
+              <ul>
+                <li>Covered parking</li>
+                <li>Visitor and valet parking</li>
+                <li>Easy access to Sheik Zayed Road</li>
+                <li>Retail in building</li>
+              </ul>
+
+              <ul>
+                <li>Easy access to Dubai Metro</li>
+                <li>24 hour security</li>
+                <li>Easy access to Dubai Metro</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ui-property-details-card__description-section">
+            <h4>Location</h4>
+            <img src="/assets/images/google-map.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    `
   );
 
 storiesOf('DIFC Components/Comments', module)

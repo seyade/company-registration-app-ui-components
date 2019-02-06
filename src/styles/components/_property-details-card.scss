@@ -50,36 +50,40 @@
         font-family: 'EuclidSquare-Medium', sans-serif;
       }
     }
+  }
 
-    &-section {
-      padding-top: 24px;
+  &__description-section {
+    padding-top: 24px;
 
-      &:last-child {
-        margin-top: 40px;
-        border-top: 1px solid #eaeaea;
-      }
+    &:last-child {
+      margin-top: 40px;
+      border-top: 1px solid #eaeaea;
+    }
 
-      h4 {
+    h4 {
+      font-family: 'EuclidSquare-Medium', sans-serif;
+      font-size: 16px;
+      padding-bottom: 16px;
+    }
+
+    span {
+      display: block;
+      padding-bottom: 12px;
+      margin-right: 76px;
+
+      strong {
         font-family: 'EuclidSquare-Medium', sans-serif;
-        font-size: 16px;
-        padding-bottom: 16px;
       }
+    }
+  }
 
-      span {
-        display: block;
-        padding-bottom: 12px;
-        margin-right: 76px;
+  &__description-section-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-        strong {
-          font-family: 'EuclidSquare-Medium', sans-serif;
-        }
-      }
-
-      &-item {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+    li {
+      padding-bottom: 16px;
     }
   }
 }
