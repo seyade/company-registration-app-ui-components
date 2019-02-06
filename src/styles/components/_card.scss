@@ -23,7 +23,7 @@
     padding: 16px;
 
     &--padding-med {
-      padding: 28px;
+      padding: 32px;
     }
 
     &--padding-lrg {
@@ -74,16 +74,9 @@
     background-color: #f2f8fc;
   }
 
-  &--pathway {
-    .ui-card__content {
-      padding-right: 16px;
-      padding-left: 16px;
-
-      @include screen-medium {
-        padding-right: 48px;
-        padding-left: 256px;
-      }
-    }
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   &__content--head {

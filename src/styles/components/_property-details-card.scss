@@ -1,0 +1,114 @@
+.ui-property-details-card {
+  position: relative;
+  width: 528px;
+  padding: 32px 32px 114px;
+  color: #515151;
+
+  .ui-button--close {
+    position: absolute;
+    top: 8px;
+    right: -16px;
+  }
+
+  &__title {
+    padding-bottom: 32px;
+    font-family: 'EuclidSquare-Medium', sans-serif;
+    font-size: 24px;
+  }
+
+  &__description {
+    font-family: 'EuclidSquare-Light', sans-serif;
+    font-size: 13px;
+
+    &-type,
+    &-name,
+    &-price {
+      display: block;
+      padding-bottom: 12px;
+    }
+
+    &-name {
+      font-family: 'EuclidSquare-Medium', sans-serif;
+      font-size: 24px;
+    }
+
+    &-price {
+      padding-bottom: 24px;
+      font-size: 24px;
+    }
+
+    &-info {
+      margin-top: 26px;
+      padding-top: 28px;
+      border-top: 1px solid #eaeaea;
+    }
+
+    &-info-text {
+      line-height: 1.4;
+
+      a {
+        font-family: 'EuclidSquare-Medium', sans-serif;
+      }
+    }
+
+    &-section {
+      padding-top: 24px;
+
+      &:last-child {
+        margin-top: 40px;
+        border-top: 1px solid #eaeaea;
+      }
+
+      h4 {
+        font-family: 'EuclidSquare-Medium', sans-serif;
+        font-size: 16px;
+        padding-bottom: 16px;
+      }
+
+      span {
+        display: block;
+        padding-bottom: 12px;
+        margin-right: 76px;
+
+        strong {
+          font-family: 'EuclidSquare-Medium', sans-serif;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.ui-property-details-card__pictures {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+
+  a {
+    display: block;
+  }
+
+  &-main {
+    padding-right: 16px;
+
+    img {
+    }
+  }
+
+  &-secondary {
+    a {
+      margin-bottom: 16px;
+      width: 144px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

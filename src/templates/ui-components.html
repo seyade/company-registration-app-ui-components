@@ -186,9 +186,12 @@
       <div class="slds-grid slds-gutters">
         <div class="slds-col slds-p-horizontal_x-large">
           <h1>Section panel</h1>
-          {% include 'components/forms/form-card.html' %}
+          {% include 'components/forms/form-card--a.html' %}
         </div>
-        <div class="slds-col slds-p-horizontal_x-large"></div>
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Section panel disabled</h1>
+          {% include 'components/forms/form-card--b.html' %}
+        </div>
       </div>
     </section>
 
@@ -199,16 +202,22 @@
           {% include 'components/path-card--a.html' %}
         </div>
         <div class="slds-col slds-p-horizontal_x-large">
-          <h1>Path card 2</h1>
-          {% include 'components/path-card--a.html' %}
+          <h1>Property details card</h1>
+          {% include 'components/property-details-card.html' %}
         </div>
       </div>
     </section>
 
     <section class="ui-card page-section">
       <div class="slds-grid slds-gutters">
-        <div class="slds-col slds-p-horizontal_x-large"><span>1</span></div>
-        <div class="slds-col slds-p-horizontal_x-large"><span>2</span></div>
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Property card</h1>
+          {% include 'components/property-card--a.html' %}
+        </div>
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Property card selectd</h1>
+          {% include 'components/property-card--b.html' %}
+        </div>
       </div>
     </section>
   </div>
