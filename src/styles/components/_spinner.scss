@@ -1,0 +1,28 @@
+.ui-spinner {
+  position: relative;
+  height: 96px;
+
+  .slds-spinner {
+    &:after,
+    &:before,
+    &__dot-a:after,
+    &__dot-a:before,
+    &__dot-b:after,
+    &__dot-b:before {
+      background-color: #59cbe8;
+    }
+  }
+
+  &--inverse {
+    .slds-spinner {
+      &:after,
+      &:before,
+      &__dot-a:after,
+      &__dot-a:before,
+      &__dot-b:after,
+      &__dot-b:before {
+        background-color: #fff;
+      }
+    }
+  }
+}
