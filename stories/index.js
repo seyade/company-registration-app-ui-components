@@ -1259,7 +1259,7 @@ storiesOf('DIFC Components/Cards', module)
     `
   )
   .add(
-    'Section Panel / Form panel expanded',
+    'Section panel / Form panel expanded',
     () => `
     <div class="ui-form-card ui-card">
       <div class="ui-form-card__content">
@@ -1527,7 +1527,7 @@ storiesOf('DIFC Components/Cards', module)
     `
   )
   .add(
-    'Section Panel / Form panel collapsed',
+    'Section panel / Form panel collapsed',
     () => `
     <div class="ui-form-card ui-card ui-form-card--collapsed">
       <div class="ui-form-card__content">
@@ -1795,7 +1795,7 @@ storiesOf('DIFC Components/Cards', module)
     `
   )
   .add(
-    'Section Panel / Form panel disabled',
+    'Section panel / Form panel disabled',
     () => `
     <div class="ui-form-card ui-form-card--collapsed ui-card ui-card--disabled">
       <div class="ui-form-card__content">
@@ -2063,7 +2063,7 @@ storiesOf('DIFC Components/Cards', module)
     `
   )
   .add(
-    'Property Base',
+    'Property base',
     () => `
     <div class="ui-property-card ui-card">
       <span class="ui-property-card__property-size">10,000 Sq ft</span>
@@ -2100,7 +2100,7 @@ storiesOf('DIFC Components/Cards', module)
     `
   )
   .add(
-    'Property Details',
+    'Property details',
     () => `
     <div class="ui-property-details-card ui-card">
       <h2 class="ui-property-details-card__title">Details</h2>
@@ -2193,6 +2193,24 @@ storiesOf('DIFC Components/Cards', module)
             <img src="/assets/images/google-map.jpg" alt="" />
           </div>
         </div>
+      </div>
+    </div>
+    `
+  )
+  .add(
+    'Service request',
+    () => `
+    <div class="ui-service-request-card ui-card">
+      <h3 class="ui-service-request-card__title">Service request name</h3>
+      <p class="ui-service-request-card__text">
+        A description of how request work. Explain to the user that our recomended
+        actions are in next steps and a list of all service request are in the All
+        Services tab.
+      </p>
+
+      <div class="ui-card__action ui-card__action--spread">
+        <span class="ui-service-request-card__time">about 4 days</span>
+        <a href="#" class="ui-button ui-button--default">View request</a>
       </div>
     </div>
     `
