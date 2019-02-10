@@ -526,6 +526,20 @@ storiesOf('DIFC Components/Buttons', module)
       </button>
     </div>
     `
+  )
+  .add(
+    'Back button inverse (link)',
+    () => `
+    <div class="ui-button-group" style="background-color: #002f6c;">
+      <button class="ui-button ui-button--back-link ui-button--back-link--inverse">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#back"></use>
+        </svg>
+        <span class="slds-assistive-text">Back to your pathway</span>
+        <span>Back to your pathway</span>
+      </button>
+    </div>
+    `
   );
 
 storiesOf('DIFC Components/Button Icons', module)

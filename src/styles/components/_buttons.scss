@@ -162,8 +162,6 @@
   &--back-link {
     padding: 8px 10px;
     color: #0076cf;
-    border: 1px solid #0076cf;
-    background-color: #fff;
     text-transform: none;
     letter-spacing: normal;
 
@@ -174,6 +172,10 @@
     &:hover {
       color: #002f6c;
       border: 1px solid #002f6c;
+    }
+
+    &--inverse {
+      color: #fff;
     }
   }
 
