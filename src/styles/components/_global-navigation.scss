@@ -2,7 +2,6 @@
   position: relative;
   flex-wrap: wrap;
   min-height: 64px;
-
   font-family: 'EuclidSquare-Medium', sans-serif;
   color: #fff;
   background-color: #002f6c;
@@ -89,6 +88,7 @@
   }
 
   &__button {
+    position: relative;
     background-color: transparent;
     border: 0;
 
@@ -105,6 +105,11 @@
 
     &--hidden {
       display: none;
+    }
+
+    .ui-badge {
+      position: absolute;
+      top: -8px;
     }
   }
 
@@ -123,10 +128,14 @@
   }
 
   &__user {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+
     &-link {
       display: inline-flex;
       align-items: center;
-      margin-right: 32px;
+      margin-right: 0;
       color: #fff;
     }
 
@@ -136,7 +145,6 @@
       justify-content: center;
       width: 48px;
       height: 48px;
-      margin-right: 16px;
       border-radius: 50%;
       overflow: hidden;
 
@@ -146,13 +154,35 @@
       }
     }
 
-    &-name {
-      margin-right: 24px;
+    &-details {
+      margin-right: 16px;
+      text-align: right;
+      text-transform: none;
+
+      &-company,
+      &-name {
+        display: block;
+        font-size: 12px;
+      }
+
+      &-company {
+        padding-bottom: 8px;
+        font-family: 'EuclidSquare-Light', sans-serif;
+      }
+    }
+
+    .ui-menu {
+      margin-left: 8px;
     }
   }
 
   &__avatar {
     max-width: 100%;
+  }
+
+  &__context-menu-button {
+    min-width: 16px;
+    padding: 8px;
   }
 
   &__menu {

@@ -8,6 +8,7 @@ import UIPickList from './picklist';
 import UIToast from './toast';
 import UIFormCard from './form-card';
 import UIPathCard from './path-card';
+import UIMenu from './menu';
 
 /**
  * @name App
@@ -60,6 +61,7 @@ class App {
       UIToast,
       UIFormCard,
       UIPathCard,
+      UIMenu,
     ]).render();
 
     console.log('Welcome to DIFC App!');

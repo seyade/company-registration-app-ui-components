@@ -61,32 +61,34 @@ class UIGlobalNavigation {
    * @private
    */
   _addEvents() {
-    this.navigationMenuButton.addEventListener('click', event => {
-      const _thisButton = event.currentTarget;
-      const _ancestor = utils.findParent(
-        _thisButton,
-        UIGlobalNavigation.CLASSES.container
-      );
-      const _thisGlobalNavMenu = _ancestor.querySelector(
-        '.ui-global-navigation__menu'
-      );
-
-      if (
-        !_thisButton.classList.contains(UIGlobalNavigation.CLASSES.isActive)
-      ) {
-        _thisButton.classList.add(UIGlobalNavigation.CLASSES.isActive);
-
-        _thisGlobalNavMenu.classList.remove(
-          UIGlobalNavigation.CLASSES.containerMenuHidden
+    if (this.navigationMenuButton) {
+      this.navigationMenuButton.addEventListener('click', event => {
+        const _thisButton = event.currentTarget;
+        const _ancestor = utils.findParent(
+          _thisButton,
+          UIGlobalNavigation.CLASSES.container
         );
-      } else {
-        _thisButton.classList.remove(UIGlobalNavigation.CLASSES.isActive);
-
-        _thisGlobalNavMenu.classList.add(
-          UIGlobalNavigation.CLASSES.containerMenuHidden
+        const _thisGlobalNavMenu = _ancestor.querySelector(
+          '.ui-global-navigation__menu'
         );
-      }
-    });
+
+        if (
+          !_thisButton.classList.contains(UIGlobalNavigation.CLASSES.isActive)
+        ) {
+          _thisButton.classList.add(UIGlobalNavigation.CLASSES.isActive);
+
+          _thisGlobalNavMenu.classList.remove(
+            UIGlobalNavigation.CLASSES.containerMenuHidden
+          );
+        } else {
+          _thisButton.classList.remove(UIGlobalNavigation.CLASSES.isActive);
+
+          _thisGlobalNavMenu.classList.add(
+            UIGlobalNavigation.CLASSES.containerMenuHidden
+          );
+        }
+      });
+    }
   }
 }
 
