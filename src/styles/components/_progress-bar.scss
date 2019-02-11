@@ -7,7 +7,9 @@
   .slds-progress-bar__value {
     width: 0%;
     background-color: #0076cf;
-    animation: expandProgressBar 700ms forwards ease-in-out;
+    // animation: expandProgressBar 700ms forwards ease-in-out;
+    animation: expandProgressBar 700ms forwards
+      cubic-bezier(0.13, 0.61, 0.55, 0.97);
   }
 }
 
