@@ -5460,6 +5460,61 @@ storiesOf('DIFC Components/Global Navigation', module)
     `
   )
   .add(
+    'Logged out improved',
+    () => `
+    <div class="ui-global-navigation">
+      <div class="ui-global-navigation__inner-wrap">
+        <h1 class="ui-global-navigation__title">
+          <img
+            class="ui-global-navigation__title-icon"
+            src="/assets/svg/difc-diamond.svg"
+            alt="DIFC"
+          />
+          <span class="ui-global-navigation__title-text">One DIFC</span>
+        </h1>
+
+        <div class="ui-global-navigation__content">
+          <div class="ui-global-navigation__content-col">
+            <div class="ui-global-navigation__action">
+              <div class="ui-global-navigation__user">
+                <a href="#" class="ui-global-navigation__link">Register</a>
+                <a
+                  href="#"
+                  class="ui-button ui-button--primary ui-button--primary-outline"
+                >
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-global-navigation__menu ui-global-navigation__menu--hidden">
+        <ul class="ui-global-navigation__menu-list">
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+          </li>
+          <li class="ui-global-navigation__menu-item">
+            <a
+              class="ui-global-navigation__menu-link ui-global-navigation__menu-link--selected"
+              href="#"
+            >
+              Menu item
+            </a>
+          </li>
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+          </li>
+          <li class="ui-global-navigation__menu-item">
+            <a class="ui-global-navigation__menu-link" href="#">Menu item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    `
+  )
+  .add(
     'Base',
     () => `
     <div class="ui-global-navigation">
@@ -5571,7 +5626,14 @@ storiesOf('DIFC Components/Global Navigation', module)
               <a 
                 class="ui-global-navigation__user-link ui-global-navigation__link" href="#"
               >
-                <span class="ui-global-navigation__user-details">Company name</span>
+                <span class="ui-global-navigation__user-details">
+                  <span class="ui-global-navigation__user-details-company">
+                    ABC Corp
+                  </span>
+                  <span class="ui-global-navigation__user-details-name">
+                    Rihanna Gopal
+                  </span>
+                </span>
                 <span class="ui-global-navigation__user-avatar">
                 <img
                   src="/assets/images/rihanna-gopal.jpg"
@@ -5637,7 +5699,14 @@ storiesOf('DIFC Components/Global Navigation', module)
                 class="ui-global-navigation__user-link ui-global-navigation__link"
                 href="#"
               >
-                <span class="ui-global-navigation__user-details">Company name</span>
+                <span class="ui-global-navigation__user-details">
+                  <span class="ui-global-navigation__user-details-company">
+                    ABC Corp
+                  </span>
+                  <span class="ui-global-navigation__user-details-name">
+                    Rihanna Gopal
+                  </span>
+                </span>
                 <span class="ui-global-navigation__user-avatar">
                 <img
                   src="/assets/images/rihanna-gopal.jpg"

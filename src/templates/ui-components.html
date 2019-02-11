@@ -2,7 +2,7 @@
 <article class="page page--ui-components">
   <header class="page-header">
     <div class="page-header__top-tier">
-      {% include 'components/global-navigation--c.html' %}
+      {% include 'components/global-navigation--e.html' %}
     </div>
     <div class="page-header__bottom-tier">
       <div class="page-header__tier-inner">
@@ -167,6 +167,33 @@
     <section class="ui-card page-section">
       <div class="slds-grid slds-gutters">
         <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Global Nav (v2) logged in</h1>
+          {% include 'components/global-navigation--d.html' %}
+        </div>
+      </div>
+    </section>
+
+    <section class="ui-card page-section">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Global Nav (v2) logged in with badge</h1>
+          {% include 'components/global-navigation--e.html' %}
+        </div>
+      </div>
+    </section>
+
+    <section class="ui-card page-section">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-p-horizontal_x-large">
+          <h1>Global Nav (v2) logged out</h1>
+          {% include 'components/global-navigation--f.html' %}
+        </div>
+      </div>
+    </section>
+
+    <section class="ui-card page-section">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-p-horizontal_x-large">
           <h1>Global Nav</h1>
           {% include 'components/global-navigation--a.html' %}
         </div>
@@ -178,24 +205,6 @@
         <div class="slds-col slds-p-horizontal_x-large">
           <h1>Global Nav Logged In</h1>
           {% include 'components/global-navigation--c.html' %}
-        </div>
-      </div>
-    </section>
-
-    <section class="ui-card page-section">
-      <div class="slds-grid slds-gutters">
-        <div class="slds-col slds-p-horizontal_x-large">
-          <h1>Global Nav Logged In</h1>
-          {% include 'components/global-navigation--d.html' %}
-        </div>
-      </div>
-    </section>
-
-    <section class="ui-card page-section">
-      <div class="slds-grid slds-gutters">
-        <div class="slds-col slds-p-horizontal_x-large">
-          <h1>Global Nav with badge</h1>
-          {% include 'components/global-navigation--e.html' %}
         </div>
       </div>
     </section>
@@ -220,8 +229,10 @@
           {% include 'components/spinner--b.html' %}
         </div>
         <div class="slds-col slds-p-horizontal_x-large">
-          <h1>Property details card</h1>
-          {% include 'components/property-details-card.html' %}
+          <h1>Badge</h1>
+          {% include 'components/badge--a.html' %}
+
+          {% include 'components/badge--b.html' %}
         </div>
       </div>
     </section>
