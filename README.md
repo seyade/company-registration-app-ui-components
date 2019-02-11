@@ -1,9 +1,8 @@
-## Usage
+_How to setup DIFC UI Components on the machine (works best on a Mac)_
 
-1. Go to your terminal/command window.
-2. Type `npm install` or `npm i` to intall all npm dependencies.
-3. And then run `npm run serve`. This should open the browser with the site displayed.
-4. You can copy past the code for integration as you usually do.
-5. Open another terminal window and run Storybook with `npm run storybook` while `npm run serve` is running. This should display the list of components and their different states.
-
-Repo link: https://bitbucket.org/seyibm/difc-ui-components/
+1. Open the terminal and copy/paste `git clone https://seyibm@bitbucket.org/seyibm/difc-ui-components.git`
+2. Enter the project folder and do `npm install` to install all dependecies
+3. Then do `npm run serve` to run project (a browser window should open) and leave that running.
+4. Then do `npm run storybook` to run Storybook (another browser window should open)
+5. Enjoy Storybook.
+6. To interact with some of the UI components go to `http://localhost:8080/components.html`, as storybook is just a display of UI states with no interaction. (edited)

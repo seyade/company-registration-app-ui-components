@@ -2,6 +2,7 @@
   margin: 16px 0;
   background-color: #fff;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease-in-out;
 
   &__header {
     padding: 28px 28px 52px;
@@ -114,5 +115,9 @@
 
   .ui-accordion__button {
     width: 100%;
+  }
+
+  &--is-close {
+    opacity: 0;
   }
 }

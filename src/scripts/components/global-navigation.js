@@ -8,61 +8,58 @@ class UIGlobalNavigation {
     /**
      * component
      * @type {Element}
+     * @private
      */
-    this.components;
+    this._components;
 
     /**
      * navigation menu
      * @type {Element}
+     * @private
      */
-    this.navigationMenu;
+    this._navigationMenu;
 
     /**
      * navigation menu button
      * @type {Element}
+     * @private
      */
-    this.navigationMenuButton;
+    this._navigationMenuButton;
 
     /**
      * navigation menu close button
      * @type {Element}
+     * @private
      */
-    this.navigationMenuCloseButton;
+    this._navigationMenuCloseButton;
 
     /**
      * search button
      * @type {Element}
+     * @private
      */
-    this.searchButton;
-
-    /**
-     * search button
-     * @type {Element}
-     */
-    this.searchBarInput;
+    this._searchBarInput;
   }
 
   init() {
-    this.components = document.querySelectorAll('.ui-global-navigation');
+    this._components = document.querySelectorAll('.ui-global-navigation');
 
-    for (let component of this.components) {
-      this.navigationMenuButton = component.querySelector(
+    for (let component of this._components) {
+      this._navigationMenuButton = component.querySelector(
         '.ui-global-navigation__button--menu'
       );
 
-      this._addEvents();
+      this._registerEvents();
     }
-
-    return this.components;
   }
 
   /**
-   * Add events
+   * Register events
    * @private
    */
-  _addEvents() {
-    if (this.navigationMenuButton) {
-      this.navigationMenuButton.addEventListener('click', event => {
+  _registerEvents() {
+    if (this._navigationMenuButton) {
+      this._navigationMenuButton.addEventListener('click', event => {
         const _thisButton = event.currentTarget;
         const _ancestor = utils.findParent(
           _thisButton,

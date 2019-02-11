@@ -1,31 +1,41 @@
 import * as utils from '../utils';
 
+/**
+ * Date Picker component
+ */
 class UIDatePicker {
   constructor() {
     /**
      * component container
      * @type {Element}
+     * @private
      */
-    this.component;
+    this._component;
+
     /**
      * calendar toggle button
      * @type {Element}
+     * @private
      */
-    this.calendarButtons;
+    this._calendarButtons;
   }
 
   init() {
-    this.component = document.querySelector('.ui-date-picker');
+    this._component = document.querySelector('.ui-date-picker');
 
-    this.calendarButtons = this.component.querySelectorAll(
+    this._calendarButtons = this._component.querySelectorAll(
       '.ui-date-picker__button'
     );
 
-    this._addEvents();
+    this._registerEvents();
   }
 
-  _addEvents() {
-    for (let calendarButton of this.calendarButtons) {
+  /**
+   * Register events
+   * @private
+   */
+  _registerEvents() {
+    for (let calendarButton of this._calendarButtons) {
       calendarButton.addEventListener('click', event => {
         let ancestor = utils.findParent(
           event.currentTarget,
@@ -42,6 +52,7 @@ class UIDatePicker {
   }
 }
 
+// classes used by components
 UIDatePicker.CLASSES = {
   uiFormElement: 'ui-form-element',
   isOpen: 'slds-is-open',

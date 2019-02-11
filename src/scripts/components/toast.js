@@ -1,24 +1,41 @@
 import * as utils from '../utils';
 
+/**
+ * Toast component
+ */
 class UIToast {
   constructor() {
-    this.components;
+    /**
+     * component
+     * @type {Element}
+     * @private
+     */
+    this._components;
 
-    this.closeButton;
+    /**
+     * close button
+     * @type {Element}
+     * @private
+     */
+    this._closeButton;
   }
 
   init() {
-    this.components = document.querySelectorAll('.ui-toast');
+    this._components = document.querySelectorAll('.ui-toast');
 
-    for (let component of this.components) {
-      this.closeButton = component.querySelector('.ui-toast__button');
+    for (let component of this._components) {
+      this._closeButton = component.querySelector('.ui-toast__button');
 
-      this._addEvents();
+      this._registerEvents();
     }
   }
 
-  _addEvents() {
-    this.closeButton.addEventListener('click', event => {
+  /**
+   * Register events
+   * @private
+   */
+  _registerEvents() {
+    this._closeButton.addEventListener('click', event => {
       const _ancestor = utils.findParent(
         event.currentTarget,
         UIToast.CLASSES.toast
@@ -31,6 +48,7 @@ class UIToast {
   }
 }
 
+// classes used by components
 UIToast.CLASSES = {
   toast: 'ui-toast',
   isClose: 'ui-toast--is-close',

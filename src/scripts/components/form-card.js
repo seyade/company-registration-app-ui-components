@@ -1,42 +1,54 @@
 import * as utils from '../utils';
 
+/**
+ * Form component
+ */
 class UIFormCard {
   constructor() {
-    this.components;
+    /**
+     * component
+     * @type {Element}
+     * @private
+     */
+    this._components;
 
-    this.component;
+    this._cardHeader;
 
-    this.cardHeader;
+    this._content;
 
-    this.content;
+    this._form;
 
-    this.form;
+    this._steps;
 
-    this.steps;
+    this._numberOfSteps;
   }
 
   init() {
-    this.components = document.querySelectorAll('.ui-form-card');
+    this._components = document.querySelectorAll('.ui-form-card');
 
     this._displayStatus();
     this._registerEvents();
   }
 
+  /**
+   * Register events
+   * @private
+   */
   _registerEvents() {
-    for (let component of this.components) {
-      this.cardHeader = component.querySelector(
+    for (let component of this._components) {
+      this._cardHeader = component.querySelector(
         UIFormCard.SELECTORS.cardHeader
       );
-      this.content = component.querySelector(UIFormCard.SELECTORS.content);
-      this.form = component.querySelector(UIFormCard.SELECTORS.form);
+      this._content = component.querySelector(UIFormCard.SELECTORS.content);
+      this._form = component.querySelector(UIFormCard.SELECTORS.form);
 
-      this.cardHeader.addEventListener('click', event => {
+      this._cardHeader.addEventListener('click', event => {
         const _thisComponent = utils.findParent(
           event.currentTarget,
           UIFormCard.CLASSES.container
         );
 
-        this.form.removeAttribute('style');
+        this._form.removeAttribute('style');
 
         if (!_thisComponent.classList.contains(UIFormCard.CLASSES.collapsed)) {
           _thisComponent.classList.add(UIFormCard.CLASSES.collapsed);
@@ -45,10 +57,10 @@ class UIFormCard {
         }
       });
 
-      this.content.addEventListener('scroll', event => {
+      this._content.addEventListener('scroll', event => {
         const _thisContent = event.currentTarget;
 
-        this.form.style.transition = 'none';
+        this._form.style.transition = 'none';
 
         if (_thisContent.scrollTop > 32) {
           component.classList.add(UIFormCard.CLASSES.sticky);
@@ -59,9 +71,13 @@ class UIFormCard {
     }
   }
 
+  /**
+   * Display status
+   * @private
+   */
   _displayStatus() {
-    for (let component of this.components) {
-      this.numberOfSteps = component.querySelector(
+    for (let component of this._components) {
+      this._numberOfSteps = component.querySelector(
         UIFormCard.SELECTORS.numberOfSteps
       );
 
@@ -69,14 +85,14 @@ class UIFormCard {
         UIFormCard.SELECTORS.focusedStep
       );
 
-      this.steps = component.querySelectorAll(
+      this._steps = component.querySelectorAll(
         '.ui-form-element__control-input'
       );
 
-      this.form = component.querySelector(UIFormCard.SELECTORS.form);
-      this.numberOfSteps.innerText = this.steps.length;
+      this._form = component.querySelector(UIFormCard.SELECTORS.form);
+      this._numberOfSteps.innerText = this.steps.length;
 
-      this.steps.forEach((step, index) => {
+      this._steps.forEach((step, index) => {
         step.addEventListener('focus', () => {
           this.focusedStep.innerText = index + 1;
 
@@ -87,9 +103,9 @@ class UIFormCard {
 
           let offset = _ancestorLi.offsetTop;
 
-          this.content = component.querySelector(UIFormCard.SELECTORS.content);
+          this._content = component.querySelector(UIFormCard.SELECTORS.content);
 
-          utils.scrollTo(this.content, offset, 300);
+          utils.scrollTo(this._content, offset, 300);
         });
 
         step.addEventListener('blur', () => {

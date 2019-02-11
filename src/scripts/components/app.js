@@ -6,6 +6,7 @@ import UIDataTable from './data-table';
 import UIDatePicker from './date-picker';
 import UIPickList from './picklist';
 import UIToast from './toast';
+import UICard from './card';
 import UIFormCard from './form-card';
 import UIPathCard from './path-card';
 import UIMenu from './menu';
@@ -59,6 +60,7 @@ class App {
       UIDatePicker,
       UIPickList,
       UIToast,
+      UICard,
       UIFormCard,
       UIPathCard,
       UIMenu,
