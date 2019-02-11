@@ -1,4 +1,4 @@
-_How to setup DIFC UI Components on the machine (works best on a Mac)_
+##How to setup DIFC UI Components on the machine (works best on a Mac)
 
 1. Open the terminal and copy/paste `git clone https://seyibm@bitbucket.org/seyibm/difc-ui-components.git`
 2. Enter the project folder and do `npm install` to install all dependecies
