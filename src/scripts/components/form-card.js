@@ -21,20 +21,13 @@ class UIFormCard {
     this._steps;
 
     this._numberOfSteps;
+
+    this._focusedStep;
   }
 
   init() {
     this._components = document.querySelectorAll('.ui-form-card');
 
-    this._displayStatus();
-    this._registerEvents();
-  }
-
-  /**
-   * Register events
-   * @private
-   */
-  _registerEvents() {
     for (let component of this._components) {
       this._cardHeader = component.querySelector(
         UIFormCard.SELECTORS.cardHeader
@@ -42,33 +35,47 @@ class UIFormCard {
       this._content = component.querySelector(UIFormCard.SELECTORS.content);
       this._form = component.querySelector(UIFormCard.SELECTORS.form);
 
-      this._cardHeader.addEventListener('click', event => {
-        const _thisComponent = utils.findParent(
-          event.currentTarget,
-          UIFormCard.CLASSES.container
-        );
-
-        this._form.removeAttribute('style');
-
-        if (!_thisComponent.classList.contains(UIFormCard.CLASSES.collapsed)) {
-          _thisComponent.classList.add(UIFormCard.CLASSES.collapsed);
-        } else {
-          _thisComponent.classList.remove(UIFormCard.CLASSES.collapsed);
-        }
-      });
-
-      this._content.addEventListener('scroll', event => {
-        const _thisContent = event.currentTarget;
-
-        this._form.style.transition = 'none';
-
-        if (_thisContent.scrollTop > 32) {
-          component.classList.add(UIFormCard.CLASSES.sticky);
-        } else {
-          component.classList.remove(UIFormCard.CLASSES.sticky);
-        }
-      });
+      this._displayStatus();
+      this._registerEvents();
     }
+  }
+
+  /**
+   * Register events
+   * @private
+   */
+  _registerEvents() {
+    this._cardHeader.addEventListener('click', event => {
+      const _thisComponent = utils.findParent(
+        event.currentTarget,
+        UIFormCard.CLASSES.container
+      );
+
+      this._form.removeAttribute('style');
+
+      if (!_thisComponent.classList.contains(UIFormCard.CLASSES.collapsed)) {
+        _thisComponent.classList.add(UIFormCard.CLASSES.collapsed);
+      } else {
+        _thisComponent.classList.remove(UIFormCard.CLASSES.collapsed);
+      }
+    });
+
+    this._content.addEventListener('scroll', event => {
+      const _self = event.currentTarget;
+
+      const _thisComponent = utils.findParent(
+        _self,
+        UIFormCard.CLASSES.container
+      );
+
+      this._form.style.transition = 'none';
+
+      if (_self.scrollTop > 32) {
+        _thisComponent.classList.add(UIFormCard.CLASSES.sticky);
+      } else {
+        _thisComponent.classList.remove(UIFormCard.CLASSES.sticky);
+      }
+    });
   }
 
   /**
@@ -81,7 +88,7 @@ class UIFormCard {
         UIFormCard.SELECTORS.numberOfSteps
       );
 
-      this.focusedStep = component.querySelector(
+      this._focusedStep = component.querySelector(
         UIFormCard.SELECTORS.focusedStep
       );
 
@@ -90,11 +97,11 @@ class UIFormCard {
       );
 
       this._form = component.querySelector(UIFormCard.SELECTORS.form);
-      this._numberOfSteps.innerText = this.steps.length;
+      this._numberOfSteps.innerText = this._steps.length;
 
       this._steps.forEach((step, index) => {
         step.addEventListener('focus', () => {
-          this.focusedStep.innerText = index + 1;
+          this._focusedStep.innerText = index + 1;
 
           let _ancestorLi = utils.findParent(
             event.currentTarget,
@@ -109,7 +116,7 @@ class UIFormCard {
         });
 
         step.addEventListener('blur', () => {
-          this.focusedStep.innerText = 0;
+          this._focusedStep.innerText = 0;
         });
       });
     }

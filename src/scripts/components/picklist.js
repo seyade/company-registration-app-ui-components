@@ -5,27 +5,61 @@ import * as utils from '../utils';
  */
 class UIPicklist {
   constructor() {
+    this._component;
+
     /**
-     * component
+     * components
      * @type {Element}
      */
-    this.components;
+    this._components;
 
     /**
      * combobox
      * @type {Element}
      */
-    this.combobox;
+    this._combobox;
+
+    /**
+     * comboboxes
+     * @type {Element}
+     */
+    this._comboboxes;
 
     /**
      * combobox input
      * @type {Element}
      */
-    this.comboboxInput;
+    this._comboboxInput;
 
-    this.listBox;
+    /**
+     * components
+     * @type {Element}
+     */
+    this._comboboxInputs;
 
-    this.listBoxOptions;
+    /**
+     * listbox
+     * @type {Element}
+     */
+    this._listBox;
+
+    /**
+     * listbox options
+     * @type {Element}
+     */
+    this._listBoxOptions;
+
+    /**
+     * listbox single option
+     * @type {Element}
+     */
+    this._listBoxOption;
+
+    /**
+     * all listboxes options in the whole page
+     * @type {Element}
+     */
+    this._allListBoxOptions;
 
     /**
      * option data
@@ -40,123 +74,200 @@ class UIPicklist {
   }
 
   init() {
-    this.components = document.querySelectorAll(UIPicklist.SELECTORS.picklist);
+    this._components = document.querySelectorAll(UIPicklist.SELECTORS.picklist);
+    this._comboboxes = document.querySelectorAll(UIPicklist.SELECTORS.comboBox);
 
-    for (let component of this.components) {
-      this.comboboxInput = component.querySelector(
+    for (this._component of this._components) {
+      this._comboboxInput = this._component.querySelector(
         UIPicklist.SELECTORS.comboBoxInput
       );
 
-      this.listBoxOptions = component.querySelectorAll(
+      this._listBoxOptions = this._component.querySelectorAll(
         UIPicklist.SELECTORS.listBoxOption
       );
 
-      this.listBox = component.querySelector(UIPicklist.SELECTORS.listBox);
+      this._listBox = this._component.querySelector(
+        UIPicklist.SELECTORS.listBox
+      );
+
+      this._allListBoxOptions = this._listBox.querySelectorAll(
+        '[role="presentation"'
+      );
 
       this._registerEvents();
     }
   }
 
+  /**
+   * register events
+   * @type {Element}
+   * @private
+   */
   _registerEvents() {
-    this.comboboxInput.addEventListener('focus', event => {
-      const _self = event.currentTarget;
-      this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
+    this._comboboxInput.addEventListener('focus', this._manageFocus.bind(this));
 
-      if (!this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
-        this.combobox.classList.add(UIPicklist.CLASSES.isOpen);
-      }
-
-      _self.setAttribute('aria-expanded', 'true');
-    });
-
-    this.comboboxInput.addEventListener('keyup', event => {
-      const _self = event.currentTarget;
-
-      this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
-
-      let _allListItems = this.combobox.querySelectorAll(
-        '.slds-listbox__item[style]:not([style=""])'
-      );
-
-      let filter = _self.value.toUpperCase();
-      let queries = this.combobox.querySelectorAll(
-        UIPicklist.SELECTORS.optionBodySpan
-      );
-      let listItem;
-      let queryText;
-
-      for (let i = 0, qlen = queries.length; i < qlen; i++) {
-        queryText = queries[i].textContent || queries[i].innerText;
-        listItem = utils.findParent(queries[i], UIPicklist.CLASSES.listBoxItem);
-
-        if (queryText.toUpperCase().indexOf(filter) > -1) {
-          listItem.style.display = '';
-        } else {
-          listItem.style.display = 'none';
-        }
-      }
-    });
-
-    this.comboboxInput.addEventListener('click', event =>
-      event.stopPropagation()
+    this._comboboxInput.addEventListener(
+      'keyup',
+      this._queryPickList.bind(this)
     );
 
-    for (let listBoxOption of this.listBoxOptions) {
-      listBoxOption.addEventListener('click', event => {
-        const _self = event.currentTarget;
+    this._comboboxInput.addEventListener('click', event => {
+      this._manageFocus(event);
+      event.stopPropagation();
+    });
 
-        this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
-
-        const _thisComboInput = this.combobox.querySelector(
-          UIPicklist.SELECTORS.comboBoxInput
-        );
-
-        let optionText = _self.querySelector(
-          UIPicklist.SELECTORS.optionBodySpan
-        ).innerText;
-
-        _thisComboInput.value = optionText;
-
-        if (this.combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
-          this.combobox.classList.remove(UIPicklist.CLASSES.isOpen);
-        }
+    for (this._listBoxOption of this._listBoxOptions) {
+      this._listBoxOption.addEventListener('click', event => {
+        this._getSelectedOptionValue(event.currentTarget);
       });
     }
 
-    this.listBox.addEventListener('focus', event => {
-      const _self = event.currentTarget;
+    this._listBox.addEventListener('keyup', event => {
+      if (
+        (event.which === 13 || event.keyCode === 13) &&
+        document.activeElement.tagName === 'LI'
+      ) {
+        let _activelistOption = document.activeElement;
 
-      this.combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
-
-      let _options = this.combobox.querySelectorAll(
-        UIPicklist.SELECTORS.listBoxOption
-      );
-
-      let ariaSelected = _self.querySelectorAll('[aria-selected="true"]');
-
-      if (!ariaSelected.length) {
-        ariaSelected[0].setAttribute('aria-selected', 'true');
-        ariaSelected[0].focus();
+        this._getSelectedOptionValue(_activelistOption);
       }
     });
 
-    document.body.addEventListener('click', event => {
-      let environment = event.target;
+    document.body.addEventListener(
+      'click',
+      this._closeListBoxGlobally.bind(this)
+    );
 
-      for (let component of this.components) {
-        let comboboxInput = component.querySelector(
+    document.body.addEventListener(
+      'keyup',
+      this._closeListBoxGlobally.bind(this)
+    );
+  }
+
+  /**
+   * close listbox when when clicking anywhere on the page
+   * or pressing "Esc"
+   * @param {Event} event
+   */
+  _closeListBoxGlobally(event) {
+    if (event.which === 27 || event.keyCode === 27 || event.type === 'click') {
+      let _environment = event.target;
+
+      for (let component of this._components) {
+        let _comboboxInput = component.querySelector(
           UIPicklist.SELECTORS.comboBoxInput
         );
 
-        if (environment !== comboboxInput) {
-          component
-            .querySelector(UIPicklist.SELECTORS.comboBox)
-            .classList.remove(UIPicklist.CLASSES.isOpen);
+        if (_environment !== _comboboxInput) {
+          this._closeListBox(
+            component.querySelector(UIPicklist.SELECTORS.comboBox)
+          );
 
-          comboboxInput.setAttribute('aria-expanded', 'false');
+          _comboboxInput.setAttribute('aria-expanded', 'false');
         }
       }
+    }
+  }
+
+  /**
+   * manage focused element
+   * @param {Event} event
+   * @private
+   */
+  _manageFocus(event) {
+    const _self = event.currentTarget;
+
+    this._combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
+
+    let _listBox = this._combobox.querySelector(UIPicklist.SELECTORS.listBox);
+    let _listOptions = _listBox.querySelectorAll('[role="presentation"');
+
+    this._comboboxes.forEach(comboBox => {
+      comboBox.setAttribute('tabindex', '-1');
     });
+
+    if (!this._combobox.classList.contains(UIPicklist.CLASSES.isOpen)) {
+      this._combobox.classList.add(UIPicklist.CLASSES.isOpen);
+    }
+
+    this._allListBoxOptions.forEach(listBoxOption => {
+      listBoxOption.setAttribute('tabindex', '-1');
+    });
+
+    _listOptions.forEach((listOption, index) => {
+      listOption.setAttribute('tabindex', `0`);
+    });
+
+    _listOptions[_listOptions.length - 1].addEventListener('blur', () => {
+      this._combobox.classList.remove(UIPicklist.CLASSES.isOpen);
+    });
+
+    _self.setAttribute('aria-expanded', 'true');
+  }
+
+  /**
+   * query option in picklist
+   * @param {Event} event
+   * @private
+   */
+  _queryPickList(event) {
+    const _self = event.currentTarget;
+
+    this._combobox = utils.findParent(_self, UIPicklist.CLASSES.comboBox);
+
+    let _filter = _self.value.toUpperCase();
+    let _queries = this._combobox.querySelectorAll(
+      UIPicklist.SELECTORS.optionBodySpan
+    );
+    let _listItem;
+    let _queryText;
+
+    if (event.which === 27 || event.keyCode === 27) {
+      this._closeListBox(this._combobox);
+    }
+
+    for (let i = 0, qlen = _queries.length; i < qlen; i += 1) {
+      _queryText = _queries[i].textContent || _queries[i].innerText;
+
+      _listItem = utils.findParent(_queries[i], UIPicklist.CLASSES.listBoxItem);
+
+      if (_queryText.toUpperCase().indexOf(_filter) > -1) {
+        _listItem.style.display = '';
+      } else {
+        _listItem.style.display = 'none';
+      }
+    }
+  }
+
+  /**
+   * get the selected option value
+   * @param {Element} element
+   * @private
+   */
+  _getSelectedOptionValue(element) {
+    this._combobox = utils.findParent(element, UIPicklist.CLASSES.comboBox);
+
+    const _thisComboInput = this._combobox.querySelector(
+      UIPicklist.SELECTORS.comboBoxInput
+    );
+
+    let _optionText = element.querySelector(UIPicklist.SELECTORS.optionBodySpan)
+      .innerText;
+
+    _thisComboInput.value = _optionText;
+
+    this._closeListBox(this._combobox);
+  }
+
+  /**
+   * close listbox
+   * @param {Element} comboBox
+   * @private
+   */
+  _closeListBox(comboBox) {
+    if (comboBox.classList.contains(UIPicklist.CLASSES.isOpen)) {
+      comboBox.classList.remove(UIPicklist.CLASSES.isOpen);
+    }
   }
 }
 
@@ -168,7 +279,6 @@ UIPicklist.CLASSES = {
   listBox: 'slds-listbox',
   listBoxItem: 'slds-listbox__item',
   listBoxOption: 'slds-listbox__option',
-  listBoxOptionHighlighted: 'slds-listbox__option--highlighted',
 };
 
 UIPicklist.SELECTORS = {
