@@ -9,6 +9,11 @@
     }
   }
 
+  .slds-table:not(.slds-no-row-hover) tbody tr:hover > td {
+    background-color: #e5f1fa;
+    box-shadow: none;
+  }
+
   .slds-th__action,
   th,
   td {

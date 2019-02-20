@@ -30,7 +30,7 @@ export default storiesOf('DIFC Components/Button Icons', module)
     'Stateful',
     () => `
     <button 
-      class="ui-button-icon slds-button slds-button_icon" 
+      class="ui-button-icon slds-button slds-button_icon slds-button_icon-border-filled" 
       aria-pressed="false" 
       title="Like"
     >
@@ -53,6 +53,20 @@ export default storiesOf('DIFC Components/Button Icons', module)
         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
       </svg>
       <span class="slds-assistive-text">Like</span>
+    </button>
+    `
+  )
+  .add(
+    'Toggle arrow',
+    () => `
+    <button 
+      class="ui-button-icon slds-button slds-button_icon" 
+      title="Settings"
+    >
+      <svg class="slds-button__icon" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+      </svg>
+      <span class="slds-assistive-text">Settings</span>
     </button>
     `
   );

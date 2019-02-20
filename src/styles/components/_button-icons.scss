@@ -1,3 +1,7 @@
 .ui-button-icon {
   border-radius: 0;
+
+  &.slds-button_icon-border-filled {
+    border: none;
+  }
 }
